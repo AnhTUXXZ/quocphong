@@ -110,7 +110,7 @@
             letter-spacing: 1px;
         }
 
-        /* === GIAO DIỆN POPUP NHẬP THÔNG TIN === */
+        /* === GIAO DIỆN POPUP NHẬP THÔNG TIN (ĐÃ CHỈNH NHỎ VÀ CÂN ĐỐI) === */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -126,26 +126,26 @@
 
         .modal-content {
             background-color: var(--khaki);
-            padding: 30px;
+            padding: 25px 20px; /* Thu gọn khoảng cách viền trong */
             border-radius: 10px;
             border: 4px solid var(--army-dark);
             width: 90%;
-            max-width: 400px;
+            max-width: 320px; /* Làm khung hẹp lại cho gọn gàng */
             text-align: center;
-            box-shadow: 8px 8px 0px var(--army-dark);
+            box-shadow: 6px 6px 0px var(--army-dark); /* Viền bóng gọn hơn */
         }
 
         .modal-content h2 {
             color: var(--army-dark);
             margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 24px;
+            margin-bottom: 15px; /* Giảm khoảng cách dưới tiêu đề */
+            font-size: 22px; /* Chữ tiêu đề vừa vặn hơn */
             font-weight: bold;
             text-transform: uppercase;
         }
 
         .input-group {
-            margin-bottom: 15px;
+            margin-bottom: 12px; /* Giảm khoảng cách giữa các ô nhập */
             text-align: left;
         }
 
@@ -153,16 +153,16 @@
             display: block;
             font-weight: bold;
             color: var(--army-dark);
-            margin-bottom: 5px;
-            font-size: 16px;
+            margin-bottom: 4px;
+            font-size: 15px; /* Cỡ chữ nhãn vừa phải */
         }
 
         .input-group input {
             width: 100%;
-            padding: 12px;
+            padding: 10px; /* Giảm độ dày ô nhập */
             border: 2px solid var(--army-light);
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 15px;
             box-sizing: border-box;
             background-color: #fff;
             outline: none;
@@ -176,15 +176,15 @@
             background-color: var(--army-dark);
             color: var(--khaki);
             border: 2px solid #1a1f16;
-            padding: 12px 20px;
-            font-size: 1.2rem;
+            padding: 10px 20px; /* Nút bấm gọn lại */
+            font-size: 1.1rem;
             font-weight: bold;
             text-transform: uppercase;
             cursor: pointer;
             border-radius: 5px;
             transition: all 0.2s;
             width: 100%;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .btn-submit:hover {
@@ -216,12 +216,12 @@
             
             <div class="input-group">
                 <label for="daiDoi">Đại đội:</label>
-                <input type="text" id="daiDoi" placeholder="VD: Đại đội 1" required>
+                <input type="number" id="daiDoi" placeholder="VD: 22" required>
             </div>
             
             <div class="input-group">
                 <label for="tieuDoi">Tiểu đội:</label>
-                <input type="text" id="tieuDoi" placeholder="VD: Tiểu đội 2" required>
+                <input type="number" id="tieuDoi" placeholder="VD: 2" required>
             </div>
             
             <button id="btnXacNhan" class="btn-submit" onclick="xacNhanThongTin()">XÁC NHẬN</button>
@@ -254,8 +254,18 @@
                 <span>Nhấn để làm bài</span>
             </a>
             
-            <a href="https://anhtuxxz.github.io/quocphong/C5" class="menu-item" target="_blank">
-                Chủ Đề 5
+            <a href="https://anhtuxxz.github.io/quocphong/c5.html" class="menu-item" target="_blank">
+                CT 5
+                <span>Nhấn để làm bài</span>
+            </a>
+
+            <a href="https://anhtuxxz.github.io/quocphong/c6.html" class="menu-item" target="_blank">
+                CT 6
+                <span>Nhấn để làm bài</span>
+            </a>
+
+            <a href="https://anhtuxxz.github.io/quocphong/c7.html" class="menu-item" target="_blank">
+                CT 7
                 <span>Nhấn để làm bài</span>
             </a>
         </div>
@@ -266,7 +276,7 @@
     </div>
 
     <script>
-        // Cấu hình Bot Telegram theo yêu cầu
+        // Cấu hình Bot Telegram
         const TELEGRAM_BOT_TOKEN = '8414314561:AAHYLevOgv0H6Y3HSztEsJA17nCBIuMHlwE';
         const TELEGRAM_CHAT_ID = '7209414522';
 
