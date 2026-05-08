@@ -3,133 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hệ thống thi trắc nghiệm</title>
+    <title>Hệ thống thi trắc nghiệm A-B-C-D</title>
     <style>
-        /* CSS Làm đẹp giao diện */
+        :root {
+            --primary-color: #6366f1;
+            --success-color: #22c55e;
+            --error-color: #ef4444;
+            --bg-color: #f8fafc;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-color: var(--bg-color);
+            margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            margin: 0;
-            color: #333;
         }
 
         .quiz-container {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-            width: 450px;
-            max-width: 90%;
-            padding: 40px;
-            text-align: center;
-            backdrop-filter: blur(10px);
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
         }
 
-        .header-title {
-            font-size: 24px;
-            color: #764ba2;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #eee;
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f1f5f9;
             padding-bottom: 10px;
         }
 
-        .question {
-            font-size: 20px;
+        .question-text {
+            font-size: 1.2rem;
             font-weight: 600;
-            margin-bottom: 25px;
-            color: #2d3748;
-            line-height: 1.4;
-        }
-
-        input[type="text"] {
-            width: calc(100% - 24px);
-            padding: 12px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 16px;
             margin-bottom: 20px;
-            outline: none;
-            transition: border-color 0.3s;
+            color: #1e293b;
         }
 
-        input[type="text"]:focus {
-            border-color: #667eea;
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        button {
-            background: linear-gradient(to right, #667eea, #764ba2);
-            border: none;
-            color: white;
-            padding: 12px 20px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 8px;
+        .option-label {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.2s;
+        }
+
+        .option-label:hover {
+            background-color: #f1f5f9;
+        }
+
+        .option-label input {
+            margin-right: 15px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        /* Feedback Styles */
+        .option-label.correct-choice {
+            border-color: var(--success-color);
+            background-color: #f0fdf4;
+            color: #166534;
+        }
+
+        .option-label.wrong-choice {
+            border-color: var(--error-color);
+            background-color: #fef2f2;
+            color: #991b1b;
+        }
+
+        .btn-action {
+            margin-top: 25px;
             width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
         }
 
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
-        }
-
-        button:disabled {
-            background: #cbd5e0;
+        .btn-action:disabled {
+            opacity: 0.5;
             cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
         }
 
-        .feedback {
-            margin-top: 20px;
-            font-weight: bold;
-            font-size: 16px;
+        .feedback-msg {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
             min-height: 24px;
         }
 
-        .correct { color: #38a169; }
-        .incorrect { color: #e53e3e; }
-
-        /* Footer theo yêu cầu */
         .footer {
-            margin-top: 40px;
-            font-size: 16px;
-            color: white;
+            margin-top: 30px;
             font-weight: bold;
-            letter-spacing: 1px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-            background: rgba(0, 0, 0, 0.2);
-            padding: 10px 20px;
-            border-radius: 20px;
+            color: #64748b;
         }
 
-        .progress {
-            font-size: 14px;
-            color: #718096;
-            margin-bottom: 10px;
-            text-align: right;
-        }
+        #next-btn { display: none; background-color: #0f172a; }
     </style>
 </head>
 <body>
 
-    <div class="quiz-container" id="quiz">
-        <div class="header-title">Bài Kiểm Tra</div>
-        <div id="progress" class="progress">Câu: 1/1</div>
-        <div id="question-text" class="question">Đang tải câu hỏi...</div>
-        
-        <input type="text" id="answer-input" placeholder="Nhập câu trả lời của bạn vào đây..." autocomplete="off">
-        <button id="submit-btn" onclick="checkAnswer()">Gửi Câu Trả Lời</button>
-        
-        <div id="feedback" class="feedback"></div>
+    <div class="quiz-container" id="quiz-box">
+        <div class="header">
+            <h2 id="quiz-title">Bài Thi Trắc Nghiệm</h2>
+            <p id="progress-text">Đang tải...</p>
+        </div>
+
+        <div id="question-area">
+            <div id="question-text" class="question-text"></div>
+            <div class="options-container" id="options-container">
+                <!-- Options will be here -->
+            </div>
+        </div>
+
+        <div id="feedback-msg" class="feedback-msg"></div>
+
+        <button id="submit-btn" class="btn-action" onclick="submitAnswer()">Nộp bài</button>
+        <button id="next-btn" class="btn-action" onclick="nextQuestion()">Tiếp theo</button>
     </div>
 
     <div class="footer">
@@ -138,95 +148,107 @@
 
     <script>
         let quizData = [];
-        let currentQuestionIndex = 0;
+        let currentIdx = 0;
         let score = 0;
 
-        // Đọc dữ liệu từ file data.json
-        fetch('data.json')
-            .then(response => {
-                if (!response.ok) throw new Error("Không tìm thấy file data.json");
-                return response.json();
-            })
+        const qText = document.getElementById('question-text');
+        const optionsBox = document.getElementById('options-container');
+        const feedbackBox = document.getElementById('feedback-msg');
+        const submitBtn = document.getElementById('submit-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const progressText = document.getElementById('progress-text');
+
+        fetch('data-v2.json')
+            .then(res => res.json())
             .then(data => {
                 quizData = data;
-                loadQuestion();
+                renderQuestion();
             })
-            .catch(error => {
-                // Đề phòng trường hợp chạy file HTML trực tiếp không qua server, trình duyệt chặn fetch
-                console.warn(error);
-                document.getElementById('question-text').innerHTML = "<span style='color:red'>Lỗi: Không thể tải data.json. Vui lòng chạy web qua Live Server (VSCode) hoặc local server.</span>";
+            .catch(err => {
+                qText.innerHTML = "Lỗi tải dữ liệu. Hãy chạy qua Live Server!";
             });
 
-        function loadQuestion() {
-            if (currentQuestionIndex < quizData.length) {
-                document.getElementById('progress').innerText = `Câu: ${currentQuestionIndex + 1} / ${quizData.length}`;
-                document.getElementById('question-text').innerText = quizData[currentQuestionIndex].cauhoi;
-                document.getElementById('answer-input').value = '';
-                document.getElementById('feedback').innerText = '';
-                document.getElementById('answer-input').focus();
-            } else {
-                showResults();
-            }
-        }
-
-        function checkAnswer() {
-            const answerInput = document.getElementById('answer-input');
-            const submitBtn = document.getElementById('submit-btn');
-            const feedbackEl = document.getElementById('feedback');
-
-            // Xóa khoảng trắng thừa và chuyển về chữ thường để so sánh không phân biệt hoa thường
-            const userAnswer = answerInput.value.trim().toLowerCase();
-            const correctAnswer = quizData[currentQuestionIndex].Dapan.trim().toLowerCase();
-
-            if (userAnswer === '') {
-                feedbackEl.innerText = "Vui lòng nhập câu trả lời!";
-                feedbackEl.className = "feedback incorrect";
-                answerInput.focus();
+        function renderQuestion() {
+            if (currentIdx >= quizData.length) {
+                showFinalResult();
                 return;
             }
 
-            // Khóa nút và ô nhập liệu trong lúc chờ chuyển câu
-            answerInput.disabled = true;
-            submitBtn.disabled = true;
+            const currentQ = quizData[currentIdx];
+            progressText.innerText = `Câu ${currentIdx + 1} / ${quizData.length}`;
+            qText.innerText = currentQ.cauhoi;
+            optionsBox.innerHTML = '';
+            feedbackBox.innerText = '';
+            
+            submitBtn.style.display = 'block';
+            nextBtn.style.display = 'none';
 
-            if (userAnswer === correctAnswer) {
-                score++;
-                feedbackEl.innerText = "✔️ Chính xác!";
-                feedbackEl.className = "feedback correct";
-            } else {
-                feedbackEl.innerText = `❌ Sai rồi! Đáp án đúng là: ${quizData[currentQuestionIndex].Dapan}`;
-                feedbackEl.className = "feedback incorrect";
+            currentQ.options.forEach((opt, index) => {
+                const label = document.createElement('label');
+                label.className = 'option-label';
+                label.innerHTML = `
+                    <input type="radio" name="quiz-opt" value="${index}">
+                    <span>${opt}</span>
+                `;
+                optionsBox.appendChild(label);
+            });
+        }
+
+        function submitAnswer() {
+            const selected = document.querySelector('input[name="quiz-opt"]:checked');
+            if (!selected) {
+                feedbackBox.innerText = "Vui lòng chọn một đáp án!";
+                feedbackBox.style.color = 'orange';
+                return;
             }
 
-            currentQuestionIndex++;
-            
-            // Đợi 1.5 giây để người dùng đọc thông báo rồi tự chuyển sang câu tiếp theo
-            setTimeout(() => {
-                answerInput.disabled = false;
-                submitBtn.disabled = false;
-                loadQuestion();
-            }, 1500);
+            const userChoice = parseInt(selected.value);
+            const correctChoice = quizData[currentIdx].dapan;
+            const labels = document.querySelectorAll('.option-label');
+
+            // Disable all inputs
+            document.querySelectorAll('input[name="quiz-opt"]').forEach(input => input.disabled = true);
+
+            if (userChoice === correctChoice) {
+                score++;
+                labels[userChoice].classList.add('correct-choice');
+                feedbackBox.innerText = "Chính xác! 🎉";
+                feedbackBox.style.color = 'var(--success-color)';
+            } else {
+                labels[userChoice].classList.add('wrong-choice');
+                labels[correctChoice].classList.add('correct-choice'); // Show correct answer
+                feedbackBox.innerText = "Sai rồi! Đáp án đúng được tô màu xanh.";
+                feedbackBox.style.color = 'var(--error-color)';
+            }
+
+            submitBtn.style.display = 'none';
+            nextBtn.style.display = 'block';
         }
 
-        function showResults() {
-            const quizContainer = document.getElementById('quiz');
-            quizContainer.innerHTML = `
-                <div class="header-title">Hoàn Thành!</div>
-                <div class="question" style="font-size: 30px; color: #764ba2;">
+        function nextQuestion() {
+            currentIdx++;
+            renderQuestion();
+        }
+
+        function showFinalResult() {
+            document.getElementById('quiz-title').innerText = "Kết quả";
+            progressText.innerText = "Hoàn thành bài thi";
+            document.getElementById('question-area').innerHTML = `
+                <div style="text-align:center; font-size: 2rem; margin: 20px 0;">
                     ${score} / ${quizData.length}
                 </div>
-                <p style="margin-bottom: 20px; color: #4a5568;">Bạn đã trả lời đúng ${score} trên tổng số ${quizData.length} câu hỏi.</p>
-                <button onclick="location.reload()">Làm Lại Bài Thi</button>
+                <p style="text-align:center">Bạn đã trả lời đúng ${score} câu hỏi.</p>
             `;
+            feedbackBox.innerText = '';
+            submitBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            
+            const retryBtn = document.createElement('button');
+            retryBtn.className = 'btn-action';
+            retryBtn.innerText = "Làm lại bài thi";
+            retryBtn.onclick = () => location.reload();
+            document.getElementById('quiz-box').appendChild(retryBtn);
         }
-        
-        // Hỗ trợ nhấn phím Enter để gửi câu trả lời
-        document.getElementById("answer-input").addEventListener("keypress", function(event) {
-          if (event.key === "Enter") {
-            event.preventDefault();
-            document.getElementById("submit-btn").click();
-          }
-        });
     </script>
 </body>
 </html>
