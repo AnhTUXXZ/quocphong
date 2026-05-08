@@ -1,0 +1,302 @@
+[
+    {
+        "cauhoi": "Lực lượng vũ trang nhân dân gồm các tổ chức:",
+        "options": [
+            "Vũ trang và bán vũ trang.",
+            "Quốc phòng và an ninh.",
+            "Quân sự và an ninh trật tự.",
+            "An ninh trật tự và bán vũ trang."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Lực lượng vũ trang nhân dân Việt Nam bao gồm:",
+        "options": [
+            "Quân đội nhân dân, công an nhân dân, dân quân tự vệ.",
+            "Quân đội nhân dân, dự bị động viên, dân quân tự vệ.",
+            "Quân đội thường trực, dự bị động viên, dân quân tự vệ.",
+            "Quân đội chủ lực, cảnh sát nhân dân, dân quân tự vệ."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Quan điểm, nguyên tắc cơ bản nhất trong xây dựng lực lượng vũ trang nhân dân là:",
+        "options": [
+            "Giữ vững và tăng cường sự lãnh đạo của Đảng Cộng sản Việt Nam đối với lực lượng vũ trang nhân dân.",
+            "Giữ vững và tăng cường sự lãnh đạo, quản lý của Nhà nước đối với lực lượng vũ trang nhân dân.",
+            "Giữ vững và tăng cường sự lãnh đạo của các tổ chức chính trị trong lực lượng vũ trang.",
+            "Giữ vững và tăng cường sự lãnh đạo của các cơ quan chính trị trong lực lượng vũ trang."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Đảng Cộng sản Việt Nam lãnh đạo lực lượng vũ trang nhân dân theo nguyên tắc:",
+        "options": [
+            "Tuyệt đối, trực tiếp và toàn diện.",
+            "Tuyệt đối, trực tiếp về mọi mặt.",
+            "Tuyệt đối, toàn diện về mọi mặt.",
+            "Toàn diện trên mọi lĩnh vực."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Quan điểm, nguyên tắc cơ bản xây dựng lực lượng vũ trang nhân dân trong thời kỳ mới là:",
+        "options": [
+            "Tự lực, tự cường xây dựng lực lượng vũ trang.",
+            "Tự lực cánh sinh, tăng cường đối ngoại.",
+            "Phát huy nội lực, tranh thủ hợp tác kinh tế.",
+            "Tích cực hợp tác quốc tế về mọi mặt."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Quan điểm, nguyên tắc cơ bản xây dựng lực lượng vũ trang nhân dân trong thời kỳ mới là:",
+        "options": [
+            "Lấy chất lượng là chính, lấy công tác huấn luyện làm cơ sở.",
+            "Lấy chất lượng là chính, lấy xây dựng chính trị làm cơ sở.",
+            "Lấy chất lượng huấn luyện là chính, coi trọng xây dựng chính trị.",
+            "Lấy chất lượng là trọng tâm, lấy xây dựng chính trị làm trọng điểm."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Một trong những nội dung xây dựng về chính trị lực lượng vũ trang nhân dân là:",
+        "options": [
+            "Chăm lo xây dựng củng cố các tổ chức chính trị trong lực lượng vũ trang nhân dân.",
+            "Chăm lo xây dựng củng cố các tổ chức chỉ huy trong lực lượng vũ trang nhân dân.",
+            "Đẩy mạnh hoạt động phòng chống “diễn biến hòa bình” trong lực lượng vũ trang.",
+            "Đổi mới công tác đào tạo sĩ quan trong nhà trường."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung quan trọng nhất trong xây dựng lực lượng vũ trang nhân dân về chính trị là:",
+        "options": [
+            "Phát triển số lượng Đảng viên trong lực lượng vũ trang nhân dân.",
+            "Xây dựng đội ngũ, cán bộ chỉ huy trong lực lượng vũ trang nhân dân.",
+            "Giáo dục chủ nghĩa Mác – Lênin, tư tưởng Hồ Chí Minh.",
+            "Giữ vững nguyên tắc Đảng lãnh đạo trong lực lượng vũ trang nhân dân."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Bảo đảm lực lượng vũ trang nhân dân luôn trong tư thế sẵn sàng chiến đấu và chiến đấu thắng lợi phản ánh:",
+        "options": [
+            "Chức năng, nhiệm vụ chiến lược cơ bản, thường xuyên của lực lượng vũ trang nhân dân.",
+            "Chức năng, nhiệm vụ chủ yếu cơ bản, thường xuyên của lực lượng vũ trang nhân dân.",
+            "Quy luật của dân tộc Việt Nam trong lịch sử dựng nước và giữ nước.",
+            "Quy luật của sự nghiệp bảo vệ Tổ quốc Việt Nam Xã hội Chủ nghĩa."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Phương hướng xây dựng lực lượng dự bị động viên:",
+        "options": [
+            "Hùng hậu về số lượng, có chất lượng cao, sẵn sàng động viên nhanh chóng khi cần thiết.",
+            "Hùng hậu, được huấn luyện và quản lý tốt, bảo đảm khi cần thiết có thể động viên nhanh theo kế hoạch.",
+            "Luôn trong tư thế sẵn sàng chiến đấu và chiến đấu thắng lợi.",
+            "Luôn sẵn sàng phối hợp với lực lượng thường trực và dân quân tự vệ."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Phương hướng xây dựng dân quân tự vệ:",
+        "options": [
+            "Vững mạnh, rộng khắp, lấy chất lượng là chính.",
+            "Vững mạnh, rộng khắp, lấy chất lượng chính trị là chính.",
+            "Toàn diện, rộng khắp, lấy chất lượng là chính.",
+            "Rộng khắp nhưng có trọng tâm trọng điểm."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Vấn đề cơ bản hàng đầu trong nhiệm vụ xây dựng quân đội, công an của Đảng trong mọi giai đoạn cách mạng là:",
+        "options": [
+            "Xây dựng quân đội, công an cách mạng.",
+            "Xây dựng quân đội, công an tinh nhuệ.",
+            "Xây dựng quân đội, công an chính quy.",
+            "Xây dựng quân đội, công an hiện đại."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Xây dựng quân đội nhân dân, công an nhân dân chính quy là:",
+        "options": [
+            "Thực hiện thống nhất về mọi mặt (tổ chức, biên chế, trang bị,…).",
+            "Thực hiện thống nhất về chính trị, quân sự, hậu cần.",
+            "Thực hiện thống nhất về nhận thức, chính trị, tư tưởng.",
+            "Thực hiện thống nhất về chính trị, mục tiêu chiến đấu."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Xây dựng quân đội nhân dân, công an nhân dân tinh nhuệ trên các lĩnh vực:",
+        "options": [
+            "Chính trị, kỹ thuật, nghiệp vụ.",
+            "Chính trị, quân sự, hậu cần.",
+            "Chính trị, quân sự, kỹ thuật.",
+            "Chính trị, tổ chức, kỹ chiến thuật."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Một trong những biện pháp chủ yếu xây dựng lực lượng vũ trang nhân dân là:",
+        "options": [
+            "Nâng cao kết quả huấn luyện quân sự, giáo dục, đẩy mạnh đối ngoại.",
+            "Nâng cao kết quả giáo dục chính trị, tư tưởng, phát triển cách đánh.",
+            "Nâng cao chất lượng huấn luyện, giáo dục, xây dựng và phát triển khoa học công nghệ quốc phòng.",
+            "Nâng cao chất lượng huấn luyện, giáo dục, xây dựng và phát triển khoa học quân sự, khoa học công an."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Một trong những biện pháp chủ yếu xây dựng lực lượng vũ trang nhân dân là:",
+        "options": [
+            "Từng bước giải quyết đầy đủ các yêu cầu của lực lượng vũ trang nhân dân.",
+            "Từng bước giải quyết yêu cầu về tổ chức, biên chế cho lực lượng vũ trang nhân dân.",
+            "Từng bước giải quyết yêu cầu về vũ khí, trang bị kỹ thuật của các lực lượng vũ trang nhân dân.",
+            "Từng bước đổi mới, bổ sung đầy đủ vũ khí hiện đại cho lực lượng vũ trang nhân dân."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Một trong những biện pháp chủ yếu xây dựng lực lượng vũ trang nhân dân là:",
+        "options": [
+            "Xây dựng đội ngũ cán bộ lực lượng vũ trang nhân dân có phẩm chất, năng lực tốt.",
+            "Xây dựng đội ngũ cán bộ lực lượng vũ trang nhân dân có phẩm chất tốt, số lượng đông.",
+            "Xây dựng đội ngũ cán bộ lực lượng vũ trang nhân dân có số lượng đông, năng lực tốt.",
+            "Xây dựng đội ngũ cán bộ lực lượng vũ trang nhân dân có số lượng đủ, phẩm chất tốt."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Lực lượng vũ trang nhân dân là các tổ chức:",
+        "options": [
+            "Vũ trang và bán vũ trang của nhân dân Việt Nam.",
+            "Quốc phòng và an ninh Việt Nam.",
+            "Vũ trang và an ninh trật tự.",
+            "An ninh và bán vũ trang của nhân dân Việt Nam."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Lực lượng vũ trang ba thứ quân gồm:",
+        "options": [
+            "Bộ đội chủ lực; Hải quân; Dân quân tự vệ.",
+            "Bộ đội chủ lực; Hải quân; Bộ đội Biên phòng.",
+            "Bộ đội chủ lực; Bộ đội địa phương; Dân quân tự vệ.",
+            "Hải quân; Bộ đội Biên phòng; Bộ đội chủ lực."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Xây dựng lực lượng vũ trang nhân dân là trách nhiệm.",
+        "options": [
+            "Chính quyền địa phương; Cả hệ thống Chính trị; Và toàn dân.",
+            "Cả hệ thống Chính trị; Quân đội nhân dân Việt Nam.",
+            "Của toàn Đảng, toàn dân, của cả hệ thống Chính trị.",
+            "Của toàn Đảng; Toàn Dân và toàn quân."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Lực lượng vũ trang nhân dân Việt Nam bao gồm:",
+        "options": [
+            "Quân đội thường trực, dự bị động viên, dân quân tự vệ.",
+            "Quân đội nhân dân, công an nhân dân, dân quân tự vệ.",
+            "Quân đội nhân dân, dự bị động viên, dân quân tự vệ.",
+            "Quân đội chủ lực, cảnh sát nhân dân, dân quân tự vệ."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Khó khăn lớn tác động đến xây dựng lực lượng vũ trang nhân dân:",
+        "options": [
+            "Các nước trên thế giới đang chạy đua vũ trang rất quyết liệt.",
+            "Mặt trái kinh tế thị trường tác động quá lớn đến lực lượng vũ trang nhân dân.",
+            "Chủ nghĩa đế quốc và các lực lượng khủng bố đẩy mạnh chiến lược “Bạo loạn lật đổ”.",
+            "Chủ nghĩa đế quốc và các thế lực phản động đẩy mạnh chiến lược “Diễn biến hòa bình”."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Một trong những thuận lợi cơ bản trong xây dựng lực lượng vũ trang nhân dân:",
+        "options": [
+            "Nhân dân ta có truyền thống đánh giặc độc đáo, sáng tạo.",
+            "Nhân dân ta có truyền thống yêu nước, đoàn kết, tin tưởng vào sự lãnh đạo của Đảng.",
+            "Nhân dân ta luôn thương yêu đùm bọc, tin tưởng tuyệt đối vào sự lãnh đạo quân đội.",
+            "Nhân dân ta có tinh thần đoàn kết quốc tế, được quốc tế ủng hộ."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Thực trạng vũ khí trang bị của lực lượng vũ trang nhân dân hiện nay?",
+        "options": [
+            "Còn quá lạc hậu và thô sơ.",
+            "Còn sử dụng vũ khí cũ.",
+            "Lạc hậu và thiếu đồng bộ.",
+            "Hiện đại, tiến bộ."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Một quan điểm, nguyên tắc cơ bản trong xây dựng lực lượng vũ trang nhân dân Việt Nam la:",
+        "options": [
+            "Tự lực tự cường xây dựng lực lượng vũ trang.",
+            "Đoàn kết quyết thắng xây dựng lực lượng vũ trang.",
+            "Độc lập, tự chủ xây dựng lực lượng vũ trang.",
+            "Bám sát thực tiễn xây dựng lực lượng vũ trang."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Một trong những quan điểm xây dựng lực lượng vũ trang nhân dân trong tình hình hiện nay là?",
+        "options": [
+            "Bảo đảm lực lượng vũ trang nhân dân không bị động bất ngờ trong mọi tình huống.",
+            "Bảo đảm lực lượng vũ trang nhân dân luôn trong tư thế sẵn sàng chiến đấu và chiến đấu thắng lợi.",
+            "Bảo đảm lực lượng vũ trang nhân dân luôn đủ về số lượng, mạnh về chất lượng.",
+            "Bảo đảm lực lượng vũ trang nhân dân luôn trung thành với Đảng, với Tổ quốc và nhân dân."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Phương hướng xây dựng quân đội nhân dân trong giai đoạn hiện nay?",
+        "options": [
+            "Chính quy, tinh nhuệ và nhanh chóng hiện đại.",
+            "Chính quy, cách mạng, tinh thông và từng bước hiện đại.",
+            "Cách mạng, chính quy, tinh nhuệ và từng bước hiện đại.",
+            "Yêu nước, yêu chủ nghĩa xã hội, sẵn sàng hi sinh vì Tổ quốc."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Phương hướng xây dựng quân đội nhân dân trong giai đoạn hiện nay?",
+        "options": [
+            "Chính quy, tinh nhuệ và nhanh chóng hiện đại.",
+            "Chính quy, cách mạng, tinh thông và từng bước hiện đại.",
+            "Cách mạng, chính quy, tinh nhuệ và từng bước hiện đại.",
+            "Yêu nước, yêu chủ nghĩa xã hội, sẵn sàng hi sinh vì Tổ quốc."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Vấn đề cơ bản hàng đầu trong nhiệm vụ xây dựng quân đội, công an của Đảng trong mọi giai đoạn cách mạng là:",
+        "options": [
+            "Xây dựng quân đội, công an hiện đại.",
+            "Xây dựng quân đội, công an cách mạng.",
+            "Xây dựng quân đội, công an tinh nhuệ.",
+            "Xây dựng quân đội, công an chính qui."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Yếu tố quyết định đến quá trình “từng bước” hiện đại hóa lực lượng vũ trang nhân dân là?",
+        "options": [
+            "Khả năng làm chủ vũ khí trang bị của LLVT.",
+            "Khả năng đáp ứng của nền kinh tế đất nước.",
+            "Khả năng nhập khẩu vũ khí hiện đại từ nước ngoài.",
+            "Sự viện trợ của các tổ chức quốc tế."
+        ],
+        "dapan": 1
+    }
+]
