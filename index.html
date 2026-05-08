@@ -3,252 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hệ thống thi trắc nghiệm A-B-C-D</title>
+    <title>Danh Mục Ôn Tập Quốc Phòng</title>
     <style>
+        /* === TONE MÀU QUÂN ĐỘI === */
         :root {
-            --primary-color: #6366f1;
-            --success-color: #22c55e;
-            --error-color: #ef4444;
-            --bg-color: #f8fafc;
+            --army-dark: #2c3525;    /* Xanh rêu đậm */
+            --army-medium: #4b5320;  /* Xanh olive */
+            --army-light: #8a9a5b;   /* Xanh lính nhạt */
+            --khaki: #e6e2d3;        /* Vàng cát / Khaki */
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
+            font-family: 'Courier New', Courier, 'Segoe UI', monospace;
+            background-color: var(--army-medium);
             margin: 0;
+            padding: 0;
+            color: var(--army-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header-banner {
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 5px solid #1a1f16;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Lưới chứa các nút bấm */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--khaki);
+            padding: 30px;
+            border: 4px solid var(--army-dark);
+            border-radius: 12px;
+            box-shadow: 8px 8px 0px var(--army-dark);
+        }
+
+        /* Nút chuyển hướng */
+        .menu-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #1a1f16;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
         }
 
-        .quiz-container {
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 10px;
-        }
-
-        .question-text {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #1e293b;
-        }
-
-        .options-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .option-label {
-            display: flex;
-            align-items: center;
-            padding: 12px 16px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .option-label:hover {
-            background-color: #f1f5f9;
-        }
-
-        .option-label input {
-            margin-right: 15px;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-        }
-
-        /* Feedback Styles */
-        .option-label.correct-choice {
-            border-color: var(--success-color);
-            background-color: #f0fdf4;
-            color: #166534;
-        }
-
-        .option-label.wrong-choice {
-            border-color: var(--error-color);
-            background-color: #fef2f2;
-            color: #991b1b;
-        }
-
-        .btn-action {
-            margin-top: 25px;
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 10px;
-            background-color: var(--primary-color);
-            color: white;
+        .menu-item span {
             font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: opacity 0.2s;
+            margin-top: 8px;
+            color: var(--army-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .btn-action:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
+        .menu-item:hover {
+            background-color: var(--army-light);
+            color: var(--army-dark);
+            transform: translateY(-5px);
+            box-shadow: 4px 8px 15px rgba(0,0,0,0.4);
+            border-color: var(--army-dark);
         }
 
-        .feedback-msg {
-            margin-top: 15px;
-            text-align: center;
-            font-weight: 600;
-            min-height: 24px;
+        .menu-item:hover span {
+            color: var(--army-dark);
         }
 
         .footer {
-            margin-top: 30px;
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
             font-weight: bold;
-            color: #64748b;
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        #next-btn { display: none; background-color: #0f172a; }
     </style>
 </head>
 <body>
 
-    <div class="quiz-container" id="quiz-box">
-        <div class="header">
-            <h2 id="quiz-title">Bài Thi Trắc Nghiệm</h2>
-            <p id="progress-text">Đang tải...</p>
+    <div class="header-banner">
+        HỆ THỐNG TRẮC NGHIỆM QUỐC PHÒNG
+    </div>
+
+    <div class="container">
+        <div class="menu-grid">
+            <!-- Link đến Chương 1 -->
+            <a href="https://anhtuxxz.github.io/quocphong/C1" class="menu-item" target="_blank">
+                Chủ Đề 1
+                <span>Nhấn để làm bài</span>
+            </a>
+            
+            <!-- Link đến Chương 2 -->
+            <a href="https://anhtuxxz.github.io/quocphong/C2" class="menu-item" target="_blank">
+                Chủ Đề 2
+                <span>Nhấn để làm bài</span>
+            </a>
+            
+            <!-- Link đến Chương 3 -->
+            <a href="https://anhtuxxz.github.io/quocphong/C3" class="menu-item" target="_blank">
+                Chủ Đề 3
+                <span>Nhấn để làm bài</span>
+            </a>
+            
+            <!-- Link đến Chương 4 -->
+            <a href="https://anhtuxxz.github.io/quocphong/C4" class="menu-item" target="_blank">
+                Chủ Đề 4
+                <span>Nhấn để làm bài</span>
+            </a>
+            
+            <!-- Link đến Chương 5 -->
+            <a href="https://anhtuxxz.github.io/quocphong/C5" class="menu-item" target="_blank">
+                Chủ Đề 5
+                <span>Nhấn để làm bài</span>
+            </a>
         </div>
-
-        <div id="question-area">
-            <div id="question-text" class="question-text"></div>
-            <div class="options-container" id="options-container">
-                <!-- Options will be here -->
-            </div>
-        </div>
-
-        <div id="feedback-msg" class="feedback-msg"></div>
-
-        <button id="submit-btn" class="btn-action" onclick="submitAnswer()">Nộp bài</button>
-        <button id="next-btn" class="btn-action" onclick="nextQuestion()">Tiếp theo</button>
     </div>
 
     <div class="footer">
         NguyenAnhTu-K16THO1-QuocPhong
     </div>
 
-    <script>
-        let quizData = [];
-        let currentIdx = 0;
-        let score = 0;
-
-        const qText = document.getElementById('question-text');
-        const optionsBox = document.getElementById('options-container');
-        const feedbackBox = document.getElementById('feedback-msg');
-        const submitBtn = document.getElementById('submit-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const progressText = document.getElementById('progress-text');
-
-        fetch('data-v2.json')
-            .then(res => res.json())
-            .then(data => {
-                quizData = data;
-                renderQuestion();
-            })
-            .catch(err => {
-                qText.innerHTML = "Lỗi tải dữ liệu. Hãy chạy qua Live Server!";
-            });
-
-        function renderQuestion() {
-            if (currentIdx >= quizData.length) {
-                showFinalResult();
-                return;
-            }
-
-            const currentQ = quizData[currentIdx];
-            progressText.innerText = `Câu ${currentIdx + 1} / ${quizData.length}`;
-            qText.innerText = currentQ.cauhoi;
-            optionsBox.innerHTML = '';
-            feedbackBox.innerText = '';
-            
-            submitBtn.style.display = 'block';
-            nextBtn.style.display = 'none';
-
-            currentQ.options.forEach((opt, index) => {
-                const label = document.createElement('label');
-                label.className = 'option-label';
-                label.innerHTML = `
-                    <input type="radio" name="quiz-opt" value="${index}">
-                    <span>${opt}</span>
-                `;
-                optionsBox.appendChild(label);
-            });
-        }
-
-        function submitAnswer() {
-            const selected = document.querySelector('input[name="quiz-opt"]:checked');
-            if (!selected) {
-                feedbackBox.innerText = "Vui lòng chọn một đáp án!";
-                feedbackBox.style.color = 'orange';
-                return;
-            }
-
-            const userChoice = parseInt(selected.value);
-            const correctChoice = quizData[currentIdx].dapan;
-            const labels = document.querySelectorAll('.option-label');
-
-            // Disable all inputs
-            document.querySelectorAll('input[name="quiz-opt"]').forEach(input => input.disabled = true);
-
-            if (userChoice === correctChoice) {
-                score++;
-                labels[userChoice].classList.add('correct-choice');
-                feedbackBox.innerText = "Chính xác! 🎉";
-                feedbackBox.style.color = 'var(--success-color)';
-            } else {
-                labels[userChoice].classList.add('wrong-choice');
-                labels[correctChoice].classList.add('correct-choice'); // Show correct answer
-                feedbackBox.innerText = "Sai rồi! Đáp án đúng được tô màu xanh.";
-                feedbackBox.style.color = 'var(--error-color)';
-            }
-
-            submitBtn.style.display = 'none';
-            nextBtn.style.display = 'block';
-        }
-
-        function nextQuestion() {
-            currentIdx++;
-            renderQuestion();
-        }
-
-        function showFinalResult() {
-            document.getElementById('quiz-title').innerText = "Kết quả";
-            progressText.innerText = "Hoàn thành bài thi";
-            document.getElementById('question-area').innerHTML = `
-                <div style="text-align:center; font-size: 2rem; margin: 20px 0;">
-                    ${score} / ${quizData.length}
-                </div>
-                <p style="text-align:center">Bạn đã trả lời đúng ${score} câu hỏi.</p>
-            `;
-            feedbackBox.innerText = '';
-            submitBtn.style.display = 'none';
-            nextBtn.style.display = 'none';
-            
-            const retryBtn = document.createElement('button');
-            retryBtn.className = 'btn-action';
-            retryBtn.innerText = "Làm lại bài thi";
-            retryBtn.onclick = () => location.reload();
-            document.getElementById('quiz-box').appendChild(retryBtn);
-        }
-    </script>
 </body>
 </html>
