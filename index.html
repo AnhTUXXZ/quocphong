@@ -13,8 +13,12 @@
             --khaki: #e6e2d3;        /* Vàng cát / Khaki */
         }
 
+        /* Đổi TOÀN BỘ font chữ sang Times New Roman */
+        * {
+            font-family: 'Times New Roman', Times, serif !important;
+        }
+
         body {
-            font-family: 'Courier New', Courier, 'Segoe UI', monospace;
             background-color: var(--army-medium);
             margin: 0;
             padding: 0;
@@ -82,7 +86,6 @@
             font-size: 1rem;
             margin-top: 8px;
             color: var(--army-light);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .menu-item:hover {
@@ -105,11 +108,125 @@
             font-size: 18px;
             font-weight: bold;
             letter-spacing: 1px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* === GIAO DIỆN POPUP NHẬP THÔNG TIN === */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: none; /* Ẩn mặc định, JS sẽ bật lên */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .modal-content {
+            background-color: var(--khaki);
+            padding: 30px;
+            border-radius: 10px;
+            border: 4px solid var(--army-dark);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 8px 8px 0px var(--army-dark);
+        }
+
+        .modal-content h2 {
+            color: var(--army-dark);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            color: var(--army-dark);
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--army-light);
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            background-color: #fff;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: var(--army-dark);
+        }
+
+        .btn-submit {
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            border: 2px solid #1a1f16;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.2s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #1a1f16;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        .error-msg {
+            color: red;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: none;
         }
     </style>
 </head>
 <body>
+
+    <div id="infoPopup" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Khai Báo Thông Tin</h2>
+            <div id="errorMsg" class="error-msg">Vui lòng điền đầy đủ tất cả thông tin!</div>
+            
+            <div class="input-group">
+                <label for="hoTen">Họ và Tên:</label>
+                <input type="text" id="hoTen" placeholder="VD: Nguyễn Văn A" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="daiDoi">Đại đội:</label>
+                <input type="text" id="daiDoi" placeholder="VD: Đại đội 1" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="tieuDoi">Tiểu đội:</label>
+                <input type="text" id="tieuDoi" placeholder="VD: Tiểu đội 2" required>
+            </div>
+            
+            <button id="btnXacNhan" class="btn-submit" onclick="xacNhanThongTin()">XÁC NHẬN</button>
+        </div>
+    </div>
 
     <div class="header-banner">
         HỆ THỐNG TRẮC NGHIỆM QUỐC PHÒNG
@@ -117,31 +234,26 @@
 
     <div class="container">
         <div class="menu-grid">
-            <!-- Link đến Chương 1 -->
             <a href="https://anhtuxxz.github.io/quocphong/ct1.html" class="menu-item" target="_blank">
                 CT 1
                 <span>Nhấn để làm bài</span>
             </a>
             
-            <!-- Link đến Chương 2 -->
             <a href="https://anhtuxxz.github.io/quocphong/c2.html" class="menu-item" target="_blank">
                 CT 2
                 <span>Nhấn để làm bài</span>
             </a>
             
-            <!-- Link đến Chương 3 -->
             <a href="https://anhtuxxz.github.io/quocphong/c3.html" class="menu-item" target="_blank">
                 CT 3
                 <span>Nhấn để làm bài</span>
             </a>
             
-            <!-- Link đến Chương 4 -->
             <a href="https://anhtuxxz.github.io/quocphong/c4.html" class="menu-item" target="_blank">
                 CT 4
                 <span>Nhấn để làm bài</span>
             </a>
             
-            <!-- Link đến Chương 5 -->
             <a href="https://anhtuxxz.github.io/quocphong/C5" class="menu-item" target="_blank">
                 Chủ Đề 5
                 <span>Nhấn để làm bài</span>
@@ -153,5 +265,85 @@
         NguyenAnhTu-K16THO1-QuocPhong
     </div>
 
+    <script>
+        // Cấu hình Bot Telegram theo yêu cầu
+        const TELEGRAM_BOT_TOKEN = '8414314561:AAHYLevOgv0H6Y3HSztEsJA17nCBIuMHlwE';
+        const TELEGRAM_CHAT_ID = '7209414522';
+
+        // Khi load trang
+        document.addEventListener('DOMContentLoaded', () => {
+            // Kiểm tra xem localStorage đã có thông tin chưa
+            const savedData = localStorage.getItem('hocVienQuocPhong');
+            
+            if (!savedData) {
+                // Nếu chưa có, hiện popup bắt buộc nhập
+                document.getElementById('infoPopup').style.display = 'flex';
+            }
+        });
+
+        // Hàm xử lý khi ấn nút "Xác nhận"
+        function xacNhanThongTin() {
+            const hoTen = document.getElementById('hoTen').value.trim();
+            const daiDoi = document.getElementById('daiDoi').value.trim();
+            const tieuDoi = document.getElementById('tieuDoi').value.trim();
+            const errorMsg = document.getElementById('errorMsg');
+            const btnXacNhan = document.getElementById('btnXacNhan');
+
+            // 1. Validate không cho bỏ trống
+            if (hoTen === "" || daiDoi === "" || tieuDoi === "") {
+                errorMsg.style.display = 'block';
+                return;
+            }
+            errorMsg.style.display = 'none';
+
+            // Đổi text nút thành đang xử lý
+            btnXacNhan.innerText = "ĐANG XỬ LÝ...";
+            btnXacNhan.disabled = true;
+
+            // 2. Lưu vào LocalStorage
+            const thongTin = {
+                hoTen: hoTen,
+                daiDoi: daiDoi,
+                tieuDoi: tieuDoi,
+                thoiGian: new Date().toLocaleString()
+            };
+            localStorage.setItem('hocVienQuocPhong', JSON.stringify(thongTin));
+
+            // 3. Chuẩn bị tin nhắn gửi về Telegram
+            const textMessage = `
+📝 <b>CÓ HỌC VIÊN MỚI TRUY CẬP HỆ THỐNG</b>
+👤 Họ và tên: <b>${hoTen}</b>
+🏢 Đại đội: ${daiDoi}
+⛺ Tiểu đội: ${tieuDoi}
+⏰ Thời gian: ${thongTin.thoiGian}
+            `;
+
+            // 4. Gửi API tới Telegram
+            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            const payload = {
+                chat_id: TELEGRAM_CHAT_ID,
+                text: textMessage,
+                parse_mode: 'HTML'
+            };
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Tắt popup sau khi gửi thành công
+                document.getElementById('infoPopup').style.display = 'none';
+            })
+            .catch(error => {
+                console.error('Lỗi khi gửi Telegram:', error);
+                // Dù lỗi mạng thì vẫn ẩn popup cho người dùng làm bài (vì đã lưu local)
+                document.getElementById('infoPopup').style.display = 'none';
+            });
+        }
+    </script>
 </body>
 </html>
