@@ -1,0 +1,722 @@
+[
+    {
+        "cauhoi": "Diễn biến hòa bình là chiến lược cơ bản nhằm:",
+        "options": [
+            "Lật đổ chế độ chính trị của các nước tiến bộ, trước hết là các nước XHCN.",
+            "Lật đổ chế độ kinh tế - xã hội của các nước tiến bộ, trước hết là các nước XHCN.",
+            "Lật đổ chế độ chính trị cộng sản của các nước tiến bộ, trước hết là các nước XHCN.",
+            "Lật đổ Đảng lãnh đạo các nước tiến bộ, trước hết là các nước XHCN."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Chiến lược “diễn biến hòa bình” do lực lượng nào tiến hành:",
+        "options": [
+            "Chủ nghĩa đế quốc và các lực lượng khủng bố.",
+            "Chủ nghĩa đế quốc và các thế lực phản động.",
+            "Chủ nghĩa đế quốc và các phần tử cơ hội.",
+            "Chủ nghĩa đế quốc và các phần tử quá khích."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Bạo loạn lật đổ là hành động chống phá bằng:",
+        "options": [
+            "Bạo lực.",
+            "Kinh tế.",
+            "Chính trị.",
+            "Quân sự."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Bạo loạn lật đổ gồm có những hình thức nào:",
+        "options": [
+            "Bạo loạn chính trị và bạo loạn vũ trang.",
+            "Bạo loạn vũ trang kết hợp với gây rối.",
+            "Kết hợp bạo loạn chính trị với vũ trang.",
+            "Cả A và C đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Mục tiêu nhất quán của chủ nghĩa đế quốc và các lực lượng thù địch trong sử dụng chiến lược diễn biến hòa bình đối với cách mạng Việt Nam nhằm thực hiện âm mưu:",
+        "options": [
+            "Xóa bỏ vai trò lãnh đạo của Đảng, xóa bỏ chế độ Xã hội Chủ nghĩa.",
+            "Lái nước ta đi theo con đường tư bản chủ nghĩa và lệ thuộc vào chủ nghĩa đế quốc.",
+            "Xóa bỏ các tổ chức chính trị và buộc ta chấp nhận các điều kiện của chúng.",
+            "Cả A và B đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Nội dung thủ đoạn chống phá về kinh tế của chiến lược diễn biến hòa bình:",
+        "options": [
+            "Khích lệ kinh tế tư nhân phát triển, làm mất vai trò chủ đạo của kinh tế nhà nước.",
+            "Khích lệ kinh tế đầu tư nước ngoài, làm mất vai trò chủ đạo của kinh tế nhà nước.",
+            "Khích lệ kinh tế đầu tư trong nước phát triển, làm mất vai trò chủ đạo của kinh tế nhà nước.",
+            "Khích lệ kinh tế tập thể phát triển, làm mất vai trò chủ đạo của kinh tế nhà nước."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung thủ đoạn chống phá về chính trị của chiến lược diễn biến hòa bình:",
+        "options": [
+            "Phá vỡ khối đại đoàn kết toàn dân của các tổ chức chính trị.",
+            "Chia rẽ nội bộ, kích động gây rối loạn các tổ chức trong xã hội.",
+            "Kích động đòi cô lập Đảng, Nhà nước với quân đội nhân dân.",
+            "Kích động đòi thực hiện chế độ đa nguyên chính trị, đa đảng đối lập."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Mục đích của thủ đoạn chống phá về tư tưởng trong chiến lược diễn biến hòa bình:",
+        "options": [
+            "Xóa bỏ hệ tư tưởng của Nhà nước Xã hội Chủ nghĩa.",
+            "Xóa bỏ chủ nghĩa Mác – Lênin, tư tưởng Hồ Chí Minh.",
+            "Xóa bỏ vai trò quản lý điều hành của Nhà nước Xã hội Chủ nghĩa.",
+            "Xóa bỏ vai trò lãnh đạo của các tổ chức chính trị xã hội."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Thực hiện thủ đoạn chống phá ta về văn hóa, kẻ thù tập trung:",
+        "options": [
+            "Phá vỡ truyền thống, kinh nghiệm của văn hóa Việt Nam.",
+            "Xuyên tạc, bôi nhọ truyền thống văn hóa quý báu của chúng ta.",
+            "Phủ nhận các quan điểm, chính sách văn hóa của Đảng và Nhà nước.",
+            "Làm phai mờ bản sắc văn hóa và giá trị văn hóa của dân tộc Việt Nam."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Nội dung kẻ thù lợi dụng để chống phá cách mạng Việt Nam về vấn đề dân tộc là:",
+        "options": [
+            "Lợi dụng các mâu thuẫn nội bộ trong đồng bào dân tộc để kích động bạo loạn.",
+            "Lợi dụng những khó khăn ở vùng đồng bào dân tộc ít người và những tồn tại do lịch sử để lại.",
+            "Lợi dụng các mâu thuẫn giữa các dân tộc do nhiều nguyên nhân gây ra.",
+            "Lợi dụng các hủ tục lạc hậu của đồng bào dân tộc để kích động."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Các thế lực thù địch triệt để lợi dụng chính sách tự do tôn giáo của Đảng, Nhà nước ta để:",
+        "options": [
+            "Truyền bá mê tín dị đoan và tư tưởng phản động chủ nghĩa xã hội.",
+            "Truyền đạo trái phép nhằm thực hiện âm mưu tôn giáo hóa dân tộc.",
+            "Truyền bá mê tín dị đoan, tập hợp lực lượng để chống phá cách mạng.",
+            "Truyền bá mê tín và tổ chức lực lượng tiến hành khủng bố."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Thực hiện thủ đoạn chống phá trên lĩnh vực quốc phòng – an ninh nhằm:",
+        "options": [
+            "Mua chuộc cán bộ cao cấp của quân đội và sĩ quan trong lực lượng vũ trang.",
+            "Phủ nhận vai trò quốc phòng an ninh trong sự nghiệp đổi mới đất nước.",
+            "Phủ nhận vai trò lãnh đạo của Đảng trong lĩnh vực quốc phòng an ninh và đối với LLVT.",
+            "Chia rẽ gây mất đoàn kết quân đội, công an, dân quân tự vệ và bộ đội biên phòng."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Thủ đoạn chống phá trên lĩnh vực đối ngoại trong chiến lược “diễn biến hòa bình” nhằm chia rẽ:",
+        "options": [
+            "Việt Nam với các nước Xã hội Chủ nghĩa và các nước tiến bộ.",
+            "Việt Nam với Lào và các nước Xã hội Chủ nghĩa.",
+            "Việt Nam với Campuchia và các nước tiến bộ.",
+            "Việt Nam với Lào, Campuchia và các nước XHCN."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Trong quá trình bạo loạn, bọn phản động tìm mọi cách để:",
+        "options": [
+            "Mở rộng lực lượng trong và ngoài nước liên hiệp bằng quân sự.",
+            "Mở rộng phạm vi, quy mô, lực lượng, kêu gọi tài trợ của nước ngoài.",
+            "Mở rộng phạm vi, quy mô lực lượng, đập phá trụ sở, uy hiếp chính quyền địa phương.",
+            "Mở rộng phạm vi, quy mô lực lượng, đập phá trụ sở, lật đổ chính quyền địa phương."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Nguyên tắc xử lý khi có bạo loạn diễn ra là:",
+        "options": [
+            "Nhanh gọn, kiên quyết, linh hoạt, đúng đối tượng, không để lan rộng kéo dài.",
+            "Nhanh gọn, kiên quyết, triệt để, đúng đối tượng, không để lan rộng kéo dài.",
+            "Nhanh gọn, linh hoạt, khôn khéo, đúng đối tượng, không để lan rộng kéo dài.",
+            "Nhanh gọn, linh hoạt, mềm dẻo, đúng đối tượng, không để lan rộng kéo dài."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Mục tiêu phòng chống chiến lược “diễn biến hòa bình” là:",
+        "options": [
+            "Giữ vững ổn định chính trị xã hội của đất nước, tạo môi trường hòa bình để đẩy mạnh công nghiệp hóa, hiện đại hóa.",
+            "Bảo vệ vững chắc độc lập, chủ quyền thống nhất và toàn vẹn lãnh thổ của Tổ quốc.",
+            "Bảo vệ an ninh quốc gia, trật tự an toàn xã hội và nền văn hóa sự nghiệp đổi mới và lợi ích quốc gia dân tộc.",
+            "Tất cả đều đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Nhiệm vụ phòng chống chiến lược “diễn biến hòa bình” và bạo loạn lật đổ được xác định:",
+        "options": [
+            "Là nhiệm vụ cấp bách, hàng đầu trong các nhiệm vụ quốc phòng an ninh hiện nay.",
+            "Là nhiệm vụ cấp bách, trọng tâm trong các nhiệm vụ quốc phòng an ninh hiện nay.",
+            "Là nhiệm vụ cấp bách, quan trọng trong các nhiệm vụ quốc phòng an ninh hiện nay.",
+            "Là nhiệm vụ trọng tâm, hàng đầu của sự nghiệp cách mạng nước ta hiện nay."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Quan điểm chỉ đạo trong đấu tranh phòng chống chiến lược diễn biến hòa bình là:",
+        "options": [
+            "Là một cuộc đấu tranh dân tộc rất gay go, quyết liệt trong mọi lĩnh vực.",
+            "Là một cuộc đấu tranh giai cấp gay go, quyết liệt, lâu dài và phức tạp trên mọi lĩnh vực.",
+            "Là một cuộc đấu tranh giai cấp, dân tộc gay go, quyết liệt, lâu dài và phức tạp trên mọi lĩnh vực.",
+            "Là một cuộc chiến tranh chính trị quyết liệt giữa chủ nghĩa tư bản và CNXH."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Trong phòng chống chiến lược “diễn biến hòa bình” và bạo loạn lật đổ cần phát huy sức mạnh tổng hợp:",
+        "options": [
+            "Của khối đại đoàn kết toàn dân, của cả hệ thống chính trị, dưới sự lãnh đạo của Đảng.",
+            "Của lực lượng vũ trang nhân dân Việt Nam, dưới sự lãnh đạo của Đảng.",
+            "Của các lĩnh vực, các mặt trận, của cả nước, dưới sự lãnh đạo của Đảng.",
+            "Của các tổ chức chính trị xã hội, các tổ chức quần chúng, dưới sự lãnh đạo của Đảng."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Giải pháp phòng chống chiến lược diễn biến hòa bình, bạo loạn lật đổ là:",
+        "options": [
+            "Nâng cao nhận thức về âm mưu phá hoại của kẻ thù.",
+            "Xây dựng ý thức bảo vệ Tổ quốc cho toàn dân.",
+            "Xây dựng các tổ chức chính trị vững mạnh.",
+            "Xây dựng lực lượng quân đội, công an vững mạnh."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Giải pháp phòng chống chiến lược diễn biến hòa bình, bạo loạn lật đổ là:",
+        "options": [
+            "Đẩy mạnh công nghiệp hóa, hiện đại hóa, chống nguy cơ tụt hậu về kinh tế.",
+            "Xây dựng cơ sở chính trị - xã hội vững mạnh về mọi mặt.",
+            "Đẩy lùi các hủ tục lạc hậu, mê tín dị đoan và các tệ nạn xã hội.",
+            "Xây dựng lòng yêu nước cho tuổi trẻ, nhất là học sinh sinh viên."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Giải pháp phòng chống chiến lược diễn biến hòa bình, bạo loạn lật đổ là:",
+        "options": [
+            "Tăng cường quan hệ đối ngoại với các nước, các chế độ chính trị trên thế giới.",
+            "Tăng cường quan hệ với các nước XHCN và các Đảng Cộng sản trên thế giới.",
+            "Xây dựng, luyện tập các phương án, các tình huống chống diễn biến hòa bình, bạo loạn lật đổ.",
+            "Xây dựng các lực lượng chuyên trách để phòng chống diễn biến hòa bình, bạo loạn lật đổ."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "“Diễn biến hòa bình” là:",
+        "options": [
+            "Chiến lược cơ bản của chủ nghĩa đế quốc và các thế lực phản động.",
+            "Phương thức chủ yếu của chủ nghĩa đế quốc và các thế lực phản động.",
+            "Sách lược chủ yếu của chủ nghĩa đế quốc và các thế lực phản động.",
+            "Thủ đoạn cơ bản của chủ nghĩa đế quốc và các thế lực phản động."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Biện pháp của chủ nghĩa đế quốc và các thế lực phản động tiến hành chiến lược “diễn biến hòa bình” là:",
+        "options": [
+            "Biện pháp quân sự.",
+            "Biện pháp phi quân sự.",
+            "Biện pháp ngoại giao.",
+            "Biện pháp bạo loạn."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Chiến lược \"diễn biến hòa bình\" được bắt nguồn từ:",
+        "options": [
+            "Nước Mỹ.",
+            "Nước Nga.",
+            "Nước Đức.",
+            "Nước Pháp."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Chủ nghĩa đế quốc và các thế lực thù địch sử dụng chiến lược \"diễn biến hòa bình\" đối với Việt Nam nhằm:",
+        "options": [
+            "Xóa bỏ hệ thống chính trị, kinh tế.",
+            "Xóa bỏ vai trò lãnh đạo của Đảng.",
+            "Lật đổ chế độ, theo quỹ đạo của chúng.",
+            "Tự do hóa đời sống chính trị, xã hội."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Chiến lược \"diễn biến hòa bình\" bắt đầu hình thành từ:",
+        "options": [
+            "Năm 1930.",
+            "Năm 1954.",
+            "Năm 1960.",
+            "Năm 1945."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Mục tiêu của chủ nghĩa đế quốc và các thế lực thù địch sử dụng chiến lược \"diễn biến hòa bình\" đối với Việt Nam là:",
+        "options": [
+            "Xóa bỏ chế độ XHCN.",
+            "Thực hiện chế độ đa nguyên chính trị.",
+            "Thực hiện tự do chính trị - xã hội.",
+            "Xóa bỏ hệ thống chính trị - xã hội."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Mục đích chống phá tư tưởng - văn hóa trong chiến lược \"diễn biến hòa bình\" là:",
+        "options": [
+            "Xóa bỏ nguồn gốc tư tưởng XHCN.",
+            "Xóa bỏ chủ nghĩa Mác-Lênin, tư tưởng Hồ Chí Minh.",
+            "Xóa bỏ đường lối chính trị của Đảng Cộng sản.",
+            "Xóa bỏ tư tưởng vô sản, thiết lập tư tưởng tư sản."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Một trong những giải pháp phòng chống chiến lược \"diễn biến hòa bình\", BLLĐ:",
+        "options": [
+            "Chăm lo xây dựng lực lượng vũ trang ở địa phương vững mạnh.",
+            "Xây dựng hệ thống chính trị cá nước vững mạnh toàn diện.",
+            "Đẩy mạnh công nghiệp hóa hiện đại hóa, chống tụt hậu kinh tế.",
+            "Xây dựng lòng yêu nước cho tuổi trẻ nhất là học sinh, sinh viên."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nhiệm vụ cấp bách hàng đầu trong các nhiệm vụ QPAN ở nước ta là:",
+        "options": [
+            "Phòng chống chiến lược \"diễn biến hòa bình\", bạo loạn lật đổ.",
+            "Phòng chống địch tiến công hỏa lực bằng vũ khí công nghệ cao.",
+            "Phòng chống địch lợi dụng vấn đề dân tộc, tôn giáo.",
+            "Phòng chống tội phạm, tệ nạn xã hội và bảo vệ an ninh quốc gia."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Lực lượng tiến hành bạo loạn lật đổ thường là:",
+        "options": [
+            "Lực lượng ly khai, đối lập trong nước hoặc cấu kết với nước ngoài.",
+            "Lực lượng đối lập phối hợp chặt chẽ với lực lượng ly khai bên ngoài.",
+            "Lực lượng ly khai phối hợp với lực lượng dân chủ, nhân quyền.",
+            "Lực lượng bất mãn chống đối trong nước cấu kết với kẻ thù từ bên ngoài."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thực hiện chiến lược \"diễn biến hòa bình\", chủ nghĩa đế quốc và các thế lực thù địch khích lệ lối sống tư sản, từng bước làm phai nhạt mục tiêu, lý tưởng XHCN ở tầng lớp:",
+        "options": [
+            "Thanh niên, nhất là sinh viên.",
+            "Học sinh, sinh viên thành thị.",
+            "Công nhân các khu công nghiệp.",
+            "Người dân nghèo ở thành thị."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thực hiện chiến lược \"diễn biến hòa bình\" chống phá CNXH, CNĐQ và các thế lực thù địch luôn coi Việt Nam là:",
+        "options": [
+            "Một trọng điểm.",
+            "Vấn đề cơ bản.",
+            "Một trọng tâm.",
+            "Vấn đề trọng điểm."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Chủ nghĩa đế quốc và các thế lực thù địch thực hiện chiến lược \"diễn biến hòa bình\" đối với Việt Nam từ khi nào?",
+        "options": [
+            "Khi đưa quân vào xâm lược miền Nam.",
+            "Sau thất bại chiến tranh xâm lược Việt Nam.",
+            "Sau biến động chế độ XHCN ở Liên Xô.",
+            "Khi Việt Nam tiến hành sự nghiệp đổi mới."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Trong các nhiệm vụ QPAN hiện nay ở nước ta, phòng chống chiến lược \"diễn biến hòa bình\" là:",
+        "options": [
+            "Nhiệm vụ cấp bách hàng đầu.",
+            "Nhiệm vụ thường xuyên hàng đầu.",
+            "Nhiệm vụ cơ bản hàng đầu.",
+            "Nhiệm vụ chiến lược hàng đầu."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung nào sau đây là một trong những giải pháp phòng chống chiến lược \"diễn biến hòa bình\", bạo loạn lật đổ?",
+        "options": [
+            "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước và chăm lo nâng cao đời sống vật chất, tinh thần cho nhân dân lao động.",
+            "Xây dựng Đảng vững mạnh, xây dựng tinh thần đoàn kết và xây dựng các tổ chức quần chúng vững mạnh.",
+            "Đẩy lùi các hủ tục lạc hậu, mê tín dị đoan và các tệ nạn xã hội, chăm lo đời sống vật chất, tinh thần cho nhân dân lao động.",
+            "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước, chống nguy cơ tụt hậu về kinh tế, khắc phục các tiêu cực trong xã hội."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thủ đoạn trên lĩnh vực QPAN trong chiến lược \"diễn biến hòa bình\" là:",
+        "options": [
+            "Phủ nhận vai trò quốc phòng - an ninh trong sự nghiệp đổi mới.",
+            "Phủ nhận vai trò lãnh đạo của Đảng trong lĩnh vực QPAN.",
+            "Mua chuộc cán bộ cao cấp của quân đội và lực lượng vũ trang.",
+            "Chia rẽ quân đội, công an, dân quân tự vệ và bộ đội biên phòng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Phòng chống chiến lược \"diễn biến hòa bình\", BLLĐ, chúng ta phải thực hiện giải pháp:",
+        "options": [
+            "Xây dựng cơ sở chính trị - xã hội vững mạnh về mọi mặt.",
+            "Đẩy mạnh công nghiệp hóa, chống nguy cơ tụt hậu kinh tế.",
+            "Đẩy lùi các hủ tục lạc hậu, mê tín dị đoan và các tệ nạn xã hội.",
+            "Xây dựng lòng yêu nước cho tuổi trẻ nhất là học sinh, sinh viên."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Chống phá về chính trị trong chiến lược \"diễn biến hòa bình\", kẻ thù âm mưu thực hiện:",
+        "options": [
+            "Xóa bỏ vai trò lãnh đạo của Đảng và chế độ XHCN.",
+            "Đối lập chủ nghĩa Mác-Lênin và tư tưởng Hồ Chí Minh.",
+            "Phủ định chủ nghĩa Mác-Lênin, xóa bỏ CNXH.",
+            "Đối lập nhiệm vụ kinh tế và quốc phòng, an ninh trật tự."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thực hiện thủ đoạn chống phá về chính trị trong chiến lược \"diễn biến hòa bình\" đối với cách mạng Việt Nam, kẻ thù tiến hành:",
+        "options": [
+            "Phá vỡ khối đại đoàn kết toàn dân của các tổ chức chính trị, xã hội.",
+            "Kích động đòi thực hiện chế độ \"đa nguyên chính trị, đa đảng đối lập\".",
+            "Chia rẽ nội bộ, kích động gây rối loạn các tổ chức trong xã hội.",
+            "Cô lập Đảng, Nhà nước với quân đội nhân dân và công an nhân dân."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Để cùng cả nước phòng chống chiến lược “diễn biến hòa bình”, BLLĐ, sinh viên phải:",
+        "options": [
+            "Đẩy mạnh sự nghiệp công nghiệp hóa, hiện đại hóa đưa đất nước phát triển.",
+            "Phát hiện và góp phần đấu tranh đánh bại mọi âm mưu, thủ đoạn của kẻ thù.",
+            "Nâng cao đời sống vật chất, tinh thần cho công nhân và nhân dân lao động.",
+            "Chăm lo xây dựng lực lượng vũ trang ở địa phương vững mạnh toàn diện."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Một trong những nội chống phá về kinh tế của chiến lược “diễn biến hòa bình” là:",
+        "options": [
+            "Làm mất vai trò chủ đạo của kinh tế Nhà nước, từng bước lệ thuộc chủ nghĩa đế quốc.",
+            "Khuyến khích kinh tế nước ngoài phát triển giữ vai trò chủ đạo của kinh tế đất nước.",
+            "Kêu gọi kinh tế cá thể phát triển, từng bước đưa kinh tế tư nhân thay thế kinh tế quốc doanh.",
+            "Phát triển nhanh kinh tế tư bản Nhà nước, giữ vai trò chủ đạo của kinh tế đất nước."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Chống phá trên lĩnh vực đối ngoại trong chiến lược “diễn biến hòa bình” kẻ thù thực hiện thủ đoạn:",
+        "options": [
+            "Chia rẽ Việt Nam với các nước tiến bộ, yêu chuộng hòa bình.",
+            "Chia rẽ Việt Nam với Lào, Campuchia và các nước XHCN.",
+            "Chia rẽ Việt Nam với Lào và các nước XHCN còn lại.",
+            "Chia rẽ Việt Nam với Campuchia và các nước tiến bộ trên thế giới."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Thực hiện thủ đoạn “diễn biến hòa bình” về văn hóa, kẻ thù tập trung tấn công vào:",
+        "options": [
+            "Bản sắc văn hóa và giá trị văn hóa của dân tộc Việt Nam.",
+            "Truyền thống kinh nghiệm của văn hóa Việt Nam.",
+            "Những sản phẩm văn hóa quý báu của chúng ta.",
+            "Nền văn hóa và sản phẩm văn hóa dân tộc Việt Nam."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thực hiện thủ đoạn trong lĩnh vực tôn giáo, dân tộc của chiến lược “diễn biến hòa bình”, kẻ thù lợi dụng vấn đề dân tộc để kích động tư tưởng:",
+        "options": [
+            "Đòi ly khai, tự quyết dân tộc.",
+            "Chia rẽ các dân tộc, gây mâu thuẫn.",
+            "Đòi biểu tình, ly khai lập khu tự trị.",
+            "Gây mâu thuẫn giữa các dân tộc."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thực hiện thủ đoạn \"diễn biến hòa bình\" trong lĩnh vực tôn giáo - dân tộc, kẻ thù triệt để lợi dụng chính sách tự do tôn giáo của Đảng ta để:",
+        "options": [
+            "Truyền bá mê tín dị đoan và tư tưởng phản động chống CNXH.",
+            "Truyền đạo trái phép nhằm thực hiện âm mưu tôn giáo hóa dân tộc.",
+            "Tuyên truyền để tập hợp lực lượng phản động chống phá cách mạng.",
+            "Xây dựng lực lượng phản động làm tay sai chống phá cách mạng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Phòng chống chiến lược \"diễn biến hòa bình\", bạo loạn lật đổ ở nước ta hiện nay, chúng ta phải thực hiện giải pháp:",
+        "options": [
+            "Nâng cao nhận thức về âm mưu, thủ đoạn của các thế lực thù địch, nắm chắc mọi diễn biến không để bị động và bất ngờ.",
+            "Nâng cao tinh thần yêu nước, hăng hái lao động sản xuất và tích cực phòng chống thiên tai cho nhân dân.",
+            "Nâng cao đời sống vật chất, tinh thần cho nhân dân, đẩy lùi các hủ tục lạc hậu, mê tín dị đoan và các tệ nạn xã hội.",
+            "Nâng cao ý thức dân tộc, yêu Tổ quốc, yêu đồng bào, trách nhiệm công dân cho tuổi trẻ nhất là học sinh, sinh viên."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Trong chiến lược \"diễn biến hòa bình\", đối với quân đội, công an, các thế lực thù địch chủ trương vô hiệu hóa sự lãnh đạo của Đảng với luận điểm:",
+        "options": [
+            "Công cụ hóa.",
+            "Phi chính trị hóa.",
+            "Lực lượng hóa.",
+            "Xã hội hóa."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Trong quá trình bạo loạn, bọn phản động tìm mọi cách để mở rộng:",
+        "options": [
+            "Phạm vi, quy mô, lực lượng, kêu gọi tài trợ của nước ngoài.",
+            "Quy mô, lực lượng, kêu gọi nước ngoài can thiệp quân sự.",
+            "Lực lượng, uy hiếp chính quyền địa phương, trung ương.",
+            "Phạm vi, lực lượng, đập phá trụ sở Đảng, chính quyền."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Một trong những mục tiêu phòng chống chiến lược \"diễn biến hòa bình\":",
+        "options": [
+            "Bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ.",
+            "Giữ vững ổn định chính trị trên cơ sở độc lập chủ quyền dân tộc.",
+            "Bảo vệ vững chắc độc lập, chủ quyền của quốc gia, dân tộc.",
+            "Bảo vệ vững chắc chế độ nhà nước Việt Nam XHCN."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thủ đoạn về chính trị trong chiến lược \"diễn biến hòa bình\", được kẻ thù xác định là:",
+        "options": [
+            "Thủ đoạn cơ bản.",
+            "Thủ đoạn chủ yếu.",
+            "Thủ đoạn hậu thuẫn.",
+            "Thủ đoạn hàng đầu."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Thực hiện thủ đoạn chính trị trong chiến lược \"diễn biến hòa bình\", các thế lực thù địch thường khai thác, tận dụng những sơ hở trong đường lối, chủ trương, chính sách của Đảng, nhà nước ta để kích động:",
+        "options": [
+            "Công nhân đình công phản đối.",
+            "Quần chúng biểu tình, chống đối.",
+            "Học sinh, sinh viên đình công.",
+            "Nhân dân gây rối chính quyền."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Chủ trương vô hiệu hóa sự lãnh đạo của Đảng, thực hiện âm mưu \"phi chính trị hóa\" của chủ nghĩa đế quốc và các thế lực thù địch trong \"diễn biến hòa bình\" nhằm làm cho quân đội nhân dân Việt Nam:",
+        "options": [
+            "Mất bản chất cách mạng, xa rời mục tiêu chiến đấu.",
+            "Phai nhạt vai trò nòng cốt, xa rời quần chúng nhân dân.",
+            "Mất bản chất nhân dân, mất truyền thống chống ngoại xâm.",
+            "Mất tính kiên cường, bất khuất, xa rời CNXH."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Từ sau thất bại ở Việt Nam, Mỹ đã từng bước thay đổi chiến lược chuyển từ tiến công bằng sức mạnh quân sự là chính, sang tiến công bằng:",
+        "options": [
+            "\"Diễn biến hòa bình\" là chủ yếu.",
+            "Vượt trên ngăn chặn là chủ yếu.",
+            "Chiến lược ngăn chặn là chủ yếu.",
+            "Đánh đòn phủ đầu là chủ yếu."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Đặc trưng của chiến lược \"diễn biến hòa bình\" là sử dụng:",
+        "options": [
+            "Biện pháp phi quân sự.",
+            "Chính sách ngoại giao.",
+            "Biện pháp kinh tế.",
+            "Thủ đoạn vũ trang."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Để nhanh chóng đạt được mục đích của \"diễn biến hòa bình\", chủ nghĩa đế quốc và các thế lực thù địch thường tiến hành thủ đoạn:",
+        "options": [
+            "Can thiệp quân sự.",
+            "Bạo loạn vũ trang.",
+            "Bạo loạn lật đổ.",
+            "Hành động bạo lực."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Hoa Kỳ xóa bỏ lệnh cấm vận kinh tế đối với Việt Nam từ:",
+        "options": [
+            "03/02/1995.",
+            "03/02/1994.",
+            "02/03/1994.",
+            "03/02/1995."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Đối với Việt Nam, sau thất bại về quân sự (năm 1975), chủ nghĩa đế quốc và các thế lực thù địch chuyển sang chiến lược \"diễn biến hòa bình\" với nhiều thủ đoạn như:",
+        "options": [
+            "Bao vây cấm vận kinh tế, cô lập về ngoại giao.",
+            "Cấm vận kinh tế, văn hóa và cô lập ngoại giao.",
+            "Bao vây, phong tỏa chính trị, quân sự, an ninh.",
+            "Cấm vận triệt để về chính trị, quân sự, văn hóa."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nguyên tắc xử lý khi có bạo loạn diễn ra là:",
+        "options": [
+            "Kiên quyết, triệt để, đúng đối tượng, không để dây dưa, lan rộng, kéo dài.",
+            "Nhanh gọn, linh hoạt, mạnh mẽ, đúng đối tượng, không để lan rộng, kéo dài.",
+            "Nhanh gọn, kiên quyết, linh hoạt, đúng đối tượng, không để lan rộng, kéo dài.",
+            "Kiên quyết, triệt để, nhẹ nhàng, đúng đối tượng, không để lan rộng, kéo dài."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Một trong những mục tiêu phòng chống chiến lược \"diễn biến hòa bình\", bạo loạn lật đổ ở nước ta là:",
+        "options": [
+            "Bảo vệ an ninh quốc gia, trật tự an toàn xã hội và nền văn hóa.",
+            "Bảo vệ hệ thống chính trị, các tổ chức quần chúng và văn hóa.",
+            "Bảo vệ chủ quyền lãnh thổ của quốc gia và bảo vệ nhân dân.",
+            "Bảo vệ vững chắc nền văn hóa và những giá trị tinh thần của dân tộc."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Trong phòng chống chiến lược \"diễn biến hòa bình\", bạo loạn lật đổ, chúng ta phải:",
+        "options": [
+            "Bảo vệ sự nghiệp đổi mới, lợi ích quốc gia, lợi ích dân tộc.",
+            "Bảo vệ đường lối đổi mới và quyền làm chủ của nhân dân.",
+            "Bảo vệ quốc gia, dân tộc và an ninh, trật tự an toàn xã hội.",
+            "Bảo vệ vững chắc hòa bình, sự nghiệp phát triển kinh tế."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Đấu tranh phòng chống chiến lược \"diễn biến hòa bình\" ở nước ta là một cuộc đấu tranh:",
+        "options": [
+            "Dân tộc gay go, một mất một còn trên mọi lĩnh vực của đời sống xã hội.",
+            "Đối đầu lịch sử giai cấp gay go, quyết liệt và phức tạp trên mọi lĩnh vực.",
+            "Giai cấp, dân tộc gay go, quyết liệt, lâu dài và phức tạp trên mọi lĩnh vực.",
+            "Chính trị lâu dài, phức tạp giữa chủ nghĩa tư bản và CNXH."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Cơ sở manh nha hình thành chiến lược \"diễn biến hòa bình\" là:",
+        "options": [
+            "Thực hiện chiến lược \"ngăn chặn\" chủ nghĩa cộng sản.",
+            "Thất bại trong chiến tranh thế giới lần thứ hai.",
+            "Lôi kéo các nước tiến bộ ở Tây Âu phụ thuộc vào Mỹ.",
+            "Phá hoại các nước XHCN còn non yếu."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung nào sau đây là trách nhiệm của sinh viên trong phòng chống chiến lược \"diễn biến hòa bình\", bạo loạn lật đổ?",
+        "options": [
+            "Xây dựng ý thức bảo vệ Tổ quốc cho toàn dân.",
+            "Thường xuyên nêu cao tinh thần cảnh giác cách mạng.",
+            "Xây dựng và luyện tập các phương án chống bạo loạn lật đổ.",
+            "Thường xuyên xây dựng cơ sở chính trị - xã hội vững mạnh."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Nội dung chính của chiến lược \"diễn biến hòa bình\" là kẻ thù sử dụng mọi thủ đoạn kinh tế, chính trị, văn hóa, xã hội, tư tưởng, đối ngoại, quốc phòng, an ninh... để:",
+        "options": [
+            "Phá hoại, làm suy yếu các nước XHCN từ bên trong.",
+            "Chia rẽ, thành lập các tổ chức phản động để can thiệp quân sự.",
+            "Phá hoại các nước từ bên trong để dễ dàng tiến công từ bên ngoài.",
+            "Chia rẽ, gây mâu thuẫn để các nước xẩy ra xung đột, lấy cớ tiến công."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Một trong những nội dung kẻ thù chống phá về chính trị trong \"diễn biến hòa bình\" là:",
+        "options": [
+            "Phá vỡ hệ thống nguyên tắc tổ chức trong bộ máy lãnh đạo Đảng, Nhà nước ta.",
+            "Chia rẽ mối quan hệ giữa Đảng với nhân dân và khối đại đoàn kết toàn dân tộc.",
+            "Chia rẽ sự thống nhất của các tổ chức, nhất là tổ chức chính trị, quân sự.",
+            "Phá vỡ hệ thống nguyên tắc tổ chức của Đảng, chính quyền, tổ chức đoàn thể."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Đảng ta xác định nội dung bảo vệ Tổ quốc Việt Nam XHCN hiện nay là toàn diện, vì kẻ thù thực hiện chiến lược \"diễn biến hòa bình\":",
+        "options": [
+            "Với nhiều đòn tiến công trên tất cả mọi lĩnh vực.",
+            "Kết hợp với răn đe quân sự, biểu tình và bạo loạn lật đổ.",
+            "Với bao vây cấm vận, cô lập ngoại giao, răn đe quân sự.",
+            "Kết hợp với các biện pháp vũ trang và phi vũ trang."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Để đạt được ý đồ thống trị thế giới và xóa bỏ các nước XHCN còn lại, chủ nghĩa đế quốc tiếp tục điều chỉnh chiến lược toàn cầu, trong đó chiến lược \"diễn biến hòa bình\" là:",
+        "options": [
+            "Bộ phận chủ yếu.",
+            "Bộ phận trọng yếu.",
+            "Bộ phận quan trọng.",
+            "Bộ phận quyết định."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Khởi đầu thực hiện bạo loạn lật đổ, các thế lực thù địch thường tiến hành:",
+        "options": [
+            "Gây rối, làm mất ổn định trật tự an toàn xã hội.",
+            "Bạo động, đập phá gây mất trật tự nơi công cộng.",
+            "Ngăn chặn, gây rối, chống người thi hành công vụ.",
+            "Tập hợp lực lượng, tuyên truyền nói xấu chế độ."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Trong chiến lược \"diễn biến hòa bình\", đối với sinh viên, kẻ thù đặc biệt coi trọng:",
+        "options": [
+            "Tuyên truyền lối sống tư sản, tham gia hoạt động các tổ chức phi chính phủ.",
+            "Khích lệ lối sống tư sản, từng bước làm phai nhạt mục tiêu XHCN.",
+            "Kích động đòi yêu sách, phúc lợi xã hội và tham gia các tổ chức phản động.",
+            "Khích lệ lối sống tự do, xuống đường đấu tranh đòi dân chủ phương tây."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Một trong những chiêu bài mà chủ nghĩa đế quốc và các thế lực thù địch sử dụng trong \"diễn biến hòa bình\" đối với Việt Nam là:",
+        "options": [
+            "Dân chủ, nhân quyền.",
+            "Tự do, dân chủ.",
+            "Nhân quyền, bình đẳng.",
+            "Bình đẳng, tự do."
+        ],
+        "dapan": 0
+    }
+]
