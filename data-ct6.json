@@ -1,0 +1,302 @@
+[
+  {
+    "cauhoi": "Luật bảo vệ môi trường được quốc hội thông qua:",
+    "options": [
+      "Ngày 23/8 năm 2014.",
+      "Ngày 23/10 năm 2014.",
+      "Ngày 23/6 năm 2014.",
+      "Ngày 23/12 năm 2014."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Luật bảo vệ môi trường có hiệu lực:",
+    "options": [
+      "Ngày 23/6 năm 2014.",
+      "Ngày 01/01 năm 2015.",
+      "Ngày 23/12 năm 2014.",
+      "Ngày 01/05 năm 2015."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Hành vi nào vi phạm môi trường:",
+    "options": [
+      "Trồng cây phủ xanh đồi trọc.",
+      "Chuyển đổi cơ cấu cây trồng.",
+      "Đốt phá rừng.",
+      "Giao việc bảo vệ rừng cho tổ chức, cá nhân."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Hành động làm mất cân bằng sinh thái, hủy hoại môi trường là:",
+    "options": [
+      "Khai thác khoáng sản đúng quy hoạch.",
+      "Khai thác khoáng sản một cách bừa bãi.",
+      "Đảm bảo điều kiện về môi trường khi khai thác tài nguyên.",
+      "An toàn cho người và tài sản khi khai thác khoáng sản."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Hành động gây ô nhiễm môi trường nước:",
+    "options": [
+      "Thải dầu mỡ, hoá chất độc hại vào nguồn nước.",
+      "Tự khai thác nước ngầm.",
+      "Xử lý hóa chất độc hại đúng quy định.",
+      "Khơi thông dòng chảy của nguồn nước."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Hành động gây ô nhiễm môi trường không khí:",
+    "options": [
+      "Trồng thêm cây xanh.",
+      "Sử dụng các loại xe cơ giới đạt tiêu chuẩn về khí thải.",
+      "Vứt xác động vật bừa bãi.",
+      "Mở nhạc với cường độ đúng quy định."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Hành động vi phạm pháp luật về môi trường:",
+    "options": [
+      "Kinh doanh gia cầm đúng quy định.",
+      "Nuôi trồng thủy hải sản phục vụ xuất khẩu.",
+      "Có ý thức bảo vệ động vật hoang dã.",
+      "Kinh doanh các loại thực vật, động vật quý, hiếm trong danh mục quy định cấm của Chính phủ."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Vi phạm pháp luật về môi trường trong xuất nhập khẩu:",
+    "options": [
+      "Xuất khẩu nông sản sạch nhập khẩu.",
+      "Xuất nhập khẩu chất thải.",
+      "Nhập khẩu nguyên liệu phục vụ sản xuất.",
+      "Xuất khẩu hải sản đúng quy định."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Đánh bắt hải sản bất hợp pháp gây nguy hại cho môi trường:",
+    "options": [
+      "Dùng xung điện khai thác hải sản.",
+      "Dùng tàu thuyền nhỏ khai thác hải sản.",
+      "Dùng thuyền câu hải sản.",
+      "Sử dụng tàu công suất lớn đánh bắt xa bờ."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Cơ sở kinh doanh thực hiện đúng pháp luật về môi trường nước:",
+    "options": [
+      "Vận chuyển chất thải, thải trộm ra kênh rạch.",
+      "Thải trực tiếp nước thải ra môi trường.",
+      "Chôn chất thải gần nguồn nước.",
+      "Xử lý nước thải đúng quy định trước khi thải ra môi trường."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Hành vi nào ảnh hưởng nghiêm trọng tới môi trường biển:",
+    "options": [
+      "Sử dụng thuốc nổ để khai thác hải sản.",
+      "Thu gom rác thải nhựa dọc bờ biển.",
+      "Đánh bắt cá ngừ đại dương xuất khẩu.",
+      "Bảo tồn rùa biển quý hiếm."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Hành vi làm ảnh hưởng đến biến đổi khí hậu cần lên án:",
+    "options": [
+      "Thành lập hội đồng thôn bản lập khế ước để bảo vệ rừng.",
+      "Chặt phá đốt rừng bừa bãi làm nương rẫy.",
+      "Khai thác lâm sản đúng quy định.",
+      "Bảo vệ rừng nguyên sinh, phòng hộ."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Nguyên nhân xả rác thải sinh hoạt bừa bãi:",
+    "options": [
+      "Vô tình thực hiện hành vi đó.",
+      "Cho là việc làm đó không sai.",
+      "Thiếu ý thức bảo vệ môi trường.",
+      "Do không được nhắc nhở."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Nguyên nhân cơ sở sản xuất kinh doanh xả trộm nước thải chưa được xử lý ra môi trường:",
+    "options": [
+      "Vì lợi nhuận, thiếu đạo đức kinh doanh.",
+      "Chưa hiểu biết về luật bảo vệ môi trường.",
+      "Chưa được các cơ quan chức năng nhắc nhở.",
+      "Thiếu hụt kinh phí."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Hiện tượng chặt phá rừng còn xảy ra ở nhiều nơi rất nghiêm trọng do:",
+    "options": [
+      "Cuộc sống mưu sinh của một số người.",
+      "Chưa được tuyên truyền nhắc nhở.",
+      "Xử lý vi phạm pháp luật về môi trường chưa thực sự nghiêm minh.",
+      "Địa phương chưa quan tâm đến bảo vệ môi trường."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Khó khăn trong quá trình xử lý về tội phạm môi trường:",
+    "options": [
+      "Người dân, người lao động không tố cáo.",
+      "Thủ đoạn của loại tội phạm này ngày một tinh vi hơn.",
+      "Do cơ sở vi phạm không báo cáo.",
+      "Chưa thấy tác động xấu tới môi trường."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Khó khăn về xử lý vi phạm môi trường trong quá trình hội nhập kinh tế:",
+    "options": [
+      "Các chủ đầu tư nước ngoài thực hiện nghiêm luật môi trường.",
+      "Hệ thống xử lý môi trường phức tạp.",
+      "Nhiều vi phạm về môi trường của chủ đầu tư nước ngoài.",
+      "Cơ sở, sản xuất kinh doanh báo cáo đầy đủ về môi trường."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Vì sao tổ chức cá nhân vi phạm môi trường ngay nơi sản xuất hoặc ở khu dân cư mà khó phát hiện.",
+    "options": [
+      "Vì người lao động sợ mất việc.",
+      "Vì người dân sợ va chạm.",
+      "Chưa phát huy được tinh thần làm chủ của nhân dân trong lĩnh vực bảo vệ môi trường.",
+      "Chưa nhận thức đúng về môi trường."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Một trong những giải pháp đấu tranh phòng chống những hành vi vi phạm và tội phạm về môi trường:",
+    "options": [
+      "Xử phạt hành chính tội phạm về môi trường.",
+      "Tiếp nhận báo cáo về môi trường của cơ sở sản xuất.",
+      "Khuyến khích cá nhân tố cáo vi phạm về môi trường.",
+      "Tổ chức thực hiện triệt để các chủ trương, chính sách của Đảng, pháp luật của Nhà nước về bảo vệ môi trường."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Để phòng ngừa, đấu tranh chống tội phạm và vi phạm pháp luật về môi trường chúng ta phải:",
+    "options": [
+      "Dựa vào tinh thần tự giác của người dân.",
+      "Phụ thuộc vào sự quản lý về môi trường của cơ sở.",
+      "Dựa vào lực lượng thanh niên tình nguyện.",
+      "Đẩy mạnh công tác tuyên truyền, giáo dục nâng cao nhận thức và trách nhiệm của mọi công dân."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Để nâng cao hiệu quả công tác đấu tranh phòng, chống tội phạm và vi phạm pháp luật về môi trường phải:",
+    "options": [
+      "Quan trắc môi trường.",
+      "Hoàn thiện cơ chế, chính sách, hệ thống pháp luật về bảo vệ tài nguyên và môi trường.",
+      "Thực hiện trồng nhiều cây xanh.",
+      "Thu gom rác thải sinh hoạt."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Để phát hiện hành vi vi phạm môi trường cần:",
+    "options": [
+      "Đặt camera quan sát.",
+      "Thông qua báo cáo của các cơ sở về môi trường.",
+      "Tăng cường công tác thanh tra, kiểm tra cơ sở, địa bàn có nguy cơ gây ô nhiễm môi trường.",
+      "Căn cứ vào phát hiện của quần chúng."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Để phát minh, sáng chế công nghệ phục vụ cho bảo vệ môi trường, đấu tranh phòng, chống tội phạm về môi trường thực hiện giải pháp:",
+    "options": [
+      "Phổ biến luật môi trường.",
+      "Tuyên truyền bảo vệ môi trường.",
+      "Phát động phong trào vì môi trường.",
+      "Tổ chức nghiên cứu các đề tài khoa học, chuyên đề về môi trường."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Những hành động nào sau đây làm suy thoái môi trường:",
+    "options": [
+      "Sử dụng thuốc bảo vệ thực vật bừa bãi, săn bắt động vật hoang dã.",
+      "Trồng cây phủ xanh đồi trọc.",
+      "Bảo vệ sinh vật có tên trong sách đỏ.",
+      "Không chặt phá rừng bừa bãi."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Hành động bảo vệ môi trường biển là:",
+    "options": [
+      "Đánh bắt hải sản bằng chất nổ.",
+      "Tăng cường đánh bắt hải sản ở ven bờ.",
+      "Khai thác hợp lí kết hợp cải tạo, phục hồi và nuôi bổ sung tài nguyên biển.",
+      "Dùng hóa chất hoặc xung điện để đánh bắt hải sản."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Luật Bảo vệ môi trường quy định việc bảo vệ môi trường nhằm:",
+    "options": [
+      "Bảo vệ sức khỏe của nhân dân, phục vụ sự phát triển bền vững của đất nước.",
+      "Bảo vệ phát triển kinh tế rừng.",
+      "Bảo vệ môi trường không khí.",
+      "Bảo vệ phát triển kinh tế biển."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Lực lượng làm nòng cốt đấu tranh phòng chống tội phạm về môi trường:",
+    "options": [
+      "Cảnh sát hình sự.",
+      "Cảnh sát kinh tế.",
+      "An ninh nhân dân.",
+      "Cảnh sát môi trường."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Đối với chất thải công nghiệp, luật bảo vệ môi trường quy định:",
+    "options": [
+      "Đổ trực tiếp ra môi trường.",
+      "Tự do chuyên chở chất thải từ nơi này đến nơi khác.",
+      "Các tổ chức, cá nhân phải có trách nhiệm xử lý chất thải bằng công nghệ thích hợp.",
+      "Chôn vùi dưới đất."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Hành động của con người gây tác động xấu môi trường là:",
+    "options": [
+      "Khắc phục ô nhiễm, suy thoái, cải thiện phục hồi môi trường.",
+      "Khai thác sử dụng hợp lý tài nguyên thiên nhiên nhằm giữ môi trường trong lành.",
+      "Xây dựng môi trường \"Xanh, sạch, đẹp\".",
+      "Chặt phá rừng bừa bãi, săn bắt động vật hoang dã."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Hành vi nào vi phạm luật bảo vệ môi trường:",
+    "options": [
+      "Khai thác sử dụng hợp lý tài nguyên thiên nhiên, giữ môi trường trong lành.",
+      "Giữ gìn phòng ngừa hạn chế tác động xấu đến môi trường.",
+      "Hình thành nếp sống thói quen giữ vệ sinh môi trường.",
+      "Thải dầu mỡ, hoá chất độc hại, quá giới hạn cho phép vào nguồn nước."
+    ],
+    "dapan": 3
+  }
+]
