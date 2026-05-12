@@ -1,0 +1,312 @@
+[
+    {
+        "cauhoi": "Ngâm bản là:",
+        "options": [
+            "Xác định góc bản và hướng bản cho súng để đường đạn đi qua điểm định bản trên mục tiêu.",
+            "Hướng thẳng trục nòng súng vào mục tiêu, bóp cò.",
+            "Hướng súng vào mục tiêu, tạo cho súng một góc bản về tâm, hướng, cự ly để đưa quỹ đạo đường đạn vào điểm định bản.",
+            "Điểm được xác định trước sao cho khi ngâm vào đó để bản, thì quỹ đạo của đường đạn sẽ đi qua điểm định bản trên mục tiêu."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Đường ngâm cơ bản là:",
+        "options": [
+            "Là đường thẳng được tính từ đỉnh đầu ngâm, sao cho đỉnh đầu ngâm thẳng với điểm định bản trên mục tiêu.",
+            "Là đường thẳng từ mặt người ngâm qua chính giữa mép trên khe thước ngâm đến điểm định bản trên mục tiêu, với điều kiện mặt súng không bị nghiêng.",
+            "Là đường thẳng từ mặt người ngâm qua chính giữa mép trên khe thước ngâm đến điểm chính giữa mép trên đầu ngâm.",
+            "Là đường thẳng được tính từ mặt người ngâm qua chính giữa mép trên khe thước ngâm đến mục tiêu."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Điểm ngâm đúng là:",
+        "options": [
+            "Xác định góc bản và hướng bản cho súng để đường đạn đi qua điểm định bản trên mục tiêu.",
+            "Hướng thẳng trục nòng súng vào mục tiêu, bóp cò.",
+            "Hướng súng vào mục tiêu, tạo cho súng một góc bản về tâm, hướng, cự ly để đưa quỹ đạo đường đạn vào điểm định bản.",
+            "Điểm được xác định trước sao cho khi ngâm vào đó để bản, thì quỹ đạo của đường đạn sẽ đi qua điểm định bản trên mục tiêu."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Đường ngâm đúng là:",
+        "options": [
+            "Xác định góc bản và hướng bản cho súng để đường đạn đi qua điểm định bản trên mục tiêu.",
+            "Hướng ngâm cơ bản được dóng vào điểm ngâm đã xác định với điều kiện mặt súng thẳng bằng.",
+            "Là dòng súng vào mục tiêu, lấy góc bản và hướng bản để đưa quỹ đạo đường đạn vào điểm định ngâm.",
+            "Là đường thẳng từ mặt người ngâm qua chính giữa mép trên khe thước ngâm đến điểm chính giữa mép trên đầu ngâm."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Thực chất của lấy đường ngâm cơ bản là:",
+        "options": [
+            "Là đường thẳng trục nòng súng vào mục tiêu, bóp cò.",
+            "Là đưa đường ngâm đúng đến điểm định bản trên mục tiêu.",
+            "Là tạo cho súng một góc bản về tâm và hướng.",
+            "Là tạo cho súng thẳng bằng để bản trúng mục tiêu."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Thực chất của lấy đường ngắm đúng là:",
+        "options": [
+            "Là đưa đường ngắm cơ bản đến điểm định ngắm trên mục tiêu.",
+            "Là đưa đường ngắm đúng đến điểm định bản trên mục tiêu.",
+            "Là tạo cho súng một góc bản về tâm và hướng.",
+            "Là tạo cho súng thẳng bằng để bản trúng mục tiêu."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Khi bản súng tiểu liên AK, với góc bản nào dưới đây đường đạn sẽ đi xa nhất:",
+        "options": [
+            "Góc bản = 450.",
+            "Góc bản < 450.",
+            "Góc bản = 350.",
+            "Góc bản > 350."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Điểm bản đúng là:",
+        "options": [
+            "Là điểm ngầm chính giữa mép dưới mục tiêu mà đạn đi qua.",
+            "Là điểm xác định trước trên mục tiêu mà đường ngắm cơ bản chiếu vào.",
+            "Là điểm chạm của súng, đạn trên mục tiêu.",
+            "Là điểm đã được xác định trên mục tiêu mà đạn đi qua."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Khi mặt súng bị nghiêng thì điểm chạm của đạn trên mục tiêu:",
+        "options": [
+            "Không sai lệch.",
+            "Nghiêng bên nào lệch bên đó và thấp hơn điểm định bản.",
+            "Nghiêng bên nào lệch bên đó và cao hơn điểm định bản.",
+            "Nghiêng bên nào lệch bên đó nhưng không cao, không thấp."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Với mục tiêu cao, lớn ta chọn thước ngắm, điểm ngắm:",
+        "options": [
+            "Thước ngắm lớn hơn cự ly bản, chọn điểm ngắm chính giữa mục tiêu.",
+            "Thước ngắm tương ứng với cự ly bản, chọn điểm ngắm chính giữa mục tiêu.",
+            "Thước ngắm tương ứng với cự ly bản, chọn điểm ngắm chính giữa mép dưới mục tiêu.",
+            "Thước ngắm nhỏ hơn cự ly bản, chọn điểm ngắm chính giữa mép dưới mục tiêu."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Sai đường ngắm cơ bản là:",
+        "options": [
+            "Sai về góc bản, cự ly bản.",
+            "Sai về hướng bản, động tác bản.",
+            "Sai về góc bản và hướng bản.",
+            "Sai lệch về hướng bản, góc bản, cự ly bản và động tác bản."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Như thế nào là lấy sai đường ngắm cơ bản:",
+        "options": [
+            "Đỉnh đầu ngắm ở chính giữa và không ngang bằng với hai mép trên của thành khe ngắm.",
+            "Đỉnh đầu ngắm không ở chính giữa và ngang bằng với hai mép trên của thành khe ngắm.",
+            "Lấy thước ngắm không đúng, định đầu ngắm ở chính giữa và ngang bằng với hai mép trên của thành khe ngắm.",
+            "Là sai góc bản, điểm ngắm, đồng thời mặt súng bị nghiêng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Sai điểm ngắm:",
+        "options": [
+            "Khi bản, ngắm sai điểm ngắm bao nhiêu, thì điểm chạm trên mục tiêu sai lệch bấy nhiêu.",
+            "Khi bản, nếu ngắm sai điểm ngắm nhưng đường ngắm cơ bản chính xác, thì điểm chạm trên mục tiêu không sai lệch.",
+            "Khi bản, nếu ngắm sai điểm ngắm nhỏ, thì cự ly bản càng xa, độ sai lệch càng lớn.",
+            "Khi bản, nếu ngắm sai điểm ngắm bao nhiêu, thì điểm chạm trên mục tiêu thấp và lệch sang trái so với điểm định bản trúng bấy nhiêu."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Điểm ngắm đúng là:",
+        "options": [
+            "Là điểm chiếu thẳng từ mặt người ngắm qua chính giữa mép trên khe thước ngắm đến điểm chính giữa mép trên đầu ngắm.",
+            "Là điểm được xác định trước sao cho khi ngắm vào đó để bán, thì quỹ đạo của đường đạn sẽ đi qua điểm định bản trên mục tiêu.",
+            "Điểm được xác định trước sao cho khi ngắm vào đó để bán, thì quỹ đạo của đường đạn sẽ đi qua điểm định bản trên mục tiêu.",
+            "Là đường thẳng từ mặt người ngắm qua chính giữa mép trên khe thước ngắm đến điểm định bản trên mục tiêu, với điều kiện mặt súng không bị nghiêng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Mặt súng nghiêng là:",
+        "options": [
+            "Mép trên thành khe ngắm không song song với mặt phẳng ngang.",
+            "Mép trên thành khe ngắm song song với mặt phẳng ngang.",
+            "Đường ngắm đúng không song song với mặt phẳng ngang.",
+            "Điểm ngắm đúng không song song với mặt phẳng ngang."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Khi bản súng tiểu liên AK, nếu có gió dọc xuôi theo hướng bản thị:",
+        "options": [
+            "Làm cho đầu đạn bay thấp và gần hơn.",
+            "Làm cho đầu đạn bay cao và gần hơn.",
+            "Làm cho đầu đạn bay thấp và xa hơn.",
+            "Làm cho đầu đạn bay cao và xa hơn."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Khi bản súng tiểu liên AK, nếu có gió dọc ngược với hướng bản thị:",
+        "options": [
+            "Làm cho đầu đạn bay thấp xuống và gần hơn.",
+            "Làm cho đầu đạn bay cao lên và gần hơn.",
+            "Làm cho đầu đạn bay thấp xuống và xa hơn.",
+            "Làm cho đầu đạn bay cao lên và xa hơn."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Khi bản súng tiểu liên AK, nếu có gió ngang theo hướng bản thị ảnh hưởng của gió đến đầu đạn:",
+        "options": [
+            "Làm cho đầu đạn bay thấp và gần hơn.",
+            "Làm cho đầu đạn bay cao và gần hơn.",
+            "Làm cho đầu đạn bay lệch hướng theo chiều xuôi hướng gió.",
+            "Làm cho đầu đạn bay lệch hướng theo chiều ngược hướng gió."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Khi bản súng tiểu liên AK, chọn thước ngắm như thế nào thì điểm ngắm và điểm bán trùng nhau:",
+        "options": [
+            "Chọn thước ngắm tương ứng với cự ly bản.",
+            "Chọn thước ngắm lớn hơn với cự ly bản.",
+            "Chọn thước ngắm nhỏ hơn với cự ly bản.",
+            "Chọn thước ngắm lớn hơn với cự ly bản, điểm ngắm chỉnh giữa mép dưới mục tiêu."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Bản mục tiêu bia số 4, cự ly 100m bằng súng tiểu liên AK, ta thường chọn thước ngắm, điểm ngắm:",
+        "options": [
+            "Thước ngắm 3, điểm ngắm chính giữa mép dưới mục tiêu.",
+            "Thước ngắm tương ứng với cự ly bản, điểm ngắm chỉnh giữa mục tiêu.",
+            "Thước ngắm 1, điểm ngắm chính giữa mép dưới mục tiêu.",
+            "Thước ngắm 3, điểm ngắm chính giữa mục tiêu."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Muốn bán được trúng chụm, khi giương sống phải đạt được các yếu tố:",
+        "options": [
+            "Bằng, chắc, đều, bền.",
+            "Giữ súng chắc, ghi súng chặt, tỉ vào vai.",
+            "Giữ súng chắc, ghi súng chặt, tỉ vào vai, không cho súng giật.",
+            "Giữ súng chắc, ghi súng chặt, tỉ vào vai không cho súng này."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thực chất của ngầm bắn là gì?",
+        "options": [
+            "Xác định góc bắn và hướng bắn cho súng",
+            "Xác định cự ly bắn",
+            "Xác định mục tiêu định bắn",
+            "Xác định điểm định bắn trúng"
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Đưa quỹ đạo của đường đạn vào điểm định bắn trúng trên mục tiêu là quá trình thực hiện động tác gì?",
+        "options": [
+            "Ngầm bắn",
+            "Chuẩn bị bắn",
+            "Điều chỉnh điểm bắn trúng",
+            "Ngầm cơ bản"
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Bán chất của ngầm bắn là xác định:",
+        "options": [
+            "Góc bắn và hướng bắn cho súng",
+            "Đặc điểm và tính chất mục tiêu",
+            "Tư thế bắn và số lượng đạn",
+            "Cự ly và phần tử bắn"
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Đường ngầm cơ bắn là đường thẳng từ mặt người ngầm quá chính giữa mép trên khe ngầm đến điểm nào trên đầu ngầm?",
+        "options": [
+            "Chính giữa mép trên đầu ngầm",
+            "Chính giữa đầu ngầm",
+            "Chính giữa khe thước ngầm",
+            "Chính giữa mục tiêu"
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung nào sau đây, nếu tạo thành đường thẳng với mặt người ngầm để tạo nên đường ngầm cơ bắn?",
+        "options": [
+            "Chính giữa mép trên khe ngầm đến điểm chính giữa mép trên đầu ngầm",
+            "Mép trên khe ngầm, chính giữa đầu ngầm",
+            "Giữa khe ngầm, chính giữa mép trên đầu ngầm",
+            "Thước ngầm, đầu ngầm, miệng nòng súng"
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Đường ngầm đúng là đường thẳng từ mắt người ngầm qua",
+        "options": [
+            "Chính giữa mép trên khe ngầm đến điểm chính giữa mép trên đầu ngầm đến điểm định bán trúng",
+            "Chính giữa đầu ngầm đến chính giữa mục tiêu",
+            "Khe ngầm, đầu ngầm đến chính giữa mục tiêu",
+            "Qua khe ngầm súng điểm ngầm đúng"
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Đường thẳng từ mắt người ngầm quá chính giữa mép trên khe ngầm đến điểm chính giữa mép trên đầu ngầm là gì?",
+        "options": [
+            "Đường ngầm cơ bản",
+            "Đường ngầm chuẩn",
+            "Đường ngầm đúng",
+            "Đường ngầm sơ bộ"
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thời cơ nào tốt nhất để người bán thực hiện động tác bóp cờ?",
+        "options": [
+            "Đã lấy được chính xác đường ngầm đúng",
+            "Khi đầu ngầm đã ở giữa khe ngầm, nhìn thấy mục tiêu",
+            "Đã lấy được chính xác đường ngầm cơ bản",
+            "Khi hết thời gian chuẩn bị bản"
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Trong các yếu tố sau, yếu tố nào sai lệch ảnh hưởng lớn nhất đến bán trúng?",
+        "options": [
+            "Đường ngầm cơ bản sai",
+            "Ngầm sai điểm ngầm đúng",
+            "Mặt súng không thẳng bằng",
+            "Tự thế động tác bản"
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Muốn bán trúng mục tiêu khi bán súng phải có 3 yếu tố nào?",
+        "options": [
+            "Có thước ngầm đúng; có điểm ngầm đúng; có đường ngầm đúng",
+            "Có thước ngầm chuẩn; có điểm ngầm đúng; có đường ngầm đúng",
+            "Có thước ngầm phù hợp; có điểm ngầm chuẩn; có đường ngầm tốt",
+            "Có thước ngầm 3; có điểm ngầm giữa; có đường ngầm tốt"
+        ],
+        "dapan": 0
+    }
+]
