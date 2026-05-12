@@ -83,12 +83,71 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
+        /* === PHẦN ĐẾM NGƯỢC === */
+        .countdown-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 25px;
+        }
+
+        .countdown-container {
+            background-color: var(--army-dark);
+            border: 4px solid var(--khaki);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 6px 6px 0px rgba(0,0,0,0.5);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .countdown-title {
+            color: var(--khaki);
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            border-bottom: 2px dashed var(--army-light);
+            padding-bottom: 10px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .time-box {
+            background-color: var(--khaki);
+            color: var(--army-dark);
+            padding: 10px 15px;
+            border-radius: 8px;
+            min-width: 70px;
+            border: 3px solid var(--army-light);
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 28px;
+            font-weight: 900;
+        }
+
+        .time-box small {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
         .container {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px 20px;
+            padding: 25px 20px 40px 20px;
         }
 
         /* Lưới chứa các nút bấm */
@@ -279,6 +338,30 @@
         </a>
     </div>
 
+    <div class="countdown-wrapper">
+        <div class="countdown-container">
+            <div class="countdown-title">Đếm Ngược Ngày Về UPT (Ngày 27)</div>
+            <div class="countdown-timer" id="countdown-timer">
+                <div class="time-box">
+                    <span id="cd-days">00</span>
+                    <small>Ngày</small>
+                </div>
+                <div class="time-box">
+                    <span id="cd-hours">00</span>
+                    <small>Giờ</small>
+                </div>
+                <div class="time-box">
+                    <span id="cd-minutes">00</span>
+                    <small>Phút</small>
+                </div>
+                <div class="time-box">
+                    <span id="cd-seconds">00</span>
+                    <small>Giây</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="menu-grid">
             <a href="https://anhtuxxz.github.io/quocphong/ct1.html" class="menu-item" target="_blank">
@@ -384,6 +467,45 @@
                 document.getElementById('infoPopup').style.display = 'none';
             });
         }
+
+        // === LOGIC ĐẾM NGƯỢC NGÀY VỀ UPT ===
+        function startCountdown() {
+            let now = new Date();
+            let currentYear = now.getFullYear();
+            let currentMonth = now.getMonth();
+            
+            // Đặt mục tiêu là ngày 27 của tháng hiện tại
+            let targetDate = new Date(currentYear, currentMonth, 27, 0, 0, 0).getTime();
+            
+            // Nếu đã qua ngày 27, tự động chuyển mục tiêu sang ngày 27 của tháng sau
+            if (now.getTime() > targetDate) {
+                targetDate = new Date(currentYear, currentMonth + 1, 27, 0, 0, 0).getTime();
+            }
+
+            const countdownInterval = setInterval(function() {
+                const currentTime = new Date().getTime();
+                const distance = targetDate - currentTime;
+
+                if (distance <= 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById("countdown-timer").innerHTML = "<div class='time-box' style='width: 100%;'><span>ĐÃ ĐẾN NGÀY VỀ UPT!</span></div>";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("cd-days").innerText = days < 10 ? "0" + days : days;
+                document.getElementById("cd-hours").innerText = hours < 10 ? "0" + hours : hours;
+                document.getElementById("cd-minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+            }, 1000);
+        }
+
+        // Khởi động đếm ngược
+        startCountdown();
     </script>
 </body>
 </html>
