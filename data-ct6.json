@@ -22,10 +22,10 @@
     {
         "cauhoi": "Đuôi tên miền từ Việt Nam Là gì? ",
         "options": [
-            ".org",
-            ".vn",
-            ".com",
-            ".xyz"
+            "org",
+            "vn",
+            "com",
+            "xyz"
         ],
         "dapan": 1
     },
