@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Thi Chủ Đề 1 - Mẫu Quân Đội</title>
+    <style>
+        /* === TONE MÀU QUÂN ĐỘI === */
+        :root {
+            --army-dark: #2c3525;    /* Xanh rêu đậm */
+            --army-medium: #4b5320;  /* Xanh olive */
+            --army-light: #8a9a5b;   /* Xanh lính nhạt */
+            --khaki: #e6e2d3;        /* Vàng cát / Khaki */
+            --khaki-light: #f4f3ec;  /* Nền nhạt */
+            --success: #22c55e;      /* Xanh lá báo đúng */
+            --error: #ef4444;        /* Đỏ báo sai */
+        }
+
+        body {
+            font-family: 'Courier New', Courier, 'Segoe UI', monospace;
+            background-color: var(--army-medium);
+            margin: 0;
+            padding: 0;
+            color: var(--army-dark);
+        }
+
+        .header-banner {
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 5px solid #1a1f16;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        /* Thẻ chứa từng câu hỏi */
+        .question-card {
+            background-color: var(--khaki);
+            border: 3px solid var(--army-dark);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 6px 6px 0px var(--army-dark);
+        }
+
+        .question-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--army-dark);
+            border-bottom: 2px dashed var(--army-light);
+            padding-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+        }
+
+        .options-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: var(--khaki-light);
+            border: 2px solid var(--army-light);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 600;
+        }
+
+        .option-label:hover {
+            background-color: #d8dec4;
+            border-color: var(--army-dark);
+        }
+
+        .option-label input[type="radio"] {
+            margin-right: 15px;
+            transform: scale(1.3);
+            accent-color: var(--army-dark);
+            cursor: pointer;
+        }
+
+        /* Giao diện khi Đúng - Xanh lá */
+        .option-label.correct-choice {
+            background-color: #dcfce7 !important;
+            border-color: var(--success) !important;
+            color: #166534 !important;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+        }
+
+        /* Giao diện khi Sai - Đỏ */
+        .option-label.wrong-choice {
+            background-color: #fee2e2 !important;
+            border-color: var(--error) !important;
+            color: #991b1b !important;
+        }
+
+        /* Khu vực Nút bấm và Kết quả */
+        .controls {
+            text-align: center;
+            margin: 40px 0;
+            background-color: var(--khaki);
+            padding: 30px;
+            border: 3px solid var(--army-dark);
+            border-radius: 8px;
+            box-shadow: 6px 6px 0px var(--army-dark);
+            display: none; /* Ẩn đi khi chưa có dữ liệu */
+        }
+
+        .btn-submit {
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            border: 2px solid #1a1f16;
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.2s;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .btn-submit:hover {
+            background-color: #1a1f16;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        .result-box {
+            display: none;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--army-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .loading-text {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--khaki);
+            margin: 50px 0;
+            font-weight: bold;
+        }
+        
+        .error-text {
+            color: #fca5a5;
+            background: #7f1d1d;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #ef4444;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        BÀI KIỂM TRA CHỦ ĐỀ 1
+    </div>
+
+    <div class="container" id="quiz-container">
+        <div class="loading-text" id="loading-msg">Đang tải dữ liệu từ data-ct.json...</div>
+    </div>
+
+    <div class="container controls" id="controls-area">
+        <button id="submit-btn" class="btn-submit" onclick="gradeExam()">NỘP BÀI</button>
+        <div id="result-box" class="result-box">
+            <!-- Kết quả hiển thị ở đây -->
+        </div>
+    </div>
+
+    <div class="footer">
+        NguyenAnhTu-K16THO1-QuocPhong
+    </div>
+
+    <script>
+        let quizData = [];
+        const quizContainer = document.getElementById('quiz-container');
+        const controlsArea = document.getElementById('controls-area');
+        const loadingMsg = document.getElementById('loading-msg');
+
+        // Yêu cầu đọc file data-ct.json
+        fetch('data-kc4.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Không tìm thấy file data-ct.json");
+                }
+                return response.json();
+            })
+            .then(data => {
+                quizData = data;
+                // Nếu tải thành công -> Ẩn dòng chữ tải, hiện nút Nộp bài
+                loadingMsg.style.display = 'none';
+                controlsArea.style.display = 'block';
+                // Vẽ câu hỏi
+                renderAllQuestions();
+            })
+            .catch(error => {
+                // Báo lỗi nếu mở file trực tiếp hoặc sai tên file
+                loadingMsg.innerHTML = `
+                    <div class="error-text">
+                        Dữ Liệu Đàn Được Cập Nhật :3                   </div>
+                `;
+                console.error(error);
+            });
+
+        function renderAllQuestions() {
+            quizData.forEach((q, index) => {
+                const card = document.createElement('div');
+                card.className = 'question-card';
+                card.id = `question-card-${index}`;
+                
+                // Tiêu đề câu hỏi
+                const title = document.createElement('div');
+                title.className = 'question-title';
+                title.innerText = `Câu ${index + 1}: ${q.cauhoi || "[Lỗi: Thiếu nội dung câu hỏi]"}`;
+                card.appendChild(title);
+
+                const optionsWrapper = document.createElement('div');
+                optionsWrapper.className = 'options-wrapper';
+
+                // Kiểm tra xem cấu trúc "options" có hợp lệ không
+                if (!q.options || !Array.isArray(q.options)) {
+                    optionsWrapper.innerHTML = `<span style="color: #ef4444; font-weight: bold;">[Cảnh báo]: Câu hỏi này trong file JSON bị thiếu mảng "options" hoặc viết sai chính tả. Vui lòng kiểm tra lại data-ct.json!</span>`;
+                } else {
+                    q.options.forEach((optText, optIndex) => {
+                        const label = document.createElement('label');
+                        label.className = `option-label q-${index}-opt-${optIndex}`;
+                        label.innerHTML = `
+                            <input type="radio" name="answer-${index}" value="${optIndex}">
+                            <span>${optText}</span>
+                        `;
+                        optionsWrapper.appendChild(label);
+                    });
+                }
+
+                card.appendChild(optionsWrapper);
+                quizContainer.appendChild(card);
+            });
+        }
+
+        function gradeExam() {
+            let score = 0;
+            let answeredCount = 0;
+
+            // Đếm số câu đã làm
+            for (let i = 0; i < quizData.length; i++) {
+                if (document.querySelector(`input[name="answer-${i}"]:checked`)) {
+                    answeredCount++;
+                }
+            }
+
+            // Hỏi xác nhận nếu chưa làm hết
+            if (answeredCount < quizData.length) {
+                const confirmSubmit = confirm(`Đồng chí mới trả lời ${answeredCount}/${quizData.length} câu. Chắc chắn muốn nộp bài?`);
+                if (!confirmSubmit) return;
+            }
+
+            // Logic chấm điểm
+            quizData.forEach((q, index) => {
+                const correctOption = q.dapan;
+                const selectedInput = document.querySelector(`input[name="answer-${index}"]:checked`);
+                
+                // Khóa không cho chọn lại
+                document.querySelectorAll(`input[name="answer-${index}"]`).forEach(inp => inp.disabled = true);
+
+                // Tô XANH đáp án đúng để học viên xem lại
+                const correctLabel = document.querySelector(`.q-${index}-opt-${correctOption}`);
+                if(correctLabel) correctLabel.classList.add('correct-choice');
+
+                if (selectedInput) {
+                    const userChoice = parseInt(selectedInput.value);
+                    if (userChoice === correctOption) {
+                        score++; // Cộng 1 điểm
+                    } else {
+                        // Tô ĐỎ đáp án chọn sai
+                        const wrongLabel = document.querySelector(`.q-${index}-opt-${userChoice}`);
+                        if(wrongLabel) wrongLabel.classList.add('wrong-choice');
+                    }
+                }
+            });
+
+            // Hiển thị khung kết quả
+            document.getElementById('submit-btn').style.display = 'none';
+            const resultBox = document.getElementById('result-box');
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = `
+                <div style="font-size: 1.5rem; color: #4b5320; margin-bottom: 10px;">HOÀN THÀNH NHIỆM VỤ!</div>
+                <div style="font-size: 3rem;">ĐIỂM SỐ: ${score} / ${quizData.length}</div>
+                <button onclick="location.reload()" class="btn-submit" style="margin-top:20px; font-size: 1.2rem; padding: 10px 30px;">THỰC HIỆN LẠI</button>
+            `;
+
+            // Tự động cuộn xuống dưới cùng để xem kết quả
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
