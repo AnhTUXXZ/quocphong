@@ -11,6 +11,7 @@
             --army-medium: #4b5320;  /* Xanh olive */
             --army-light: #8a9a5b;   /* Xanh lính nhạt */
             --khaki: #e6e2d3;        /* Vàng cát / Khaki */
+            --fb-blue: #1877F2;      /* Màu Facebook */
         }
 
         /* Đổi TOÀN BỘ font chữ sang Times New Roman */
@@ -37,8 +38,49 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 5px solid #1a1f16;
+            border-bottom: 2px solid var(--army-light);
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        /* === PHẦN THÔNG BÁO LỖI DƯỚI BANNER === */
+        .error-report-bar {
+            background-color: var(--khaki);
+            text-align: center;
+            padding: 10px;
+            border-bottom: 4px solid var(--army-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .error-report-bar span {
+            font-weight: bold;
+            font-size: 16px;
+            color: var(--army-dark);
+        }
+
+        .fb-contact-btn {
+            background-color: var(--fb-blue);
+            color: white !important;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid #0e5db3;
+            text-transform: uppercase;
+        }
+
+        .fb-contact-btn:hover {
+            background-color: #145dbf;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .container {
@@ -126,26 +168,26 @@
 
         .modal-content {
             background-color: var(--khaki);
-            padding: 25px 20px; 
+            padding: 25px 20px;
             border-radius: 10px;
             border: 4px solid var(--army-dark);
             width: 90%;
-            max-width: 320px; 
+            max-width: 320px;
             text-align: center;
-            box-shadow: 6px 6px 0px var(--army-dark); 
+            box-shadow: 6px 6px 0px var(--army-dark);
         }
 
         .modal-content h2 {
             color: var(--army-dark);
             margin-top: 0;
-            margin-bottom: 15px; 
-            font-size: 22px; 
+            margin-bottom: 15px;
+            font-size: 22px;
             font-weight: bold;
             text-transform: uppercase;
         }
 
         .input-group {
-            margin-bottom: 12px; 
+            margin-bottom: 12px;
             text-align: left;
         }
 
@@ -154,12 +196,12 @@
             font-weight: bold;
             color: var(--army-dark);
             margin-bottom: 4px;
-            font-size: 15px; 
+            font-size: 15px;
         }
 
         .input-group input {
             width: 100%;
-            padding: 10px; 
+            padding: 10px;
             border: 2px solid var(--army-light);
             border-radius: 5px;
             font-size: 15px;
@@ -168,41 +210,11 @@
             outline: none;
         }
 
-        .input-group input:focus {
-            border-color: var(--army-dark);
-        }
-
-        /* CSS cho phần thông tin liên hệ Facebook */
-        .contact-info {
-            margin-top: 10px;
-            font-size: 13.5px;
-            color: var(--army-dark);
-            font-style: italic;
-            text-align: left;
-            line-height: 1.4;
-            padding: 8px;
-            background-color: rgba(138, 154, 91, 0.15); /* Nền nhạt làm nổi bật khung */
-            border-left: 3px solid var(--army-dark);
-            border-radius: 4px;
-        }
-
-        .contact-info a {
-            color: #b71c1c; /* Màu đỏ đô để nổi bật nhưng vẫn nghiêm túc */
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-info a:hover {
-            color: #d32f2f;
-            text-decoration: underline;
-        }
-
         .btn-submit {
             background-color: var(--army-dark);
             color: var(--khaki);
             border: 2px solid #1a1f16;
-            padding: 10px 20px; 
+            padding: 10px 20px;
             font-size: 1.1rem;
             font-weight: bold;
             text-transform: uppercase;
@@ -216,7 +228,6 @@
         .btn-submit:hover {
             background-color: #1a1f16;
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
 
         .error-msg {
@@ -250,16 +261,22 @@
                 <input type="number" id="tieuDoi" placeholder="VD: 2" required>
             </div>
             
-            <div class="contact-info">
-                * Lưu ý: Nếu đáp án lỗi hay có vấn đề gì vui lòng liên hệ Facebook qua link: <a href="https://bom.so/fbtu" target="_blank">bom.so/fbtu</a>
-            </div>
-
             <button id="btnXacNhan" class="btn-submit" onclick="xacNhanThongTin()">XÁC NHẬN</button>
         </div>
     </div>
 
     <div class="header-banner">
         HỆ THỐNG TRẮC NGHIỆM QUỐC PHÒNG - UPT
+    </div>
+
+    <div class="error-report-bar">
+        <span>Phát hiện lỗi đáp án hoặc cần hỗ trợ?</span>
+        <a href="https://bom.so/fbtu" target="_blank" class="fb-contact-btn">
+            <svg style="width:18px;height:18px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+            </svg>
+            Liên hệ Facebook
+        </a>
     </div>
 
     <div class="container">
@@ -306,22 +323,16 @@
     </div>
 
     <script>
-        // Cấu hình Bot Telegram
         const TELEGRAM_BOT_TOKEN = '8414314561:AAHYLevOgv0H6Y3HSztEsJA17nCBIuMHlwE';
         const TELEGRAM_CHAT_ID = '7209414522';
 
-        // Khi load trang
         document.addEventListener('DOMContentLoaded', () => {
-            // Kiểm tra xem localStorage đã có thông tin chưa
             const savedData = localStorage.getItem('hocVienQuocPhong');
-            
             if (!savedData) {
-                // Nếu chưa có, hiện popup bắt buộc nhập
                 document.getElementById('infoPopup').style.display = 'flex';
             }
         });
 
-        // Hàm xử lý khi ấn nút "Xác nhận"
         function xacNhanThongTin() {
             const hoTen = document.getElementById('hoTen').value.trim();
             const daiDoi = document.getElementById('daiDoi').value.trim();
@@ -329,18 +340,15 @@
             const errorMsg = document.getElementById('errorMsg');
             const btnXacNhan = document.getElementById('btnXacNhan');
 
-            // 1. Validate không cho bỏ trống
             if (hoTen === "" || daiDoi === "" || tieuDoi === "") {
                 errorMsg.style.display = 'block';
                 return;
             }
             errorMsg.style.display = 'none';
 
-            // Đổi text nút thành đang xử lý
             btnXacNhan.innerText = "ĐANG XỬ LÝ...";
             btnXacNhan.disabled = true;
 
-            // 2. Lưu vào LocalStorage
             const thongTin = {
                 hoTen: hoTen,
                 daiDoi: daiDoi,
@@ -349,7 +357,6 @@
             };
             localStorage.setItem('hocVienQuocPhong', JSON.stringify(thongTin));
 
-            // 3. Chuẩn bị tin nhắn gửi về Telegram
             const textMessage = `
 📝 <b>CÓ HỌC VIÊN MỚI TRUY CẬP HỆ THỐNG</b>
 👤 Họ và tên: <b>${hoTen}</b>
@@ -358,7 +365,6 @@
 ⏰ Thời gian: ${thongTin.thoiGian}
             `;
 
-            // 4. Gửi API tới Telegram
             const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
             const payload = {
                 chat_id: TELEGRAM_CHAT_ID,
@@ -368,19 +374,13 @@
 
             fetch(url, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             })
-            .then(response => response.json())
-            .then(data => {
-                // Tắt popup sau khi gửi thành công
+            .then(() => {
                 document.getElementById('infoPopup').style.display = 'none';
             })
-            .catch(error => {
-                console.error('Lỗi khi gửi Telegram:', error);
-                // Dù lỗi mạng thì vẫn ẩn popup cho người dùng làm bài (vì đã lưu local)
+            .catch(() => {
                 document.getElementById('infoPopup').style.display = 'none';
             });
         }
