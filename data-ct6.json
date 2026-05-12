@@ -1,0 +1,302 @@
+[
+    {
+        "cauhoi": "Luật An toàn thông tin mạng gồm bao nhiêu chương, điều?",
+        "options": [
+            "08 chương, 54 điều.",
+            "08 chương, 45 điều.",
+            "07 chương, 54 điều.",
+            "07 chương, 45 điều."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Luật An ninh mạng gồm bao nhiêu chương, điều?",
+        "options": [
+            "07 chương, 34 điều.",
+            "07 chương, 43 điều.",
+            "08 chương, 34 điều.",
+            "08 chương, 43 điều."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Chương II của Luật An toàn thông tin mạng: “Bảo đảm an toàn thông tin mạng” gồm bao nhiêu điều? Từ điều máy đến điều nào?",
+        "options": [
+            "21 điều, từ điều 19 đến điều 39.",
+            "12 điều, từ điều 9 đến điều 21.",
+            "21 điều, từ điều 9 đến điều 29.",
+            "12 điều, từ điều 9 đến điều 21."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Luật An toàn thông tin mạng có hiệu lực thi hành từ:",
+        "options": [
+            "Ngày 07 tháng 01 năm 2016.",
+            "Ngày 01 tháng 07 năm 2016.",
+            "Ngày 01 tháng 07 năm 2015.",
+            "Ngày 07 tháng 01 năm 2015."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Chủ thể thông tin cá nhân là:",
+        "options": [
+            "Người quản lý thông tin cá nhân đó.",
+            "Người được thu thập thông tin cá nhân đó.",
+            "Người được xác định từ thông tin cá nhân đó.",
+            "Người được kiểm tra thông tin cá nhân đó."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Các hành vi bị nghiêm cấm của luật an toàn thông tin mạng.",
+        "options": [
+            "Phát tán thư rác, phần mềm độc hại, thiết lập hệ thống thông tin giả mạo, lừa đảo.",
+            "Phát tán thư rác, vi rút độc hại, thiết lập hệ thống thông tin giả mạo, lừa đảo.",
+            "Phát tán thư rác, phần mềm độc hại, tuyên truyền các thông tin giả mạo, lừa đảo.",
+            "Phát tán thư rác, phần mềm độc hại, đưa thông tin giả mạo, lừa đảo, xuyên tạc, tấn công mạng."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Bảo vệ an ninh mạng là:",
+        "options": [
+            "Phòng ngừa, điều tra, ngăn chặn, xử lý hành vi xâm phạm an ninh mạng.",
+            "Phòng ngừa, phát hiện, ngăn chặn, xử lý hành vi xâm phạm an ninh mạng.",
+            "Phòng ngừa, phát hiện, điều tra, xử lý hành vi xâm phạm an ninh mạng.",
+            "Điều tra, phát hiện, ngăn chặn, xử lý hành vi xâm phạm an ninh mạng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Không gian mạng quốc gia là:",
+        "options": [
+            "Không gian mạng do Chính phủ xây dựng, quản lý và kiểm soát.",
+            "Không gian mạng do Chính phủ quản lý và kiểm soát.",
+            "Không gian mạng do Chính phủ xác lập, quản lý và kiểm soát.",
+            "Không gian mạng do Chính phủ xác lập và kiểm soát."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Khủng bố mạng là:",
+        "options": [
+            "Việc sử dụng tài khoản cá nhân để thực hiện hành vi khủng bố, tài trợ khủng bố.",
+            "Việc sử dụng tài khoản tổ chức để thực hiện hành vi khủng bố, tài trợ khủng bố.",
+            "Việc sử dụng không gian mạng, công nghệ thông tin hoặc phương tiện điện tử để thực hiện hành vi khủng bố, tài trợ khủng bố.",
+            "Việc sử dụng tài liệu liên quan đến không gian mạng để thực hiện hành vi khủng bố, tài trợ khủng bố."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Thông tin trên không gian mạng có nội dung tuyên truyền chống Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam bao gồm:",
+        "options": [
+            "Tuyên truyền tư tưởng sống tự do, cực đoan.",
+            "Chiến tranh tâm lý, kích động chiến tranh xâm lược.",
+            "Xúc phạm dân tộc, quốc kỳ, quốc huy, quốc ca, vĩ nhân, lãnh tụ, danh nhân, anh hùng dân tộc.",
+            "Tất cả các nội dung trên."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Thông tin trên không gian mạng có nội dung “Xúc phạm dân tộc, quốc kỳ, quốc huy, quốc ca, vĩ nhân, lãnh tụ, danh nhân, anh hùng dân tộc” là vi phạm:",
+        "options": [
+            "Thông tin có nội dung kích động gây bạo loạn, phá rối an ninh, gây rối TTCC.",
+            "Thông tin có nội dung tuyên truyền chống Nhà nước Cộng hòa XHCN Việt Nam.",
+            "Thông tin có nội dung làm nhục, vu khống.",
+            "Thông tin có nội dung xâm phạm trật tự quản lý kinh tế."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Thông tin trên không gian mạng có nội dung “Chiến tranh tâm lý, kích động chiến tranh xâm lược, chia rẽ, gây thù hận giữa các dân tộc, tôn giáo và nhân dân các nước” là vi phạm:",
+        "options": [
+            "Thông tin có nội dung tuyên truyền chống Nhà nước Cộng hòa XHCN Việt Nam.",
+            "Thông tin có nội dung kích động gây bạo loạn, phá rối an ninh, gây rối TTCC.",
+            "Thông tin có nội dung làm nhục, vu khống.",
+            "Thông tin có nội dung xâm phạm trật tự quản lý kinh tế."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thông tin trên không gian mạng có nội dung kích động gây bạo loạn, phá rối an ninh, gây rối trật tự công cộng là:",
+        "options": [
+            "Chiến tranh tâm lý, kích động chiến tranh xâm lược.",
+            "Thông tin bị đặt, sai sự thật xâm phạm danh dự, uy tín, nhân phẩm.",
+            "Kêu gọi, vận động, xúi giục, đe dọa, gây chia rẽ, tiến hành hoạt động vũ trang hoặc dùng bạo lực nhằm chống chính quyền, nhân dân.",
+            "Tuyên truyền xuyên tạc, phỉ báng chính quyền nhân dân."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Thông tin trên không gian mạng có nội dung làm nhục, vu khống là:",
+        "options": [
+            "Xúc phạm nghiêm trọng danh dự, uy tín, nhân phẩm của người khác.",
+            "Tuyên truyền xuyên tạc, phỉ báng chính quyền nhân dân.",
+            "Thông tin bị đặt, sai sự thật về sản phẩm, hàng hóa, tiền, trái phiếu, tín phiếu, công trái, séc và các loại giấy tờ có giá trị khác.",
+            "Xúc phạm dân tộc, quốc kỳ, quốc huy, quốc ca, vĩ nhân, lãnh tụ, danh nhân, anh hùng dân tộc."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Thông tin trên không gian mạng có nội dung xâm phạm trật tự quản lý kinh tế là:",
+        "options": [
+            "Thông tin bị đặt, sai sự thật về sản phẩm, hàng hóa, tiền, trái phiếu, tín phiếu, công trái, séc và các loại giấy tờ có giá trị khác.",
+            "Kêu gọi, vận động, xúi giục, đe dọa, lôi kéo tụ tập đông người gây rối, chống người thi hành công vụ.",
+            "Thông tin bị đặt, sai sự thật xâm phạm danh dự, uy tín, nhân phẩm.",
+            "Tuyên truyền xuyên tạc, phỉ báng chính quyền nhân dân."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Chính phủ đã ban hành Nghị định số 15/2020/NĐ-CP quy định xử phạt vi phạm hành chính trong lĩnh vực bưu chính, viễn thông, tần số vô tuyến điện, công nghệ thông tin và giao dịch điện tử khi nào?",
+        "options": [
+            "Ngày 02 tháng 03 năm 2020.",
+            "Ngày 03 tháng 02 năm 2019.",
+            "Ngày 03 tháng 02 năm 2020.",
+            "Ngày 02 tháng 03 năm 2019."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Theo Điều 101 Nghị định 15/2020/NĐ-CP, hành vi cung cấp, chia sẻ thông tin giả mạo, sai sự thật, xuyên tạc, vu khống, xúc phạm uy tín của cơ quan, tổ chức, danh dự, nhân phẩm của cá nhân bị phạt từ:",
+        "options": [
+            "15.000.000 đồng đến 25.000.000 đồng.",
+            "10.000.000 đồng đến 20.000.000 đồng.",
+            "20.000.000 đồng đến 30.000.000 đồng.",
+            "25.000.000 đồng đến 35.000.000 đồng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Phạt tiền đối với hành vi xâm phạm quyền, lợi ích hợp pháp của chủ sở hữu cơ sở dữ liệu hoặc cản trở việc sử dụng cơ sở dữ liệu:",
+        "options": [
+            "100.000.000 đồng đến 200.000.000 đồng.",
+            "140.000.000 đồng đến 200.000.000 đồng.",
+            "100.000.000 đồng đến 140.000.000 đồng.",
+            "140.000.000 đồng đến 240.000.000 đồng."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Phạt tiền đối với hành vi phá hoại cơ sở hạ tầng thông tin hoặc phá hoại thông tin trên môi trường mạng:",
+        "options": [
+            "140.000.000 đồng đến 200.000.000 đồng.",
+            "140.000.000 đồng đến 170.000.000 đồng.",
+            "100.000.000 đồng đến 170.000.000 đồng.",
+            "100.000.000 đồng đến 200.000.000 đồng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Phạt tiền đối với hành vi bẻ khóa, trộm cắp, sử dụng mật khẩu, khóa mật mã và thông tin của tổ chức, cá nhân khác trên môi trường mạng:",
+        "options": [
+            "10.000.000 đồng đến 25.000.000 đồng.",
+            "10.000.000 đồng đến 20.000.000 đồng.",
+            "15.000.000 đồng đến 20.000.000 đồng.",
+            "15.000.000 đồng đến 25.000.000 đồng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Phạt tiền đối với hành vi truy cập trái phép vào mạng hoặc thiết bị số của người khác để chiếm quyền điều khiển, thay đổi, xóa bỏ thông tin, thu thập thông tin trái phép:",
+        "options": [
+            "30.000.000 đồng đến 50.000.000 đồng.",
+            "30.000.000 đồng đến 70.000.000 đồng.",
+            "40.000.000 đồng đến 50.000.000 đồng.",
+            "40.000.000 đồng đến 70.000.000 đồng."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Phạt tiền đối với hành vi thu thập thông tin cá nhân khi chưa có sự đồng ý của chủ thể thông tin cá nhân về phạm vi, mục đích thu thập và sử dụng:",
+        "options": [
+            "10.000.000 đồng đến 40.000.000 đồng.",
+            "20.000.000 đồng đến 30.000.000 đồng.",
+            "10.000.000 đồng đến 20.000.000 đồng.",
+            "20.000.000 đồng đến 40.000.000 đồng."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Phạt tiền đối với hành vi sử dụng không đúng mục đích thông tin cá nhân hoặc cung cấp cho bên thứ ba khi chưa được đồng ý:",
+        "options": [
+            "10.000.000 đồng đến 30.000.000 đồng.",
+            "20.000.000 đồng đến 40.000.000 đồng.",
+            "10.000.000 đồng đến 20.000.000 đồng.",
+            "20.000.000 đồng đến 30.000.000 đồng."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Ngăn chặn, yêu cầu tạm ngừng, ngừng cung cấp thông tin mạng; đình chỉ, tạm đình chỉ các hoạt động thiết lập, cung cấp và sử dụng mạng viễn thông, Internet... là nội dung thuộc:",
+        "options": [
+            "Nguyên tắc bảo vệ an ninh mạng.",
+            "Hình thức bảo vệ an ninh mạng.",
+            "Biện pháp bảo vệ an ninh mạng.",
+            "Yêu cầu bảo vệ an ninh mạng."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Chủ động phòng ngừa, phát hiện, ngăn chặn, đấu tranh, làm thất bại mọi hoạt động sử dụng không gian mạng xâm phạm an ninh quốc gia là nội dung thuộc:",
+        "options": [
+            "Nguyên tắc bảo vệ an ninh mạng.",
+            "Đặc điểm bảo vệ an ninh mạng.",
+            "Yêu cầu bảo vệ an ninh mạng.",
+            "Biện pháp bảo vệ an ninh mạng."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Kịp thời cung cấp thông tin liên quan đến bảo vệ an ninh mạng, nguy cơ đe dọa an ninh mạng cho cơ quan có thẩm quyền là nội dung thuộc:",
+        "options": [
+            "Biện pháp của cơ quan, tổ chức, cá nhân sử dụng không gian mạng.",
+            "Trách nhiệm của cơ quan, tổ chức, cá nhân sử dụng không gian mạng.",
+            "Nguyên tắc của cơ quan, tổ chức, cá nhân sử dụng không gian mạng.",
+            "Yêu cầu của cơ quan, tổ chức, cá nhân sử dụng không gian mạng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Luật An toàn thông tin mạng. Luật số:",
+        "options": [
+            "68/2015/QH12 được Quốc hội khóa XII, kỳ họp thứ 10 thông qua.",
+            "86/2016/QH12 được Quốc hội khóa XII, kỳ họp thứ 12 thông qua.",
+            "68/2016/QH13 được Quốc hội khóa XIII, kỳ họp thứ 12 thông qua.",
+            "86/2015/QH13 được Quốc hội khóa XIII, kỳ họp thứ 10 thông qua."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Luật An toàn thông tin mạng được Quốc hội khóa XIII, kỳ họp thứ 10 thông qua ngày:",
+        "options": [
+            "19/11/2016.",
+            "19/11/2015.",
+            "19/11/2014.",
+            "19/11/2017."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Luật An ninh mạng. Luật số:",
+        "options": [
+            "24/2019/QH13 được Quốc hội khóa XIII, kỳ họp thứ 6 thông qua.",
+            "24/2018/QH14 được Quốc hội khóa XIV, kỳ họp thứ 5 thông qua.",
+            "42/2018/QH14 được Quốc hội khóa XIV, kỳ họp thứ 5 thông qua.",
+            "42/2019/QH13 được Quốc hội khóa XIII, kỳ họp thứ 6 thông qua."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Luật An ninh mạng được Quốc hội khóa XIV, kỳ họp thứ 5 thông qua ngày:",
+        "options": [
+            "12 tháng 6 năm 2018.",
+            "12 tháng 6 năm 2019.",
+            "12 tháng 6 năm 2017.",
+            "12 tháng 6 năm 2020."
+        ],
+        "dapan": 0
+    }
+]
