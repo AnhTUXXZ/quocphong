@@ -110,7 +110,7 @@
             letter-spacing: 1px;
         }
 
-        /* === GIAO DIỆN POPUP NHẬP THÔNG TIN (ĐÃ CHỈNH NHỎ VÀ CÂN ĐỐI) === */
+        /* === GIAO DIỆN POPUP NHẬP THÔNG TIN === */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -118,7 +118,7 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.85);
-            display: none; /* Ẩn mặc định, JS sẽ bật lên */
+            display: none; 
             justify-content: center;
             align-items: center;
             z-index: 9999;
@@ -126,26 +126,26 @@
 
         .modal-content {
             background-color: var(--khaki);
-            padding: 25px 20px; /* Thu gọn khoảng cách viền trong */
+            padding: 25px 20px; 
             border-radius: 10px;
             border: 4px solid var(--army-dark);
             width: 90%;
-            max-width: 320px; /* Làm khung hẹp lại cho gọn gàng */
+            max-width: 320px; 
             text-align: center;
-            box-shadow: 6px 6px 0px var(--army-dark); /* Viền bóng gọn hơn */
+            box-shadow: 6px 6px 0px var(--army-dark); 
         }
 
         .modal-content h2 {
             color: var(--army-dark);
             margin-top: 0;
-            margin-bottom: 15px; /* Giảm khoảng cách dưới tiêu đề */
-            font-size: 22px; /* Chữ tiêu đề vừa vặn hơn */
+            margin-bottom: 15px; 
+            font-size: 22px; 
             font-weight: bold;
             text-transform: uppercase;
         }
 
         .input-group {
-            margin-bottom: 12px; /* Giảm khoảng cách giữa các ô nhập */
+            margin-bottom: 12px; 
             text-align: left;
         }
 
@@ -154,12 +154,12 @@
             font-weight: bold;
             color: var(--army-dark);
             margin-bottom: 4px;
-            font-size: 15px; /* Cỡ chữ nhãn vừa phải */
+            font-size: 15px; 
         }
 
         .input-group input {
             width: 100%;
-            padding: 10px; /* Giảm độ dày ô nhập */
+            padding: 10px; 
             border: 2px solid var(--army-light);
             border-radius: 5px;
             font-size: 15px;
@@ -172,11 +172,37 @@
             border-color: var(--army-dark);
         }
 
+        /* CSS cho phần thông tin liên hệ Facebook */
+        .contact-info {
+            margin-top: 10px;
+            font-size: 13.5px;
+            color: var(--army-dark);
+            font-style: italic;
+            text-align: left;
+            line-height: 1.4;
+            padding: 8px;
+            background-color: rgba(138, 154, 91, 0.15); /* Nền nhạt làm nổi bật khung */
+            border-left: 3px solid var(--army-dark);
+            border-radius: 4px;
+        }
+
+        .contact-info a {
+            color: #b71c1c; /* Màu đỏ đô để nổi bật nhưng vẫn nghiêm túc */
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #d32f2f;
+            text-decoration: underline;
+        }
+
         .btn-submit {
             background-color: var(--army-dark);
             color: var(--khaki);
             border: 2px solid #1a1f16;
-            padding: 10px 20px; /* Nút bấm gọn lại */
+            padding: 10px 20px; 
             font-size: 1.1rem;
             font-weight: bold;
             text-transform: uppercase;
@@ -224,6 +250,10 @@
                 <input type="number" id="tieuDoi" placeholder="VD: 2" required>
             </div>
             
+            <div class="contact-info">
+                * Lưu ý: Nếu đáp án lỗi hay có vấn đề gì vui lòng liên hệ Facebook qua link: <a href="https://bom.so/fbtu" target="_blank">bom.so/fbtu</a>
+            </div>
+
             <button id="btnXacNhan" class="btn-submit" onclick="xacNhanThongTin()">XÁC NHẬN</button>
         </div>
     </div>
