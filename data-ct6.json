@@ -20,6 +20,16 @@
         "dapan": 1
     },
     {
+        "cauhoi": "Đuôi tên miền từ Việt Nam Là gì? ",
+        "options": [
+            ".org",
+            ".vn",
+            ".com",
+            ".xyz"
+        ],
+        "dapan": 1
+    },
+    {
         "cauhoi": "Chương II của Luật An toàn thông tin mạng: “Bảo đảm an toàn thông tin mạng” gồm bao nhiêu điều? Từ điều máy đến điều nào?",
         "options": [
             "21 điều, từ điều 19 đến điều 39.",
