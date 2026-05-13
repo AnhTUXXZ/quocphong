@@ -1,6 +1,6 @@
 [
     {
-        "cauhoi": "Ngâm bản là:",
+        "cauhoi": "Ngắm bắn là:",
         "options": [
             "Xác định góc bản và hướng bản cho súng để đường đạn đi qua điểm định bản trên mục tiêu.",
             "Hướng thẳng trục nòng súng vào mục tiêu, bóp cò.",
@@ -10,7 +10,7 @@
         "dapan": 0
     },
     {
-        "cauhoi": "Đường ngâm cơ bản là:",
+        "cauhoi": "Đường ngắm cơ bản là:",
         "options": [
             "Là đường thẳng được tính từ đỉnh đầu ngâm, sao cho đỉnh đầu ngâm thẳng với điểm định bản trên mục tiêu.",
             "Là đường thẳng từ mặt người ngâm qua chính giữa mép trên khe thước ngâm đến điểm định bản trên mục tiêu, với điều kiện mặt súng không bị nghiêng.",
@@ -20,7 +20,7 @@
         "dapan": 2
     },
     {
-        "cauhoi": "Điểm ngâm đúng là:",
+        "cauhoi": "Điểm ngắm đúng là:",
         "options": [
             "Xác định góc bản và hướng bản cho súng để đường đạn đi qua điểm định bản trên mục tiêu.",
             "Hướng thẳng trục nòng súng vào mục tiêu, bóp cò.",
@@ -30,7 +30,7 @@
         "dapan": 3
     },
     {
-        "cauhoi": "Đường ngâm đúng là:",
+        "cauhoi": "Đường ngắm đúng là:",
         "options": [
             "Xác định góc bản và hướng bản cho súng để đường đạn đi qua điểm định bản trên mục tiêu.",
             "Hướng ngâm cơ bản được dóng vào điểm ngâm đã xác định với điều kiện mặt súng thẳng bằng.",
@@ -40,7 +40,7 @@
         "dapan": 1
     },
     {
-        "cauhoi": "Thực chất của lấy đường ngâm cơ bản là:",
+        "cauhoi": "Thực chất của lấy đường ngắm cơ bản là:",
         "options": [
             "Là đường thẳng trục nòng súng vào mục tiêu, bóp cò.",
             "Là đưa đường ngâm đúng đến điểm định bản trên mục tiêu.",
@@ -70,7 +70,7 @@
         "dapan": 2
     },
     {
-        "cauhoi": "Điểm bản đúng là:",
+        "cauhoi": "Điểm bắn đúng là:",
         "options": [
             "Là điểm ngầm chính giữa mép dưới mục tiêu mà đạn đi qua.",
             "Là điểm xác định trước trên mục tiêu mà đường ngắm cơ bản chiếu vào.",
