@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Thi KC - Mẫu Quân Đội</title>
+    <style>
+        /* === TONE MÀU QUÂN ĐỘI === */
+        :root {
+            --army-dark: #2c3525;    
+            --army-medium: #4b5320;  
+            --army-light: #8a9a5b;   
+            --khaki: #e6e2d3;        
+            --khaki-light: #f4f3ec;  
+            --success: #22c55e;      
+            --error: #ef4444;        
+        }
+
+        body {
+            font-family: 'Courier New', Courier, 'Segoe UI', monospace;
+            background-color: var(--army-medium);
+            margin: 0;
+            padding: 0;
+            color: var(--army-dark);
+            position: relative;
+        }
+
+        /* === GIAO DIỆN ĐỒNG HỒ === */
+        .timer-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1a1f16;
+            color: #ef4444;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: 3px solid var(--khaki);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+            z-index: 1000;
+            display: none;
+            letter-spacing: 2px;
+        }
+
+        .header-banner {
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 5px solid #1a1f16;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .question-card {
+            background-color: var(--khaki);
+            border: 3px solid var(--army-dark);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 6px 6px 0px var(--army-dark);
+        }
+
+        .question-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--army-dark);
+            border-bottom: 2px dashed var(--army-light);
+            padding-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+        }
+
+        .options-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: var(--khaki-light);
+            border: 2px solid var(--army-light);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 600;
+        }
+
+        .option-label:hover {
+            background-color: #d8dec4;
+            border-color: var(--army-dark);
+        }
+
+        .option-label input[type="radio"] {
+            margin-right: 15px;
+            transform: scale(1.3);
+            accent-color: var(--army-dark);
+            cursor: pointer;
+        }
+
+        .option-label.correct-choice {
+            background-color: #dcfce7 !important;
+            border-color: var(--success) !important;
+            color: #166534 !important;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+        }
+
+        .option-label.wrong-choice {
+            background-color: #fee2e2 !important;
+            border-color: var(--error) !important;
+            color: #991b1b !important;
+        }
+
+        .controls {
+            text-align: center;
+            margin: 40px 0;
+            background-color: var(--khaki);
+            padding: 30px;
+            border: 3px solid var(--army-dark);
+            border-radius: 8px;
+            box-shadow: 6px 6px 0px var(--army-dark);
+            display: none;
+        }
+
+        .btn-submit {
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            border: 2px solid #1a1f16;
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.2s;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .btn-submit:hover {
+            background-color: #1a1f16;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        .result-box {
+            display: none;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--army-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .loading-text {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--khaki);
+            margin: 50px 0;
+            font-weight: bold;
+        }
+        
+        .error-text {
+            color: #fca5a5;
+            background: #7f1d1d;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #ef4444;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="timer-box" class="timer-box">10:00</div>
+
+    <div class="header-banner">
+        BÀI KIỂM TRA KC
+    </div>
+
+    <div class="container" id="quiz-container">
+        <div class="loading-text" id="loading-msg">Đang tổng hợp dữ liệu từ các file KC...</div>
+    </div>
+
+    <div class="container controls" id="controls-area">
+        <button id="submit-btn" class="btn-submit" onclick="gradeExam()">NỘP BÀI</button>
+        <div id="result-box" class="result-box">
+            </div>
+    </div>
+
+    <div class="footer">
+        NguyenAnhTu-K16THO1-QuocPhong
+    </div>
+
+    <script>
+        let quizData = [];
+        // CẬP NHẬT CẤU HÌNH Ở ĐÂY
+        const TOTAL_QUESTIONS = 10; // Lấy 10 câu
+        const TIME_LIMIT = 10 * 60; // 10 phút (tính bằng giây)
+        
+        let timeRemaining = TIME_LIMIT;
+        let timerInterval;
+
+        const quizContainer = document.getElementById('quiz-container');
+        const controlsArea = document.getElementById('controls-area');
+        const loadingMsg = document.getElementById('loading-msg');
+        const timerBox = document.getElementById('timer-box');
+
+        // Danh sách 4 file dữ liệu KC
+        const filesToLoad = [
+            'data-kc1.json', 'data-kc4.json', 'data-kc5.json', 'data-kc6.json'
+        ];
+
+        // Khởi chạy load dữ liệu ngay khi load trang
+        loadAllData();
+
+        async function loadAllData() {
+            try {
+                // Fetch đồng loạt các file bằng Promise.all
+                const fetchPromises = filesToLoad.map(file => 
+                    fetch(file).then(res => {
+                        if (!res.ok) {
+                            console.warn(`Không tìm thấy file: ${file}`);
+                            return [];
+                        }
+                        return res.json();
+                    }).catch(err => [])
+                );
+
+                const results = await Promise.all(fetchPromises);
+                
+                // Gộp tất cả mảng câu hỏi lại
+                let allQuestions = results.flat();
+
+                if (allQuestions.length === 0) {
+                    throw new Error("Không có câu hỏi nào được tải. Vui lòng kiểm tra lại các file json.");
+                }
+
+                // Xáo trộn toàn bộ ngân hàng câu hỏi
+                shuffleArray(allQuestions);
+
+                // Cắt lấy đúng 10 câu đầu tiên
+                quizData = allQuestions.slice(0, Math.min(TOTAL_QUESTIONS, allQuestions.length));
+
+                // Ẩn thông báo loading, hiện khu vực làm bài
+                loadingMsg.style.display = 'none';
+                controlsArea.style.display = 'block';
+
+                // Vẽ câu hỏi và bắt đầu đếm ngược
+                renderAllQuestions();
+                startTimer();
+
+            } catch (error) {
+                loadingMsg.innerHTML = `
+                    <div class="error-text">
+                        LỖI: ${error.message}<br><br>
+                        Nhớ mở file qua <b>Live Server</b> để tránh lỗi CORS nhé.
+                    </div>
+                `;
+                console.error(error);
+            }
+        }
+
+        // Hàm xáo trộn mảng ngẫu nhiên
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Hàm bắt đầu đồng hồ
+        function startTimer() {
+            timerBox.style.display = 'block';
+            updateTimerDisplay();
+
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+
+                // Nếu hết giờ
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert("ĐÃ HẾT THỜI GIAN LÀM BÀI! Hệ thống sẽ tự động nộp bài.");
+                    gradeExam(true); // Gửi cờ true để ép nộp bài không cần hỏi confirm
+                }
+            }, 1000);
+        }
+
+        // Hàm cập nhật text trên đồng hồ
+        function updateTimerDisplay() {
+            let m = Math.floor(timeRemaining / 60);
+            let s = timeRemaining % 60;
+            timerBox.innerText = `${m < 10 ? '0' + m : m}:${s < 10 ? '0' + s : s}`;
+
+            // Gần hết giờ (dưới 1 phút) thì nhấp nháy
+            if (timeRemaining <= 60) {
+                timerBox.style.backgroundColor = timeRemaining % 2 === 0 ? "#ef4444" : "#1a1f16";
+                timerBox.style.color = timeRemaining % 2 === 0 ? "#ffffff" : "#ef4444";
+            }
+        }
+
+        // Vẽ danh sách câu hỏi ra màn hình
+        function renderAllQuestions() {
+            quizData.forEach((q, index) => {
+                const card = document.createElement('div');
+                card.className = 'question-card';
+                card.id = `question-card-${index}`;
+                
+                const title = document.createElement('div');
+                title.className = 'question-title';
+                title.innerText = `Câu ${index + 1}: ${q.cauhoi || "[Lỗi: Thiếu nội dung câu hỏi]"}`;
+                card.appendChild(title);
+
+                const optionsWrapper = document.createElement('div');
+                optionsWrapper.className = 'options-wrapper';
+
+                if (!q.options || !Array.isArray(q.options)) {
+                    optionsWrapper.innerHTML = `<span style="color: #ef4444; font-weight: bold;">[Cảnh báo]: Thiếu mảng "options".</span>`;
+                } else {
+                    q.options.forEach((optText, optIndex) => {
+                        const label = document.createElement('label');
+                        label.className = `option-label q-${index}-opt-${optIndex}`;
+                        label.innerHTML = `
+                            <input type="radio" name="answer-${index}" value="${optIndex}">
+                            <span>${optText}</span>
+                        `;
+                        optionsWrapper.appendChild(label);
+                    });
+                }
+
+                card.appendChild(optionsWrapper);
+                quizContainer.appendChild(card);
+            });
+        }
+
+        // Hàm chấm điểm
+        function gradeExam(isTimeOut = false) {
+            let score = 0;
+            let answeredCount = 0;
+
+            for (let i = 0; i < quizData.length; i++) {
+                if (document.querySelector(`input[name="answer-${i}"]:checked`)) {
+                    answeredCount++;
+                }
+            }
+
+            // Nếu người dùng tự bấm nộp bài (chưa hết giờ)
+            if (!isTimeOut && answeredCount < quizData.length) {
+                const confirmSubmit = confirm(`Đồng chí mới trả lời ${answeredCount}/${quizData.length} câu. Chắc chắn muốn nộp bài?`);
+                if (!confirmSubmit) return; // Hủy nộp bài, đồng hồ vẫn đếm tiếp
+            }
+
+            // --- BẮT ĐẦU XỬ LÝ KẾT QUẢ ---
+            clearInterval(timerInterval); // Dừng đồng hồ
+            timerBox.style.display = 'none'; // Ẩn đồng hồ đi cho gọn
+
+            quizData.forEach((q, index) => {
+                const correctOption = q.dapan;
+                const selectedInput = document.querySelector(`input[name="answer-${index}"]:checked`);
+                
+                document.querySelectorAll(`input[name="answer-${index}"]`).forEach(inp => inp.disabled = true);
+
+                const correctLabel = document.querySelector(`.q-${index}-opt-${correctOption}`);
+                if(correctLabel) correctLabel.classList.add('correct-choice');
+
+                if (selectedInput) {
+                    const userChoice = parseInt(selectedInput.value);
+                    if (userChoice === correctOption) {
+                        score++;
+                    } else {
+                        const wrongLabel = document.querySelector(`.q-${index}-opt-${userChoice}`);
+                        if(wrongLabel) wrongLabel.classList.add('wrong-choice');
+                    }
+                }
+            });
+
+            document.getElementById('submit-btn').style.display = 'none';
+            const resultBox = document.getElementById('result-box');
+            resultBox.style.display = 'block';
+            
+            // Tính số điểm quy đổi hệ 10
+            const finalScore10 = (score / quizData.length) * 10;
+
+            resultBox.innerHTML = `
+                <div style="font-size: 1.5rem; color: #4b5320; margin-bottom: 10px;">HOÀN THÀNH NHIỆM VỤ!</div>
+                <div style="font-size: 2.5rem; margin-bottom: 10px;">Số câu đúng: ${score} / ${quizData.length}</div>
+                <div style="font-size: 2rem; color: #ef4444;">Điểm hệ 10: ${finalScore10.toFixed(1)} Điểm</div>
+                <button onclick="location.reload()" class="btn-submit" style="margin-top:30px; font-size: 1.2rem; padding: 10px 30px;">THỰC HIỆN LẠI (F5)</button>
+            `;
+
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
