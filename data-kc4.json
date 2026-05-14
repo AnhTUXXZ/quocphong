@@ -1,0 +1,222 @@
+[
+  {
+    "cauhoi": "Lựu đạn là loại vũ khí gì?",
+    "options": [
+      "Dùng để đánh gần, trang bị cho từng người trong chiến đấu",
+      "Có hỏa lực rất mạnh, hủy diệt sinh lực đối phương",
+      "Có khả năng phá hủy tất cả các loại vũ khí khác",
+      "Là phương tiện dùng để gây sát thương"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Lựu đạn là loại vũ khí được cấu tạo như thế nào?",
+    "options": [
+      "Cấu tạo đơn giản, gọn nhẹ, sử dụng thuận tiện",
+      "Có nhiều bộ phận, sử dụng phức tạp",
+      "Cấu tạo phức tạp nhưng sử dụng dễ dàng",
+      "Có nhiều tác dụng, sử dụng với nhiều mục đích"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Lựu đạn là loại vũ khí khi sử dụng có khả năng gì?",
+    "options": [
+      "Sát thương sinh lực địch",
+      "Dùng để tiêu diệt các phương tiện trên không",
+      "Hủy diệt lớn sinh lực đối phương",
+      "Tiêu diệt các phương tiện ở sâu dưới nước"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Lựu đạn F1 Việt Nam, khi sử dụng chủ yếu sát thương sinh lực địch bằng gì?",
+    "options": [
+      "Mảnh gang vụn",
+      "Các viên bi nhỏ",
+      "Hơi thuốc nổ",
+      "Mảnh sắt vụn"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Bán kính sát thương của lựu đạn F1 là bao nhiêu m?",
+    "options": ["20m", "15m", "10m"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Khối lượng toàn bộ của lựu đạn F1 Việt Nam là bao nhiêu gam?",
+    "options": ["600 gam", "450 gam", "500 gam"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Cấu tạo lựu đạn F1 Việt Nam gồm những bộ phận nào?",
+    "options": [
+      "Thân lựu đạn, thuốc nhồi và bộ phận gây nổ",
+      "Thân lựu đạn, cán lựu đạn và bộ phận gây nổ lắp vào thân",
+      "Thân lựu đạn, bộ phận gây nổ lắp vào thân và hạt nổ",
+      "Thân, bộ phận gây nổ lắp vào thân và đuôi lựu đạn"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Vỏ lựu đạn F1 Việt Nam làm bằng chất liệu gì?",
+    "options": ["Gang", "Sắt", "Thép", "Nhựa tổng hợp"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Bên trong vỏ lựu đạn F1 Việt Nam chứa gì?",
+    "options": ["Thuốc nổ TNT", "Thuốc cháy", "Nhiều viên bi", "Thuốc gây nổ"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Lúc bình thường, mỏ vịt của lựu đạn F1 như thế nào?",
+    "options": [
+      "Chốt an toàn giữ không cho mỏ vịt bật lên",
+      "Không có chốt an toàn, mỏ vịt bật lên",
+      "Bật lên nhưng được tay người ném giữ lại",
+      "Mỏ vịt ở vị trí không an toàn"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Khi sử dụng, nếu rút chốt an toàn thì mỏ vịt của lựu đạn F1 như thế nào?",
+    "options": [
+      "Không có chốt giữ, mỏ vịt bật lên",
+      "Muốn mỏ vịt bật lên, phải tiếp tục rút chốt an toàn phụ",
+      "Mỏ vịt vẫn ở trạng thái an toàn",
+      "Không thay đổi, giữ nguyên như cũ"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Thời gian cháy chậm của lựu đạn LĐ-01 là bao nhiêu giây?",
+    "options": ["Từ 3,2 - 4,2s", "Từ 3,0 - 4,0s", "Từ 3,1 - 4,1s"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Lựu đạn LĐ-01 có đường kính thân là bao nhiêu mm?",
+    "options": ["57 mm", "50 mm", "65 mm"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Lựu đạn LĐ-01 có khối lượng toàn bộ là bao nhiêu?",
+    "options": ["365 - 400 gam", "440 - 500 gam", "390 - 450 gam", "470 - 500 gam"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Bán kính sát thương của LĐ-01?",
+    "options": ["5 – 6 m", "5 – 7 m", "4 – 8 m"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Lựu đạn LĐ-01 dùng để sát thương sinh lực địch chủ yếu bằng gì?",
+    "options": ["Vỏ thép mỏng", "Mảnh sắt vụn", "Mảnh thép vụn", "Áp lực khí thuốc"],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Quy tắc sử dụng lựu đạn thật có một nội dung nào sau đây?",
+    "options": [
+      "Nắm vững tính năng chiến đấu, cấu tạo và thành thạo động tác sử dụng lựu đạn",
+      "Biết cách ném trong kiểm tra ném lựu đạn trúng đích",
+      "Biết cách rút chốt an toàn làm cho lựu đạn nổ",
+      "Nắm chắc cách đánh giá thành tích trong ném lựu đạn trúng đích"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Chỉ sử dụng lựu đạn thật trong trường hợp nào?",
+    "options": [
+      "Khi có lệnh của người chỉ huy",
+      "Khi người sử dụng thấy",
+      "Khi luyện tập chiến thuật",
+      "Khi học tập về nội dung"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Quy định sử dụng lựu đạn thật như thế nào?",
+    "options": [
+      "Cấm sử dụng trong luyện tập",
+      "Được sử dụng ở khu vực đông người, nhưng phải tháo kíp nổ",
+      "Được sử dụng trong luyện tập, nhưng phải cố định chốt an toàn",
+      "Trong luyện tập phải cẩn thận khi sử dụng"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Động tác đứng ném lựu đạn gồm mấy cử động?",
+    "options": ["3", "2", "4"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Khi ném lựu đạn, người ném buông lựu đạn ra khỏi tay khi nào là đúng thời cơ nhất?",
+    "options": [
+      "Cánh tay phải hợp với mặt phẳng ngang 45°",
+      "Cánh tay vung lên ở góc",
+      "Thân người hợp với mặt phẳng ngang 45°",
+      "Cánh tay phải hợp với mặt phẳng ngang 45°"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Động tác quỳ ném lựu đạn có mấy cử động?",
+    "options": ["3", "2", "4"],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Động tác nằm ném lựu đạn có mấy cử động?",
+    "options": ["3", "4", "2"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Bãi ném lựu đạn xa, đúng hướng có chiều dài bao nhiêu m?",
+    "options": ["20m – 60m", "5m – 35m", "10m – 50m"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Đánh giá thành tích loại Giỏi trong ném lựu đạn xa, đúng hướng là bao nhiêu m?",
+    "options": ["35m trở lên", "25m trở lên", "45m trở lên"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Đánh giá thành tích loại Khá trong ném lựu đạn xa, đúng hướng là bao nhiêu m?",
+    "options": ["30m – dưới 35m", "25m – dưới 45m", "35m – dưới 50m"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Đánh giá thành tích loại Trung bình trong ném lựu đạn xa, đúng hướng là bao nhiêu m?",
+    "options": ["25m – dưới 30m", "15m – dưới 20m", "10m – dưới 25m"],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Người ném lựu đạn thật phải căn cứ vào đâu để xác định tư thế, động tác ném phù hợp?",
+    "options": [
+      "Tùy theo điều kiện địa hình, địa vật, tình hình địch",
+      "Căn cứ tình hình ta và địa vật",
+      "Điều kiện tình hình ta và địa vật",
+      "Tùy theo điều kiện thời tiết"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Khi ném lựu đạn xong, người ném phải làm gì?",
+    "options": [
+      "Quan sát kết quả ném và tình hình địch để xử lý kịp thời",
+      "Nấp xuống để tránh mảnh lựu đạn",
+      "Di chuyển ngay vị trí để bảo đảm an toàn",
+      "Quan sát tình hình địch xung quanh"
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trong quá trình vận chuyển, giữ gìn lựu đạn cần lưu ý gì?",
+    "options": [
+      "Không để rơi, không va chạm mạnh",
+      "Phải kiểm tra chốt an toàn lựu đạn xong mới được vận chuyển",
+      "Phải kiểm tra cẩn thận khi vận chuyển cùng thuốc nổ",
+      "Động tác nhẹ nhàng khi tung, ném trong vận chuyển"
+    ],
+    "dapan": 0
+  }
+]
