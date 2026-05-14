@@ -40,6 +40,126 @@
             letter-spacing: 2px;
             border-bottom: 2px solid var(--army-light);
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            position: relative; /* Thêm relative để chứa nút 3 gạch */
+        }
+
+        /* === MENU SIDEBAR (TOP TRUY CẬP) === */
+        .hamburger-btn {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            font-size: 32px;
+            color: var(--khaki);
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+
+        .hamburger-btn:hover {
+            transform: translateY(-50%) scale(1.1);
+            color: #fff;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -350px;
+            width: 320px;
+            max-width: 80%;
+            height: 100%;
+            background-color: var(--army-dark);
+            border-right: 4px solid var(--khaki);
+            box-shadow: 5px 0 15px rgba(0,0,0,0.7);
+            transition: left 0.3s ease;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            color: var(--khaki);
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background-color: var(--army-medium);
+            border-bottom: 3px solid var(--khaki);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar-header h3 {
+            margin: 0;
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .close-btn {
+            font-size: 32px;
+            cursor: pointer;
+            color: var(--khaki);
+            line-height: 1;
+            transition: color 0.2s;
+        }
+
+        .close-btn:hover {
+            color: #ff4d4d;
+        }
+
+        .sidebar-content {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .history-item {
+            background-color: var(--khaki);
+            color: var(--army-dark);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 3px solid var(--army-light);
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .history-item .rank-badge {
+            position: absolute;
+            top: -12px;
+            right: -10px;
+            background-color: #ff3333;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 2px solid white;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .history-item div {
+            margin-bottom: 6px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .history-item .time {
+            font-size: 14px;
+            color: #444;
+            font-weight: normal;
+            margin-top: 10px;
+            border-top: 1px dashed var(--army-dark);
+            padding-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         /* === PHẦN THÔNG BÁO LỖI DƯỚI BANNER === */
@@ -337,6 +457,15 @@
 </head>
 <body>
 
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Bảng Xếp Hạng</h3>
+            <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        </div>
+        <div class="sidebar-content" id="sidebarContent">
+            </div>
+    </div>
+
     <div id="infoPopup" class="modal-overlay">
         <div class="modal-content">
             <h2>Khai Báo Thông Tin</h2>
@@ -362,6 +491,7 @@
     </div>
 
     <div class="header-banner">
+        <button class="hamburger-btn" onclick="toggleSidebar()">&#9776;</button>
         HỆ THỐNG TRẮC NGHIỆM QUỐC PHÒNG - UPT
     </div>
 
@@ -448,7 +578,7 @@
                 <span>Nhấn để làm bài</span>
             </a>
 
-<a href="https://anhtuxxz.github.io/quocphong/kc4.html" class="menu-item" target="_blank">
+            <a href="https://anhtuxxz.github.io/quocphong/kc4.html" class="menu-item" target="_blank">
                KC 4
                 <span>Nhấn để làm bài</span>
             </a>
@@ -457,7 +587,8 @@
                KC 5
                 <span>Nhấn để làm bài</span>
             </a>
-<a href="https://anhtuxxz.github.io/quocphong/kc6.html" class="menu-item" target="_blank">
+            
+            <a href="https://anhtuxxz.github.io/quocphong/kc6.html" class="menu-item" target="_blank">
                KC 6
                 <span>Nhấn để làm bài</span>
             </a>
@@ -478,8 +609,52 @@
             if (!savedData) {
                 document.getElementById('infoPopup').style.display = 'flex';
             }
+            // Gọi load sidebar khi tải trang
+            loadSidebarData();
         });
 
+        // === XỬ LÝ MỞ/ĐÓNG SIDEBAR ===
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+            if (sidebar.classList.contains('active')) {
+                loadSidebarData();
+            }
+        }
+
+        // === XỬ LÝ HIỂN THỊ DỮ LIỆU LÊN SIDEBAR ===
+        function loadSidebarData() {
+            const sidebarContent = document.getElementById('sidebarContent');
+            let history = JSON.parse(localStorage.getItem('hocVienQuocPhongList')) || [];
+            
+            // Xử lý nạp dữ liệu cũ (nếu người dùng đã khai báo trước khi thêm tính năng list)
+            const currentUser = JSON.parse(localStorage.getItem('hocVienQuocPhong'));
+            if (history.length === 0 && currentUser) {
+                history.push(currentUser);
+                localStorage.setItem('hocVienQuocPhongList', JSON.stringify(history));
+            }
+
+            if (history.length === 0) {
+                sidebarContent.innerHTML = '<p style="text-align:center; margin-top:20px;">Chưa có dữ liệu truy cập.</p>';
+                return;
+            }
+
+            let html = '';
+            history.forEach((item, index) => {
+                html += `
+                    <div class="history-item">
+                        <div class="rank-badge">TOP ${index + 1}</div>
+                        <div>👤 Họ tên: ${item.hoTen}</div>
+                        <div>🏢 Đại đội: ${item.daiDoi}</div>
+                        <div>⛺ Tiểu đội: ${item.tieuDoi}</div>
+                        <div class="time">🕒 ${item.thoiGian}</div>
+                    </div>
+                `;
+            });
+            sidebarContent.innerHTML = html;
+        }
+
+        // === XỬ LÝ NHẬP THÔNG TIN VÀ LƯU LIST ===
         function xacNhanThongTin() {
             const hoTen = document.getElementById('hoTen').value.trim();
             const daiDoi = document.getElementById('daiDoi').value.trim();
@@ -502,7 +677,17 @@
                 tieuDoi: tieuDoi,
                 thoiGian: new Date().toLocaleString()
             };
+            
+            // Lưu dữ liệu user hiện tại
             localStorage.setItem('hocVienQuocPhong', JSON.stringify(thongTin));
+
+            // Lưu vào mảng lịch sử (List) để hiện trên bảng xếp hạng
+            let history = JSON.parse(localStorage.getItem('hocVienQuocPhongList')) || [];
+            history.unshift(thongTin); // Thêm người mới nhất lên đầu danh sách
+            localStorage.setItem('hocVienQuocPhongList', JSON.stringify(history));
+
+            // Cập nhật lại Sidebar
+            loadSidebarData();
 
             const textMessage = `
 📝 <b>CÓ HỌC VIÊN MỚI TRUY CẬP HỆ THỐNG</b>
@@ -626,4 +811,4 @@
         });
     </script>
 </body>
-</html>
+    </html>
