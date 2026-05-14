@@ -149,9 +149,16 @@
             font-weight: bold;
             font-size: 16px;
         }
+        
+        .history-item .visit-count {
+            color: #d32f2f;
+            font-size: 17px;
+            font-weight: 900;
+            margin-top: 8px;
+        }
 
         .history-item .time {
-            font-size: 14px;
+            font-size: 13px;
             color: #444;
             font-weight: normal;
             margin-top: 10px;
@@ -637,11 +644,46 @@
         document.addEventListener('DOMContentLoaded', () => {
             const savedData = localStorage.getItem('hocVienQuocPhong');
             if (!savedData) {
+                // Nếu chưa có data thì mở popup
                 document.getElementById('infoPopup').style.display = 'flex';
+            } else {
+                // Nếu đã có data thì ghi nhận thêm 1 lần truy cập
+                recordUserVisit(JSON.parse(savedData));
             }
-            // Gọi load sidebar khi tải trang
             loadSidebarData();
         });
+
+        // === LOGIC GHI NHẬN & CỘNG DỒN LƯỢT TRUY CẬP CHO USER ===
+        function recordUserVisit(userData) {
+            let history = JSON.parse(localStorage.getItem('hocVienQuocPhongList')) || [];
+            
+            // Tìm xem người này đã có trong danh sách chưa (dựa vào Tên, Đại đội, Tiểu đội)
+            let existingUserIndex = history.findIndex(item => 
+                item.hoTen === userData.hoTen && 
+                item.daiDoi === userData.daiDoi && 
+                item.tieuDoi === userData.tieuDoi
+            );
+
+            if (existingUserIndex !== -1) {
+                // Đã có -> Tăng biến đếm và cập nhật thời gian
+                if (!history[existingUserIndex].visitCount) {
+                    history[existingUserIndex].visitCount = 1; // Khởi tạo nếu bản ghi cũ chưa có
+                }
+                history[existingUserIndex].visitCount += 1;
+                history[existingUserIndex].thoiGian = new Date().toLocaleString();
+            } else {
+                // Chưa có -> Thêm mới với lượt truy cập = 1
+                userData.visitCount = 1;
+                userData.thoiGian = new Date().toLocaleString();
+                history.push(userData);
+            }
+
+            // Sắp xếp lại danh sách theo số lượt truy cập (visitCount) giảm dần
+            history.sort((a, b) => (b.visitCount || 1) - (a.visitCount || 1));
+
+            // Lưu lại vào LocalStorage
+            localStorage.setItem('hocVienQuocPhongList', JSON.stringify(history));
+        }
 
         // === XỬ LÝ MỞ/ĐÓNG SIDEBAR ===
         function toggleSidebar() {
@@ -656,13 +698,6 @@
         function loadSidebarData() {
             const sidebarContent = document.getElementById('sidebarContent');
             let history = JSON.parse(localStorage.getItem('hocVienQuocPhongList')) || [];
-            
-            // Xử lý nạp dữ liệu cũ (nếu người dùng đã khai báo trước khi thêm tính năng list)
-            const currentUser = JSON.parse(localStorage.getItem('hocVienQuocPhong'));
-            if (history.length === 0 && currentUser) {
-                history.push(currentUser);
-                localStorage.setItem('hocVienQuocPhongList', JSON.stringify(history));
-            }
 
             if (history.length === 0) {
                 sidebarContent.innerHTML = '<p style="text-align:center; margin-top:20px;">Chưa có dữ liệu truy cập.</p>';
@@ -671,20 +706,22 @@
 
             let html = '';
             history.forEach((item, index) => {
+                let count = item.visitCount || 1; // Mặc định là 1 nếu dữ liệu cũ
                 html += `
                     <div class="history-item">
                         <div class="rank-badge">TOP ${index + 1}</div>
                         <div>👤 Họ tên: ${item.hoTen}</div>
                         <div>🏢 Đại đội: ${item.daiDoi}</div>
                         <div>⛺ Tiểu đội: ${item.tieuDoi}</div>
-                        <div class="time">🕒 ${item.thoiGian}</div>
+                        <div class="visit-count">🔥 Số lần vào web: ${count}</div>
+                        <div class="time">🕒 Lần cuối: ${item.thoiGian}</div>
                     </div>
                 `;
             });
             sidebarContent.innerHTML = html;
         }
 
-        // === XỬ LÝ NHẬP THÔNG TIN VÀ LƯU LIST ===
+        // === XỬ LÝ NHẬP THÔNG TIN MỚI ===
         function xacNhanThongTin() {
             const hoTen = document.getElementById('hoTen').value.trim();
             const daiDoi = document.getElementById('daiDoi').value.trim();
@@ -704,17 +741,14 @@
             const thongTin = {
                 hoTen: hoTen,
                 daiDoi: daiDoi,
-                tieuDoi: tieuDoi,
-                thoiGian: new Date().toLocaleString()
+                tieuDoi: tieuDoi
             };
             
             // Lưu dữ liệu user hiện tại
             localStorage.setItem('hocVienQuocPhong', JSON.stringify(thongTin));
 
-            // Lưu vào mảng lịch sử (List) để hiện trên bảng xếp hạng
-            let history = JSON.parse(localStorage.getItem('hocVienQuocPhongList')) || [];
-            history.unshift(thongTin); // Thêm người mới nhất lên đầu danh sách
-            localStorage.setItem('hocVienQuocPhongList', JSON.stringify(history));
+            // Ghi nhận lượt truy cập đầu tiên cho user này và cập nhật bảng xếp hạng
+            recordUserVisit(thongTin);
 
             // Cập nhật lại Sidebar
             loadSidebarData();
@@ -724,7 +758,7 @@
 👤 Họ và tên: <b>${hoTen}</b>
 🏢 Đại đội: ${daiDoi}
 ⛺ Tiểu đội: ${tieuDoi}
-⏰ Thời gian: ${thongTin.thoiGian}
+⏰ Thời gian: ${new Date().toLocaleString()}
             `;
 
             const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
@@ -822,9 +856,9 @@
         // Mỗi lần tải trang hoặc nhấn F5, hệ thống đều cộng thêm 1 lượt lên Firebase
         runTransaction(totalVisitsRef, (currentData) => {
             if (currentData === null) {
-                return 372 + 1; // Khởi tạo 372 + 1 lượt
+                return 372 + 1; 
             } else {
-                return currentData + 1; // Cộng dồn
+                return currentData + 1; 
             }
         }).catch((error) => {
             console.error("Lỗi khi đếm tổng truy cập: ", error);
