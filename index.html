@@ -40,10 +40,10 @@
             letter-spacing: 2px;
             border-bottom: 2px solid var(--army-light);
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            position: relative; /* Thêm relative để chứa nút 3 gạch */
+            position: relative;
         }
 
-        /* === MENU SIDEBAR (TOP TRUY CẬP) === */
+        /* === MENU SIDEBAR (TOP TRUY CẬP TOÀN CẦU) === */
         .hamburger-btn {
             position: absolute;
             top: 50%;
@@ -96,9 +96,18 @@
 
         .sidebar-header h3 {
             margin: 0;
-            font-size: 22px;
+            font-size: 18px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            text-align: left;
+            line-height: 1.4;
+        }
+
+        .sidebar-header h3 span {
+            color: #00ff00;
+            font-size: 14px;
+            display: block;
+            text-transform: none;
         }
 
         .close-btn {
@@ -143,6 +152,11 @@
             border: 2px solid white;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
         }
+
+        /* Top 1, 2, 3 mạ vàng, bạc, đồng */
+        .history-item.top-1 .rank-badge { background-color: #FFD700; color: #000; }
+        .history-item.top-2 .rank-badge { background-color: #C0C0C0; color: #000; }
+        .history-item.top-3 .rank-badge { background-color: #CD7F32; color: #fff; }
 
         .history-item div {
             margin-bottom: 6px;
@@ -222,7 +236,7 @@
 
         .online-box {
             background-color: var(--army-dark);
-            color: #00ff00; /* Màu xanh lá nổi bật cho online */
+            color: #00ff00;
             border: 2px solid var(--khaki);
             padding: 8px 25px;
             border-radius: 20px;
@@ -352,7 +366,6 @@
             box-shadow: 8px 8px 0px var(--army-dark);
         }
 
-        /* Nút chuyển hướng */
         .menu-item {
             display: flex;
             flex-direction: column;
@@ -490,11 +503,12 @@
 
     <div id="sidebar" class="sidebar">
         <div class="sidebar-header">
-            <h3>Bảng Xếp Hạng</h3>
+            <h3>BẢNG XẾP HẠNG<br><span>(Cập nhật Realtime toàn hệ thống)</span></h3>
             <span class="close-btn" onclick="toggleSidebar()">&times;</span>
         </div>
         <div class="sidebar-content" id="sidebarContent">
-            </div>
+            <p style="text-align:center; margin-top:20px;">Đang tải dữ liệu từ máy chủ...</p>
+        </div>
     </div>
 
     <div id="infoPopup" class="modal-overlay">
@@ -569,61 +583,17 @@
 
     <div class="container">
         <div class="menu-grid">
-            <a href="https://anhtuxxz.github.io/quocphong/ct1.html" class="menu-item" target="_blank">
-                CT 1
-                <span>Nhấn để làm bài</span>
-            </a>
-            
-            <a href="https://anhtuxxz.github.io/quocphong/ct2.html" class="menu-item" target="_blank">
-                CT 2
-                <span>Nhấn để làm bài</span>
-            </a>
-            
-            <a href="https://anhtuxxz.github.io/quocphong/ct3.html" class="menu-item" target="_blank">
-                CT 3
-                <span>Nhấn để làm bài</span>
-            </a>
-            
-            <a href="https://anhtuxxz.github.io/quocphong/ct4.html" class="menu-item" target="_blank">
-                CT 4
-                <span>Nhấn để làm bài</span>
-            </a>
-            
-            <a href="https://anhtuxxz.github.io/quocphong/ct5.html" class="menu-item" target="_blank">
-                CT 5
-                <span>Nhấn để làm bài</span>
-            </a>
-
-            <a href="https://anhtuxxz.github.io/quocphong/ct6.html" class="menu-item" target="_blank">
-                CT 6
-                <span>Nhấn để làm bài</span>
-            </a>
-
-            <a href="https://anhtuxxz.github.io/quocphong/ct7.html" class="menu-item" target="_blank">
-                CT 7
-                <span>Nhấn để làm bài</span>
-            </a>
-
-            <a href="https://anhtuxxz.github.io/quocphong/kc1.html" class="menu-item" target="_blank">
-               KC 1
-                <span>Nhấn để làm bài</span>
-            </a>
-
-            <a href="https://anhtuxxz.github.io/quocphong/kc4.html" class="menu-item" target="_blank">
-               KC 4
-                <span>Nhấn để làm bài</span>
-            </a>
-
-            <a href="https://anhtuxxz.github.io/quocphong/kc5.html" class="menu-item" target="_blank">
-               KC 5
-                <span>Nhấn để làm bài</span>
-            </a>
-            
-            <a href="https://anhtuxxz.github.io/quocphong/kc6.html" class="menu-item" target="_blank">
-               KC 6
-                <span>Nhấn để làm bài</span>
-            </a>
-
+            <a href="https://anhtuxxz.github.io/quocphong/ct1.html" class="menu-item" target="_blank">CT 1<span>Nhấn để làm bài</span></a>
+            <a href="https://anhtuxxz.github.io/quocphong/ct2.html" class="menu-item" target="_blank">CT 2<span>Nhấn để làm bài</span></a>
+            <a href="https://anhtuxxz.github.io/quocphong/ct3.html" class="menu-item" target="_blank">CT 3<span>Nhấn để làm bài</span></a>
+            <a href="https://anhtuxxz.github.io/quocphong/ct4.html" class="menu-item" target="_blank">CT 4<span>Nhấn để làm bài</span></a>
+            <a href="https://anhtuxxz.github.io/quocphong/ct5.html" class="menu-item" target="_blank">CT 5<span>Nhấn để làm bài</span></a>
+            <a href="https://anhtuxxz.github.io/quocphong/ct6.html" class="menu-item" target="_blank">CT 6<span>Nhấn để làm bài</span></a>
+            <a href="https://anhtuxxz.github.io/quocphong/ct7.html" class="menu-item" target="_blank">CT 7<span>Nhấn để làm bài</span></a>
+            <a href="https://anhtuxxz.github.io/quocphong/kc1.html" class="menu-item" target="_blank">KC 1<span>Nhấn để làm bài</span></a>
+            <a href="https://anhtuxxz.github.io/quocphong/kc4.html" class="menu-item" target="_blank">KC 4<span>Nhấn để làm bài</span></a>
+            <a href="https://anhtuxxz.github.io/quocphong/kc5.html" class="menu-item" target="_blank">KC 5<span>Nhấn để làm bài</span></a>
+            <a href="https://anhtuxxz.github.io/quocphong/kc6.html" class="menu-item" target="_blank">KC 6<span>Nhấn để làm bài</span></a>
         </div>
     </div>
 
@@ -637,92 +607,131 @@
         NguyenAnhTu-K16THO1-QuocPhong-UPT
     </div>
 
-    <script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-analytics.js";
+        import { getDatabase, ref, onValue, onDisconnect, set, remove, runTransaction } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
+
+        // === CẤU HÌNH FIREBASE ===
+        const firebaseConfig = {
+            apiKey: "AIzaSyBz5y6EPEvkxa-X3W83mpB8nT2i6QLY0ck",
+            authDomain: "sl-gdqp.firebaseapp.com",
+            databaseURL: "https://sl-gdqp-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "sl-gdqp",
+            storageBucket: "sl-gdqp.firebasestorage.app",
+            messagingSenderId: "541164628409",
+            appId: "1:541164628409:web:5ebb5f2d2fe1c6f513ae68",
+            measurementId: "G-LRKDV6MVGR"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase(app);
+
+        // BOT TELEGRAM INFO
         const TELEGRAM_BOT_TOKEN = '8414314561:AAHYLevOgv0H6Y3HSztEsJA17nCBIuMHlwE';
         const TELEGRAM_CHAT_ID = '7209414522';
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedData = localStorage.getItem('hocVienQuocPhong');
-            if (!savedData) {
-                // Nếu chưa có data thì mở popup
-                document.getElementById('infoPopup').style.display = 'flex';
-            } else {
-                // Nếu đã có data thì ghi nhận thêm 1 lần truy cập
-                recordUserVisit(JSON.parse(savedData));
-            }
-            loadSidebarData();
-        });
+        // Xử lý ID cá nhân (để định danh trên Firebase)
+        let userId = localStorage.getItem('upt_user_id');
+        if (!userId) {
+            userId = 'user_' + Math.random().toString(36).substr(2, 9) + Date.now();
+            localStorage.setItem('upt_user_id', userId);
+        }
 
-        // === LOGIC GHI NHẬN & CỘNG DỒN LƯỢT TRUY CẬP CHO USER ===
-        function recordUserVisit(userData) {
-            let history = JSON.parse(localStorage.getItem('hocVienQuocPhongList')) || [];
+        // ==========================================
+        // 1. GHI NHẬN LƯỢT TRUY CẬP CÁ NHÂN LÊN FIREBASE (BXH)
+        // ==========================================
+        function pushUserVisitToFirebase(userData) {
+            const userLeaderboardRef = ref(db, 'leaderboard/' + userId);
             
-            // Tìm xem người này đã có trong danh sách chưa (dựa vào Tên, Đại đội, Tiểu đội)
-            let existingUserIndex = history.findIndex(item => 
-                item.hoTen === userData.hoTen && 
-                item.daiDoi === userData.daiDoi && 
-                item.tieuDoi === userData.tieuDoi
-            );
-
-            if (existingUserIndex !== -1) {
-                // Đã có -> Tăng biến đếm và cập nhật thời gian
-                if (!history[existingUserIndex].visitCount) {
-                    history[existingUserIndex].visitCount = 1; // Khởi tạo nếu bản ghi cũ chưa có
+            runTransaction(userLeaderboardRef, (currentData) => {
+                if (currentData === null) {
+                    // Nếu người này chưa từng có trên Firebase Leaderboard
+                    return {
+                        hoTen: userData.hoTen,
+                        daiDoi: userData.daiDoi,
+                        tieuDoi: userData.tieuDoi,
+                        visitCount: 1, // Lần đầu
+                        thoiGian: new Date().toLocaleString('vi-VN')
+                    };
+                } else {
+                    // Nếu đã có, cộng thêm 1 lượt và cập nhật giờ
+                    currentData.visitCount = (currentData.visitCount || 0) + 1;
+                    currentData.thoiGian = new Date().toLocaleString('vi-VN');
+                    // Cập nhật lại thông tin nhỡ họ đổi tên/đại đội
+                    currentData.hoTen = userData.hoTen;
+                    currentData.daiDoi = userData.daiDoi;
+                    currentData.tieuDoi = userData.tieuDoi;
+                    return currentData;
                 }
-                history[existingUserIndex].visitCount += 1;
-                history[existingUserIndex].thoiGian = new Date().toLocaleString();
-            } else {
-                // Chưa có -> Thêm mới với lượt truy cập = 1
-                userData.visitCount = 1;
-                userData.thoiGian = new Date().toLocaleString();
-                history.push(userData);
-            }
-
-            // Sắp xếp lại danh sách theo số lượt truy cập (visitCount) giảm dần
-            history.sort((a, b) => (b.visitCount || 1) - (a.visitCount || 1));
-
-            // Lưu lại vào LocalStorage
-            localStorage.setItem('hocVienQuocPhongList', JSON.stringify(history));
+            }).catch(error => console.error("Lỗi cập nhật BXH Firebase: ", error));
         }
 
-        // === XỬ LÝ MỞ/ĐÓNG SIDEBAR ===
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-            if (sidebar.classList.contains('active')) {
-                loadSidebarData();
-            }
-        }
-
-        // === XỬ LÝ HIỂN THỊ DỮ LIỆU LÊN SIDEBAR ===
-        function loadSidebarData() {
+        // ==========================================
+        // 2. LẮNG NGHE & RENDER BẢNG XẾP HẠNG REALTIME
+        // ==========================================
+        const leaderboardRef = ref(db, 'leaderboard');
+        onValue(leaderboardRef, (snap) => {
             const sidebarContent = document.getElementById('sidebarContent');
-            let history = JSON.parse(localStorage.getItem('hocVienQuocPhongList')) || [];
-
-            if (history.length === 0) {
-                sidebarContent.innerHTML = '<p style="text-align:center; margin-top:20px;">Chưa có dữ liệu truy cập.</p>';
+            if (!snap.exists()) {
+                sidebarContent.innerHTML = '<p style="text-align:center; margin-top:20px;">Chưa có dữ liệu trên máy chủ.</p>';
                 return;
             }
 
+            const data = snap.val();
+            // Chuyển object Firebase thành Array để có thể Sắp Xếp
+            let history = Object.values(data);
+            
+            // Sắp xếp giảm dần theo số lượng truy cập
+            history.sort((a, b) => (b.visitCount || 0) - (a.visitCount || 0));
+
             let html = '';
             history.forEach((item, index) => {
-                let count = item.visitCount || 1; // Mặc định là 1 nếu dữ liệu cũ
+                // Gắn class cho TOP 1, 2, 3 để đổi màu huy hiệu
+                let rankClass = '';
+                if (index === 0) rankClass = 'top-1';
+                else if (index === 1) rankClass = 'top-2';
+                else if (index === 2) rankClass = 'top-3';
+
                 html += `
-                    <div class="history-item">
+                    <div class="history-item ${rankClass}">
                         <div class="rank-badge">TOP ${index + 1}</div>
                         <div>👤 Họ tên: ${item.hoTen}</div>
                         <div>🏢 Đại đội: ${item.daiDoi}</div>
                         <div>⛺ Tiểu đội: ${item.tieuDoi}</div>
-                        <div class="visit-count">🔥 Số lần vào web: ${count}</div>
+                        <div class="visit-count">🔥 Số lần vào web: ${item.visitCount}</div>
                         <div class="time">🕒 Lần cuối: ${item.thoiGian}</div>
                     </div>
                 `;
             });
             sidebarContent.innerHTML = html;
+        });
+
+        // ==========================================
+        // 3. XỬ LÝ KHỞI ĐỘNG KHI LOAD TRANG
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedData = localStorage.getItem('hocVienQuocPhong');
+            if (!savedData) {
+                // Nếu chưa có data -> Hiện Popup khai báo
+                document.getElementById('infoPopup').style.display = 'flex';
+            } else {
+                // Nếu đã có data -> Nhắn lên Firebase cộng thêm 1 lượt cá nhân
+                pushUserVisitToFirebase(JSON.parse(savedData));
+            }
+            startCountdown();
+        });
+
+        // Gắn hàm toggleSidebar vào global window để HTML gọi được
+        window.toggleSidebar = function() {
+            document.getElementById('sidebar').classList.toggle('active');
         }
 
-        // === XỬ LÝ NHẬP THÔNG TIN MỚI ===
-        function xacNhanThongTin() {
+        // ==========================================
+        // 4. XỬ LÝ NHẬP THÔNG TIN MỚI (POPUP)
+        // ==========================================
+        window.xacNhanThongTin = function() {
             const hoTen = document.getElementById('hoTen').value.trim();
             const daiDoi = document.getElementById('daiDoi').value.trim();
             const tieuDoi = document.getElementById('tieuDoi').value.trim();
@@ -744,34 +753,29 @@
                 tieuDoi: tieuDoi
             };
             
-            // Lưu dữ liệu user hiện tại
+            // Lưu xuống máy người dùng để lần sau ko hiện popup
             localStorage.setItem('hocVienQuocPhong', JSON.stringify(thongTin));
 
-            // Ghi nhận lượt truy cập đầu tiên cho user này và cập nhật bảng xếp hạng
-            recordUserVisit(thongTin);
+            // Đẩy ngay người này lên Bảng xếp hạng Firebase (Lượt 1)
+            pushUserVisitToFirebase(thongTin);
 
-            // Cập nhật lại Sidebar
-            loadSidebarData();
-
+            // Bắn thông báo Telegram
             const textMessage = `
 📝 <b>CÓ HỌC VIÊN MỚI TRUY CẬP HỆ THỐNG</b>
 👤 Họ và tên: <b>${hoTen}</b>
 🏢 Đại đội: ${daiDoi}
 ⛺ Tiểu đội: ${tieuDoi}
-⏰ Thời gian: ${new Date().toLocaleString()}
+⏰ Thời gian: ${new Date().toLocaleString('vi-VN')}
             `;
 
-            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-            const payload = {
-                chat_id: TELEGRAM_CHAT_ID,
-                text: textMessage,
-                parse_mode: 'HTML'
-            };
-
-            fetch(url, {
+            fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
+                body: JSON.stringify({
+                    chat_id: TELEGRAM_CHAT_ID,
+                    text: textMessage,
+                    parse_mode: 'HTML'
+                })
             })
             .then(() => {
                 document.getElementById('infoPopup').style.display = 'none';
@@ -781,12 +785,45 @@
             });
         }
 
-        // === LOGIC ĐẾM NGƯỢC NGÀY VỀ UPT ===
+        // ==========================================
+        // 5. TỔNG TRUY CẬP TOÀN HỆ THỐNG (CỘNG CẢ F5)
+        // ==========================================
+        const totalVisitsRef = ref(db, 'totalVisits');
+        onValue(totalVisitsRef, (snap) => {
+            let val = snap.val() || 372;
+            document.getElementById('total-visits-count').innerText = val;
+        });
+
+        // Tự động cộng dồn TỔNG CHUNG mỗi lần F5
+        runTransaction(totalVisitsRef, (currentData) => {
+            return (currentData === null) ? 373 : currentData + 1;
+        }).catch(err => console.error(err));
+
+        // ==========================================
+        // 6. SỐ NGƯỜI ĐANG ONLINE TRỰC TIẾP
+        // ==========================================
+        const connectedRef = ref(db, '.info/connected');
+        const myUserRef = ref(db, 'onlineUsers/' + userId);
+        const allOnlineUsersRef = ref(db, 'onlineUsers');
+
+        onValue(connectedRef, (snap) => {
+            if (snap.val() === true) {
+                const con = onDisconnect(myUserRef);
+                con.remove().then(() => set(myUserRef, true));
+            }
+        });
+
+        onValue(allOnlineUsersRef, (snap) => {
+            document.getElementById('online-count').innerText = snap.exists() ? Object.keys(snap.val()).length : 0;
+        });
+
+        // ==========================================
+        // 7. LOGIC ĐẾM NGƯỢC
+        // ==========================================
         function startCountdown() {
             let now = new Date();
             let currentYear = now.getFullYear();
             let currentMonth = now.getMonth();
-            
             let targetDate = new Date(currentYear, currentMonth, 27, 0, 0, 0).getTime();
             
             if (now.getTime() > targetDate) {
@@ -794,8 +831,7 @@
             }
 
             const countdownInterval = setInterval(function() {
-                const currentTime = new Date().getTime();
-                const distance = targetDate - currentTime;
+                const distance = targetDate - new Date().getTime();
 
                 if (distance <= 0) {
                     clearInterval(countdownInterval);
@@ -814,87 +850,6 @@
                 document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
             }, 1000);
         }
-
-        startCountdown();
-    </script>
-
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-analytics.js";
-        import { getDatabase, ref, onValue, onDisconnect, set, remove, runTransaction } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyBz5y6EPEvkxa-X3W83mpB8nT2i6QLY0ck",
-            authDomain: "sl-gdqp.firebaseapp.com",
-            databaseURL: "https://sl-gdqp-default-rtdb.europe-west1.firebasedatabase.app",
-            projectId: "sl-gdqp",
-            storageBucket: "sl-gdqp.firebasestorage.app",
-            messagingSenderId: "541164628409",
-            appId: "1:541164628409:web:5ebb5f2d2fe1c6f513ae68",
-            measurementId: "G-LRKDV6MVGR"
-        };
-
-        // Khởi tạo Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const db = getDatabase(app);
-
-        // ==========================================
-        // XỬ LÝ TỔNG SỐ LƯỢNG TRUY CẬP (TÍNH CẢ F5)
-        // ==========================================
-        const totalVisitsRef = ref(db, 'totalVisits');
-
-        // Lắng nghe giá trị tổng truy cập trên Firebase để hiển thị
-        onValue(totalVisitsRef, (snap) => {
-            let val = snap.val();
-            if (val === null) {
-                val = 372; // Nếu Firebase chưa có dữ liệu, hiển thị gốc là 372
-            }
-            document.getElementById('total-visits-count').innerText = val;
-        });
-
-        // Mỗi lần tải trang hoặc nhấn F5, hệ thống đều cộng thêm 1 lượt lên Firebase
-        runTransaction(totalVisitsRef, (currentData) => {
-            if (currentData === null) {
-                return 372 + 1; 
-            } else {
-                return currentData + 1; 
-            }
-        }).catch((error) => {
-            console.error("Lỗi khi đếm tổng truy cập: ", error);
-        });
-
-        // ==========================================
-        // XỬ LÝ NGƯỜI DÙNG ĐANG ONLINE
-        // ==========================================
-        let userId = localStorage.getItem('upt_user_id');
-        if (!userId) {
-            userId = 'user_' + Math.random().toString(36).substr(2, 9) + Date.now();
-            localStorage.setItem('upt_user_id', userId);
-        }
-
-        const connectedRef = ref(db, '.info/connected');
-        const myUserRef = ref(db, 'onlineUsers/' + userId);
-        const allOnlineUsersRef = ref(db, 'onlineUsers');
-
-        // Lắng nghe trạng thái kết nối
-        onValue(connectedRef, (snap) => {
-            if (snap.val() === true) {
-                const con = onDisconnect(myUserRef);
-                con.remove().then(() => {
-                    set(myUserRef, true);
-                });
-            }
-        });
-
-        // Lắng nghe tổng số lượng người đang online
-        onValue(allOnlineUsersRef, (snap) => {
-            let onlineCount = 0;
-            if (snap.exists()) {
-                onlineCount = Object.keys(snap.val()).length;
-            }
-            document.getElementById('online-count').innerText = onlineCount;
-        });
     </script>
 </body>
 </html>
