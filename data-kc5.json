@@ -1,0 +1,317 @@
+[
+  {
+    "cauhoi": "Trong chiến đấu tiến công, từng người hoặc cùng với tổ có thể đánh chiếm một số mục tiêu:",
+    "options": [
+      "Đánh địch trong ụ súng, lô cốt, chiến hào, giao thông hào, căn nhà, xe tăng, xe bọc thép, tên địch, tốp địch trong công sự, đánh xe tăng, xe bọc thép địch, đánh địch đột nhập.",
+      "Đánh địch phía trước, hai bên sườn, phía sau trận địa phòng ngự, đánh địch trong ụ súng, đánh địch trong công sự, đánh xe tăng, xe bọc thép địch, đánh địch đột nhập.",
+      "Đánh tên, tốp địch trong công sự, đánh xe tăng, xe bọc thép địch, đánh địch đột nhập.",
+      "Đánh bại địch tấn công phía trước, hai bên sườn, phía sau trận địa phòng ngự, đánh địch trong ụ súng, đánh địch trong công sự, đánh xe tăng, xe bọc thép địch, đánh địch đột nhập."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Chỉ ra đâu là một yêu cầu chiến thuật “từng người trong chiến đấu tiến công”:",
+    "options": [
+      "Thiết bị bắn chu đáo, phát huy được hỏa lực ngăn chặn và tiêu diệt địch trên các hướng.",
+      "Có quyết tâm chiến đấu cao, chuẩn bị mọi mặt chu đáo để đánh địch liên tục dài ngày.",
+      "Bí mật, bất ngờ, tinh khôn, mưu mẹo.",
+      "Hiệp đồng chặt chẽ với đồng đội tạo thành thể liên hoàn đánh địch."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Chỉ ra đâu là một yêu cầu chiến thuật “từng người trong chiến đấu tiến công”:",
+    "options": [
+      "Đánh nhanh, sục sạo kỹ, vừa đánh vừa địch vận.",
+      "Hiệp đồng chặt chẽ với đồng đội tạo thành thể liên hoàn đánh địch.",
+      "Giữ vững trận địa, tiêu diệt địch nhanh, làm chủ trận địa.",
+      "Kiên cường, mưu trí, dũng cảm, chủ động, kiên quyết giữ vững trận địa đến cùng."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Chiến sĩ thường nhận nhiệm vụ chiến đấu từ:",
+    "options": [
+      "Tiểu đoàn trưởng.",
+      "Đại đội trưởng.",
+      "Trung đội trưởng.",
+      "Tổ trưởng hoặc tiểu đội trưởng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Trong chiến đấu tiến công, cấp trên thường giao nhiệm vụ cho chiến sĩ ở:",
+    "options": [
+      "Trên bản đồ địa hình sau đó được bổ sung ngoài thực địa.",
+      "Trên sa bàn.",
+      "Ngay tại thực địa.",
+      "Trên sa bàn hoặc bản đồ địa hình."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Nội dung làm công tác chuẩn bị chiến đấu của từng người trong chiến đấu tiến công gồm:",
+    "options": [
+      "Xác định vị trí phòng ngự, cách đánh, bố trí vũ khí trang bị, chuẩn bị đầy đủ lương thực, thực phẩm,...",
+      "Xác định tư tưởng, ý chí quyết tâm chiến đấu, nhận bổ sung vũ khí, trang bị, thuốc quân y, gói buộc lực lượng...",
+      "Xác định tư tưởng, cách đánh, bố trí vũ khí, làm công sự, vật cản, đường cơ động, chuẩn bị đầy đủ vật dụng...",
+      "Xác định tư tưởng, ý chí quyết tâm chiến đấu, cách đánh, bố trí vũ khí, làm công sự, vật cản, chuẩn bị đầy đủ vật dụng..."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Trong chiến đấu tiến công, trước khi vận động đến gần địch, chiến sĩ phải:",
+    "options": [
+      "Quan sát tình hình địch, tình hình ta, xem xét địa hình, thời tiết, vận động theo đường nào, đến đâu, thời điểm và phương đoạn, vị trí tạm dừng và cách nghi binh lừa địch.",
+      "Quan sát địch, triệt để lợi dụng địa hình, thời tiết, ánh sáng, tiếng động,... để vận dụng các tư thế vận động nhanh, bí mật, an toàn, đúng thời gian quy định.",
+      "Quan sát địch, thời tiết, địa hình, ánh sáng, luôn giữ đúng đường, đúng hướng, tìm mọi cách tiến đến địa hình.",
+      "Nhanh chóng chuẩn bị súng đạn, lựu đạn, pháo tay,... quan sát nắm tình hình địch và hành động của đồng đội, có thể có hiệu quả."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trong chiến đấu tiến công, khi vận động đến gần mục tiêu, chiến sĩ phải:",
+    "options": [
+      "Phải quan sát địch, ta, địa hình, thời tiết, vận động theo đường nào, đến đâu, thời cơ và động tác vận động, cách nghi binh lừa địch.",
+      "Phải quan sát địch, triệt để lợi dụng địa hình, thời tiết, ánh sáng, tiếng động,... để vận dụng các tư thế bảo đảm vận động nhanh, bí mật, an toàn, đúng thời gian quy định.",
+      "Quan sát địch, thời tiết, địa hình, ánh sáng, luôn giữ đúng đường, đúng hướng, nắm vững thời cơ tiến công.",
+      "Phải nhanh chóng chuẩn bị súng đạn, lựu đạn, pháo tay,... quan sát nắm tình hình địch, hành động của các đối tượng, chiếm mục tiêu."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Trước khi đánh chiếm mục tiêu (ụ súng hoặc lô cốt), người chiến sĩ phải:",
+    "options": [
+      "Phải quan sát nắm chắc địch, địa hình xung quanh, đường tiếp cận, hình thù, tính chất mục tiêu, nhanh đến bên sườn phía sau, dùng lựu đạn ném vào bên trong tiêu diệt địch.",
+      "Phải quan sát nắm chắc địch, địa hình xung quanh, đường tiếp cận, hình thù, tính chất mục tiêu, đặc biệt hỗ trợ việc điều chỉnh sườn, phía sau,... đồng thời căn cứ vào vũ khí hiện có để xác định cách đánh chắc.",
+      "Triệt để tận dụng kết quả hỏa lực của cấp trên, bí mật vận động đến bên sườn phía sau, dùng lựu đạn để điều chỉnh.",
+      "Quan sát địch, thời tiết, địa hình, ánh sáng, luôn giữ đúng đường, đúng hướng, nắm vững thời cơ tiến công."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Trong chiến đấu tiến công, trước khi vận động đến gần địch người chiến sĩ phải:",
+    "options": [
+      "Quan sát địch, địa hình, thời tiết, ánh sáng.",
+      "Xác định đường, hướng vận động, vị trí tạm dừng.",
+      "Xác định cách nghi binh, lừa địch trên đường vận động.",
+      "Phương án A, B, C đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Chiến sĩ thường nhận nhiệm vụ chiến đấu từ:",
+    "options": [
+      "Tiểu đoàn trưởng.",
+      "Đại đội trưởng.",
+      "Trung đội trưởng.",
+      "Tổ trưởng hoặc tiểu đội trưởng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Thủ đoạn của địch khi bị tiến công:",
+    "options": [
+      "Lợi dụng công sự trận địa tăng cường quan sát.",
+      "Khi bị tiến công địch lợi dụng công sự trận địa chống trả quyết liệt.",
+      "Khi có nguy cơ bị tiêu diệt, địch co cụm tháo chạy và chờ lực lượng phía sau lên ứng cứu giải tỏa.",
+      "Tất cả các phương án trên."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Từng người trong chiến đấu tiến công, cấp trên thường giao nhiệm vụ cho chiến sĩ ở:",
+    "options": [
+      "Trên bản đồ địa hình.",
+      "Trên sa bàn.",
+      "Ngay tại thực địa.",
+      "Trên cả sa bàn và bản đồ địa hình."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Từng người trong chiến đấu tiến công có mấy yêu cầu:",
+    "options": ["4 yêu cầu.", "6 yêu cầu.", "7 yêu cầu.", "5 yêu cầu."],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Từng người trong chiến đấu tiến công có mấy nhiệm vụ:",
+    "options": ["4 nhiệm vụ.", "6 nhiệm vụ.", "5 nhiệm vụ.", "3 nhiệm vụ."],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Khi nhận nhiệm vụ, người chiến sĩ cần nắm bao nhiêu nội dung:",
+    "options": ["3 nội dung.", "4 nội dung.", "5 nội dung.", "6 nội dung."],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Hiệp đồng trong chiến đấu nhằm mục đích:",
+    "options": [
+      "Giữ vững trận địa, tạo nên yếu tố bí mật bất ngờ.",
+      "Tạo nên sức mạnh tổng hợp, chi viện, hỗ trợ cho nhau.",
+      "Nhằm phát huy cao độ hiệu quả các loại vũ khí.",
+      "Giữ vững trận địa, tiêu diệt địch nhanh làm chủ trận địa."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Độc lập chiến đấu, chủ động hiệp đồng, liên tục chiến đấu, được xác định là:",
+    "options": [
+      "Nhiệm vụ của từng người.",
+      "Cách đánh.",
+      "Yêu cầu chiến thuật.",
+      "Nguyên tắc."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Quan sát địch, ta, địa hình, thời tiết. Vận động theo đường nào, đến đâu, thời cơ và động tác vận động, nghi binh lừa địch. Được xác định là:",
+    "options": [
+      "Hành động của chiến sĩ trước khi vận động.",
+      "Hành động của chiến sĩ khi vận động đến gần địch.",
+      "Hành động của chiến sĩ khi thực hành xung phong đánh chiếm mục tiêu.",
+      "Hành động của chiến sĩ sau khi hoàn thành nhiệm vụ."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Quan sát nắm chắc địch ở trên hào, địch dưới hào, tình hình đồng đội chiến đấu và địa hình, địa vật xong đánh cụ thể cho phù hợp. Được xác định là:",
+    "options": [
+      "Cách đánh mục tiêu chiến hào và giao thông hào.",
+      "Cách đánh mục tiêu xe tăng xe bọc thép.",
+      "Cách đánh mục tiêu ụ súng lô cốt.",
+      "Cách đánh mục tiêu căn nhà."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Bí mật, bất ngờ, tinh khôn, mưu mẹo. Được xác định là:",
+    "options": [
+      "Một trong những yêu cầu chiến thuật.",
+      "Một trong những nhiệm vụ.",
+      "Một trong những cách đánh.",
+      "Một trong những nguyên tắc."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Phải quan sát địch, ta, xem xét địa hình, thời tiết, cụ thể trong phạm vi chiến đấu chọn đường tiến, vận động đến đâu, thời cơ và động tác vận động trong từng đoạn; vị trí tạm dừng, cách nghi binh lừa địch. Được xác định là:",
+    "options": [
+      "Trước khi vận động tiến công mục tiêu.",
+      "Khi vận động tiến công mục tiêu.",
+      "Khi nhận nhiệm vụ ngoài thực địa.",
+      "Khi thực hành đánh chiếm mục tiêu."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Phải luôn quan sát, nắm chắc tình hình địch, triệt để lợi dụng địa hình, địa vật, thời tiết, ánh sáng, tiếng động, động tác vận động cho phù hợp, bảo đảm mọi hành động nhanh, bí mật, an toàn, đến đúng thời gian quy định là:",
+    "options": [
+      "Khi vận động tiến công mục tiêu.",
+      "Trước khi vận động tiến công mục tiêu.",
+      "Khi nhận nhiệm vụ ngoài thực địa.",
+      "Khi thực hành đánh chiếm mục tiêu."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Phát huy cao độ của vũ khí trang bị, tiêu diệt địch tiết kiệm đạn. Được xác định là:",
+    "options": ["Nhiệm vụ.", "Cách đánh.", "Yêu cầu chiến thuật.", "Người."],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Đánh nhanh, sục sạo kỹ, vừa đánh vừa địch vận. Được xác định là:",
+    "options": ["Nhiệm vụ.", "Cách đánh.", "Nguyên tắc.", "Yêu cầu."],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Xác định tư tưởng, ý chí quyết tâm chiến đấu; nhận bổ sung vũ khí, trang bị, thuốc quân y, giới buộc lực lượng.",
+    "options": [
+      "Nội dung làm công tác chuẩn bị của từng người trong chiến đấu.",
+      "Yêu cầu chiến thuật.",
+      "Cách đánh.",
+      "Nguyên tắc."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Yêu cầu thứ 4 trong chiến đấu tiến công là:",
+    "options": [
+      "Phát huy cao độ hiệu quả của vũ khí, trang bị tiêu diệt địch, tiết kiệm đạn.",
+      "Biết phát hiện và lợi dụng nơi sơ hở, hiểm yếu của địch, tiếp cận đến gần tiêu diệt địch.",
+      "Độc lập chiến đấu, chủ động hiệp đồng, liên tục chiến đấu.",
+      "Đánh nhanh, sục sạo kỹ, vừa đánh vừa địch vận."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Một trong các yêu cầu chiến thuật từng người trong chiến đấu tiến công:",
+    "options": [
+      "Thiết bị bắn chu đáo, phát huy được hỏa lực ngăn chặn và tiêu diệt địch trên các hướng.",
+      "Có quyết tâm chiến đấu cao, chuẩn bị mọi mặt chu đáo để đánh địch liên tục dài ngày.",
+      "Bí mật, bất ngờ, tinh khôn, mưu mẹo.",
+      "Hiệp đồng chặt chẽ với đồng đội tạo thành thể liên hoàn đánh địch."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Một trong các yêu cầu chiến thuật từng người trong chiến đấu tiến công:",
+    "options": [
+      "Đánh nhanh, sục sạo kỹ, vừa đánh vừa địch vận.",
+      "Hiệp đồng chặt chẽ với đồng đội tạo thành thể liên hoàn đánh địch.",
+      "Giữ vững trận địa, tiêu diệt địch nhanh làm chủ trận địa.",
+      "Mức độ công sự ngụy trang, vật chất cần chuẩn bị."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Nguyên tắc làm công sự trong chiến đấu tiến công:",
+    "options": [
+      "Triệt để tận dụng địa hình địa vật, vật liệu và nhân lực tại chỗ.",
+      "Bí mật bất ngờ vững chắc, có công sự chính và công sự dự bị, ngụy trang kín đáo.",
+      "Phù hợp với ý định chiến thuật, tạo thể liên hoàn vững chắc, phát huy được hỏa lực của các loại vũ khí.",
+      "Nhằm phát huy cao độ hiệu quả các loại vũ khí."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Tác dụng của ngụy trang trong chiến đấu tiến công:",
+    "options": [
+      "Triệt để tận dụng địa hình địa vật, vật liệu và nhân lực tại chỗ, ngụy trang kín đáo.",
+      "Che giấu người, vũ khí trang bị, phương tiện kỹ thuật, công sự, đảm bảo an toàn trong quá trình chiến đấu, trinh sát phát hiện.",
+      "Phù hợp với địa hình, phát huy được hỏa lực của các loại vũ khí.",
+      "Nhằm làm phù hợp địa hình, phát huy cao độ hiệu quả các loại vũ khí, phương tiện chiến tranh, đồng thời đấu."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Trong chiến đấu tiến công, từng người cùng tổ bộ binh có nhiệm vụ đánh chiếm các mục tiêu:",
+    "options": [
+      "Xe tăng, xe bọc thép địch.",
+      "Tàu chiến, ca nô của địch.",
+      "Máy bay, quân dù địch.",
+      "Trong hầm ngầm địch."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Một trong những yêu cầu đối với từng người trong chiến đấu tiến công:",
+    "options": [
+      "Đúng cảm, linh hoạt, kịp thời.",
+      "Anh dũng, kiên cường bám trụ.",
+      "Đúng cảm, bất khuất, tự tin.",
+      "Linh hoạt, mưu trí, lạc quan."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trong chiến đấu tiến công, khi chiếm được mục tiêu, hành động của từng người là phải:",
+    "options": [
+      "Chiếm địa hình có lợi, đề phòng địch phản công.",
+      "Cơ động ra khỏi trận địa, đề phòng địch.",
+      "Đào công sự, ngụy trang, chuẩn bị tiến công tiếp.",
+      "Xây dựng công sự trận địa, tổ chức cử."
+    ],
+    "dapan": 2
+  }
+]
