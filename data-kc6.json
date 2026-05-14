@@ -1,0 +1,336 @@
+[
+  {
+    "cauhoi": "Một trong những nội dung chiến sĩ phải nhớ kỹ khi nhận nhiệm vụ chiến đấu phòng ngự là:",
+    "options": [
+      "Phương hướng, vật chuẩn, đặc điểm địa hình nơi phòng ngự.",
+      "Tình hình địch.",
+      "Thời gian hoàn thành công tác chuẩn bị, thời gian sẵn sàng đánh địch.",
+      "Cả 3 phương án trên."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Trong chiến đấu phòng ngự, sau khi hiểu rõ nhiệm vụ, thứ tự các công việc người chiến sĩ phải làm như sau:",
+    "options": [
+      "Xác định vị trí phòng ngự, xác định cách đánh, bố trí vũ khí, làm công sự và vật cản.",
+      "Xác định vị trí phòng ngự, làm công sự, bố trí vũ khí, xác định cách đánh.",
+      "Làm công sự, bố trí vũ khí, xác định cách đánh, bố trí vật cản.",
+      "Làm đường cơ động, đào hố bắn, triển khai súng, lựu đạn sẵn sàng đánh địch tập kích phía trước."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trong chiến đấu phòng ngự, vị trí phòng ngự của từng người bao gồm:",
+    "options": [
+      "Khu vực trên hướng bắn chính, hướng quan trọng, hướng bố trợ.",
+      "Mục tiêu cần giữ và một số địa hình, địa vật xung quanh.",
+      "Hố bắn chính, hố bắn phụ, hào chiến đấu, hào giao thông.",
+      "Nơi tiện quan sát, tiện tiêu diệt địch."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Cách đánh của chiến sĩ khi địch tiến công vào trận địa là:",
+    "options": [
+      "Nhanh chóng dùng vũ khí ngăn chặn, tiêu diệt, đẩy lùi địch từ xa.",
+      "Lợi dụng địa hình địa vật, cơ động ra phía trước, hiệp đồng với đồng đội đánh chặn địch từ xa.",
+      "Nắm vững thời cơ, chiếm lĩnh vị trí chiến đấu, chờ địch vào tầm bắn hiệu quả, theo lệnh người chỉ huy tiêu diệt địch, giữ vững vị trí được giao.",
+      "Cả 3 phương án trên đều đúng."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Trong chiến đấu phòng ngự, vũ khí bắn thẳng thường được bố trí:",
+    "options": [
+      "Trên hướng bắn chính.",
+      "Phía trước mục tiêu cần giữ để tiêu diệt, ngăn chặn không cho địch đánh chiếm.",
+      "Tại hố bắn chính của người chiến sĩ.",
+      "Ở nhiều vị trí, nơi phát huy hết uy lực của vũ khí, hiểm hóc, bất ngờ, tiện cơ động đánh địch."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Quy định thứ tự làm công sự trong chiến đấu phòng ngự là:",
+    "options": [
+      "Hố bắn chính, hố bắn phụ, hào chiến đấu, hào giao thông, các loại hầm nấp, nghỉ ngơi.",
+      "Hào giao thông, hào chiến đấu, các loại hố bắn, hầm nấp, nghỉ ngơi.",
+      "Hầm cất giấu vũ khí, lương thực thực phẩm, hố bắn chính, hố bắn phụ, hào chiến đấu, hào giao thông, nghỉ ngơi.",
+      "Hào chiến đấu, hào giao thông, các loại hố bắn, các loại hầm nấp, nghỉ ngơi."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Để đảm bảo cho chiến đấu phòng ngự, vật chất từng người phải chuẩn bị:",
+    "options": [
+      "Dụng cụ và vật liệu xây dựng công sự trận địa.",
+      "Các loại vũ khí, trang bị, phương tiện, vật chất.",
+      "Lương thực, thực phẩm, thuốc men.",
+      "Súng đạn, lựu đạn, mìn."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Khi địch dùng hỏa lực bắn phá nhưng chưa tiến công bằng bộ binh hoặc bộ binh cơ giới, hành động nào là đúng?",
+    "options": [
+      "Báo cáo với cấp trên, thông báo với bạn, nhanh chóng về vị trí chiến đấu để sẵn sàng đánh địch.",
+      "Cơ động về vị trí chiến đấu, củng cố công sự trận địa, báo cáo với cấp trên.",
+      "Cơ động ra phía trước sẵn sàng đánh chặn địch ở phía trước trận địa.",
+      "Nếu không làm nhiệm vụ trực ban, phải triệt để lợi dụng công sự trận địa, địa hình, địa vật để giải quyết các tình huống."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Khi địch tiến công bằng bộ binh hoặc bộ binh cơ giới, hành động của chiến sĩ là:",
+    "options": [
+      "Cơ động ra phía trước, hiệp đồng với đồng đội đánh chặn địch ở phía trước trận địa.",
+      "Bố trí vật cản phía trước trận địa để ngăn chặn địch.",
+      "Nhanh chóng, bí mật chiếm vị trí chiến đấu, chờ địch đến gần, nắm vững thời cơ, bất ngờ nổ súng.",
+      "Nhanh chóng chiếm vị trí chiến đấu, củng cố công sự trận địa, tăng cường quan sát, tiêu diệt các tình huống."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Khi bị địch chiếm một phần trận địa, hành động của chiến sĩ là:",
+    "options": [
+      "Lùi về sau, báo cáo với cấp trên xin chi viện, phản kích lấy lại phần đất đã mất.",
+      "Vòng ra bên sườn, phía sau địch, dùng lựu đạn, thủ pháo, bắn găm, bắn tỉa tiêu diệt chúng.",
+      "Kiên quyết giữ vững phần trận địa còn lại, dùng vũ khí tiêu diệt, ngăn chặn không cho địch phát triển.",
+      "Tùy theo từng tình huống chiến đấu có thể vận dụng một trong 3 phương án trên."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Sau mỗi lần tiến công bị thất bại, địch thường rút lui về phía sau, hành động của chiến sĩ lúc này là:",
+    "options": [
+      "Bắn truy kích cho đến khi địch chạy ra ngoài tầm bắn xa nhất của vũ khí, phán đoán thủ đoạn, cứu chữa thương binh, củng cố công sự, sẵn sàng đánh địch tiến công tiếp theo.",
+      "Củng cố công sự, ngụy trang, phán đoán thủ đoạn tiến công mới của địch, báo cáo cấp trên.",
+      "Cơ động đuổi theo truy kích địch, cứu chữa thương binh, thu chiến lợi phẩm, bắt tù binh.",
+      "Bắn truy kích cho đến khi địch chạy ra ngoài tầm bắn hiệu quả, phán đoán thủ đoạn tiến công, củng cố công sự, sẵn sàng đánh địch tiến công tiếp theo."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Trong chiến đấu phòng ngự, trước khi tiến công địch thường sử dụng:",
+    "options": [
+      "Các lực lượng, phương tiện trinh sát trên không kết hợp biệt kích, thám báo, bọn phản động.",
+      "Xe tăng, xe bọc thép kết hợp với bộ binh triển khai ở tuyến xuất phát xung phong bắn phá vào trận địa.",
+      "Lợi dụng địa hình thuận lợi triển khai đội hình bộ binh bắn phá vào trận địa phòng ngự của ta.",
+      "Cả A, B và C đúng."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Đặc điểm khi tiến công trận địa của ta, địch thường sử dụng:",
+    "options": [
+      "Hỏa lực của máy bay, pháo binh đánh phá mãnh liệt với cường độ cao liên tục nhiều ngày vào trận địa.",
+      "Hỏa lực bắn trực tiếp vào trận địa kết hợp hỏa lực trên xe tăng, thiết giáp đồng thời bộ binh tiến công.",
+      "Hỏa lực bắn truy kích tiêu diệt ta trong tầm bắn hiệu quả, sau đó tiếp tục tiến công.",
+      "Hỏa lực bắn trên xe tăng, thiết giáp bắn vào phía sau đội hình phòng ngự của ta nhằm ngăn cản."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Một trong những nhiệm vụ của từng người trong chiến đấu phòng ngự:",
+    "options": [
+      "Tiêu diệt và đánh bại địch tiến công phía trước, hai bên sườn, và trên không trận địa phòng ngự.",
+      "Xây dựng công sự chiến đấu vững chắc, ngụy trang bí mật.",
+      "Đánh địch đột nhập.",
+      "Vận chuyển vũ khí, đạn và làm nhiệm vụ tuần tra canh gác trong phạm vi trận địa phòng ngự."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Một trong những nhiệm vụ của từng người trong chiến đấu phòng ngự:",
+    "options": [
+      "Tiêu diệt và đánh bại địch tiến công phía trước, hai bên sườn, và trên không trận địa phòng ngự.",
+      "Xây dựng công sự chiến đấu vững chắc, ngụy trang bí mật.",
+      "Vận chuyển vũ khí, đạn và làm nhiệm vụ.",
+      "Tham gia làm nhiệm vụ đánh địch vòng ngoài."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Một trong những yêu cầu chiến thuật của từng người trong chiến đấu phòng ngự:",
+    "options": [
+      "Có quyết tâm chiến đấu cao, chuẩn bị mọi mặt chu đáo, đảm bảo đánh địch dài ngày.",
+      "Đánh nhanh, sục sạo kỹ, vừa đánh vừa địch vận.",
+      "Độc lập chiến đấu, chủ động hiệp đồng, liên tục chiến đấu.",
+      "Bí mật, bất ngờ, tinh khôn, mưu mẹo."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Một trong những yêu cầu chiến thuật của từng người trong chiến đấu phòng ngự:",
+    "options": [
+      "Hiệp đồng chặt chẽ với đồng đội tạo thành thể liên hoàn đánh địch.",
+      "Đánh nhanh, sục sạo kỹ, vừa đánh vừa địch vận.",
+      "Độc lập chiến đấu, chủ động hiệp đồng, liên tục chiến đấu.",
+      "Bí mật, bất ngờ, tinh khôn, mưu mẹo."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Đặc điểm tiến công của địch: sau mỗi lần bị thất bại:",
+    "options": [
+      "Địch thường lùi ra phía sau, củng cố lực lượng. Dùng hỏa lực đánh phá vào trận địa. Sau đó tiếp tục tiến công.",
+      "Lợi dụng địa hình thuận lợi triển khai lực lượng dự bị để tiến công tiếp.",
+      "Chuyển hướng và tiếp tục tiến công vào trận địa.",
+      "Tổ chức nghỉ ngơi, sau đó tiến công tiếp."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Một trong những nội dung hiểu rõ nhiệm vụ của từng người trong chiến đấu phòng ngự:",
+    "options": [
+      "Phương hướng, vật chuẩn, đặc điểm địa hình nơi phòng ngự.",
+      "Biện pháp địch tiến hành trinh sát trận địa của ta.",
+      "Nhiệm vụ của từng người trong chiến đấu phòng ngự.",
+      "Kỹ thuật chiến đấu của chiến sĩ bộ binh."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trong chiến đấu phòng ngự người chiến sĩ chỉ được rời khỏi trận địa:",
+    "options": [
+      "Khi hỏa lực địch bắn phá mãnh liệt vào vị trí chiến đấu.",
+      "Khi địch đột nhập và chiếm giữ công sự chiến đấu.",
+      "Khi địch sử dụng vũ khí công nghệ cao.",
+      "Khi được lệnh của cấp trên."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Một trong những yêu cầu chiến thuật của từng người trong chiến đấu phòng ngự:",
+    "options": [
+      "Đánh nhanh, sục sạo kỹ, vừa đánh vừa địch vận.",
+      "Độc lập chiến đấu, chủ động hiệp đồng, liên tục chiến đấu.",
+      "Bí mật, bất ngờ, tinh khôn, mưu mẹo.",
+      "Xây dựng công sự chiến đấu vững chắc, kiên cố, ngụy trang bí mật."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Một trong những nhiệm vụ của từng người trong chiến đấu phòng ngự:",
+    "options": [
+      "Tiêu diệt và đánh bại địch tiến công phía trước, hai bên sườn, và trên không trận địa phòng ngự.",
+      "Xây dựng công sự chiến đấu vững chắc, ngụy trang bí mật.",
+      "Vận chuyển vũ khí, đạn và làm nhiệm vụ.",
+      "Dựa vào công sự trận địa tiêu diệt và đánh bại địch tiến công ở phía trước, bên sườn và phía sau."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Hành động của từng người sau mỗi lần đánh bại địch tiến công:",
+    "options": [
+      "Chủ động cứu chữa thương binh, củng cố công sự trận địa, bổ sung vật chất.",
+      "Nhận nhiệm vụ mới do cấp trên giao, làm công tác chuẩn bị.",
+      "Nhanh chóng rời khỏi trận địa và sẵn sàng nhận nhiệm vụ tiếp theo.",
+      "Làm lực lượng dự bị hỗ trợ đồng đội đánh địch tiến công trận địa."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Hành động của từng người làm công tác chuẩn bị trong chiến đấu phòng ngự:",
+    "options": [
+      "Xác định vị trí phòng ngự và cách đánh địch.",
+      "Làm kế hoạch chiến đấu.",
+      "Trinh sát trận địa phòng ngự.",
+      "Hiệp đồng cùng đồng đội."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Khi địch tiến công vào trận địa cách vị trí chiến đấu khoảng bao nhiêu mét thì chiến sĩ sử dụng lựu đạn?",
+    "options": ["5-10 mét.", "20-30 mét.", "70-80 mét."],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Hành động của từng người làm công tác chuẩn bị trong chiến đấu phòng ngự:",
+    "options": [
+      "Bố trí vũ khí, làm công sự và vật cản.",
+      "Xác định tư tưởng, ý chí quyết tâm.",
+      "Nhận bổ sung vũ khí, trang bị kỹ thuật.",
+      "Gói buộc lượng nổ."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Hành động của từng người trong chiến đấu phòng ngự, đánh địch rút chạy:",
+    "options": [
+      "Bắn truy kích tiêu diệt địch trong tầm bắn hiệu quả.",
+      "Rời trận địa xung phong tiêu cực.",
+      "Bí mật cơ động chặn đường rút lui của địch.",
+      "Đánh địch rút chạy."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trong chiến đấu phòng ngự, cùng với tổ, tiểu đội, chiến sĩ dựa vào công sự trận địa:",
+    "options": [
+      "Đánh bại địch tiến công.",
+      "Ngăn chặn địch tiến công.",
+      "Đẩy lùi địch tiến công.",
+      "Phản kích địch tiến công."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Sau mỗi lần tiến công vào trận địa phòng ngự của ta thất bại, địch lùi ra phía sau để:",
+    "options": [
+      "Củng cố lực lượng.",
+      "Bổ sung quân số.",
+      "Củng cố vũ khí.",
+      "Phản kích địch tiến công."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Trong chiến đấu phòng ngự, chiến sĩ không những đảm nhiệm các nhiệm vụ trong trận địa, mà còn có nhiều nhiệm vụ khác nhau:",
+    "options": [
+      "Đánh địch vòng ngoài.",
+      "Tuần tra bên ngoài.",
+      "Đánh địch vòng trong."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trong chiến đấu phòng ngự, yêu cầu phải xây dựng công sự chiến đấu:",
+    "options": [
+      "Kiên cố vững chắc, ngụy trang bí mật.",
+      "Liên kết bền vững, ngụy trang bí mật.",
+      "Kiên cố, chắc chắn, ngụy trang bí mật.",
+      "Liên kết vững chắc, nghi binh thường."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trong chiến đấu phòng ngự, sau mỗi lần đánh bại địch tiến công phải chủ động cứu chữa thương tật:",
+    "options": [
+      "Củng cố công sự trận địa.",
+      "Xây dựng công sự phòng ngự.",
+      "Tổng kết trận đánh.",
+      "Rút kinh nghiệm chiến đấu."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trong chiến đấu phòng ngự trận địa, sau mỗi đợt địch tấn công bị thất bại chúng thường:",
+    "options": [
+      "Địch lùi ra xa, tổ chức củng cố lại đội hình, tăng cường lực lượng, vũ khí, dùng hỏa lực bắn phá, tiếp tục.",
+      "Tổ chức xây dựng công sự trận địa phòng ngự, làm đường cơ động, bố trí vật cản ngăn chặn. Chờ quân tiếp viện đến, tiến công tiếp.",
+      "Địch lùi ra xa, tổ chức củng cố lại đội hình, trinh sát xác định vị trí, gọi máy bay ném bom, dùng đạn và tấn công tiếp.",
+      "Thay đổi hướng tiến công, đổi cách đánh. Xây dựng tuyến xuất phát tiến công, tiếp tục đánh."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Hiệp đồng trong chiến đấu nhằm mục đích:",
+    "options": [
+      "Tạo nên sức mạnh tổng hợp, chi viện, hỗ trợ cho nhau.",
+      "Giữ vững trận địa, tạo nên yếu tố hiệu quả.",
+      "Nhằm phát huy cao độ hiệu quả các loại vũ khí.",
+      "Giữ vững trận địa, tiêu diệt địch."
+    ],
+    "dapan": 0
+  }
+]
