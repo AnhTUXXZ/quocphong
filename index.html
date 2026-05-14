@@ -11,7 +11,6 @@
             --army-medium: #4b5320;  /* Xanh olive */
             --army-light: #8a9a5b;   /* Xanh lính nhạt */
             --khaki: #e6e2d3;        /* Vàng cát / Khaki */
-            --fb-blue: #1877F2;      /* Màu Facebook */
         }
 
         /* Đổi TOÀN BỘ font chữ sang Times New Roman */
@@ -38,108 +37,33 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 2px solid var(--army-light);
+            border-bottom: 5px solid #1a1f16;
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            position: relative;
         }
 
-        /* === PHẦN THÔNG BÁO LỖI DƯỚI BANNER === */
-        .error-report-bar {
-            background-color: var(--khaki);
-            text-align: center;
-            padding: 10px;
-            border-bottom: 4px solid var(--army-dark);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .error-report-bar span {
-            font-weight: bold;
-            font-size: 16px;
-            color: var(--army-dark);
-        }
-
-        .fb-contact-btn {
-            background-color: var(--fb-blue);
-            color: white !important;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            font-weight: bold;
+        /* === BADGE ONLINE === */
+        .online-badge {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background-color: rgba(0,0,0,0.7);
+            color: #00ff00;
+            padding: 8px 15px;
+            border-radius: 30px;
             font-size: 14px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            border: 2px solid #0e5db3;
-            text-transform: uppercase;
-        }
-
-        .fb-contact-btn:hover {
-            background-color: #145dbf;
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        /* === PHẦN ĐẾM NGƯỢC === */
-        .countdown-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding-top: 25px;
-        }
-
-        .countdown-container {
-            background-color: var(--army-dark);
-            border: 4px solid var(--khaki);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 6px 6px 0px rgba(0,0,0,0.5);
-            max-width: 600px;
-            width: 90%;
-        }
-
-        .countdown-title {
-            color: var(--khaki);
-            font-size: 22px;
             font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
-            border-bottom: 2px dashed var(--army-light);
-            padding-bottom: 10px;
+            letter-spacing: 1px;
+            border: 1px solid #00ff00;
+            backdrop-filter: blur(5px);
+            font-family: monospace !important;
         }
 
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .time-box {
-            background-color: var(--khaki);
-            color: var(--army-dark);
-            padding: 10px 15px;
-            border-radius: 8px;
-            min-width: 70px;
-            border: 3px solid var(--army-light);
-            box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
-        }
-
-        .time-box span {
-            display: block;
-            font-size: 28px;
+        .online-badge span {
+            font-size: 18px;
             font-weight: 900;
-        }
-
-        .time-box small {
-            font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
+            color: #00ff00;
+            font-family: monospace !important;
         }
 
         .container {
@@ -147,7 +71,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 25px 20px 40px 20px;
+            padding: 40px 20px;
         }
 
         /* Lưới chứa các nút bấm */
@@ -211,7 +135,7 @@
             letter-spacing: 1px;
         }
 
-        /* === GIAO DIỆN POPUP NHẬP THÔNG TIN === */
+        /* === GIAO DIỆN POPUP NHẬP THÔNG TIN (ĐÃ CHỈNH NHỎ VÀ CÂN ĐỐI) === */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -219,7 +143,7 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.85);
-            display: none; 
+            display: none; /* Ẩn mặc định, JS sẽ bật lên */
             justify-content: center;
             align-items: center;
             z-index: 9999;
@@ -227,26 +151,26 @@
 
         .modal-content {
             background-color: var(--khaki);
-            padding: 25px 20px;
+            padding: 25px 20px; /* Thu gọn khoảng cách viền trong */
             border-radius: 10px;
             border: 4px solid var(--army-dark);
             width: 90%;
-            max-width: 320px;
+            max-width: 320px; /* Làm khung hẹp lại cho gọn gàng */
             text-align: center;
-            box-shadow: 6px 6px 0px var(--army-dark);
+            box-shadow: 6px 6px 0px var(--army-dark); /* Viền bóng gọn hơn */
         }
 
         .modal-content h2 {
             color: var(--army-dark);
             margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 22px;
+            margin-bottom: 15px; /* Giảm khoảng cách dưới tiêu đề */
+            font-size: 22px; /* Chữ tiêu đề vừa vặn hơn */
             font-weight: bold;
             text-transform: uppercase;
         }
 
         .input-group {
-            margin-bottom: 12px;
+            margin-bottom: 12px; /* Giảm khoảng cách giữa các ô nhập */
             text-align: left;
         }
 
@@ -255,12 +179,12 @@
             font-weight: bold;
             color: var(--army-dark);
             margin-bottom: 4px;
-            font-size: 15px;
+            font-size: 15px; /* Cỡ chữ nhãn vừa phải */
         }
 
         .input-group input {
             width: 100%;
-            padding: 10px;
+            padding: 10px; /* Giảm độ dày ô nhập */
             border: 2px solid var(--army-light);
             border-radius: 5px;
             font-size: 15px;
@@ -269,11 +193,15 @@
             outline: none;
         }
 
+        .input-group input:focus {
+            border-color: var(--army-dark);
+        }
+
         .btn-submit {
             background-color: var(--army-dark);
             color: var(--khaki);
             border: 2px solid #1a1f16;
-            padding: 10px 20px;
+            padding: 10px 20px; /* Nút bấm gọn lại */
             font-size: 1.1rem;
             font-weight: bold;
             text-transform: uppercase;
@@ -287,6 +215,7 @@
         .btn-submit:hover {
             background-color: #1a1f16;
             transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
 
         .error-msg {
@@ -325,40 +254,9 @@
     </div>
 
     <div class="header-banner">
-        HỆ THỐNG TRẮC NGHIỆM QUỐC PHÒNG - UPT
-    </div>
-
-    <div class="error-report-bar">
-        <span>Phát hiện lỗi đáp án hoặc cần hỗ trợ?</span>
-        <a href="https://bom.so/fbtu" target="_blank" class="fb-contact-btn">
-            <svg style="width:18px;height:18px" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
-            </svg>
-            Liên hệ Facebook
-        </a>
-    </div>
-
-    <div class="countdown-wrapper">
-        <div class="countdown-container">
-            <div class="countdown-title">Đếm Ngược Ngày Về UPT (Ngày 27)</div>
-            <div class="countdown-timer" id="countdown-timer">
-                <div class="time-box">
-                    <span id="cd-days">00</span>
-                    <small>Ngày</small>
-                </div>
-                <div class="time-box">
-                    <span id="cd-hours">00</span>
-                    <small>Giờ</small>
-                </div>
-                <div class="time-box">
-                    <span id="cd-minutes">00</span>
-                    <small>Phút</small>
-                </div>
-                <div class="time-box">
-                    <span id="cd-seconds">00</span>
-                    <small>Giây</small>
-                </div>
-            </div>
+        HỆ THỐNG TRẮC NGHIỆM QUỐC PHÒNG
+        <div class="online-badge" id="onlineBadge">
+            👥 ONLINE: <span id="onlineCount">0</span>
         </div>
     </div>
 
@@ -369,37 +267,37 @@
                 <span>Nhấn để làm bài</span>
             </a>
             
-            <a href="https://anhtuxxz.github.io/quocphong/ct2.html" class="menu-item" target="_blank">
+            <a href="https://anhtuxxz.github.io/quocphong/c2.html" class="menu-item" target="_blank">
                 CT 2
                 <span>Nhấn để làm bài</span>
             </a>
             
-            <a href="https://anhtuxxz.github.io/quocphong/ct3.html" class="menu-item" target="_blank">
+            <a href="https://anhtuxxz.github.io/quocphong/c3.html" class="menu-item" target="_blank">
                 CT 3
                 <span>Nhấn để làm bài</span>
             </a>
             
-            <a href="https://anhtuxxz.github.io/quocphong/ct4.html" class="menu-item" target="_blank">
+            <a href="https://anhtuxxz.github.io/quocphong/c4.html" class="menu-item" target="_blank">
                 CT 4
                 <span>Nhấn để làm bài</span>
             </a>
             
-            <a href="https://anhtuxxz.github.io/quocphong/ct5.html" class="menu-item" target="_blank">
+            <a href="https://anhtuxxz.github.io/quocphong/c5.html" class="menu-item" target="_blank">
                 CT 5
                 <span>Nhấn để làm bài</span>
             </a>
 
-            <a href="https://anhtuxxz.github.io/quocphong/ct6.html" class="menu-item" target="_blank">
+            <a href="https://anhtuxxz.github.io/quocphong/c6.html" class="menu-item" target="_blank">
                 CT 6
                 <span>Nhấn để làm bài</span>
             </a>
 
-            <a href="https://anhtuxxz.github.io/quocphong/ct7.html" class="menu-item" target="_blank">
+            <a href="https://anhtuxxz.github.io/quocphong/c7.html" class="menu-item" target="_blank">
                 CT 7
                 <span>Nhấn để làm bài</span>
             </a>
 
-<a href="https://anhtuxxz.github.io/quocphong/kc1.html" class="menu-item" target="_blank">
+            <a href="https://anhtuxxz.github.io/quocphong/kc1.html" class="menu-item" target="_blank">
                KC 1
                 <span>Nhấn để làm bài</span>
             </a>
@@ -418,26 +316,121 @@
                 <span>Nhấn để làm bài</span>
             </a>
 
-            
-            
         </div>
     </div>
 
     <div class="footer">
-        NguyenAnhTu-K16THO1-QuocPhong-UPT
+        NguyenAnhTu-K16THO1-QuocPhong
     </div>
 
-    <script>
+    <!-- Import Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
+        import { getDatabase, ref, onValue, set, onDisconnect, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBz5y6EPEvkxa-X3W83mpB8nT2i6QLY0ck",
+            authDomain: "sl-gdqp.firebaseapp.com",
+            databaseURL: "https://sl-gdqp-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "sl-gdqp",
+            storageBucket: "sl-gdqp.firebasestorage.app",
+            messagingSenderId: "541164628409",
+            appId: "1:541164628409:web:5ebb5f2d2fe1c6f513ae68",
+            measurementId: "G-LRKDV6MVGR"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Tạo ID ngẫu nhiên cho phiên truy cập hiện tại
+        const sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        
+        // Tham chiếu đến node online users
+        const onlineRef = ref(database, 'online_users/' + sessionId);
+        const onlineCountRef = ref(database, 'online_count');
+        
+        // Hàm cập nhật số lượng online realtime
+        function updateOnlineCount() {
+            // Khi người dùng kết nối, thêm vào danh sách online
+            set(onlineRef, {
+                timestamp: serverTimestamp(),
+                userAgent: navigator.userAgent.substring(0, 100)
+            });
+            
+            // Tự động xóa khỏi danh sách khi đóng tab hoặc thoát trình duyệt
+            onDisconnect(onlineRef).remove();
+            
+            // Lắng nghe sự thay đổi số lượng người online
+            onValue(onlineCountRef, (snapshot) => {
+                const count = snapshot.val() || 0;
+                const onlineCountElement = document.getElementById('onlineCount');
+                if (onlineCountElement) {
+                    onlineCountElement.textContent = count;
+                    
+                    // Đổi màu theo số lượng
+                    if (count >= 10) {
+                        onlineCountElement.style.color = '#ff4444';
+                    } else if (count >= 5) {
+                        onlineCountElement.style.color = '#ffaa00';
+                    } else {
+                        onlineCountElement.style.color = '#00ff00';
+                    }
+                }
+            });
+        }
+        
+        // Khởi tạo theo dõi online (chỉ khi đã xác nhận thông tin hoặc không cần popup)
+        // Chúng ta sẽ gọi sau khi đã xác nhận thông tin để tránh gửi nhiều session vô ích
+        let isTrackingOnline = false;
+        
+        function startOnlineTracking() {
+            if (!isTrackingOnline) {
+                updateOnlineCount();
+                isTrackingOnline = true;
+                console.log('Đã bắt đầu theo dõi online với session ID:', sessionId);
+            }
+        }
+        
+        // Export để dùng trong global scope
+        window.startOnlineTracking = startOnlineTracking;
+        
+        // Hàm lấy số lượng online (để debug)
+        window.getOnlineCount = function() {
+            onValue(onlineCountRef, (snapshot) => {
+                console.log('Số người online:', snapshot.val());
+            });
+        };
+    </script>
+    
+    <script type="text/javascript">
+        // Cấu hình Bot Telegram
         const TELEGRAM_BOT_TOKEN = '8414314561:AAHYLevOgv0H6Y3HSztEsJA17nCBIuMHlwE';
         const TELEGRAM_CHAT_ID = '7209414522';
 
+        // Biến lưu trạng thái đã bắt đầu tracking
+        let trackingStarted = false;
+
+        // Khi load trang
         document.addEventListener('DOMContentLoaded', () => {
+            // Kiểm tra xem localStorage đã có thông tin chưa
             const savedData = localStorage.getItem('hocVienQuocPhong');
+            
             if (!savedData) {
+                // Nếu chưa có, hiện popup bắt buộc nhập
                 document.getElementById('infoPopup').style.display = 'flex';
+            } else {
+                // Nếu đã có thông tin, bắt đầu theo dõi online ngay
+                if (!trackingStarted && window.startOnlineTracking) {
+                    window.startOnlineTracking();
+                    trackingStarted = true;
+                }
             }
         });
 
+        // Hàm xử lý khi ấn nút "Xác nhận"
         function xacNhanThongTin() {
             const hoTen = document.getElementById('hoTen').value.trim();
             const daiDoi = document.getElementById('daiDoi').value.trim();
@@ -445,15 +438,18 @@
             const errorMsg = document.getElementById('errorMsg');
             const btnXacNhan = document.getElementById('btnXacNhan');
 
+            // 1. Validate không cho bỏ trống
             if (hoTen === "" || daiDoi === "" || tieuDoi === "") {
                 errorMsg.style.display = 'block';
                 return;
             }
             errorMsg.style.display = 'none';
 
+            // Đổi text nút thành đang xử lý
             btnXacNhan.innerText = "ĐANG XỬ LÝ...";
             btnXacNhan.disabled = true;
 
+            // 2. Lưu vào LocalStorage
             const thongTin = {
                 hoTen: hoTen,
                 daiDoi: daiDoi,
@@ -462,6 +458,7 @@
             };
             localStorage.setItem('hocVienQuocPhong', JSON.stringify(thongTin));
 
+            // 3. Chuẩn bị tin nhắn gửi về Telegram
             const textMessage = `
 📝 <b>CÓ HỌC VIÊN MỚI TRUY CẬP HỆ THỐNG</b>
 👤 Họ và tên: <b>${hoTen}</b>
@@ -470,6 +467,7 @@
 ⏰ Thời gian: ${thongTin.thoiGian}
             `;
 
+            // 4. Gửi API tới Telegram
             const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
             const payload = {
                 chat_id: TELEGRAM_CHAT_ID,
@@ -479,55 +477,40 @@
 
             fetch(url, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify(payload)
             })
-            .then(() => {
+            .then(response => response.json())
+            .then(data => {
+                // Tắt popup sau khi gửi thành công
                 document.getElementById('infoPopup').style.display = 'none';
+                
+                // BẮT ĐẦU THEO DÕI ONLINE NGAY SAU KHI XÁC NHẬN
+                if (!trackingStarted && window.startOnlineTracking) {
+                    window.startOnlineTracking();
+                    trackingStarted = true;
+                }
             })
-            .catch(() => {
+            .catch(error => {
+                console.error('Lỗi khi gửi Telegram:', error);
+                // Dù lỗi mạng thì vẫn ẩn popup cho người dùng làm bài (vì đã lưu local)
                 document.getElementById('infoPopup').style.display = 'none';
+                
+                // VẪN BẮT ĐẦU THEO DÕI ONLINE DÙ LỖI TELEGRAM
+                if (!trackingStarted && window.startOnlineTracking) {
+                    window.startOnlineTracking();
+                    trackingStarted = true;
+                }
             });
         }
-
-        // === LOGIC ĐẾM NGƯỢC NGÀY VỀ UPT ===
-        function startCountdown() {
-            let now = new Date();
-            let currentYear = now.getFullYear();
-            let currentMonth = now.getMonth();
-            
-            // Đặt mục tiêu là ngày 27 của tháng hiện tại
-            let targetDate = new Date(currentYear, currentMonth, 27, 0, 0, 0).getTime();
-            
-            // Nếu đã qua ngày 27, tự động chuyển mục tiêu sang ngày 27 của tháng sau
-            if (now.getTime() > targetDate) {
-                targetDate = new Date(currentYear, currentMonth + 1, 27, 0, 0, 0).getTime();
-            }
-
-            const countdownInterval = setInterval(function() {
-                const currentTime = new Date().getTime();
-                const distance = targetDate - currentTime;
-
-                if (distance <= 0) {
-                    clearInterval(countdownInterval);
-                    document.getElementById("countdown-timer").innerHTML = "<div class='time-box' style='width: 100%;'><span>ĐÃ ĐẾN NGÀY VỀ UPT!</span></div>";
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("cd-days").innerText = days < 10 ? "0" + days : days;
-                document.getElementById("cd-hours").innerText = hours < 10 ? "0" + hours : hours;
-                document.getElementById("cd-minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-                document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
-            }, 1000);
-        }
-
-        // Khởi động đếm ngược
-        startCountdown();
+        
+        // Optional: Khi người dùng rời khỏi trang (đóng tab hoặc refresh)
+        window.addEventListener('beforeunload', () => {
+            // Session sẽ tự động bị xóa bởi onDisconnect của Firebase
+            console.log('Người dùng rời khỏi trang, session sẽ tự động xóa');
+        });
     </script>
 </body>
 </html>
