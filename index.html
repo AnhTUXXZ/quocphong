@@ -209,6 +209,8 @@
             justify-content: center;
             padding-top: 20px;
             width: 100%;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .online-box {
@@ -224,6 +226,28 @@
             align-items: center;
             gap: 10px;
             text-transform: uppercase;
+        }
+
+        .total-visits-box {
+            background-color: var(--khaki);
+            color: var(--army-dark);
+            border: 2px solid var(--army-dark);
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+        }
+
+        .bottom-stats-wrapper {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 25px;
+            width: 100%;
         }
 
         .online-dot {
@@ -596,6 +620,12 @@
         </div>
     </div>
 
+    <div class="bottom-stats-wrapper">
+        <div class="total-visits-box">
+            👁️ Tổng số lượng truy cập: <span id="total-visits-count">372</span>
+        </div>
+    </div>
+
     <div class="footer">
         NguyenAnhTu-K16THO1-QuocPhong-UPT
     </div>
@@ -757,7 +787,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-analytics.js";
-        import { getDatabase, ref, onValue, onDisconnect, set, remove } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
+        import { getDatabase, ref, onValue, onDisconnect, set, remove, runTransaction } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyBz5y6EPEvkxa-X3W83mpB8nT2i6QLY0ck",
@@ -775,15 +805,40 @@
         const analytics = getAnalytics(app);
         const db = getDatabase(app);
 
-        // Xử lý tạo và lấy ID người dùng từ LocalStorage
+        // ==========================================
+        // XỬ LÝ TỔNG SỐ LƯỢNG TRUY CẬP (TÍNH CẢ F5)
+        // ==========================================
+        const totalVisitsRef = ref(db, 'totalVisits');
+
+        // Lắng nghe giá trị tổng truy cập trên Firebase để hiển thị
+        onValue(totalVisitsRef, (snap) => {
+            let val = snap.val();
+            if (val === null) {
+                val = 372; // Nếu Firebase chưa có dữ liệu, hiển thị gốc là 372
+            }
+            document.getElementById('total-visits-count').innerText = val;
+        });
+
+        // Mỗi lần tải trang hoặc nhấn F5, hệ thống đều cộng thêm 1 lượt lên Firebase
+        runTransaction(totalVisitsRef, (currentData) => {
+            if (currentData === null) {
+                return 372 + 1; // Khởi tạo 372 + 1 lượt
+            } else {
+                return currentData + 1; // Cộng dồn
+            }
+        }).catch((error) => {
+            console.error("Lỗi khi đếm tổng truy cập: ", error);
+        });
+
+        // ==========================================
+        // XỬ LÝ NGƯỜI DÙNG ĐANG ONLINE
+        // ==========================================
         let userId = localStorage.getItem('upt_user_id');
         if (!userId) {
-            // Tạo ID ngẫu nhiên không trùng lặp cho user mới
             userId = 'user_' + Math.random().toString(36).substr(2, 9) + Date.now();
             localStorage.setItem('upt_user_id', userId);
         }
 
-        // Khai báo các Ref của Firebase
         const connectedRef = ref(db, '.info/connected');
         const myUserRef = ref(db, 'onlineUsers/' + userId);
         const allOnlineUsersRef = ref(db, 'onlineUsers');
@@ -791,10 +846,8 @@
         // Lắng nghe trạng thái kết nối
         onValue(connectedRef, (snap) => {
             if (snap.val() === true) {
-                // Khi có kết nối (hoặc có mạng lại), setup onDisconnect để xóa ID khi tắt tab
                 const con = onDisconnect(myUserRef);
                 con.remove().then(() => {
-                    // Sau khi setup xóa xong, thì tiến hành thêm user lên database
                     set(myUserRef, true);
                 });
             }
@@ -804,11 +857,10 @@
         onValue(allOnlineUsersRef, (snap) => {
             let onlineCount = 0;
             if (snap.exists()) {
-                // Đếm số lượng key (user) đang tồn tại trong onlineUsers
                 onlineCount = Object.keys(snap.val()).length;
             }
             document.getElementById('online-count').innerText = onlineCount;
         });
     </script>
 </body>
-    </html>
+</html>
