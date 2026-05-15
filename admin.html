@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Hệ Thống GDQP</title>
+    <style>
+        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { margin: 0; background-color: #f4f6f9; color: #333; }
+
+        /* === MÀN HÌNH ĐĂNG NHẬP === */
+        #login-screen {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #2c3525; display: flex; justify-content: center; align-items: center; z-index: 9999;
+        }
+        .login-box {
+            background: #fff; padding: 30px; border-radius: 8px; width: 350px; text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .login-box h2 { margin-top: 0; color: #2c3525; text-transform: uppercase; }
+        .login-box input {
+            width: 100%; padding: 10px; margin: 15px 0; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;
+        }
+        .login-box button {
+            width: 100%; padding: 10px; background-color: #1877F2; color: white; border: none;
+            border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer;
+        }
+        .login-box button:hover { background-color: #145dbf; }
+        .error-login { color: red; display: none; margin-bottom: 10px; font-weight: bold; }
+
+        /* === LAYOUT ADMIN === */
+        #admin-panel { display: none; } /* Ẩn đi chờ đăng nhập */
+        
+        .header {
+            background-color: #2c3525; color: #e6e2d3; padding: 15px 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .header h1 { margin: 0; font-size: 20px; text-transform: uppercase; }
+        .btn-logout {
+            background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold;
+        }
+
+        .container { padding: 20px; max-width: 1200px; margin: 0 auto; }
+
+        /* Thống kê */
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px;
+        }
+        .stat-card {
+            background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center; border-bottom: 4px solid #4b5320;
+        }
+        .stat-card h3 { margin: 0 0 10px 0; color: #666; font-size: 16px; text-transform: uppercase; }
+        .stat-card .value { font-size: 32px; font-weight: bold; color: #2c3525; }
+
+        /* Bảng Quản lý */
+        .table-wrapper {
+            background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .table-header {
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;
+        }
+        .table-header h2 { margin: 0; color: #2c3525; }
+        .actions button {
+            padding: 8px 15px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; color: white; margin-left: 5px;
+        }
+        .btn-reset-bxh { background-color: #f39c12; }
+        .btn-reset-view { background-color: #8e44ad; }
+        
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #2c3525; color: #e6e2d3; text-transform: uppercase; font-size: 14px; }
+        tr:hover { background-color: #f9f9f9; }
+        
+        .btn-delete { background-color: #e74c3c; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+        .btn-delete:hover { background-color: #c0392b; }
+
+        @media (max-width: 768px) {
+            .table-wrapper { overflow-x: auto; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="login-screen">
+        <div class="login-box">
+            <h2>Admin Login</h2>
+            <div id="error-login" class="error-login">Mật khẩu không chính xác!</div>
+            <input type="password" id="admin-pass" placeholder="Nhập mật khẩu quản trị..." onkeypress="if(event.key === 'Enter') checkLogin()">
+            <button onclick="checkLogin()">ĐĂNG NHẬP</button>
+            <p style="font-size: 12px; color: #666; margin-top: 15px;">Dành riêng cho BQT Hệ thống UPT</p>
+        </div>
+    </div>
+
+    <div id="admin-panel">
+        <div class="header">
+            <h1>⚙️ Dashboard Quản Trị Hệ Thống</h1>
+            <button class="btn-logout" onclick="logout()">Thoát</button>
+        </div>
+
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>🟢 Đang Online Thực Tế</h3>
+                    <div class="value" id="admin-online">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>👁️ Tổng Lượt Truy Cập</h3>
+                    <div class="value" id="admin-total-views">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>👤 Tổng Số Học Viên</h3>
+                    <div class="value" id="admin-total-users">0</div>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <div class="table-header">
+                    <h2>Danh Sách Học Viên (BXH)</h2>
+                    <div class="actions">
+                        <button class="btn-reset-view" onclick="resetTotalViews()">Reset Lượt Truy Cập</button>
+                        <button class="btn-reset-bxh" onclick="resetLeaderboard()">Xóa Toàn Bộ BXH</button>
+                    </div>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ và Tên</th>
+                            <th>Đại Đội</th>
+                            <th>Tiểu Đội</th>
+                            <th>Lượt Truy Cập</th>
+                            <th>Lần Cuối</th>
+                            <th>Hành Động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-table-body">
+                        <tr><td colspan="7" style="text-align:center;">Đang tải dữ liệu...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
+        import { getDatabase, ref, onValue, remove, set } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
+
+        // === CẤU HÌNH FIREBASE (GIỮ NGUYÊN NHƯ BÊN INDEX.HTML) ===
+        const firebaseConfig = {
+            apiKey: "AIzaSyBz5y6EPEvkxa-X3W83mpB8nT2i6QLY0ck",
+            authDomain: "sl-gdqp.firebaseapp.com",
+            databaseURL: "https://sl-gdqp-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "sl-gdqp",
+            storageBucket: "sl-gdqp.firebasestorage.app",
+            messagingSenderId: "541164628409",
+            appId: "1:541164628409:web:5ebb5f2d2fe1c6f513ae68"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        // === LOGIC ĐĂNG NHẬP ĐƠN GIẢN ===
+        // Mật khẩu mặc định là: upt2026 (Bạn có thể đổi ở dòng dưới)
+        const ADMIN_PASSWORD = "upt"; 
+
+        window.checkLogin = function() {
+            const pass = document.getElementById('admin-pass').value;
+            if (pass === ADMIN_PASSWORD) {
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('admin-panel').style.display = 'block';
+                sessionStorage.setItem('admin_logged_in', 'true');
+            } else {
+                document.getElementById('error-login').style.display = 'block';
+            }
+        }
+
+        window.logout = function() {
+            sessionStorage.removeItem('admin_logged_in');
+            location.reload();
+        }
+
+        // Kiểm tra session nếu đã đăng nhập trước đó
+        if(sessionStorage.getItem('admin_logged_in') === 'true') {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('admin-panel').style.display = 'block';
+        }
+
+        // === LẤY DỮ LIỆU THỐNG KÊ ===
+
+        // 1. Số người online
+        onValue(ref(db, 'onlineUsers'), (snap) => {
+            document.getElementById('admin-online').innerText = snap.exists() ? Object.keys(snap.val()).length : 0;
+        });
+
+        // 2. Tổng truy cập
+        onValue(ref(db, 'totalVisits'), (snap) => {
+            document.getElementById('admin-total-views').innerText = snap.exists() ? snap.val() : 0;
+        });
+
+        // 3. Danh sách BXH & Tổng học viên
+        onValue(ref(db, 'leaderboard'), (snap) => {
+            const tbody = document.getElementById('admin-table-body');
+            
+            if (!snap.exists()) {
+                document.getElementById('admin-total-users').innerText = 0;
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;">Chưa có dữ liệu học viên.</td></tr>';
+                return;
+            }
+
+            const data = snap.val();
+            let history = Object.entries(data).map(([key, val]) => ({ id: key, ...val }));
+            
+            // Cập nhật tổng số học viên
+            document.getElementById('admin-total-users').innerText = history.length;
+
+            // Sắp xếp giảm dần theo lượt truy cập
+            history.sort((a, b) => (b.visitCount || 0) - (a.visitCount || 0));
+
+            let html = '';
+            history.forEach((item, index) => {
+                html += `
+                    <tr>
+                        <td><strong>${index + 1}</strong></td>
+                        <td>${item.hoTen}</td>
+                        <td>${item.daiDoi}</td>
+                        <td>${item.tieuDoi}</td>
+                        <td><strong>${item.visitCount}</strong></td>
+                        <td>${item.thoiGian}</td>
+                        <td>
+                            <button class="btn-delete" onclick="deleteUser('${item.id}', '${item.hoTen}')">Xóa</button>
+                        </td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = html;
+        });
+
+        // === CÁC HÀM XỬ LÝ DỮ LIỆU (XÓA/RESET) ===
+
+        // Xóa 1 người dùng cụ thể
+        window.deleteUser = function(userId, userName) {
+            if (confirm(`Bạn có chắc chắn muốn xóa học viên [${userName}] khỏi hệ thống không? Dữ liệu không thể khôi phục!`)) {
+                remove(ref(db, 'leaderboard/' + userId))
+                    .then(() => alert('Xóa thành công!'))
+                    .catch(error => alert('Lỗi: ' + error.message));
+            }
+        }
+
+        // Xóa toàn bộ Bảng xếp hạng
+        window.resetLeaderboard = function() {
+            const code = prompt('CẢNH BÁO: Hành động này sẽ xóa TOÀN BỘ học viên khỏi Bảng xếp hạng.\nNhập chữ "XOA" để xác nhận:');
+            if (code === 'XOA') {
+                remove(ref(db, 'leaderboard'))
+                    .then(() => alert('Đã dọn dẹp sạch Bảng xếp hạng!'))
+                    .catch(error => alert('Lỗi: ' + error.message));
+            } else if (code !== null) {
+                alert('Xác nhận không đúng, đã hủy thao tác.');
+            }
+        }
+
+        // Reset tổng số lượt truy cập về 0
+        window.resetTotalViews = function() {
+            if (confirm('Bạn muốn reset tổng lượt truy cập về 0?')) {
+                set(ref(db, 'totalVisits'), 0)
+                    .then(() => alert('Đã reset tổng truy cập!'))
+                    .catch(error => alert('Lỗi: ' + error.message));
+            }
+        }
+
+    </script>
+</body>
+</html>
