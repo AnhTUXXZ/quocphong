@@ -521,6 +521,30 @@
             display: none;
         }
 
+        /* === GIAO DIỆN CẢNH BÁO KHÓA CHAT === */
+        .block-modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9); display: none; justify-content: center; align-items: center; z-index: 100000;
+        }
+        .block-modal-content {
+            background-color: #fff; padding: 30px; border-radius: 12px; border: 5px solid #e74c3c;
+            width: 90%; max-width: 400px; text-align: center; box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+            animation: shake 0.5s ease-in-out;
+        }
+        .block-modal-content h2 { color: #e74c3c; margin-top: 0; font-size: 26px; text-transform: uppercase; }
+        .block-modal-content p { font-size: 16px; color: #333; line-height: 1.5; font-weight: bold; }
+        .block-timer { font-size: 38px; font-weight: 900; color: #e74c3c; margin: 15px 0; display: block; letter-spacing: 2px; }
+        .btn-close-block {
+            background-color: #2c3525; color: #e6e2d3; border: none; padding: 12px 25px; font-size: 16px;
+            font-weight: bold; border-radius: 5px; cursor: pointer; text-transform: uppercase; margin-top: 15px; width: 100%;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+        }
+
         /* === HIỂU ỨNG LOADING K463 CHUYỂN TRANG === */
         .loading-overlay-k463 {
             position: fixed;
@@ -649,6 +673,11 @@
             font-size: 24px;
             line-height: 1;
         }
+        /* NÚT GỌI WRC */
+        #btn-call-wrc {
+            cursor: pointer; font-size: 20px; display: none; margin-right: 15px; transition: 0.2s;
+        }
+        #btn-call-wrc:hover { transform: scale(1.1); }
 
         .chat-inbox {
             flex: 1;
@@ -684,7 +713,7 @@
             display: none;
             flex-direction: column;
             background-color: #f0f2f5;
-            min-height: 0; /* Ép flex container không phình to quá thẻ cha */
+            min-height: 0;
         }
 
         .chat-messages {
@@ -694,7 +723,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            min-height: 0; /* Cho phép nội dung bên trong cuộn xuống thay vì tràn viền */
+            min-height: 0;
         }
 
         .msg-bubble {
@@ -730,7 +759,7 @@
             padding: 10px;
             background-color: white;
             border-top: 1px solid #ccc;
-            flex-shrink: 0; /* Chốt cứng khung nhập liệu, không cho phép bị thu nhỏ hay đẩy mất */
+            flex-shrink: 0; 
         }
         .chat-input-area input {
             flex: 1;
@@ -762,6 +791,29 @@
 </head>
 <body>
 
+    <div id="blockPopup" class="block-modal-overlay">
+        <div class="block-modal-content">
+            <h2>⚠️ CẢNH BÁO VI PHẠM</h2>
+            <p>Bạn đã sử dụng ngôn từ không hợp lệ.<br>Tính năng nhắn tin của bạn đã bị khóa tạm thời!</p>
+            <span id="block-time-left" class="block-timer">10:00</span>
+            <button class="btn-close-block" onclick="document.getElementById('blockPopup').style.display='none'">Đã Hiểu</button>
+        </div>
+    </div>
+
+    <div id="webrtc-modal" class="modal-overlay" style="z-index: 100002;">
+        <div class="modal-content" style="width: 90%; max-width: 600px; background: #1a1f16; border-color: #8a9a5b;">
+            <h3 id="call-status" style="color: #00ff00; margin-top: 0; text-transform: uppercase;">Cuộc Gọi Video...</h3>
+            <div style="position: relative; width: 100%; height: 350px; background: #000; border-radius: 8px; overflow: hidden; margin-bottom: 15px;">
+                <video id="remoteVideo" autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                <video id="localVideo" autoplay playsinline muted style="width: 100px; height: 150px; position: absolute; bottom: 10px; right: 10px; border: 2px solid #8a9a5b; border-radius: 8px; object-fit: cover; background: #333; z-index: 10;"></video>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 15px;">
+                <button id="btnAnswer" style="background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; display: none; font-size: 16px;">Nhấc Máy</button>
+                <button id="btnHangup" onclick="endCall()" style="background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 16px;">Kết Thúc</button>
+            </div>
+        </div>
+    </div>
+
     <div id="loadingK463" class="loading-overlay-k463">
         <div class="loading-text-container">
             K463<span class="loading-dots"></span>
@@ -787,6 +839,7 @@
         <div class="chat-header">
             <span id="chat-back-btn" class="back-btn" onclick="showInboxView()">⬅</span>
             <span id="chat-title">Hộp Thư Đến</span>
+            <span id="btn-call-wrc" onclick="startCall()">📞</span>
             <span class="close-chat" onclick="toggleChatWrapper()">&times;</span>
         </div>
         
@@ -909,9 +962,10 @@
     </div>
 
     <script type="module">
+        // Import thêm onChildAdded, get cho tính năng WebRTC
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-analytics.js";
-        import { getDatabase, ref, onValue, onDisconnect, set, remove, runTransaction, push, update } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
+        import { getDatabase, ref, onValue, onDisconnect, set, remove, runTransaction, push, update, onChildAdded, get } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
 
         // === CẤU HÌNH FIREBASE ===
         const firebaseConfig = {
@@ -939,6 +993,9 @@
             userId = 'user_' + Math.random().toString(36).substr(2, 9) + Date.now();
             localStorage.setItem('upt_user_id', userId);
         }
+        
+        // Rank khởi tạo mặc định (Chặn chưa vào top)
+        window.myCurrentRank = 9999;
 
         // ==========================================
         // 1. GHI NHẬN LƯỢT TRUY CẬP CÁ NHÂN LÊN FIREBASE (BXH)
@@ -978,11 +1035,16 @@
             }
 
             const data = snap.val();
-            // Lấy ID làm key cho mỗi object để dùng lúc chat
             let history = Object.entries(data).map(([key, val]) => ({ id: key, ...val }));
             
             // Sắp xếp giảm dần theo số lượng truy cập
             history.sort((a, b) => (b.visitCount || 0) - (a.visitCount || 0));
+
+            // Xác định Hạng (Rank) của chính người dùng hiện tại
+            let myRankIndex = history.findIndex(item => item.id === userId);
+            if (myRankIndex !== -1) {
+                window.myCurrentRank = myRankIndex + 1;
+            }
 
             let html = '';
             history.forEach((item, index) => {
@@ -1131,17 +1193,56 @@
         }
 
         // ==========================================
-        // 7. TÍNH NĂNG NHẮN TIN REALTIME FIREBASE
+        // 7. TÍNH NĂNG NHẮN TIN REALTIME FIREBASE & KIỂM DUYỆT
         // ==========================================
         window.currentChatPartnerId = null;
         window.currentChatPartnerName = null;
         window.currentChatUnsubscribe = null;
+        
+        // --- BỘ LỌC TỪ NGỮ ---
+        const badWords = ["chó", "lon", "lồn", "l o l", "cac", "cặc", "dm", "djtme"];
+        let blockInterval;
+
+        function containsBadWords(text) {
+            let normalized = text.toLowerCase().replace(/\s+/g, ''); 
+            for (let word of badWords) {
+                let cleanWord = word.replace(/\s+/g, '');
+                if (normalized.includes(cleanWord)) return true;
+            }
+            return false;
+        }
+
+        function showBlockPopup(endTime) {
+            document.getElementById('blockPopup').style.display = 'flex';
+            clearInterval(blockInterval);
+
+            function updateTimer() {
+                let remain = Math.floor((endTime - Date.now()) / 1000);
+                if (remain <= 0) {
+                    clearInterval(blockInterval);
+                    document.getElementById('blockPopup').style.display = 'none';
+                    localStorage.removeItem('chat_blocked_until');
+                    return;
+                }
+                let m = Math.floor(remain / 60);
+                let s = remain % 60;
+                document.getElementById('block-time-left').innerText = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
+            }
+            updateTimer();
+            blockInterval = setInterval(updateTimer, 1000);
+        }
 
         window.toggleChatWrapper = function() {
+            // Check TOP 25 Condition
+            if (window.myCurrentRank > 25) {
+                alert(`🔒 CHỈ DÀNH CHO TOP 25!\n\nBạn đang xếp hạng ${window.myCurrentRank}.\nHãy truy cập học tập nhiều hơn để vào TOP 25 và mở khóa tính năng Nhắn Tin & Gọi WebRTC nhé!`);
+                return;
+            }
+
             const wrapper = document.getElementById('chat-modal-wrapper');
             wrapper.style.display = wrapper.style.display === 'flex' ? 'none' : 'flex';
             if(wrapper.style.display === 'flex') {
-                showInboxView(); // Luôn mở hộp thư đầu tiên
+                showInboxView(); 
             }
         };
 
@@ -1149,40 +1250,43 @@
             document.getElementById('chat-inbox').style.display = 'flex';
             document.getElementById('chat-room').style.display = 'none';
             document.getElementById('chat-back-btn').style.display = 'none';
+            document.getElementById('btn-call-wrc').style.display = 'none';
             document.getElementById('chat-title').innerText = 'Hộp Thư Đến';
             if (window.currentChatUnsubscribe) {
-                window.currentChatUnsubscribe(); // Tắt lắng nghe luồng chat chi tiết
+                window.currentChatUnsubscribe(); 
             }
             window.currentChatPartnerId = null;
         }
 
         window.openChatRoom = function(partnerId, partnerName) {
+            // Check TOP 25 Condition again for clicks inside leaderboard
+            if (window.myCurrentRank > 25) {
+                alert(`🔒 CHỈ DÀNH CHO TOP 25!\n\nBạn đang xếp hạng ${window.myCurrentRank}.\nHãy chăm chỉ học để vào TOP 25 và mở khóa nhé!`);
+                return;
+            }
+
             if (partnerId === userId) {
                 alert("Bạn không thể tự nhắn tin cho chính mình!");
                 return;
             }
             
-            // Đóng sidebar BXH nếu đang mở
             document.getElementById('sidebar').classList.remove('active');
             
-            // Hiện cửa sổ chat
             document.getElementById('chat-modal-wrapper').style.display = 'flex';
             document.getElementById('chat-inbox').style.display = 'none';
             document.getElementById('chat-room').style.display = 'flex';
             document.getElementById('chat-back-btn').style.display = 'block';
+            document.getElementById('btn-call-wrc').style.display = 'block'; // Mở nút Gọi
             document.getElementById('chat-title').innerText = partnerName;
 
             window.currentChatPartnerId = partnerId;
             window.currentChatPartnerName = partnerName;
 
-            // Xoá số thông báo tin nhắn chưa đọc của người này
             update(ref(db, `inbox/${userId}/${partnerId}`), { unread: 0 });
 
-            // Lắng nghe tin nhắn
             loadMessages(partnerId);
         }
 
-        // Lắng nghe Hộp Thư Đến
         onValue(ref(db, `inbox/${userId}`), (snap) => {
             const inboxData = snap.val();
             let totalUnread = 0;
@@ -1208,9 +1312,9 @@
 
             document.getElementById('chat-inbox').innerHTML = html;
 
-            // Cập nhật số trên FAB
             const badge = document.getElementById('chat-badge');
-            if (totalUnread > 0) {
+            // Nếu ngoài top 25 thì không hiện chấm đỏ
+            if (totalUnread > 0 && window.myCurrentRank <= 25) {
                 badge.innerText = totalUnread > 9 ? '9+' : totalUnread;
                 badge.style.display = 'flex';
             } else {
@@ -1218,7 +1322,6 @@
             }
         });
 
-        // Hàm tải & hiển thị tin nhắn trong phòng
         function loadMessages(pId) {
             if (window.currentChatUnsubscribe) window.currentChatUnsubscribe();
 
@@ -1250,11 +1353,25 @@
             });
         }
 
-        // Hàm Gửi tin nhắn
         window.sendRealtimeMessage = function() {
+            const blockedUntil = localStorage.getItem('chat_blocked_until');
+            if (blockedUntil && Date.now() < parseInt(blockedUntil)) {
+                showBlockPopup(parseInt(blockedUntil));
+                return;
+            }
+
             const input = document.getElementById('chat-input');
             const text = input.value.trim();
             if (!text) return;
+
+            // Kiểm duyệt từ ngữ
+            if (containsBadWords(text)) {
+                const blockTime = Date.now() + 10 * 60 * 1000; 
+                localStorage.setItem('chat_blocked_until', blockTime);
+                showBlockPopup(blockTime);
+                input.value = ''; 
+                return;
+            }
 
             const pId = window.currentChatPartnerId;
             const pName = window.currentChatPartnerName;
@@ -1263,14 +1380,12 @@
             let myData = localStorage.getItem('hocVienQuocPhong');
             let myName = myData ? JSON.parse(myData).hoTen : "Học viên";
 
-            // 1. Lưu nội dung tin nhắn
             push(ref(db, `messages/${chatId}`), {
                 senderId: userId,
                 text: text,
                 timestamp: Date.now()
             });
 
-            // 2. Cập nhật Hộp thư đến Của Mình
             update(ref(db, `inbox/${userId}/${pId}`), {
                 partnerId: pId,
                 partnerName: pName,
@@ -1279,12 +1394,11 @@
                 unread: 0
             });
 
-            // 3. Cập nhật Hộp thư đến của Người Nhận (tăng biến chưa đọc)
             runTransaction(ref(db, `inbox/${pId}/${userId}`), (currentData) => {
                 if (currentData === null) {
                     return { partnerId: userId, partnerName: myName, lastMsg: text, timestamp: Date.now(), unread: 1 };
                 }
-                currentData.partnerName = myName; // Nhỡ mình đổi tên
+                currentData.partnerName = myName; 
                 currentData.lastMsg = text;
                 currentData.timestamp = Date.now();
                 currentData.unread = (currentData.unread || 0) + 1;
@@ -1300,6 +1414,202 @@
                 sendRealtimeMessage();
             }
         }
+
+
+        // ==========================================
+        // 8. TÍNH NĂNG GỌI VIDEO WEBRTC NATIVE (P2P)
+        // ==========================================
+        let localStream;
+        let remoteStream;
+        let peerConnection;
+        // Sử dụng Google STUN servers miễn phí cho việc chọc thủng NAT
+        const rtcServers = {
+            iceServers: [
+                { urls: ['stun:stun1.l.google.com:19302', 'stun:stun2.l.google.com:19302'] }
+            ]
+        };
+
+        // Lắng nghe cuộc gọi đến trên toàn hệ thống cho User hiện tại
+        let incomingCallData = null;
+        onValue(ref(db, `incoming_calls/${userId}`), (snap) => {
+            const data = snap.val();
+            if (data && !peerConnection) {
+                // Có người gọi đến
+                incomingCallData = data;
+                document.getElementById('webrtc-modal').style.display = 'flex';
+                document.getElementById('call-status').innerText = `📞 ${data.callerName} Đang gọi Video...`;
+                document.getElementById('btnAnswer').style.display = 'inline-block';
+            } else if (!data && incomingCallData) {
+                // Người gọi đã cúp máy trước khi nghe
+                endCallUI();
+            }
+        });
+
+        window.startCall = async function() {
+            const pId = window.currentChatPartnerId;
+            const pName = window.currentChatPartnerName;
+            const chatId = userId < pId ? userId + '_' + pId : pId + '_' + userId;
+            
+            document.getElementById('webrtc-modal').style.display = 'flex';
+            document.getElementById('call-status').innerText = `Đang đổ chuông tới ${pName}...`;
+            document.getElementById('btnAnswer').style.display = 'none';
+
+            try {
+                localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                document.getElementById('localVideo').srcObject = localStream;
+                
+                peerConnection = new RTCPeerConnection(rtcServers);
+                remoteStream = new MediaStream();
+                document.getElementById('remoteVideo').srcObject = remoteStream;
+
+                // Thêm Track từ Local lên Peer
+                localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+                
+                // Nhận Track từ Remote đưa vào Video
+                peerConnection.ontrack = event => {
+                    event.streams[0].getTracks().forEach(track => remoteStream.addTrack(track));
+                };
+
+                const callDoc = ref(db, `calls/${chatId}`);
+                
+                // Thu thập ICE Candidates (Bên Gọi)
+                peerConnection.onicecandidate = event => {
+                    if(event.candidate) {
+                        push(ref(db, `calls/${chatId}/callerCandidates`), event.candidate.toJSON());
+                    }
+                };
+
+                // Tạo Offer SDP
+                const offerDescription = await peerConnection.createOffer();
+                await peerConnection.setLocalDescription(offerDescription);
+                const offer = { sdp: offerDescription.sdp, type: offerDescription.type };
+                await set(callDoc, { offer: offer });
+
+                // Thông báo tới Firebase người nhận có cuộc gọi
+                let myData = localStorage.getItem('hocVienQuocPhong');
+                let myName = myData ? JSON.parse(myData).hoTen : "Học viên";
+                set(ref(db, `incoming_calls/${pId}`), {
+                    callerId: userId,
+                    callerName: myName,
+                    chatId: chatId
+                });
+
+                // Chờ người nhận trả lời (Answer)
+                onValue(ref(db, `calls/${chatId}/answer`), (snap) => {
+                    const answer = snap.val();
+                    if(answer && !peerConnection.currentRemoteDescription) {
+                        const answerDescription = new RTCSessionDescription(answer);
+                        peerConnection.setRemoteDescription(answerDescription);
+                        document.getElementById('call-status').innerText = "✅ Đã Kết Nối Giao Tiếp Cục Bộ";
+                    }
+                });
+
+                // Lắng nghe ICE Candidates từ người nhận
+                onChildAdded(ref(db, `calls/${chatId}/calleeCandidates`), (data) => {
+                    const candidate = new RTCIceCandidate(data.val());
+                    peerConnection.addIceCandidate(candidate);
+                });
+
+            } catch (error) {
+                alert("Lỗi truy cập Camera/Mic: " + error.message);
+                endCallUI();
+            }
+        };
+
+        // Khi bấm nút Nhấc Máy (Trả Lời)
+        document.getElementById('btnAnswer').onclick = async function() {
+            if(!incomingCallData) return;
+            const chatId = incomingCallData.chatId;
+            const callerId = incomingCallData.callerId;
+            
+            document.getElementById('btnAnswer').style.display = 'none';
+            document.getElementById('call-status').innerText = "Đang kết nối luồng P2P...";
+
+            try {
+                localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                document.getElementById('localVideo').srcObject = localStream;
+
+                peerConnection = new RTCPeerConnection(rtcServers);
+                remoteStream = new MediaStream();
+                document.getElementById('remoteVideo').srcObject = remoteStream;
+
+                localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+                peerConnection.ontrack = event => {
+                    event.streams[0].getTracks().forEach(track => remoteStream.addTrack(track));
+                };
+
+                // Thu thập ICE Candidates (Bên Nhận)
+                peerConnection.onicecandidate = event => {
+                    if(event.candidate) {
+                        push(ref(db, `calls/${chatId}/calleeCandidates`), event.candidate.toJSON());
+                    }
+                };
+
+                // Lấy Offer từ Firebase
+                get(ref(db, `calls/${chatId}/offer`)).then(async (snap) => {
+                    const offer = snap.val();
+                    if(offer) {
+                        const offerDescription = new RTCSessionDescription(offer);
+                        await peerConnection.setRemoteDescription(offerDescription);
+
+                        // Tạo Answer SDP
+                        const answerDescription = await peerConnection.createAnswer();
+                        await peerConnection.setLocalDescription(answerDescription);
+
+                        const answer = { type: answerDescription.type, sdp: answerDescription.sdp };
+                        await set(ref(db, `calls/${chatId}/answer`), answer);
+                        
+                        document.getElementById('call-status').innerText = "✅ Đã Kết Nối Giao Tiếp Cục Bộ";
+                    }
+                });
+
+                // Lắng nghe ICE Candidates từ người gọi
+                onChildAdded(ref(db, `calls/${chatId}/callerCandidates`), (data) => {
+                    const candidate = new RTCIceCandidate(data.val());
+                    peerConnection.addIceCandidate(candidate);
+                });
+                
+                // Xóa tín hiệu chuông (Incoming Call)
+                remove(ref(db, `incoming_calls/${userId}`));
+
+            } catch (error) {
+                alert("Lỗi truy cập Camera/Mic: " + error.message);
+                endCallUI();
+            }
+        };
+
+        window.endCall = function() {
+            endCallUI();
+            
+            // Xóa dữ liệu Signaling DB
+            let pId = window.currentChatPartnerId;
+            if(!pId && incomingCallData) {
+                pId = incomingCallData.callerId;
+            }
+
+            if(pId) {
+                const chatId = userId < pId ? userId + '_' + pId : pId + '_' + userId;
+                remove(ref(db, `calls/${chatId}`));
+                remove(ref(db, `incoming_calls/${pId}`));
+            }
+            remove(ref(db, `incoming_calls/${userId}`));
+        };
+
+        function endCallUI() {
+            if(peerConnection) {
+                peerConnection.close();
+                peerConnection = null;
+            }
+            if(localStream) {
+                localStream.getTracks().forEach(t => t.stop());
+                localStream = null;
+            }
+            document.getElementById('webrtc-modal').style.display = 'none';
+            document.getElementById('remoteVideo').srcObject = null;
+            document.getElementById('localVideo').srcObject = null;
+            incomingCallData = null;
+        }
+
     </script>
 
     <script>
@@ -1323,4 +1633,4 @@
         });
     </script>
 </body>
-                </html>
+        </html>
