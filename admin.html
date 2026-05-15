@@ -79,36 +79,6 @@
         .btn-edit { background-color: #3498db; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; margin-right: 5px; }
         .btn-edit:hover { background-color: #2980b9; }
 
-        /* === GIAO DIỆN KIỂM SOÁT TIN NHẮN === */
-        .chat-monitor-container {
-            display: flex; gap: 20px; height: 400px;
-        }
-        .chat-list {
-            width: 30%; overflow-y: auto; border-right: 1px solid #ddd; padding-right: 10px;
-        }
-        .chat-list-item {
-            padding: 12px; border-bottom: 1px solid #eee; cursor: pointer; border-radius: 4px; transition: 0.2s;
-        }
-        .chat-list-item:hover { background-color: #e6e2d3; }
-        .chat-list-item.active { background-color: #2c3525; color: white; }
-        .chat-list-item.active .msg-count { color: #a1ce71 !important; }
-
-        .chat-content {
-            width: 70%; overflow-y: auto; background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ddd;
-        }
-        .msg-bubble-admin {
-            padding: 10px; border-radius: 8px; margin-bottom: 10px; background-color: #e6e2d3; color: #2c3525; max-width: 85%;
-        }
-        .msg-bubble-admin strong { color: #1877F2; }
-        .msg-bubble-admin .time { font-size: 11px; color: #666; margin-left: 10px; }
-
-        @media (max-width: 768px) {
-            .table-wrapper { overflow-x: auto; }
-            .stats-grid { grid-template-columns: 1fr; }
-            .chat-monitor-container { flex-direction: column; height: auto; }
-            .chat-list, .chat-content { width: 100%; height: 300px; }
-        }
-
         /* === MODAL SỬA USER === */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -124,6 +94,59 @@
         .modal-actions button { padding: 8px 15px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
         .btn-save { background: #2c3525; color: #e6e2d3; margin-left: 10px; }
         .btn-cancel { background: #ccc; color: #333; }
+
+        /* === GIAO DIỆN KIỂM SOÁT TIN NHẮN CHUYÊN NGHIỆP === */
+        .chat-monitor-container {
+            display: flex; gap: 20px; height: 550px; border: 1px solid #ddd; border-radius: 8px; background: #fff; overflow: hidden;
+        }
+        .chat-list {
+            width: 35%; overflow-y: auto; border-right: 1px solid #ddd; background: #fafafa;
+        }
+        .chat-list-item {
+            padding: 15px; border-bottom: 1px solid #eee; cursor: pointer; transition: 0.2s; position: relative;
+        }
+        .chat-list-item:hover { background-color: #eef2f5; }
+        .chat-list-item.active { background-color: #2c3525; color: white; }
+        .chat-list-item.active .msg-count { color: #a1ce71 !important; }
+        .chat-list-item .users-title { font-size: 15px; font-weight: bold; display: flex; flex-direction: column; gap: 5px; }
+        .chat-list-item .users-title span { display: flex; align-items: center; gap: 5px; }
+        .msg-count { font-size: 13px; color: #666; margin-top: 8px; font-weight: bold; }
+
+        .chat-content-wrapper {
+            width: 65%; display: flex; flex-direction: column; background: #f0f2f5;
+        }
+        .chat-content-header {
+            padding: 15px; background: white; border-bottom: 1px solid #ccc; font-weight: bold; font-size: 16px; color: #2c3525;
+            display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .chat-content {
+            flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px;
+        }
+
+        /* Bong bóng chat Admin View */
+        .admin-msg-bubble {
+            max-width: 75%; padding: 10px 15px; border-radius: 18px; font-size: 14px; position: relative; line-height: 1.4;
+        }
+        .msg-left {
+            align-self: flex-start; background-color: #e4e6eb; color: #000; border-bottom-left-radius: 4px;
+        }
+        .msg-right {
+            align-self: flex-end; background-color: #1877F2; color: #fff; border-bottom-right-radius: 4px;
+        }
+        .sender-name {
+            font-size: 11px; font-weight: bold; margin-bottom: 4px; opacity: 0.8; display: block;
+        }
+        .msg-time {
+            font-size: 10px; opacity: 0.7; display: block; margin-top: 5px; text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .table-wrapper { overflow-x: auto; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .chat-monitor-container { flex-direction: column; height: auto; }
+            .chat-list { width: 100%; height: 250px; border-right: none; border-bottom: 2px solid #ddd; }
+            .chat-content-wrapper { width: 100%; height: 400px; }
+        }
     </style>
 </head>
 <body>
@@ -213,14 +236,19 @@
 
             <div class="table-wrapper">
                 <div class="table-header">
-                    <h2>💬 Kiểm Soát Tin Nhắn Hệ Thống</h2>
+                    <h2>💬 Giám Sát Tin Nhắn Hệ Thống</h2>
                 </div>
                 <div class="chat-monitor-container">
                     <div class="chat-list" id="admin-chat-list">
                         <p style="text-align:center; color:#666; margin-top:20px;">Đang tải danh sách...</p>
                     </div>
-                    <div class="chat-content" id="admin-chat-content">
-                        <p style="text-align: center; color: #888; margin-top: 50px;">👈 Chọn một đoạn chat bên trái để xem nội dung chi tiết</p>
+                    
+                    <div class="chat-content-wrapper">
+                        <div class="chat-content-header" id="chat-detail-header">
+                            👈 Vui lòng chọn một cuộc trò chuyện để xem chi tiết
+                        </div>
+                        <div class="chat-content" id="admin-chat-content">
+                            </div>
                     </div>
                 </div>
             </div>
@@ -230,7 +258,6 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
-        // IMPORT THÊM HÀM update ĐỂ CHỈNH SỬA
         import { getDatabase, ref, onValue, remove, set, update } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
 
         // === CẤU HÌNH FIREBASE ===
@@ -247,11 +274,11 @@
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
 
-        // Map lưu trữ Tên user để map với ID khi đọc tin nhắn
+        // Biến toàn cục lưu dữ liệu
         window.usersMap = {};
         window.allChatsData = {};
 
-        // === LOGIC ĐĂNG NHẬP ĐƠN GIẢN ===
+        // === ĐĂNG NHẬP ===
         const ADMIN_PASSWORD = "upt"; 
 
         window.checkLogin = function() {
@@ -275,7 +302,7 @@
             document.getElementById('admin-panel').style.display = 'block';
         }
 
-        // === LẤY DỮ LIỆU THỐNG KÊ ===
+        // === THỐNG KÊ ===
         onValue(ref(db, 'onlineUsers'), (snap) => {
             document.getElementById('admin-online').innerText = snap.exists() ? Object.keys(snap.val()).length : 0;
         });
@@ -284,7 +311,7 @@
             document.getElementById('admin-total-views').innerText = snap.exists() ? snap.val() : 0;
         });
 
-        // Danh sách BXH & Map Tên người dùng
+        // Lấy BXH và tạo Map User
         onValue(ref(db, 'leaderboard'), (snap) => {
             const tbody = document.getElementById('admin-table-body');
             
@@ -299,7 +326,7 @@
             
             document.getElementById('admin-total-users').innerText = history.length;
             
-            // Đẩy vào Map để tiện cho việc tra tên khi đọc tin nhắn
+            // Map để tra cứu Tên
             window.usersMap = {};
             history.forEach(item => { window.usersMap[item.id] = item.hoTen; });
 
@@ -325,7 +352,7 @@
             tbody.innerHTML = html;
         });
 
-        // === LẮNG NGHE & ĐỌC TOÀN BỘ TIN NHẮN ===
+        // === GIÁM SÁT TIN NHẮN (NÂNG CẤP GIAO DIỆN) ===
         onValue(ref(db, 'messages'), (snap) => {
             const data = snap.val();
             const chatListDiv = document.getElementById('admin-chat-list');
@@ -347,65 +374,79 @@
                 let msgCount = Object.keys(data[chatId]).length;
                 
                 chatListHtml += `
-                    <div class="chat-list-item" id="chat-tab-${chatId}" onclick="viewChat('${chatId}', '${name1}', '${name2}')">
-                        <strong style="display:block; font-size:15px;">👤 ${name1} <br><span style="font-size:12px; font-weight:normal;">nhắn với</span><br> 👤 ${name2}</strong>
-                        <div class="msg-count" style="font-size: 12px; color: #888; margin-top:5px;">💬 ${msgCount} tin nhắn</div>
+                    <div class="chat-list-item" id="chat-tab-${chatId}" onclick="viewChat('${chatId}', '${u1}', '${u2}')">
+                        <div class="users-title">
+                            <span>👤 <span style="color: #1877F2;">${name1}</span></span>
+                            <span style="font-size: 12px; font-weight:normal; margin-left:10px;">nhắn với</span>
+                            <span>👤 <span style="color: #e74c3c;">${name2}</span></span>
+                        </div>
+                        <div class="msg-count">💬 Tổng: ${msgCount} tin nhắn</div>
                     </div>
                 `;
             });
             chatListDiv.innerHTML = chatListHtml;
         });
 
-        // Hiển thị nội dung chi tiết 1 cuộc hội thoại
-        window.viewChat = function(chatId, name1, name2) {
-            // Đổi màu tab đang active
+        // Render chi tiết chat giống Messenger
+        window.viewChat = function(chatId, u1, u2) {
+            // Hiệu ứng active tab
             document.querySelectorAll('.chat-list-item').forEach(el => el.classList.remove('active'));
             document.getElementById(`chat-tab-${chatId}`).classList.add('active');
 
+            let name1 = window.usersMap[u1] || "Học viên A";
+            let name2 = window.usersMap[u2] || "Học viên B";
+
             const chatContentDiv = document.getElementById('admin-chat-content');
+            const chatHeader = document.getElementById('chat-detail-header');
+            
+            // Đổi Header
+            chatHeader.innerHTML = `👁️ Đang xem cuộc trò chuyện giữa: <strong style="color:#1877F2; margin-left:5px;">${name1}</strong> <span style="margin: 0 5px;">và</span> <strong style="color:#e74c3c;">${name2}</strong>`;
+
             const msgs = window.allChatsData[chatId];
             if (!msgs) return;
             
-            let html = `<h3 style="margin-top:0; border-bottom: 2px solid #ccc; padding-bottom:10px; color:#2c3525;">Lịch sử Chat: ${name1} & ${name2}</h3>`;
-            html += `<div style="display:flex; flex-direction:column;">`;
+            let html = '';
             
             Object.values(msgs).sort((a,b) => a.timestamp - b.timestamp).forEach(msg => {
-                let senderName = window.usersMap[msg.senderId] || "Học viên (ID ẩn)";
+                let senderName = window.usersMap[msg.senderId] || "ID ẩn";
                 let time = new Date(msg.timestamp).toLocaleString('vi-VN');
                 
+                // Gán người u1 là bên trái, u2 là bên phải để dễ phân biệt
+                let isLeft = (msg.senderId === u1);
+                let bubbleClass = isLeft ? 'msg-left' : 'msg-right';
+                
                 html += `
-                    <div class="msg-bubble-admin">
-                        <strong>${senderName}</strong> <span class="time">${time}</span>
-                        <div style="margin-top: 5px; line-height: 1.4;">${msg.text}</div>
+                    <div class="admin-msg-bubble ${bubbleClass}">
+                        <span class="sender-name">${senderName}</span>
+                        ${msg.text}
+                        <span class="msg-time">${time}</span>
                     </div>
                 `;
             });
             
-            html += `</div>`;
             chatContentDiv.innerHTML = html;
             
-            // Cuộn xuống cuối
-            chatContentDiv.scrollTop = chatContentDiv.scrollHeight;
+            // Cuộn xuống dòng tin nhắn mới nhất
+            setTimeout(() => {
+                chatContentDiv.scrollTop = chatContentDiv.scrollHeight;
+            }, 50);
         }
 
-        // === CÁC HÀM XỬ LÝ DỮ LIỆU CỦA ADMIN ===
+        // === CÁC HÀM XỬ LÝ (SỬA, XÓA, RESET) ===
 
-        // 1. Mở Modal Sửa Thông Tin
         window.openEditModal = function(id, name, daiDoi, tieuDoi, views) {
             document.getElementById('edit-id').value = id;
             document.getElementById('edit-name').value = name;
             document.getElementById('edit-daidoi').value = daiDoi;
             document.getElementById('edit-tieudoi').value = tieuDoi;
-            document.getElementById('edit-views').value = views || 0; // Hiển thị lượt truy cập hiện tại
+            document.getElementById('edit-views').value = views || 0;
             document.getElementById('edit-modal').style.display = 'flex';
         }
 
-        // 2. Đóng Modal
         window.closeEditModal = function() {
             document.getElementById('edit-modal').style.display = 'none';
         }
 
-        // 3. Lưu thông tin (Ghi đè lên Firebase)
         window.saveEdit = function() {
             const id = document.getElementById('edit-id').value;
             const newName = document.getElementById('edit-name').value.trim();
@@ -417,7 +458,6 @@
                 alert("Vui lòng điền đầy đủ thông tin và số lượt truy cập hợp lệ!"); return;
             }
 
-            // Update thay đổi trực tiếp lên Firebase (bao gồm cả visitCount)
             update(ref(db, 'leaderboard/' + id), {
                 hoTen: newName,
                 daiDoi: newDaiDoi,
@@ -429,7 +469,6 @@
             }).catch(error => alert('Lỗi: ' + error.message));
         }
 
-        // Xóa 1 người dùng cụ thể
         window.deleteUser = function(userId, userName) {
             if (confirm(`Bạn có chắc chắn muốn xóa học viên [${userName}] khỏi hệ thống không? Dữ liệu không thể khôi phục!`)) {
                 remove(ref(db, 'leaderboard/' + userId))
@@ -438,7 +477,6 @@
             }
         }
 
-        // Xóa toàn bộ Bảng xếp hạng
         window.resetLeaderboard = function() {
             const code = prompt('CẢNH BÁO: Hành động này sẽ xóa TOÀN BỘ học viên khỏi Bảng xếp hạng.\nNhập chữ "XOA" để xác nhận:');
             if (code === 'XOA') {
@@ -450,7 +488,6 @@
             }
         }
 
-        // Reset tổng lượt truy cập về 0
         window.resetTotalViews = function() {
             if (confirm('Bạn muốn reset tổng lượt truy cập về 0?')) {
                 set(ref(db, 'totalVisits'), 0)
