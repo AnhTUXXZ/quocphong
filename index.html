@@ -183,6 +183,29 @@
             gap: 5px;
         }
 
+        /* Nút nhắn tin trong BXH */
+        .btn-chat-bxh {
+            display: block;
+            width: 100%;
+            background-color: var(--fb-blue);
+            color: white;
+            border: 2px solid #0e5db3;
+            border-radius: 5px;
+            padding: 8px;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.2s;
+        }
+
+        .btn-chat-bxh:hover {
+            background-color: #145dbf;
+            transform: scale(1.02);
+        }
+
         /* === PHẦN THÔNG BÁO LỖI DƯỚI BANNER === */
         .error-report-bar {
             background-color: var(--khaki);
@@ -505,7 +528,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(44, 53, 37, 0.95); /* Xanh rêu đậm với độ mờ */
+            background: rgba(44, 53, 37, 0.95);
             display: none;
             justify-content: center;
             align-items: center;
@@ -526,7 +549,7 @@
 
         .loading-dots {
             display: inline-block;
-            width: 60px; /* Chiều rộng cố định để text K463 không giật */
+            width: 60px;
             text-align: left;
         }
 
@@ -547,6 +570,191 @@
             75% { content: '. . .'; }
             100% { content: ''; }
         }
+
+        /* === GIAO DIỆN CHAT MESSENGER REALTIME === */
+        .chat-fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--fb-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 9999;
+            transition: transform 0.2s;
+            border: 3px solid white;
+        }
+        .chat-fab:hover {
+            transform: scale(1.1);
+        }
+        .chat-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+        }
+
+        .chat-modal-wrapper {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 350px;
+            max-width: 90%;
+            height: 450px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: none;
+            flex-direction: column;
+            z-index: 10000;
+            overflow: hidden;
+            border: 2px solid var(--army-dark);
+        }
+
+        .chat-header {
+            background-color: var(--army-dark);
+            color: var(--khaki);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 3px solid var(--army-light);
+        }
+        .chat-header .back-btn {
+            cursor: pointer;
+            font-size: 20px;
+            display: none;
+        }
+        .chat-header .close-chat {
+            cursor: pointer;
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        .chat-inbox {
+            flex: 1;
+            overflow-y: auto;
+            background-color: var(--khaki);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inbox-item {
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+        .inbox-item:hover { background-color: #d1cbae; }
+        .inbox-info strong { display: block; color: var(--army-dark); font-size: 16px; }
+        .inbox-info p { margin: 5px 0 0; color: #555; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px; }
+        .inbox-unread {
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 8px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .chat-room {
+            flex: 1;
+            display: none;
+            flex-direction: column;
+            background-color: #f0f2f5;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .msg-bubble {
+            max-width: 75%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            font-size: 15px;
+            line-height: 1.4;
+            position: relative;
+        }
+        .msg-sent {
+            align-self: flex-end;
+            background-color: var(--fb-blue);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        .msg-received {
+            align-self: flex-start;
+            background-color: #e4e6eb;
+            color: black;
+            border-bottom-left-radius: 4px;
+        }
+        .msg-time {
+            font-size: 10px;
+            opacity: 0.7;
+            display: block;
+            margin-top: 5px;
+            text-align: right;
+        }
+
+        .chat-input-area {
+            display: flex;
+            padding: 10px;
+            background-color: white;
+            border-top: 1px solid #ccc;
+        }
+        .chat-input-area input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+            font-size: 15px;
+        }
+        .chat-input-area button {
+            background-color: var(--fb-blue);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s;
+        }
+        .chat-input-area button:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -564,6 +772,32 @@
         </div>
         <div class="sidebar-content" id="sidebarContent">
             <p style="text-align:center; margin-top:20px;">Đang tải dữ liệu từ máy chủ...</p>
+        </div>
+    </div>
+
+    <div class="chat-fab" onclick="toggleChatWrapper()">
+        💬
+        <span id="chat-badge" class="chat-badge" style="display: none;">0</span>
+    </div>
+
+    <div id="chat-modal-wrapper" class="chat-modal-wrapper">
+        <div class="chat-header">
+            <span id="chat-back-btn" class="back-btn" onclick="showInboxView()">⬅</span>
+            <span id="chat-title">Hộp Thư Đến</span>
+            <span class="close-chat" onclick="toggleChatWrapper()">&times;</span>
+        </div>
+        
+        <div id="chat-inbox" class="chat-inbox">
+            <p style="text-align:center; margin-top:20px;">Đang tải tin nhắn...</p>
+        </div>
+
+        <div id="chat-room" class="chat-room">
+            <div id="chat-messages" class="chat-messages">
+                </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleEnterKey(event)">
+                <button onclick="sendRealtimeMessage()">➤</button>
+            </div>
         </div>
     </div>
 
@@ -674,7 +908,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-analytics.js";
-        import { getDatabase, ref, onValue, onDisconnect, set, remove, runTransaction } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
+        import { getDatabase, ref, onValue, onDisconnect, set, remove, runTransaction, push, update } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
 
         // === CẤU HÌNH FIREBASE ===
         const firebaseConfig = {
@@ -711,19 +945,16 @@
             
             runTransaction(userLeaderboardRef, (currentData) => {
                 if (currentData === null) {
-                    // Nếu người này chưa từng có trên Firebase Leaderboard
                     return {
                         hoTen: userData.hoTen,
                         daiDoi: userData.daiDoi,
                         tieuDoi: userData.tieuDoi,
-                        visitCount: 1, // Lần đầu
+                        visitCount: 1, 
                         thoiGian: new Date().toLocaleString('vi-VN')
                     };
                 } else {
-                    // Nếu đã có, cộng thêm 1 lượt và cập nhật giờ
                     currentData.visitCount = (currentData.visitCount || 0) + 1;
                     currentData.thoiGian = new Date().toLocaleString('vi-VN');
-                    // Cập nhật lại thông tin nhỡ họ đổi tên/đại đội
                     currentData.hoTen = userData.hoTen;
                     currentData.daiDoi = userData.daiDoi;
                     currentData.tieuDoi = userData.tieuDoi;
@@ -744,15 +975,14 @@
             }
 
             const data = snap.val();
-            // Chuyển object Firebase thành Array để có thể Sắp Xếp
-            let history = Object.values(data);
+            // Lấy ID làm key cho mỗi object để dùng lúc chat
+            let history = Object.entries(data).map(([key, val]) => ({ id: key, ...val }));
             
             // Sắp xếp giảm dần theo số lượng truy cập
             history.sort((a, b) => (b.visitCount || 0) - (a.visitCount || 0));
 
             let html = '';
             history.forEach((item, index) => {
-                // Gắn class cho TOP 1, 2, 3 để đổi màu huy hiệu
                 let rankClass = '';
                 if (index === 0) rankClass = 'top-1';
                 else if (index === 1) rankClass = 'top-2';
@@ -766,6 +996,7 @@
                         <div>⛺ Tiểu đội: ${item.tieuDoi}</div>
                         <div class="visit-count">🔥 Số lần vào web: ${item.visitCount}</div>
                         <div class="time">🕒 Lần cuối: ${item.thoiGian}</div>
+                        <button class="btn-chat-bxh" onclick="openChatRoom('${item.id}', '${item.hoTen}')">💬 Nhắn tin</button>
                     </div>
                 `;
             });
@@ -778,16 +1009,13 @@
         document.addEventListener('DOMContentLoaded', () => {
             const savedData = localStorage.getItem('hocVienQuocPhong');
             if (!savedData) {
-                // Nếu chưa có data -> Hiện Popup khai báo
                 document.getElementById('infoPopup').style.display = 'flex';
             } else {
-                // Nếu đã có data -> Nhắn lên Firebase cộng thêm 1 lượt cá nhân
                 pushUserVisitToFirebase(JSON.parse(savedData));
             }
             startCountdown();
         });
 
-        // Gắn hàm toggleSidebar vào global window để HTML gọi được
         window.toggleSidebar = function() {
             document.getElementById('sidebar').classList.toggle('active');
         }
@@ -817,13 +1045,9 @@
                 tieuDoi: tieuDoi
             };
             
-            // Lưu xuống máy người dùng để lần sau ko hiện popup
             localStorage.setItem('hocVienQuocPhong', JSON.stringify(thongTin));
-
-            // Đẩy ngay người này lên Bảng xếp hạng Firebase (Lượt 1)
             pushUserVisitToFirebase(thongTin);
 
-            // Bắn thông báo Telegram
             const textMessage = `
 📝 <b>CÓ HỌC VIÊN MỚI TRUY CẬP HỆ THỐNG</b>
 👤 Họ và tên: <b>${hoTen}</b>
@@ -835,22 +1059,14 @@
             fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
-                    text: textMessage,
-                    parse_mode: 'HTML'
-                })
-            })
-            .then(() => {
-                document.getElementById('infoPopup').style.display = 'none';
-            })
-            .catch(() => {
+                body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: textMessage, parse_mode: 'HTML' })
+            }).finally(() => {
                 document.getElementById('infoPopup').style.display = 'none';
             });
         }
 
         // ==========================================
-        // 5. TỔNG TRUY CẬP TOÀN HỆ THỐNG (CỘNG CẢ F5)
+        // 5. TỔNG TRUY CẬP & ONLINE
         // ==========================================
         const totalVisitsRef = ref(db, 'totalVisits');
         onValue(totalVisitsRef, (snap) => {
@@ -858,14 +1074,10 @@
             document.getElementById('total-visits-count').innerText = val;
         });
 
-        // Tự động cộng dồn TỔNG CHUNG mỗi lần F5
         runTransaction(totalVisitsRef, (currentData) => {
             return (currentData === null) ? 373 : currentData + 1;
         }).catch(err => console.error(err));
 
-        // ==========================================
-        // 6. SỐ NGƯỜI ĐANG ONLINE TRỰC TIẾP
-        // ==========================================
         const connectedRef = ref(db, '.info/connected');
         const myUserRef = ref(db, 'onlineUsers/' + userId);
         const allOnlineUsersRef = ref(db, 'onlineUsers');
@@ -882,7 +1094,7 @@
         });
 
         // ==========================================
-        // 7. LOGIC ĐẾM NGƯỢC
+        // 6. LOGIC ĐẾM NGƯỢC
         // ==========================================
         function startCountdown() {
             let now = new Date();
@@ -914,6 +1126,177 @@
                 document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
             }, 1000);
         }
+
+        // ==========================================
+        // 7. TÍNH NĂNG NHẮN TIN REALTIME FIREBASE
+        // ==========================================
+        window.currentChatPartnerId = null;
+        window.currentChatPartnerName = null;
+        window.currentChatUnsubscribe = null;
+
+        window.toggleChatWrapper = function() {
+            const wrapper = document.getElementById('chat-modal-wrapper');
+            wrapper.style.display = wrapper.style.display === 'flex' ? 'none' : 'flex';
+            if(wrapper.style.display === 'flex') {
+                showInboxView(); // Luôn mở hộp thư đầu tiên
+            }
+        };
+
+        window.showInboxView = function() {
+            document.getElementById('chat-inbox').style.display = 'flex';
+            document.getElementById('chat-room').style.display = 'none';
+            document.getElementById('chat-back-btn').style.display = 'none';
+            document.getElementById('chat-title').innerText = 'Hộp Thư Đến';
+            if (window.currentChatUnsubscribe) {
+                window.currentChatUnsubscribe(); // Tắt lắng nghe luồng chat chi tiết
+            }
+            window.currentChatPartnerId = null;
+        }
+
+        window.openChatRoom = function(partnerId, partnerName) {
+            if (partnerId === userId) {
+                alert("Bạn không thể tự nhắn tin cho chính mình!");
+                return;
+            }
+            
+            // Đóng sidebar BXH nếu đang mở
+            document.getElementById('sidebar').classList.remove('active');
+            
+            // Hiện cửa sổ chat
+            document.getElementById('chat-modal-wrapper').style.display = 'flex';
+            document.getElementById('chat-inbox').style.display = 'none';
+            document.getElementById('chat-room').style.display = 'flex';
+            document.getElementById('chat-back-btn').style.display = 'block';
+            document.getElementById('chat-title').innerText = partnerName;
+
+            window.currentChatPartnerId = partnerId;
+            window.currentChatPartnerName = partnerName;
+
+            // Xoá số thông báo tin nhắn chưa đọc của người này
+            update(ref(db, `inbox/${userId}/${partnerId}`), { unread: 0 });
+
+            // Lắng nghe tin nhắn
+            loadMessages(partnerId);
+        }
+
+        // Lắng nghe Hộp Thư Đến
+        onValue(ref(db, `inbox/${userId}`), (snap) => {
+            const inboxData = snap.val();
+            let totalUnread = 0;
+            let html = '';
+
+            if (inboxData) {
+                const list = Object.values(inboxData).sort((a,b) => b.timestamp - a.timestamp);
+                list.forEach(chat => {
+                    totalUnread += (chat.unread || 0);
+                    let unreadBadge = chat.unread > 0 ? `<span class="inbox-unread">${chat.unread}</span>` : '';
+                    html += `
+                    <div class="inbox-item" onclick="openChatRoom('${chat.partnerId}', '${chat.partnerName}')">
+                        <div class="inbox-info">
+                            <strong>${chat.partnerName}</strong>
+                            <p>${chat.lastMsg}</p>
+                        </div>
+                        ${unreadBadge}
+                    </div>`;
+                });
+            } else {
+                html = '<p style="text-align:center; color:#555; margin-top:20px;">Chưa có tin nhắn nào.</p>';
+            }
+
+            document.getElementById('chat-inbox').innerHTML = html;
+
+            // Cập nhật số trên FAB
+            const badge = document.getElementById('chat-badge');
+            if (totalUnread > 0) {
+                badge.innerText = totalUnread > 9 ? '9+' : totalUnread;
+                badge.style.display = 'flex';
+            } else {
+                badge.style.display = 'none';
+            }
+        });
+
+        // Hàm tải & hiển thị tin nhắn trong phòng
+        function loadMessages(pId) {
+            if (window.currentChatUnsubscribe) window.currentChatUnsubscribe();
+
+            const chatId = userId < pId ? userId + '_' + pId : pId + '_' + userId;
+            const msgRef = ref(db, `messages/${chatId}`);
+
+            window.currentChatUnsubscribe = onValue(msgRef, (snap) => {
+                const data = snap.val();
+                let html = '';
+                if (data) {
+                    Object.values(data).sort((a,b) => a.timestamp - b.timestamp).forEach(msg => {
+                        const isMe = msg.senderId === userId;
+                        const timeObj = new Date(msg.timestamp);
+                        const timeStr = timeObj.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+                        
+                        html += `
+                        <div class="msg-bubble ${isMe ? 'msg-sent' : 'msg-received'}">
+                            ${msg.text}
+                            <span class="msg-time">${timeStr}</span>
+                        </div>`;
+                    });
+                } else {
+                    html = '<p style="text-align:center; color:#888; font-size:14px; margin-top:10px;">Hãy gửi lời chào!</p>';
+                }
+
+                const chatBox = document.getElementById('chat-messages');
+                chatBox.innerHTML = html;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            });
+        }
+
+        // Hàm Gửi tin nhắn
+        window.sendRealtimeMessage = function() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const pId = window.currentChatPartnerId;
+            const pName = window.currentChatPartnerName;
+            const chatId = userId < pId ? userId + '_' + pId : pId + '_' + userId;
+            
+            let myData = localStorage.getItem('hocVienQuocPhong');
+            let myName = myData ? JSON.parse(myData).hoTen : "Học viên";
+
+            // 1. Lưu nội dung tin nhắn
+            push(ref(db, `messages/${chatId}`), {
+                senderId: userId,
+                text: text,
+                timestamp: Date.now()
+            });
+
+            // 2. Cập nhật Hộp thư đến Của Mình
+            update(ref(db, `inbox/${userId}/${pId}`), {
+                partnerId: pId,
+                partnerName: pName,
+                lastMsg: "Bạn: " + text,
+                timestamp: Date.now(),
+                unread: 0
+            });
+
+            // 3. Cập nhật Hộp thư đến của Người Nhận (tăng biến chưa đọc)
+            runTransaction(ref(db, `inbox/${pId}/${userId}`), (currentData) => {
+                if (currentData === null) {
+                    return { partnerId: userId, partnerName: myName, lastMsg: text, timestamp: Date.now(), unread: 1 };
+                }
+                currentData.partnerName = myName; // Nhỡ mình đổi tên
+                currentData.lastMsg = text;
+                currentData.timestamp = Date.now();
+                currentData.unread = (currentData.unread || 0) + 1;
+                return currentData;
+            });
+
+            input.value = '';
+            document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
+        }
+
+        window.handleEnterKey = function(event) {
+            if (event.key === "Enter") {
+                sendRealtimeMessage();
+            }
+        }
     </script>
 
     <script>
@@ -923,16 +1306,13 @@
 
             menuItems.forEach(item => {
                 item.addEventListener('click', function(e) {
-                    e.preventDefault(); // Ngăn trình duyệt chuyển trang ngay lập tức
+                    e.preventDefault(); 
                     const targetUrl = this.href;
 
-                    // Bật giao diện hiệu ứng lên
                     loadingOverlay.style.display = 'flex';
 
-                    // Đếm ngược đúng 1.5 giây (1500ms)
                     setTimeout(() => {
                         loadingOverlay.style.display = 'none';
-                        // Thực hiện chuyển hướng thẳng trên tab hiện tại
                         window.location.href = targetUrl;
                     }, 1500);
                 });
