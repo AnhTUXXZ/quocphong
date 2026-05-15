@@ -29,7 +29,7 @@
         .error-login { color: red; display: none; margin-bottom: 10px; font-weight: bold; }
 
         /* === LAYOUT ADMIN === */
-        #admin-panel { display: none; } /* Ẩn đi chờ đăng nhập */
+        #admin-panel { display: none; } 
         
         .header {
             background-color: #2c3525; color: #e6e2d3; padding: 15px 20px;
@@ -56,6 +56,7 @@
         /* Bảng Quản lý */
         .table-wrapper {
             background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
         .table-header {
             display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;
@@ -75,13 +76,78 @@
         .btn-delete { background-color: #e74c3c; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; }
         .btn-delete:hover { background-color: #c0392b; }
 
+        .btn-edit { background-color: #3498db; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; margin-right: 5px; }
+        .btn-edit:hover { background-color: #2980b9; }
+
+        /* === GIAO DIỆN KIỂM SOÁT TIN NHẮN === */
+        .chat-monitor-container {
+            display: flex; gap: 20px; height: 400px;
+        }
+        .chat-list {
+            width: 30%; overflow-y: auto; border-right: 1px solid #ddd; padding-right: 10px;
+        }
+        .chat-list-item {
+            padding: 12px; border-bottom: 1px solid #eee; cursor: pointer; border-radius: 4px; transition: 0.2s;
+        }
+        .chat-list-item:hover { background-color: #e6e2d3; }
+        .chat-list-item.active { background-color: #2c3525; color: white; }
+        .chat-list-item.active .msg-count { color: #a1ce71 !important; }
+
+        .chat-content {
+            width: 70%; overflow-y: auto; background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ddd;
+        }
+        .msg-bubble-admin {
+            padding: 10px; border-radius: 8px; margin-bottom: 10px; background-color: #e6e2d3; color: #2c3525; max-width: 85%;
+        }
+        .msg-bubble-admin strong { color: #1877F2; }
+        .msg-bubble-admin .time { font-size: 11px; color: #666; margin-left: 10px; }
+
         @media (max-width: 768px) {
             .table-wrapper { overflow-x: auto; }
             .stats-grid { grid-template-columns: 1fr; }
+            .chat-monitor-container { flex-direction: column; height: auto; }
+            .chat-list, .chat-content { width: 100%; height: 300px; }
         }
+
+        /* === MODAL SỬA USER === */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 10000;
+        }
+        .modal-content {
+            background: #fff; padding: 25px; border-radius: 8px; width: 350px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .modal-content h3 { margin-top: 0; color: #2c3525; }
+        .modal-content label { font-weight: bold; display: block; margin-top: 10px; margin-bottom: 5px; font-size: 14px; }
+        .modal-content input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 15px; }
+        .modal-actions { margin-top: 20px; text-align: right; }
+        .modal-actions button { padding: 8px 15px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+        .btn-save { background: #2c3525; color: #e6e2d3; margin-left: 10px; }
+        .btn-cancel { background: #ccc; color: #333; }
     </style>
 </head>
 <body>
+
+    <div id="edit-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Sửa Thông Tin Học Viên</h3>
+            <input type="hidden" id="edit-id">
+            
+            <label>Họ và Tên:</label>
+            <input type="text" id="edit-name" placeholder="Nhập tên mới...">
+            
+            <label>Đại Đội:</label>
+            <input type="number" id="edit-daidoi" placeholder="Nhập đại đội mới...">
+            
+            <label>Tiểu Đội:</label>
+            <input type="number" id="edit-tieudoi" placeholder="Nhập tiểu đội mới...">
+            
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeEditModal()">Hủy</button>
+                <button class="btn-save" onclick="saveEdit()">Cập Nhật</button>
+            </div>
+        </div>
+    </div>
 
     <div id="login-screen">
         <div class="login-box">
@@ -141,14 +207,30 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="table-wrapper">
+                <div class="table-header">
+                    <h2>💬 Kiểm Soát Tin Nhắn Hệ Thống</h2>
+                </div>
+                <div class="chat-monitor-container">
+                    <div class="chat-list" id="admin-chat-list">
+                        <p style="text-align:center; color:#666; margin-top:20px;">Đang tải danh sách...</p>
+                    </div>
+                    <div class="chat-content" id="admin-chat-content">
+                        <p style="text-align: center; color: #888; margin-top: 50px;">👈 Chọn một đoạn chat bên trái để xem nội dung chi tiết</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
-        import { getDatabase, ref, onValue, remove, set } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
+        // IMPORT THÊM HÀM update ĐỂ CHỈNH SỬA
+        import { getDatabase, ref, onValue, remove, set, update } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
 
-        // === CẤU HÌNH FIREBASE (GIỮ NGUYÊN NHƯ BÊN INDEX.HTML) ===
+        // === CẤU HÌNH FIREBASE ===
         const firebaseConfig = {
             apiKey: "AIzaSyBz5y6EPEvkxa-X3W83mpB8nT2i6QLY0ck",
             authDomain: "sl-gdqp.firebaseapp.com",
@@ -162,8 +244,11 @@
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
 
+        // Map lưu trữ Tên user để map với ID khi đọc tin nhắn
+        window.usersMap = {};
+        window.allChatsData = {};
+
         // === LOGIC ĐĂNG NHẬP ĐƠN GIẢN ===
-        // Mật khẩu mặc định là: upt2026 (Bạn có thể đổi ở dòng dưới)
         const ADMIN_PASSWORD = "upt"; 
 
         window.checkLogin = function() {
@@ -182,25 +267,21 @@
             location.reload();
         }
 
-        // Kiểm tra session nếu đã đăng nhập trước đó
         if(sessionStorage.getItem('admin_logged_in') === 'true') {
             document.getElementById('login-screen').style.display = 'none';
             document.getElementById('admin-panel').style.display = 'block';
         }
 
         // === LẤY DỮ LIỆU THỐNG KÊ ===
-
-        // 1. Số người online
         onValue(ref(db, 'onlineUsers'), (snap) => {
             document.getElementById('admin-online').innerText = snap.exists() ? Object.keys(snap.val()).length : 0;
         });
 
-        // 2. Tổng truy cập
         onValue(ref(db, 'totalVisits'), (snap) => {
             document.getElementById('admin-total-views').innerText = snap.exists() ? snap.val() : 0;
         });
 
-        // 3. Danh sách BXH & Tổng học viên
+        // Danh sách BXH & Map Tên người dùng
         onValue(ref(db, 'leaderboard'), (snap) => {
             const tbody = document.getElementById('admin-table-body');
             
@@ -213,10 +294,12 @@
             const data = snap.val();
             let history = Object.entries(data).map(([key, val]) => ({ id: key, ...val }));
             
-            // Cập nhật tổng số học viên
             document.getElementById('admin-total-users').innerText = history.length;
+            
+            // Đẩy vào Map để tiện cho việc tra tên khi đọc tin nhắn
+            window.usersMap = {};
+            history.forEach(item => { window.usersMap[item.id] = item.hoTen; });
 
-            // Sắp xếp giảm dần theo lượt truy cập
             history.sort((a, b) => (b.visitCount || 0) - (a.visitCount || 0));
 
             let html = '';
@@ -230,6 +313,7 @@
                         <td><strong>${item.visitCount}</strong></td>
                         <td>${item.thoiGian}</td>
                         <td>
+                            <button class="btn-edit" onclick="openEditModal('${item.id}', '${item.hoTen}', '${item.daiDoi}', '${item.tieuDoi}')">Sửa</button>
                             <button class="btn-delete" onclick="deleteUser('${item.id}', '${item.hoTen}')">Xóa</button>
                         </td>
                     </tr>
@@ -238,7 +322,106 @@
             tbody.innerHTML = html;
         });
 
-        // === CÁC HÀM XỬ LÝ DỮ LIỆU (XÓA/RESET) ===
+        // === LẮNG NGHE & ĐỌC TOÀN BỘ TIN NHẮN ===
+        onValue(ref(db, 'messages'), (snap) => {
+            const data = snap.val();
+            const chatListDiv = document.getElementById('admin-chat-list');
+            
+            if (!data) {
+                chatListDiv.innerHTML = '<p style="text-align:center; margin-top:20px; color:#666;">Chưa có cuộc hội thoại nào.</p>';
+                return;
+            }
+
+            window.allChatsData = data;
+            let chatListHtml = '';
+
+            Object.keys(data).forEach(chatId => {
+                let parts = chatId.split('_');
+                let u1 = parts[0];
+                let u2 = parts[1];
+                let name1 = window.usersMap[u1] || "ID: " + u1.substring(0,6) + "...";
+                let name2 = window.usersMap[u2] || "ID: " + u2.substring(0,6) + "...";
+                let msgCount = Object.keys(data[chatId]).length;
+                
+                chatListHtml += `
+                    <div class="chat-list-item" id="chat-tab-${chatId}" onclick="viewChat('${chatId}', '${name1}', '${name2}')">
+                        <strong style="display:block; font-size:15px;">👤 ${name1} <br><span style="font-size:12px; font-weight:normal;">nhắn với</span><br> 👤 ${name2}</strong>
+                        <div class="msg-count" style="font-size: 12px; color: #888; margin-top:5px;">💬 ${msgCount} tin nhắn</div>
+                    </div>
+                `;
+            });
+            chatListDiv.innerHTML = chatListHtml;
+        });
+
+        // Hiển thị nội dung chi tiết 1 cuộc hội thoại
+        window.viewChat = function(chatId, name1, name2) {
+            // Đổi màu tab đang active
+            document.querySelectorAll('.chat-list-item').forEach(el => el.classList.remove('active'));
+            document.getElementById(`chat-tab-${chatId}`).classList.add('active');
+
+            const chatContentDiv = document.getElementById('admin-chat-content');
+            const msgs = window.allChatsData[chatId];
+            if (!msgs) return;
+            
+            let html = `<h3 style="margin-top:0; border-bottom: 2px solid #ccc; padding-bottom:10px; color:#2c3525;">Lịch sử Chat: ${name1} & ${name2}</h3>`;
+            html += `<div style="display:flex; flex-direction:column;">`;
+            
+            Object.values(msgs).sort((a,b) => a.timestamp - b.timestamp).forEach(msg => {
+                let senderName = window.usersMap[msg.senderId] || "Học viên (ID ẩn)";
+                let time = new Date(msg.timestamp).toLocaleString('vi-VN');
+                
+                html += `
+                    <div class="msg-bubble-admin">
+                        <strong>${senderName}</strong> <span class="time">${time}</span>
+                        <div style="margin-top: 5px; line-height: 1.4;">${msg.text}</div>
+                    </div>
+                `;
+            });
+            
+            html += `</div>`;
+            chatContentDiv.innerHTML = html;
+            
+            // Cuộn xuống cuối
+            chatContentDiv.scrollTop = chatContentDiv.scrollHeight;
+        }
+
+        // === CÁC HÀM XỬ LÝ DỮ LIỆU CỦA ADMIN ===
+
+        // 1. Mở Modal Sửa Thông Tin
+        window.openEditModal = function(id, name, daiDoi, tieuDoi) {
+            document.getElementById('edit-id').value = id;
+            document.getElementById('edit-name').value = name;
+            document.getElementById('edit-daidoi').value = daiDoi;
+            document.getElementById('edit-tieudoi').value = tieuDoi;
+            document.getElementById('edit-modal').style.display = 'flex';
+        }
+
+        // 2. Đóng Modal
+        window.closeEditModal = function() {
+            document.getElementById('edit-modal').style.display = 'none';
+        }
+
+        // 3. Lưu thông tin (Ghi đè lên Firebase)
+        window.saveEdit = function() {
+            const id = document.getElementById('edit-id').value;
+            const newName = document.getElementById('edit-name').value.trim();
+            const newDaiDoi = document.getElementById('edit-daidoi').value.trim();
+            const newTieuDoi = document.getElementById('edit-tieudoi').value.trim();
+
+            if(!newName || !newDaiDoi || !newTieuDoi) {
+                alert("Vui lòng điền đầy đủ thông tin!"); return;
+            }
+
+            // Update thay đổi trực tiếp lên Firebase
+            update(ref(db, 'leaderboard/' + id), {
+                hoTen: newName,
+                daiDoi: newDaiDoi,
+                tieuDoi: newTieuDoi
+            }).then(() => {
+                alert('Cập nhật thông tin thành công!');
+                closeEditModal();
+            }).catch(error => alert('Lỗi: ' + error.message));
+        }
 
         // Xóa 1 người dùng cụ thể
         window.deleteUser = function(userId, userName) {
@@ -261,7 +444,7 @@
             }
         }
 
-        // Reset tổng số lượt truy cập về 0
+        // Reset tổng lượt truy cập về 0
         window.resetTotalViews = function() {
             if (confirm('Bạn muốn reset tổng lượt truy cập về 0?')) {
                 set(ref(db, 'totalVisits'), 0)
@@ -272,4 +455,4 @@
 
     </script>
 </body>
-</html>
+    </html>
