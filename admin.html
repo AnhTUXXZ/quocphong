@@ -352,7 +352,7 @@
             tbody.innerHTML = html;
         });
 
-        // === GIÁM SÁT TIN NHẮN (FIX LỖI HIỂN THỊ TÊN THẬT) ===
+        // === GIÁM SÁT TIN NHẮN (ĐÃ FIX LỖI HIỂN THỊ TÊN THẬT TỪ DATABASE) ===
         onValue(ref(db, 'messages'), (snap) => {
             const data = snap.val();
             const chatListDiv = document.getElementById('admin-chat-list');
@@ -366,17 +366,26 @@
             let chatListHtml = '';
 
             Object.keys(data).forEach(chatId => {
-                let parts = chatId.split('_');
-                let u1 = parts[0];  // Đây là ID của người thứ 1
-                let u2 = parts[1];  // Đây là ID của người thứ 2
+                // FIX LỖI TÁCH ID: ID có chứa dấu "_" (ví dụ: user_123_user_456)
+                // Cắt khéo léo để lấy đúng cụm user_xxx và user_yyy
+                let u1, u2;
+                let middleIndex = chatId.indexOf('_user_');
+                if (middleIndex !== -1) {
+                    u1 = chatId.substring(0, middleIndex);
+                    u2 = chatId.substring(middleIndex + 1);
+                } else {
+                    let parts = chatId.split('_');
+                    u1 = parts[0];
+                    u2 = parts[1];
+                }
                 
-                // Lấy tên thật từ window.usersMap dựa vào ID
+                // Lấy tên thật từ Firebase (window.usersMap) dựa vào ID
                 let name1 = window.usersMap[u1] || ("ID: " + u1.substring(0,6) + "...");
                 let name2 = window.usersMap[u2] || ("ID: " + u2.substring(0,6) + "...");
                 
                 let msgCount = Object.keys(data[chatId]).length;
                 
-                // TRUYỀN ID VÀO HÀM viewChat (Thay vì truyền tên như bản cũ)
+                // TRUYỀN ID THAY VÌ TRUYỀN TÊN (để viewChat dễ truy xuất avatar/tên)
                 chatListHtml += `
                     <div class="chat-list-item" id="chat-tab-${chatId}" onclick="viewChat('${chatId}', '${u1}', '${u2}')">
                         <div class="users-title">
@@ -397,7 +406,7 @@
             document.querySelectorAll('.chat-list-item').forEach(el => el.classList.remove('active'));
             document.getElementById(`chat-tab-${chatId}`).classList.add('active');
 
-            // Quét tên dựa vào ID
+            // Quét tên dựa vào ID chuẩn xác
             let name1 = window.usersMap[u1] || ("ID: " + u1.substring(0,6) + "...");
             let name2 = window.usersMap[u2] || ("ID: " + u2.substring(0,6) + "...");
 
@@ -413,8 +422,8 @@
             let html = '';
             
             Object.values(msgs).sort((a,b) => a.timestamp - b.timestamp).forEach(msg => {
-                // Tên thật của người gửi dựa vào msg.senderId
-                let senderName = window.usersMap[msg.senderId] || "ID ẩn";
+                // Tên thật của người gửi dựa vào msg.senderId khớp với usersMap
+                let senderName = window.usersMap[msg.senderId] || "Học viên (ID Ẩn)";
                 let time = new Date(msg.timestamp).toLocaleString('vi-VN');
                 
                 // Gán tin nhắn của người u1 nằm bên trái, u2 bên phải
