@@ -352,7 +352,7 @@
             tbody.innerHTML = html;
         });
 
-        // === GIÁM SÁT TIN NHẮN (NÂNG CẤP GIAO DIỆN) ===
+        // === GIÁM SÁT TIN NHẮN (FIX LỖI HIỂN THỊ TÊN THẬT) ===
         onValue(ref(db, 'messages'), (snap) => {
             const data = snap.val();
             const chatListDiv = document.getElementById('admin-chat-list');
@@ -367,12 +367,16 @@
 
             Object.keys(data).forEach(chatId => {
                 let parts = chatId.split('_');
-                let u1 = parts[0];
-                let u2 = parts[1];
-                let name1 = window.usersMap[u1] || "ID: " + u1.substring(0,6) + "...";
-                let name2 = window.usersMap[u2] || "ID: " + u2.substring(0,6) + "...";
+                let u1 = parts[0];  // Đây là ID của người thứ 1
+                let u2 = parts[1];  // Đây là ID của người thứ 2
+                
+                // Lấy tên thật từ window.usersMap dựa vào ID
+                let name1 = window.usersMap[u1] || ("ID: " + u1.substring(0,6) + "...");
+                let name2 = window.usersMap[u2] || ("ID: " + u2.substring(0,6) + "...");
+                
                 let msgCount = Object.keys(data[chatId]).length;
                 
+                // TRUYỀN ID VÀO HÀM viewChat (Thay vì truyền tên như bản cũ)
                 chatListHtml += `
                     <div class="chat-list-item" id="chat-tab-${chatId}" onclick="viewChat('${chatId}', '${u1}', '${u2}')">
                         <div class="users-title">
@@ -387,19 +391,20 @@
             chatListDiv.innerHTML = chatListHtml;
         });
 
-        // Render chi tiết chat giống Messenger
+        // Hàm render chi tiết nhận vào u1, u2 là ID gốc
         window.viewChat = function(chatId, u1, u2) {
             // Hiệu ứng active tab
             document.querySelectorAll('.chat-list-item').forEach(el => el.classList.remove('active'));
             document.getElementById(`chat-tab-${chatId}`).classList.add('active');
 
-            let name1 = window.usersMap[u1] || "Học viên A";
-            let name2 = window.usersMap[u2] || "Học viên B";
+            // Quét tên dựa vào ID
+            let name1 = window.usersMap[u1] || ("ID: " + u1.substring(0,6) + "...");
+            let name2 = window.usersMap[u2] || ("ID: " + u2.substring(0,6) + "...");
 
             const chatContentDiv = document.getElementById('admin-chat-content');
             const chatHeader = document.getElementById('chat-detail-header');
             
-            // Đổi Header
+            // Đổi Header với tên thật
             chatHeader.innerHTML = `👁️ Đang xem cuộc trò chuyện giữa: <strong style="color:#1877F2; margin-left:5px;">${name1}</strong> <span style="margin: 0 5px;">và</span> <strong style="color:#e74c3c;">${name2}</strong>`;
 
             const msgs = window.allChatsData[chatId];
@@ -408,10 +413,11 @@
             let html = '';
             
             Object.values(msgs).sort((a,b) => a.timestamp - b.timestamp).forEach(msg => {
+                // Tên thật của người gửi dựa vào msg.senderId
                 let senderName = window.usersMap[msg.senderId] || "ID ẩn";
                 let time = new Date(msg.timestamp).toLocaleString('vi-VN');
                 
-                // Gán người u1 là bên trái, u2 là bên phải để dễ phân biệt
+                // Gán tin nhắn của người u1 nằm bên trái, u2 bên phải
                 let isLeft = (msg.senderId === u1);
                 let bubbleClass = isLeft ? 'msg-left' : 'msg-right';
                 
