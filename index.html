@@ -77,10 +77,32 @@
             text-align: center;
         }
 
+        .hero-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            letter-spacing: 2px;
+        }
+        
+        .hero-subtitle {
+            font-size: 16px;
+            color: var(--accent);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        /* LOGO UPT BO TRÒN DƯỚI TEXT */
         .upt-logo {
             width: 140px;
-            height: auto;
-            margin-bottom: 20px;
+            height: 140px;
+            object-fit: contain;
+            background-color: #fff; /* Nền trắng cho logo nổi bật */
+            border-radius: 50%;     /* Bo tròn 50% */
+            padding: 10px;
+            margin-bottom: 30px;
+            border: 4px solid var(--accent);
             filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
             animation: floatLogo 3s ease-in-out infinite;
         }
@@ -89,21 +111,6 @@
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0px); }
-        }
-
-        .hero-title {
-            font-size: 32px;
-            font-weight: 900;
-            margin-bottom: 5px;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-            letter-spacing: 2px;
-        }
-        .hero-subtitle {
-            font-size: 16px;
-            color: var(--accent);
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 4px;
         }
 
         /* Glassmorphism Countdown Container */
@@ -325,6 +332,13 @@
         .btn-submit:hover { background: #8bc34a; transform: translateY(-2px); }
         .error-msg { color: #ff4d4d; font-size: 13px; font-weight: bold; margin-bottom: 10px; display: none; }
 
+        /* FIX: CSS BỊ THIẾU CHO POPUP BLOCK Ở BẢN TRƯỚC */
+        .block-modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(5px);
+            display: none; /* Cực kỳ quan trọng: Giúp ẩn đi lúc bình thường */
+            justify-content: center; align-items: center; z-index: 100000;
+        }
         .block-modal-content { border: 2px solid #e74c3c; animation: shake 0.5s ease-in-out; }
         .block-modal-content h2 { color: #e74c3c; }
         .block-timer { font-size: 38px; font-weight: 900; color: #e74c3c; margin: 15px 0; display: block; letter-spacing: 2px; }
@@ -547,10 +561,11 @@
     </div>
 
     <div class="hero-section">
-        <img src="https://upt.edu.vn/wp-content/uploads/2021/08/logo-upt-1.png" onerror="this.src='https://tuyensinh.upt.edu.vn/wp-content/uploads/2022/10/Logo-UPT-1.png'" alt="Logo UPT" class="upt-logo">
         
         <div class="hero-title">ĐẾM NGƯỢC NGÀY VỀ</div>
         <div class="hero-subtitle">ĐẠI HỌC PHAN THIẾT - 07:00 | 27/05</div>
+
+        <img src="https://cdn.haitrieu.com/wp-content/uploads/2021/11/Logo-DH-Phan-Thiet-UPT.png" alt="Logo UPT" class="upt-logo">
 
         <div class="countdown-container">
             <div class="countdown-timer" id="countdown-timer">
@@ -641,7 +656,7 @@
         }
         window.myCurrentRank = 9999;
 
-        // TỰ ĐỘNG GỠ LỆNH KHÓA NẾU BỊ KẸT TỪ BẢN LỖI TRƯỚC ĐÓ
+        // XÓA ÁN PHẠT CŨ (Tránh kẹt lỗi)
         localStorage.removeItem('chat_blocked_until');
 
         // === 1. LƯU & LẤY DỮ LIỆU USER ===
@@ -747,14 +762,13 @@
             }, 1000);
         }
 
-        // === 4. TÍNH NĂNG CHAT & BỘ LỌC TỪ (ĐÃ FIX LỖI) ===
+        // === 4. TÍNH NĂNG CHAT & BỘ LỌC TỪ (THÔNG MINH HƠN) ===
         window.currentChatPartnerId = null;
         window.currentChatPartnerName = null;
         window.currentChatUnsubscribe = null;
         
         let blockInterval;
 
-        // Hiển thị Popup và chạy thời gian
         function showBlockPopup(endTime) {
             document.getElementById('blockPopup').style.display = 'flex';
             clearInterval(blockInterval);
@@ -771,11 +785,11 @@
                 let s = remain % 60;
                 document.getElementById('block-time-left').innerText = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
             }
-            updateTimer(); // Gọi ngay 1 lần để không bị lag 1s đầu
+            updateTimer();
             blockInterval = setInterval(updateTimer, 1000);
         }
 
-        // Tách chữ ra kiểm tra độc lập (fix lỗi 'admin' chứa 'dm')
+        // Fix lỗi Admin chứa "dm", chữ salon chứa "lon"
         function containsBadWords(text) {
             let lowerText = text.toLowerCase();
             let words = lowerText.split(/[\s,.\?!]+/);
@@ -785,7 +799,6 @@
                 if (exactBadWords.includes(w)) return true;
             }
             
-            // Trường hợp lách luật cố tình ghi dính chùm "lol" hoặc "djtme"
             let noSpace = lowerText.replace(/\s+/g, '');
             if (noSpace.includes("lol") || noSpace.includes("djtme")) return true;
             
@@ -851,7 +864,6 @@
 
             const input = document.getElementById('chat-input'); const text = input.value.trim(); if (!text) return;
 
-            // Kiểm duyệt từ ngữ
             if (containsBadWords(text)) {
                 const blockTime = Date.now() + 10 * 60 * 1000; 
                 localStorage.setItem('chat_blocked_until', blockTime);
@@ -961,4 +973,4 @@
         }
     </script>
 </body>
-                    </html>
+</html>
