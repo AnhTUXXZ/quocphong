@@ -337,7 +337,6 @@
         }
 
         /* === CHAT & WEBRTC NATIVE === */
-        /* (Giữ nguyên class css cấu trúc chat từ bản trước, chỉ đổi màu nhẹ) */
         .chat-fab {
             position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
             background: linear-gradient(135deg, #1877F2, #0e5db3); color: white; border-radius: 50%;
@@ -548,7 +547,7 @@
     </div>
 
     <div class="hero-section">
-        <img src="https://tuyensinh.upt.edu.vn/wp-content/uploads/2022/10/Logo-UPT-1.png" alt="Logo UPT" class="upt-logo">
+        <img src="https://upt.edu.vn/wp-content/uploads/2021/08/logo-upt-1.png" onerror="this.src='https://tuyensinh.upt.edu.vn/wp-content/uploads/2022/10/Logo-UPT-1.png'" alt="Logo UPT" class="upt-logo">
         
         <div class="hero-title">ĐẾM NGƯỢC NGÀY VỀ</div>
         <div class="hero-subtitle">ĐẠI HỌC PHAN THIẾT - 07:00 | 27/05</div>
@@ -642,6 +641,9 @@
         }
         window.myCurrentRank = 9999;
 
+        // TỰ ĐỘNG GỠ LỆNH KHÓA NẾU BỊ KẸT TỪ BẢN LỖI TRƯỚC ĐÓ
+        localStorage.removeItem('chat_blocked_until');
+
         // === 1. LƯU & LẤY DỮ LIỆU USER ===
         function pushUserVisitToFirebase(userData) {
             runTransaction(ref(db, 'leaderboard/' + userId), (currentData) => {
@@ -726,10 +728,7 @@
         function startCountdown() {
             let now = new Date();
             let currentYear = now.getFullYear();
-            // Tháng trong JS bắt đầu từ 0 (Tháng 5 = 4), Ngày 27, 7 Giờ Sáng, 0 Phút, 0 Giây
             let targetDate = new Date(currentYear, 4, 27, 7, 0, 0).getTime();
-            
-            // Nếu đã vượt qua 27/05 năm nay thì đặt năm sau
             if (now.getTime() > targetDate) {
                 targetDate = new Date(currentYear + 1, 4, 27, 7, 0, 0).getTime();
             }
@@ -748,23 +747,49 @@
             }, 1000);
         }
 
-        // === 4. TÍNH NĂNG CHAT (TOP 25) & BỘ LỌC TỪ ===
+        // === 4. TÍNH NĂNG CHAT & BỘ LỌC TỪ (ĐÃ FIX LỖI) ===
         window.currentChatPartnerId = null;
         window.currentChatPartnerName = null;
         window.currentChatUnsubscribe = null;
         
-        const badWords = ["chó", "lon", "lồn", "l o l", "cac", "cặc", "dm", "djtme"];
         let blockInterval;
 
+        // Hiển thị Popup và chạy thời gian
         function showBlockPopup(endTime) {
             document.getElementById('blockPopup').style.display = 'flex';
             clearInterval(blockInterval);
-            blockInterval = setInterval(() => {
+            
+            function updateTimer() {
                 let remain = Math.floor((endTime - Date.now()) / 1000);
-                if (remain <= 0) { clearInterval(blockInterval); document.getElementById('blockPopup').style.display = 'none'; localStorage.removeItem('chat_blocked_until'); return; }
-                let m = Math.floor(remain / 60); let s = remain % 60;
+                if (remain <= 0) { 
+                    clearInterval(blockInterval); 
+                    document.getElementById('blockPopup').style.display = 'none'; 
+                    localStorage.removeItem('chat_blocked_until'); 
+                    return; 
+                }
+                let m = Math.floor(remain / 60); 
+                let s = remain % 60;
                 document.getElementById('block-time-left').innerText = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
-            }, 1000);
+            }
+            updateTimer(); // Gọi ngay 1 lần để không bị lag 1s đầu
+            blockInterval = setInterval(updateTimer, 1000);
+        }
+
+        // Tách chữ ra kiểm tra độc lập (fix lỗi 'admin' chứa 'dm')
+        function containsBadWords(text) {
+            let lowerText = text.toLowerCase();
+            let words = lowerText.split(/[\s,.\?!]+/);
+            const exactBadWords = ["chó", "lon", "lồn", "cac", "cặc", "dm", "djtme", "đm", "vcl"];
+            
+            for (let w of words) {
+                if (exactBadWords.includes(w)) return true;
+            }
+            
+            // Trường hợp lách luật cố tình ghi dính chùm "lol" hoặc "djtme"
+            let noSpace = lowerText.replace(/\s+/g, '');
+            if (noSpace.includes("lol") || noSpace.includes("djtme")) return true;
+            
+            return false;
         }
 
         window.toggleChatWrapper = function() {
@@ -826,12 +851,11 @@
 
             const input = document.getElementById('chat-input'); const text = input.value.trim(); if (!text) return;
 
-            let normalized = text.toLowerCase().replace(/\s+/g, '');
-            for (let w of badWords) {
-                if (normalized.includes(w.replace(/\s+/g, ''))) {
-                    const blockTime = Date.now() + 10 * 60 * 1000; localStorage.setItem('chat_blocked_until', blockTime);
-                    showBlockPopup(blockTime); input.value = ''; return;
-                }
+            // Kiểm duyệt từ ngữ
+            if (containsBadWords(text)) {
+                const blockTime = Date.now() + 10 * 60 * 1000; 
+                localStorage.setItem('chat_blocked_until', blockTime);
+                showBlockPopup(blockTime); input.value = ''; return;
             }
 
             const pId = window.currentChatPartnerId; const pName = window.currentChatPartnerName;
@@ -937,4 +961,4 @@
         }
     </script>
 </body>
-</html>
+                    </html>
