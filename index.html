@@ -153,7 +153,6 @@
             box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
         }
 
-        /* Top 1, 2, 3 mạ vàng, bạc, đồng */
         .history-item.top-1 .rank-badge { background-color: #FFD700; color: #000; }
         .history-item.top-2 .rank-badge { background-color: #C0C0C0; color: #000; }
         .history-item.top-3 .rank-badge { background-color: #CD7F32; color: #fff; }
@@ -183,7 +182,6 @@
             gap: 5px;
         }
 
-        /* Nút nhắn tin trong BXH */
         .btn-chat-bxh {
             display: block;
             width: 100%;
@@ -375,7 +373,6 @@
             padding: 25px 20px 40px 20px;
         }
 
-        /* Lưới chứa các nút bấm */
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -435,7 +432,7 @@
             letter-spacing: 1px;
         }
 
-        /* === GIAO DIỆN POPUP NHẬP THÔNG TIN === */
+        /* === GIAO DIỆN POPUP KHAI BÁO === */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -545,248 +542,139 @@
             75% { transform: translateX(-10px); }
         }
 
-        /* === HIỂU ỨNG LOADING K463 CHUYỂN TRANG === */
+        /* === HIỂU ỨNG LOADING K463 === */
         .loading-overlay-k463 {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(44, 53, 37, 0.95);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 100000;
-            flex-direction: column;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(44, 53, 37, 0.95); display: none; justify-content: center; align-items: center;
+            z-index: 100000; flex-direction: column;
         }
-
         .loading-text-container {
-            display: flex;
-            align-items: flex-end;
-            font-size: 4rem;
-            font-weight: 900;
-            color: var(--khaki);
-            text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
-            animation: bounceK463 0.6s infinite alternate ease-in-out;
-            letter-spacing: 2px;
+            display: flex; align-items: flex-end; font-size: 4rem; font-weight: 900; color: var(--khaki);
+            text-shadow: 4px 4px 10px rgba(0,0,0,0.8); animation: bounceK463 0.6s infinite alternate ease-in-out; letter-spacing: 2px;
         }
-
-        .loading-dots {
-            display: inline-block;
-            width: 60px;
-            text-align: left;
-        }
-
-        .loading-dots::after {
-            content: '';
-            animation: blinkDots 1.5s infinite;
-        }
-
-        @keyframes bounceK463 {
-            0% { transform: translateY(15px); }
-            100% { transform: translateY(-15px); }
-        }
-
-        @keyframes blinkDots {
-            0% { content: ''; }
-            25% { content: '.'; }
-            50% { content: '. .'; }
-            75% { content: '. . .'; }
-            100% { content: ''; }
-        }
+        .loading-dots { display: inline-block; width: 60px; text-align: left; }
+        .loading-dots::after { content: ''; animation: blinkDots 1.5s infinite; }
+        @keyframes bounceK463 { 0% { transform: translateY(15px); } 100% { transform: translateY(-15px); } }
+        @keyframes blinkDots { 0% { content: ''; } 25% { content: '.'; } 50% { content: '. .'; } 75% { content: '. . .'; } 100% { content: ''; } }
 
         /* === GIAO DIỆN CHAT MESSENGER REALTIME === */
         .chat-fab {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: var(--fb-blue);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            z-index: 9999;
-            transition: transform 0.2s;
-            border: 3px solid white;
+            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+            background-color: var(--fb-blue); color: white; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center; font-size: 30px;
+            cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 9999;
+            transition: transform 0.2s; border: 3px solid white;
         }
-        .chat-fab:hover {
-            transform: scale(1.1);
-        }
+        .chat-fab:hover { transform: scale(1.1); }
         .chat-badge {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: red;
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid white;
+            position: absolute; top: -5px; right: -5px; background-color: red; color: white;
+            font-size: 14px; font-weight: bold; width: 24px; height: 24px;
+            border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 2px solid white;
         }
 
         .chat-modal-wrapper {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            width: 350px;
-            max-width: 90%;
-            height: 450px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            display: none;
-            flex-direction: column;
-            z-index: 10000;
-            overflow: hidden;
-            border: 2px solid var(--army-dark);
+            position: fixed; bottom: 100px; right: 30px; width: 350px; max-width: 90%; height: 450px;
+            background-color: #fff; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: none; flex-direction: column; z-index: 10000; overflow: hidden; border: 2px solid var(--army-dark);
         }
 
         .chat-header {
-            background-color: var(--army-dark);
-            color: var(--khaki);
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            font-size: 18px;
-            border-bottom: 3px solid var(--army-light);
+            background-color: var(--army-dark); color: var(--khaki); padding: 15px;
+            display: flex; justify-content: space-between; align-items: center;
+            font-weight: bold; font-size: 18px; border-bottom: 3px solid var(--army-light);
         }
-        .chat-header .back-btn {
-            cursor: pointer;
-            font-size: 20px;
-            display: none;
+        .chat-header .back-btn { cursor: pointer; font-size: 20px; display: none; }
+        .chat-header .close-chat { cursor: pointer; font-size: 24px; line-height: 1; }
+        
+        /* KHUNG CHỨA NÚT GỌI */
+        .call-buttons-area { display: none; gap: 15px; margin-right: 15px; align-items: center; }
+        .call-btn {
+            font-size: 20px; cursor: pointer; transition: 0.2s; display: flex;
+            align-items: center; justify-content: center; width: 35px; height: 35px;
+            background: rgba(255,255,255,0.1); border-radius: 50%;
         }
-        .chat-header .close-chat {
-            cursor: pointer;
-            font-size: 24px;
-            line-height: 1;
-        }
-        /* NÚT GỌI WRC */
-        #btn-call-wrc {
-            cursor: pointer; font-size: 20px; display: none; margin-right: 15px; transition: 0.2s;
-        }
-        #btn-call-wrc:hover { transform: scale(1.1); }
+        .call-btn:hover { background: rgba(255,255,255,0.3); transform: scale(1.1); }
 
-        .chat-inbox {
-            flex: 1;
-            overflow-y: auto;
-            background-color: var(--khaki);
-            display: flex;
-            flex-direction: column;
-        }
-
+        .chat-inbox { flex: 1; overflow-y: auto; background-color: var(--khaki); display: flex; flex-direction: column; }
         .inbox-item {
-            padding: 15px;
-            border-bottom: 1px solid #ccc;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.2s;
+            padding: 15px; border-bottom: 1px solid #ccc; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center; transition: background 0.2s;
         }
         .inbox-item:hover { background-color: #d1cbae; }
         .inbox-info strong { display: block; color: var(--army-dark); font-size: 16px; }
         .inbox-info p { margin: 5px 0 0; color: #555; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px; }
-        .inbox-unread {
-            background-color: red;
-            color: white;
-            border-radius: 50%;
-            padding: 2px 8px;
-            font-size: 12px;
-            font-weight: bold;
-        }
+        .inbox-unread { background-color: red; color: white; border-radius: 50%; padding: 2px 8px; font-size: 12px; font-weight: bold; }
 
-        .chat-room {
-            flex: 1;
-            display: none;
-            flex-direction: column;
-            background-color: #f0f2f5;
-            min-height: 0;
-        }
+        .chat-room { flex: 1; display: none; flex-direction: column; background-color: #f0f2f5; min-height: 0; }
+        .chat-messages { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
 
-        .chat-messages {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            min-height: 0;
-        }
+        .msg-bubble { max-width: 75%; padding: 10px 15px; border-radius: 18px; font-size: 15px; line-height: 1.4; position: relative; }
+        .msg-sent { align-self: flex-end; background-color: var(--fb-blue); color: white; border-bottom-right-radius: 4px; }
+        .msg-received { align-self: flex-start; background-color: #e4e6eb; color: black; border-bottom-left-radius: 4px; }
+        .msg-time { font-size: 10px; opacity: 0.7; display: block; margin-top: 5px; text-align: right; }
 
-        .msg-bubble {
-            max-width: 75%;
-            padding: 10px 15px;
-            border-radius: 18px;
-            font-size: 15px;
-            line-height: 1.4;
-            position: relative;
-        }
-        .msg-sent {
-            align-self: flex-end;
-            background-color: var(--fb-blue);
-            color: white;
-            border-bottom-right-radius: 4px;
-        }
-        .msg-received {
-            align-self: flex-start;
-            background-color: #e4e6eb;
-            color: black;
-            border-bottom-left-radius: 4px;
-        }
-        .msg-time {
-            font-size: 10px;
-            opacity: 0.7;
-            display: block;
-            margin-top: 5px;
-            text-align: right;
-        }
-
-        .chat-input-area {
-            display: flex;
-            padding: 10px;
-            background-color: white;
-            border-top: 1px solid #ccc;
-            flex-shrink: 0; 
-        }
-        .chat-input-area input {
-            flex: 1;
-            padding: 10px 15px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
-            outline: none;
-            font-size: 15px;
-        }
+        .chat-input-area { display: flex; padding: 10px; background-color: white; border-top: 1px solid #ccc; flex-shrink: 0; }
+        .chat-input-area input { flex: 1; padding: 10px 15px; border: 1px solid #ccc; border-radius: 20px; outline: none; font-size: 15px; }
         .chat-input-area button {
-            background-color: var(--fb-blue);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            margin-left: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.2s;
+            background-color: var(--fb-blue); color: white; border: none; border-radius: 50%; width: 40px; height: 40px;
+            margin-left: 10px; cursor: pointer; font-size: 18px; display: flex; justify-content: center; align-items: center; transition: 0.2s;
         }
-        .chat-input-area button:hover {
-            transform: scale(1.1);
+        .chat-input-area button:hover { transform: scale(1.1); }
+
+        /* === GIAO DIỆN POPUP WEBRTC (GỌI ĐIỆN) SIÊU ĐẸP === */
+        .wrc-modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);
+            display: none; justify-content: center; align-items: center; z-index: 100002;
         }
+        .wrc-modal-content {
+            background: linear-gradient(145deg, #1e251a, #2c3525);
+            border: 2px solid #8a9a5b; border-radius: 24px;
+            width: 90%; max-width: 450px; text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6); padding: 30px 20px;
+            color: white; position: relative; overflow: hidden;
+        }
+        
+        .wrc-title { font-size: 20px; font-weight: bold; margin-bottom: 5px; color: #e6e2d3; text-transform: uppercase; }
+        .wrc-status { font-size: 14px; color: #a1ce71; margin-bottom: 25px; letter-spacing: 1px; }
+
+        /* Avatar toả sóng khi gọi âm thanh */
+        .pulsing-avatar-container { display: flex; justify-content: center; align-items: center; height: 250px; }
+        .pulsing-avatar {
+            width: 100px; height: 100px; border-radius: 50%;
+            background: var(--army-light); color: var(--army-dark);
+            display: flex; justify-content: center; align-items: center; font-size: 50px;
+            box-shadow: 0 0 0 0 rgba(138, 154, 91, 0.7);
+        }
+        .is-ringing { animation: pulse-ring 1.5s infinite cubic-bezier(0.66, 0, 0, 1); }
+
+        @keyframes pulse-ring {
+            to { box-shadow: 0 0 0 35px rgba(138, 154, 91, 0); }
+        }
+
+        /* Khung chứa Video */
+        .wrc-video-container {
+            position: relative; width: 100%; height: 300px; background: #000;
+            border-radius: 16px; overflow: hidden; margin-bottom: 20px;
+            border: 2px solid rgba(255,255,255,0.1); display: none;
+        }
+        #remoteVideo { width: 100%; height: 100%; object-fit: cover; }
+        #localVideo {
+            width: 90px; height: 130px; position: absolute; bottom: 15px; right: 15px;
+            border: 2px solid #8a9a5b; border-radius: 12px; object-fit: cover;
+            background: #333; z-index: 10; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .wrc-actions { display: flex; justify-content: center; gap: 30px; margin-top: 10px; }
+        .wrc-btn {
+            border: none; border-radius: 50px; padding: 12px 30px; font-weight: bold; font-size: 16px;
+            cursor: pointer; display: flex; align-items: center; gap: 10px; transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); text-transform: uppercase;
+        }
+        .wrc-btn-answer { background: #2ecc71; color: white; display: none; }
+        .wrc-btn-answer:hover { background: #27ae60; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(46, 204, 113, 0.4); }
+        .wrc-btn-hangup { background: #e74c3c; color: white; }
+        .wrc-btn-hangup:hover { background: #c0392b; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4); }
     </style>
 </head>
 <body>
@@ -800,16 +688,23 @@
         </div>
     </div>
 
-    <div id="webrtc-modal" class="modal-overlay" style="z-index: 100002;">
-        <div class="modal-content" style="width: 90%; max-width: 600px; background: #1a1f16; border-color: #8a9a5b;">
-            <h3 id="call-status" style="color: #00ff00; margin-top: 0; text-transform: uppercase;">Cuộc Gọi Video...</h3>
-            <div style="position: relative; width: 100%; height: 350px; background: #000; border-radius: 8px; overflow: hidden; margin-bottom: 15px;">
-                <video id="remoteVideo" autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
-                <video id="localVideo" autoplay playsinline muted style="width: 100px; height: 150px; position: absolute; bottom: 10px; right: 10px; border: 2px solid #8a9a5b; border-radius: 8px; object-fit: cover; background: #333; z-index: 10;"></video>
+    <div id="webrtc-modal" class="wrc-modal-overlay">
+        <div class="wrc-modal-content">
+            <div class="wrc-title" id="call-partner-name">Nguyễn Văn A</div>
+            <div class="wrc-status" id="call-status">Đang kết nối...</div>
+
+            <div class="pulsing-avatar-container" id="audio-container">
+                <div class="pulsing-avatar is-ringing" id="call-avatar">👤</div>
             </div>
-            <div style="display: flex; justify-content: center; gap: 15px;">
-                <button id="btnAnswer" style="background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; display: none; font-size: 16px;">Nhấc Máy</button>
-                <button id="btnHangup" onclick="endCall()" style="background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 16px;">Kết Thúc</button>
+
+            <div class="wrc-video-container" id="video-container">
+                <video id="remoteVideo" autoplay playsinline></video>
+                <video id="localVideo" autoplay playsinline muted></video>
+            </div>
+
+            <div class="wrc-actions">
+                <button id="btnAnswer" class="wrc-btn wrc-btn-answer">📞 Nhấc Máy</button>
+                <button id="btnHangup" onclick="endCall()" class="wrc-btn wrc-btn-hangup">☎ Kết Thúc</button>
             </div>
         </div>
     </div>
@@ -838,8 +733,13 @@
     <div id="chat-modal-wrapper" class="chat-modal-wrapper">
         <div class="chat-header">
             <span id="chat-back-btn" class="back-btn" onclick="showInboxView()">⬅</span>
-            <span id="chat-title">Hộp Thư Đến</span>
-            <span id="btn-call-wrc" onclick="startCall()">📞</span>
+            <span id="chat-title" style="flex:1; text-align:left; margin-left: 10px;">Hộp Thư Đến</span>
+            
+            <div class="call-buttons-area" id="call-buttons-area">
+                <span class="call-btn" onclick="startCall('audio')" title="Gọi Âm Thanh">📞</span>
+                <span class="call-btn" onclick="startCall('video')" title="Gọi Video">📹</span>
+            </div>
+            
             <span class="close-chat" onclick="toggleChatWrapper()">&times;</span>
         </div>
         
@@ -929,9 +829,7 @@
 
     <div class="container">
         <div class="menu-grid">
-
-<a href="https://anhtuxxz.github.io/quocphong/xaotronct.html" class="menu-item" target="_blank"> Đề Thi Thử HP2 20 <br>Câu 15 phút  <span>Nhấn để làm bài</span></a>
-            
+            <a href="https://anhtuxxz.github.io/quocphong/xaotronct.html" class="menu-item" target="_blank"> Đề Thi Thử HP2 20 <br>Câu 15 phút  <span>Nhấn để làm bài</span></a>
             <a href="https://anhtuxxz.github.io/quocphong/ct1.html" class="menu-item" target="_blank">CT 1<span>Nhấn để làm bài</span></a>
             <a href="https://anhtuxxz.github.io/quocphong/ct2.html" class="menu-item" target="_blank">CT 2<span>Nhấn để làm bài</span></a>
             <a href="https://anhtuxxz.github.io/quocphong/ct3.html" class="menu-item" target="_blank">CT 3<span>Nhấn để làm bài</span></a>
@@ -939,14 +837,11 @@
             <a href="https://anhtuxxz.github.io/quocphong/ct5.html" class="menu-item" target="_blank">CT 5<span>Nhấn để làm bài</span></a>
             <a href="https://anhtuxxz.github.io/quocphong/ct6.html" class="menu-item" target="_blank">CT 6<span>Nhấn để làm bài</span></a>
             <a href="https://anhtuxxz.github.io/quocphong/ct7.html" class="menu-item" target="_blank">CT 7<span>Nhấn để làm bài</span></a>
-
-<a href="https://anhtuxxz.github.io/quocphong/xaotronkc.html" class="menu-item" target="_blank"> Đề Thi Thi Thử HP4 10 <br> Câu 10 Phút <span>Nhấn để làm bài</span></a>
-            
+            <a href="https://anhtuxxz.github.io/quocphong/xaotronkc.html" class="menu-item" target="_blank"> Đề Thi Thi Thử HP4 10 <br> Câu 10 Phút <span>Nhấn để làm bài</span></a>
             <a href="https://anhtuxxz.github.io/quocphong/kc1.html" class="menu-item" target="_blank">KC 1<span>Nhấn để làm bài</span></a>
             <a href="https://anhtuxxz.github.io/quocphong/kc4.html" class="menu-item" target="_blank">KC 4<span>Nhấn để làm bài</span></a>
             <a href="https://anhtuxxz.github.io/quocphong/kc5.html" class="menu-item" target="_blank">KC 5<span>Nhấn để làm bài</span></a>
             <a href="https://anhtuxxz.github.io/quocphong/kc6.html" class="menu-item" target="_blank">KC 6<span>Nhấn để làm bài</span></a>
-
             <a href="https://anhtuxxz.github.io/quocphong/" class="menu-item" target="_blank">KC 7<span> Học Thêm Tại Sách ( Tài Liệu Học Tập)<br> Trang 219</span></a>
         </div>
     </div>
@@ -962,7 +857,6 @@
     </div>
 
     <script type="module">
-        // Import thêm onChildAdded, get cho tính năng WebRTC
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-analytics.js";
         import { getDatabase, ref, onValue, onDisconnect, set, remove, runTransaction, push, update, onChildAdded, get } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
@@ -987,31 +881,22 @@
         const TELEGRAM_BOT_TOKEN = '8414314561:AAHYLevOgv0H6Y3HSztEsJA17nCBIuMHlwE';
         const TELEGRAM_CHAT_ID = '7209414522';
 
-        // Xử lý ID cá nhân (để định danh trên Firebase)
         let userId = localStorage.getItem('upt_user_id');
         if (!userId) {
             userId = 'user_' + Math.random().toString(36).substr(2, 9) + Date.now();
             localStorage.setItem('upt_user_id', userId);
         }
         
-        // Rank khởi tạo mặc định (Chặn chưa vào top)
         window.myCurrentRank = 9999;
 
         // ==========================================
-        // 1. GHI NHẬN LƯỢT TRUY CẬP CÁ NHÂN LÊN FIREBASE (BXH)
+        // 1. GHI NHẬN LƯỢT TRUY CẬP (BXH)
         // ==========================================
         function pushUserVisitToFirebase(userData) {
             const userLeaderboardRef = ref(db, 'leaderboard/' + userId);
-            
             runTransaction(userLeaderboardRef, (currentData) => {
                 if (currentData === null) {
-                    return {
-                        hoTen: userData.hoTen,
-                        daiDoi: userData.daiDoi,
-                        tieuDoi: userData.tieuDoi,
-                        visitCount: 1, 
-                        thoiGian: new Date().toLocaleString('vi-VN')
-                    };
+                    return { hoTen: userData.hoTen, daiDoi: userData.daiDoi, tieuDoi: userData.tieuDoi, visitCount: 1, thoiGian: new Date().toLocaleString('vi-VN') };
                 } else {
                     currentData.visitCount = (currentData.visitCount || 0) + 1;
                     currentData.thoiGian = new Date().toLocaleString('vi-VN');
@@ -1020,11 +905,11 @@
                     currentData.tieuDoi = userData.tieuDoi;
                     return currentData;
                 }
-            }).catch(error => console.error("Lỗi cập nhật BXH Firebase: ", error));
+            }).catch(error => console.error("Lỗi cập nhật BXH: ", error));
         }
 
         // ==========================================
-        // 2. LẮNG NGHE & RENDER BẢNG XẾP HẠNG REALTIME
+        // 2. LẮNG NGHE BẢNG XẾP HẠNG
         // ==========================================
         const leaderboardRef = ref(db, 'leaderboard');
         onValue(leaderboardRef, (snap) => {
@@ -1037,10 +922,8 @@
             const data = snap.val();
             let history = Object.entries(data).map(([key, val]) => ({ id: key, ...val }));
             
-            // Sắp xếp giảm dần theo số lượng truy cập
             history.sort((a, b) => (b.visitCount || 0) - (a.visitCount || 0));
 
-            // Xác định Hạng (Rank) của chính người dùng hiện tại
             let myRankIndex = history.findIndex(item => item.id === userId);
             if (myRankIndex !== -1) {
                 window.myCurrentRank = myRankIndex + 1;
@@ -1069,7 +952,7 @@
         });
 
         // ==========================================
-        // 3. XỬ LÝ KHỞI ĐỘNG KHI LOAD TRANG
+        // 3. KHỞI ĐỘNG TRANG & ĐẾM NGƯỢC
         // ==========================================
         document.addEventListener('DOMContentLoaded', () => {
             const savedData = localStorage.getItem('hocVienQuocPhong');
@@ -1085,9 +968,6 @@
             document.getElementById('sidebar').classList.toggle('active');
         }
 
-        // ==========================================
-        // 4. XỬ LÝ NHẬP THÔNG TIN MỚI (POPUP)
-        // ==========================================
         window.xacNhanThongTin = function() {
             const hoTen = document.getElementById('hoTen').value.trim();
             const daiDoi = document.getElementById('daiDoi').value.trim();
@@ -1096,541 +976,356 @@
             const btnXacNhan = document.getElementById('btnXacNhan');
 
             if (hoTen === "" || daiDoi === "" || tieuDoi === "") {
-                errorMsg.style.display = 'block';
-                return;
+                errorMsg.style.display = 'block'; return;
             }
             errorMsg.style.display = 'none';
+            btnXacNhan.innerText = "ĐANG XỬ LÝ..."; btnXacNhan.disabled = true;
 
-            btnXacNhan.innerText = "ĐANG XỬ LÝ...";
-            btnXacNhan.disabled = true;
-
-            const thongTin = {
-                hoTen: hoTen,
-                daiDoi: daiDoi,
-                tieuDoi: tieuDoi
-            };
-            
+            const thongTin = { hoTen: hoTen, daiDoi: daiDoi, tieuDoi: tieuDoi };
             localStorage.setItem('hocVienQuocPhong', JSON.stringify(thongTin));
             pushUserVisitToFirebase(thongTin);
-
-            const textMessage = `
-📝 <b>CÓ HỌC VIÊN MỚI TRUY CẬP HỆ THỐNG</b>
-👤 Họ và tên: <b>${hoTen}</b>
-🏢 Đại đội: ${daiDoi}
-⛺ Tiểu đội: ${tieuDoi}
-⏰ Thời gian: ${new Date().toLocaleString('vi-VN')}
-            `;
 
             fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: textMessage, parse_mode: 'HTML' })
-            }).finally(() => {
-                document.getElementById('infoPopup').style.display = 'none';
-            });
+                body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: `📝 <b>CÓ HỌC VIÊN MỚI TRUY CẬP</b>\n👤 ${hoTen} - ĐĐ: ${daiDoi} - TĐ: ${tieuDoi}`, parse_mode: 'HTML' })
+            }).finally(() => { document.getElementById('infoPopup').style.display = 'none'; });
         }
 
-        // ==========================================
-        // 5. TỔNG TRUY CẬP & ONLINE
-        // ==========================================
         const totalVisitsRef = ref(db, 'totalVisits');
-        onValue(totalVisitsRef, (snap) => {
-            let val = snap.val() || 372;
-            document.getElementById('total-visits-count').innerText = val;
-        });
-
-        runTransaction(totalVisitsRef, (currentData) => {
-            return (currentData === null) ? 373 : currentData + 1;
-        }).catch(err => console.error(err));
+        onValue(totalVisitsRef, (snap) => { document.getElementById('total-visits-count').innerText = snap.val() || 372; });
+        runTransaction(totalVisitsRef, (currentData) => { return (currentData === null) ? 373 : currentData + 1; }).catch(err => console.error(err));
 
         const connectedRef = ref(db, '.info/connected');
         const myUserRef = ref(db, 'onlineUsers/' + userId);
         const allOnlineUsersRef = ref(db, 'onlineUsers');
+        onValue(connectedRef, (snap) => { if (snap.val() === true) { onDisconnect(myUserRef).remove().then(() => set(myUserRef, true)); } });
+        onValue(allOnlineUsersRef, (snap) => { document.getElementById('online-count').innerText = snap.exists() ? Object.keys(snap.val()).length : 0; });
 
-        onValue(connectedRef, (snap) => {
-            if (snap.val() === true) {
-                const con = onDisconnect(myUserRef);
-                con.remove().then(() => set(myUserRef, true));
-            }
-        });
-
-        onValue(allOnlineUsersRef, (snap) => {
-            document.getElementById('online-count').innerText = snap.exists() ? Object.keys(snap.val()).length : 0;
-        });
-
-        // ==========================================
-        // 6. LOGIC ĐẾM NGƯỢC
-        // ==========================================
         function startCountdown() {
             let now = new Date();
-            let currentYear = now.getFullYear();
-            let currentMonth = now.getMonth();
-            let targetDate = new Date(currentYear, currentMonth, 27, 0, 0, 0).getTime();
-            
-            if (now.getTime() > targetDate) {
-                targetDate = new Date(currentYear, currentMonth + 1, 27, 0, 0, 0).getTime();
-            }
+            let targetDate = new Date(now.getFullYear(), now.getMonth(), 27, 0, 0, 0).getTime();
+            if (now.getTime() > targetDate) { targetDate = new Date(now.getFullYear(), now.getMonth() + 1, 27, 0, 0, 0).getTime(); }
 
             const countdownInterval = setInterval(function() {
                 const distance = targetDate - new Date().getTime();
-
                 if (distance <= 0) {
                     clearInterval(countdownInterval);
                     document.getElementById("countdown-timer").innerHTML = "<div class='time-box' style='width: 100%;'><span>ĐÃ ĐẾN NGÀY VỀ UPT!</span></div>";
                     return;
                 }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("cd-days").innerText = days < 10 ? "0" + days : days;
-                document.getElementById("cd-hours").innerText = hours < 10 ? "0" + hours : hours;
-                document.getElementById("cd-minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-                document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+                document.getElementById("cd-days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+                document.getElementById("cd-hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                document.getElementById("cd-minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                document.getElementById("cd-seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
             }, 1000);
         }
 
         // ==========================================
-        // 7. TÍNH NĂNG NHẮN TIN REALTIME FIREBASE & KIỂM DUYỆT
+        // 7. TÍNH NĂNG NHẮN TIN REALTIME & KIỂM DUYỆT
         // ==========================================
         window.currentChatPartnerId = null;
         window.currentChatPartnerName = null;
         window.currentChatUnsubscribe = null;
         
-        // --- BỘ LỌC TỪ NGỮ ---
         const badWords = ["chó", "lon", "lồn", "l o l", "cac", "cặc", "dm", "djtme"];
         let blockInterval;
 
         function containsBadWords(text) {
             let normalized = text.toLowerCase().replace(/\s+/g, ''); 
-            for (let word of badWords) {
-                let cleanWord = word.replace(/\s+/g, '');
-                if (normalized.includes(cleanWord)) return true;
-            }
+            for (let word of badWords) { if (normalized.includes(word.replace(/\s+/g, ''))) return true; }
             return false;
         }
 
         function showBlockPopup(endTime) {
             document.getElementById('blockPopup').style.display = 'flex';
             clearInterval(blockInterval);
-
             function updateTimer() {
                 let remain = Math.floor((endTime - Date.now()) / 1000);
                 if (remain <= 0) {
-                    clearInterval(blockInterval);
-                    document.getElementById('blockPopup').style.display = 'none';
-                    localStorage.removeItem('chat_blocked_until');
-                    return;
+                    clearInterval(blockInterval); document.getElementById('blockPopup').style.display = 'none'; localStorage.removeItem('chat_blocked_until'); return;
                 }
-                let m = Math.floor(remain / 60);
-                let s = remain % 60;
+                let m = Math.floor(remain / 60); let s = remain % 60;
                 document.getElementById('block-time-left').innerText = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
             }
-            updateTimer();
-            blockInterval = setInterval(updateTimer, 1000);
+            updateTimer(); blockInterval = setInterval(updateTimer, 1000);
         }
 
         window.toggleChatWrapper = function() {
-            // Check TOP 25 Condition
             if (window.myCurrentRank > 25) {
-                alert(`🔒 CHỈ DÀNH CHO TOP 25!\n\nBạn đang xếp hạng ${window.myCurrentRank}.\nHãy truy cập học tập nhiều hơn để vào TOP 25 và mở khóa tính năng Nhắn Tin & Gọi WebRTC nhé!`);
-                return;
+                alert(`🔒 CHỈ DÀNH CHO TOP 25!\n\nBạn đang xếp hạng ${window.myCurrentRank}.\nHãy truy cập học tập nhiều hơn để vào TOP 25 và mở khóa tính năng Nhắn Tin & Gọi nhé!`); return;
             }
-
             const wrapper = document.getElementById('chat-modal-wrapper');
             wrapper.style.display = wrapper.style.display === 'flex' ? 'none' : 'flex';
-            if(wrapper.style.display === 'flex') {
-                showInboxView(); 
-            }
+            if(wrapper.style.display === 'flex') showInboxView(); 
         };
 
         window.showInboxView = function() {
             document.getElementById('chat-inbox').style.display = 'flex';
             document.getElementById('chat-room').style.display = 'none';
             document.getElementById('chat-back-btn').style.display = 'none';
-            document.getElementById('btn-call-wrc').style.display = 'none';
+            document.getElementById('call-buttons-area').style.display = 'none'; // Ẩn cụm nút gọi
             document.getElementById('chat-title').innerText = 'Hộp Thư Đến';
-            if (window.currentChatUnsubscribe) {
-                window.currentChatUnsubscribe(); 
-            }
+            if (window.currentChatUnsubscribe) window.currentChatUnsubscribe(); 
             window.currentChatPartnerId = null;
         }
 
         window.openChatRoom = function(partnerId, partnerName) {
-            // Check TOP 25 Condition again for clicks inside leaderboard
             if (window.myCurrentRank > 25) {
-                alert(`🔒 CHỈ DÀNH CHO TOP 25!\n\nBạn đang xếp hạng ${window.myCurrentRank}.\nHãy chăm chỉ học để vào TOP 25 và mở khóa nhé!`);
-                return;
+                alert(`🔒 CHỈ DÀNH CHO TOP 25!\n\nBạn đang xếp hạng ${window.myCurrentRank}.\nHãy chăm chỉ học để vào TOP 25 và mở khóa nhé!`); return;
             }
-
-            if (partnerId === userId) {
-                alert("Bạn không thể tự nhắn tin cho chính mình!");
-                return;
-            }
+            if (partnerId === userId) { alert("Bạn không thể tự nhắn tin cho chính mình!"); return; }
             
             document.getElementById('sidebar').classList.remove('active');
-            
             document.getElementById('chat-modal-wrapper').style.display = 'flex';
             document.getElementById('chat-inbox').style.display = 'none';
             document.getElementById('chat-room').style.display = 'flex';
             document.getElementById('chat-back-btn').style.display = 'block';
-            document.getElementById('btn-call-wrc').style.display = 'block'; // Mở nút Gọi
+            document.getElementById('call-buttons-area').style.display = 'flex'; // Hiện cụm nút gọi (Audio + Video)
             document.getElementById('chat-title').innerText = partnerName;
 
             window.currentChatPartnerId = partnerId;
             window.currentChatPartnerName = partnerName;
-
             update(ref(db, `inbox/${userId}/${partnerId}`), { unread: 0 });
-
             loadMessages(partnerId);
         }
 
         onValue(ref(db, `inbox/${userId}`), (snap) => {
             const inboxData = snap.val();
-            let totalUnread = 0;
-            let html = '';
-
+            let totalUnread = 0; let html = '';
             if (inboxData) {
-                const list = Object.values(inboxData).sort((a,b) => b.timestamp - a.timestamp);
-                list.forEach(chat => {
+                Object.values(inboxData).sort((a,b) => b.timestamp - a.timestamp).forEach(chat => {
                     totalUnread += (chat.unread || 0);
                     let unreadBadge = chat.unread > 0 ? `<span class="inbox-unread">${chat.unread}</span>` : '';
-                    html += `
-                    <div class="inbox-item" onclick="openChatRoom('${chat.partnerId}', '${chat.partnerName}')">
-                        <div class="inbox-info">
-                            <strong>${chat.partnerName}</strong>
-                            <p>${chat.lastMsg}</p>
-                        </div>
-                        ${unreadBadge}
-                    </div>`;
+                    html += `<div class="inbox-item" onclick="openChatRoom('${chat.partnerId}', '${chat.partnerName}')"><div class="inbox-info"><strong>${chat.partnerName}</strong><p>${chat.lastMsg}</p></div>${unreadBadge}</div>`;
                 });
-            } else {
-                html = '<p style="text-align:center; color:#555; margin-top:20px;">Chưa có tin nhắn nào.</p>';
-            }
-
+            } else { html = '<p style="text-align:center; color:#555; margin-top:20px;">Chưa có tin nhắn nào.</p>'; }
             document.getElementById('chat-inbox').innerHTML = html;
-
             const badge = document.getElementById('chat-badge');
-            // Nếu ngoài top 25 thì không hiện chấm đỏ
             if (totalUnread > 0 && window.myCurrentRank <= 25) {
-                badge.innerText = totalUnread > 9 ? '9+' : totalUnread;
-                badge.style.display = 'flex';
-            } else {
-                badge.style.display = 'none';
-            }
+                badge.innerText = totalUnread > 9 ? '9+' : totalUnread; badge.style.display = 'flex';
+            } else { badge.style.display = 'none'; }
         });
 
         function loadMessages(pId) {
             if (window.currentChatUnsubscribe) window.currentChatUnsubscribe();
-
             const chatId = userId < pId ? userId + '_' + pId : pId + '_' + userId;
-            const msgRef = ref(db, `messages/${chatId}`);
-
-            window.currentChatUnsubscribe = onValue(msgRef, (snap) => {
-                const data = snap.val();
-                let html = '';
+            window.currentChatUnsubscribe = onValue(ref(db, `messages/${chatId}`), (snap) => {
+                const data = snap.val(); let html = '';
                 if (data) {
                     Object.values(data).sort((a,b) => a.timestamp - b.timestamp).forEach(msg => {
                         const isMe = msg.senderId === userId;
-                        const timeObj = new Date(msg.timestamp);
-                        const timeStr = timeObj.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
-                        
-                        html += `
-                        <div class="msg-bubble ${isMe ? 'msg-sent' : 'msg-received'}">
-                            ${msg.text}
-                            <span class="msg-time">${timeStr}</span>
-                        </div>`;
+                        const timeStr = new Date(msg.timestamp).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+                        html += `<div class="msg-bubble ${isMe ? 'msg-sent' : 'msg-received'}">${msg.text}<span class="msg-time">${timeStr}</span></div>`;
                     });
-                } else {
-                    html = '<p style="text-align:center; color:#888; font-size:14px; margin-top:10px;">Hãy gửi lời chào!</p>';
-                }
-
+                } else { html = '<p style="text-align:center; color:#888; font-size:14px; margin-top:10px;">Hãy gửi lời chào!</p>'; }
                 const chatBox = document.getElementById('chat-messages');
-                chatBox.innerHTML = html;
-                chatBox.scrollTop = chatBox.scrollHeight;
+                chatBox.innerHTML = html; chatBox.scrollTop = chatBox.scrollHeight;
             });
         }
 
         window.sendRealtimeMessage = function() {
             const blockedUntil = localStorage.getItem('chat_blocked_until');
-            if (blockedUntil && Date.now() < parseInt(blockedUntil)) {
-                showBlockPopup(parseInt(blockedUntil));
-                return;
-            }
+            if (blockedUntil && Date.now() < parseInt(blockedUntil)) { showBlockPopup(parseInt(blockedUntil)); return; }
 
             const input = document.getElementById('chat-input');
             const text = input.value.trim();
             if (!text) return;
 
-            // Kiểm duyệt từ ngữ
             if (containsBadWords(text)) {
                 const blockTime = Date.now() + 10 * 60 * 1000; 
-                localStorage.setItem('chat_blocked_until', blockTime);
-                showBlockPopup(blockTime);
-                input.value = ''; 
-                return;
+                localStorage.setItem('chat_blocked_until', blockTime); showBlockPopup(blockTime); input.value = ''; return;
             }
 
-            const pId = window.currentChatPartnerId;
-            const pName = window.currentChatPartnerName;
+            const pId = window.currentChatPartnerId; const pName = window.currentChatPartnerName;
             const chatId = userId < pId ? userId + '_' + pId : pId + '_' + userId;
-            
-            let myData = localStorage.getItem('hocVienQuocPhong');
-            let myName = myData ? JSON.parse(myData).hoTen : "Học viên";
+            let myData = localStorage.getItem('hocVienQuocPhong'); let myName = myData ? JSON.parse(myData).hoTen : "Học viên";
 
-            push(ref(db, `messages/${chatId}`), {
-                senderId: userId,
-                text: text,
-                timestamp: Date.now()
-            });
-
-            update(ref(db, `inbox/${userId}/${pId}`), {
-                partnerId: pId,
-                partnerName: pName,
-                lastMsg: "Bạn: " + text,
-                timestamp: Date.now(),
-                unread: 0
-            });
-
+            push(ref(db, `messages/${chatId}`), { senderId: userId, text: text, timestamp: Date.now() });
+            update(ref(db, `inbox/${userId}/${pId}`), { partnerId: pId, partnerName: pName, lastMsg: "Bạn: " + text, timestamp: Date.now(), unread: 0 });
             runTransaction(ref(db, `inbox/${pId}/${userId}`), (currentData) => {
-                if (currentData === null) {
-                    return { partnerId: userId, partnerName: myName, lastMsg: text, timestamp: Date.now(), unread: 1 };
-                }
-                currentData.partnerName = myName; 
-                currentData.lastMsg = text;
-                currentData.timestamp = Date.now();
-                currentData.unread = (currentData.unread || 0) + 1;
+                if (currentData === null) return { partnerId: userId, partnerName: myName, lastMsg: text, timestamp: Date.now(), unread: 1 };
+                currentData.partnerName = myName; currentData.lastMsg = text; currentData.timestamp = Date.now(); currentData.unread = (currentData.unread || 0) + 1;
                 return currentData;
             });
-
-            input.value = '';
-            document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
+            input.value = ''; document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
         }
 
-        window.handleEnterKey = function(event) {
-            if (event.key === "Enter") {
-                sendRealtimeMessage();
-            }
-        }
-
+        window.handleEnterKey = function(event) { if (event.key === "Enter") sendRealtimeMessage(); }
 
         // ==========================================
-        // 8. TÍNH NĂNG GỌI VIDEO WEBRTC NATIVE (P2P)
+        // 8. TÍNH NĂNG GỌI VIDEO/AUDIO WEBRTC (MODERN UI)
         // ==========================================
-        let localStream;
-        let remoteStream;
-        let peerConnection;
-        // Sử dụng Google STUN servers miễn phí cho việc chọc thủng NAT
-        const rtcServers = {
-            iceServers: [
-                { urls: ['stun:stun1.l.google.com:19302', 'stun:stun2.l.google.com:19302'] }
-            ]
-        };
-
-        // Lắng nghe cuộc gọi đến trên toàn hệ thống cho User hiện tại
+        let localStream; let remoteStream; let peerConnection;
+        const rtcServers = { iceServers: [{ urls: ['stun:stun1.l.google.com:19302', 'stun:stun2.l.google.com:19302'] }] };
         let incomingCallData = null;
+
         onValue(ref(db, `incoming_calls/${userId}`), (snap) => {
             const data = snap.val();
             if (data && !peerConnection) {
-                // Có người gọi đến
                 incomingCallData = data;
-                document.getElementById('webrtc-modal').style.display = 'flex';
-                document.getElementById('call-status').innerText = `📞 ${data.callerName} Đang gọi Video...`;
-                document.getElementById('btnAnswer').style.display = 'inline-block';
+                setupUIForCall(data.callType, false, data.callerName); // Gọi đến
             } else if (!data && incomingCallData) {
-                // Người gọi đã cúp máy trước khi nghe
                 endCallUI();
             }
         });
 
-        window.startCall = async function() {
+        // Hàm thiết lập Giao diện Popup dựa vào Loại Cuộc Gọi (audio hay video)
+        function setupUIForCall(type, isCaller, partnerName) {
+            document.getElementById('webrtc-modal').style.display = 'flex';
+            document.getElementById('call-partner-name').innerText = partnerName;
+            
+            if(isCaller) {
+                document.getElementById('call-status').innerText = (type === 'video') ? "Đang đổ chuông Video..." : "Đang đổ chuông Âm thanh...";
+                document.getElementById('btnAnswer').style.display = 'none';
+            } else {
+                document.getElementById('call-status').innerText = (type === 'video') ? "📞 Đang gọi Video..." : "📞 Đang gọi Âm thanh...";
+                document.getElementById('btnAnswer').style.display = 'flex';
+            }
+
+            if (type === 'video') {
+                document.getElementById('audio-container').style.display = 'none';
+                document.getElementById('video-container').style.display = 'block';
+            } else {
+                document.getElementById('audio-container').style.display = 'flex';
+                document.getElementById('video-container').style.display = 'none';
+                document.getElementById('call-avatar').classList.add('is-ringing');
+            }
+        }
+
+        // BẮT ĐẦU GỌI (type: 'audio' or 'video')
+        window.startCall = async function(callType) {
             const pId = window.currentChatPartnerId;
             const pName = window.currentChatPartnerName;
             const chatId = userId < pId ? userId + '_' + pId : pId + '_' + userId;
             
-            document.getElementById('webrtc-modal').style.display = 'flex';
-            document.getElementById('call-status').innerText = `Đang đổ chuông tới ${pName}...`;
-            document.getElementById('btnAnswer').style.display = 'none';
+            setupUIForCall(callType, true, pName);
 
             try {
-                localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-                document.getElementById('localVideo').srcObject = localStream;
+                const streamConstraints = { video: callType === 'video', audio: true };
+                localStream = await navigator.mediaDevices.getUserMedia(streamConstraints);
+                if (callType === 'video') document.getElementById('localVideo').srcObject = localStream;
                 
                 peerConnection = new RTCPeerConnection(rtcServers);
                 remoteStream = new MediaStream();
-                document.getElementById('remoteVideo').srcObject = remoteStream;
+                if (callType === 'video') document.getElementById('remoteVideo').srcObject = remoteStream;
 
-                // Thêm Track từ Local lên Peer
                 localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
-                
-                // Nhận Track từ Remote đưa vào Video
-                peerConnection.ontrack = event => {
-                    event.streams[0].getTracks().forEach(track => remoteStream.addTrack(track));
-                };
+                peerConnection.ontrack = event => { event.streams[0].getTracks().forEach(track => remoteStream.addTrack(track)); };
 
                 const callDoc = ref(db, `calls/${chatId}`);
-                
-                // Thu thập ICE Candidates (Bên Gọi)
                 peerConnection.onicecandidate = event => {
-                    if(event.candidate) {
-                        push(ref(db, `calls/${chatId}/callerCandidates`), event.candidate.toJSON());
-                    }
+                    if(event.candidate) push(ref(db, `calls/${chatId}/callerCandidates`), event.candidate.toJSON());
                 };
 
-                // Tạo Offer SDP
                 const offerDescription = await peerConnection.createOffer();
                 await peerConnection.setLocalDescription(offerDescription);
-                const offer = { sdp: offerDescription.sdp, type: offerDescription.type };
-                await set(callDoc, { offer: offer });
+                await set(callDoc, { offer: { sdp: offerDescription.sdp, type: offerDescription.type } });
 
-                // Thông báo tới Firebase người nhận có cuộc gọi
                 let myData = localStorage.getItem('hocVienQuocPhong');
                 let myName = myData ? JSON.parse(myData).hoTen : "Học viên";
-                set(ref(db, `incoming_calls/${pId}`), {
-                    callerId: userId,
-                    callerName: myName,
-                    chatId: chatId
-                });
+                set(ref(db, `incoming_calls/${pId}`), { callerId: userId, callerName: myName, chatId: chatId, callType: callType });
 
-                // Chờ người nhận trả lời (Answer)
                 onValue(ref(db, `calls/${chatId}/answer`), (snap) => {
                     const answer = snap.val();
                     if(answer && !peerConnection.currentRemoteDescription) {
-                        const answerDescription = new RTCSessionDescription(answer);
-                        peerConnection.setRemoteDescription(answerDescription);
-                        document.getElementById('call-status').innerText = "✅ Đã Kết Nối Giao Tiếp Cục Bộ";
+                        peerConnection.setRemoteDescription(new RTCSessionDescription(answer));
+                        document.getElementById('call-status').innerText = "✅ Đã Kết Nối Thành Công";
+                        document.getElementById('call-avatar').classList.remove('is-ringing');
                     }
                 });
 
-                // Lắng nghe ICE Candidates từ người nhận
                 onChildAdded(ref(db, `calls/${chatId}/calleeCandidates`), (data) => {
-                    const candidate = new RTCIceCandidate(data.val());
-                    peerConnection.addIceCandidate(candidate);
+                    peerConnection.addIceCandidate(new RTCIceCandidate(data.val()));
                 });
 
             } catch (error) {
-                alert("Lỗi truy cập Camera/Mic: " + error.message);
-                endCallUI();
+                alert("Lỗi truy cập Camera/Mic: " + error.message); endCallUI();
             }
         };
 
-        // Khi bấm nút Nhấc Máy (Trả Lời)
+        // NHẤC MÁY
         document.getElementById('btnAnswer').onclick = async function() {
             if(!incomingCallData) return;
             const chatId = incomingCallData.chatId;
-            const callerId = incomingCallData.callerId;
+            const callType = incomingCallData.callType || 'video';
             
             document.getElementById('btnAnswer').style.display = 'none';
-            document.getElementById('call-status').innerText = "Đang kết nối luồng P2P...";
+            document.getElementById('call-status').innerText = "Đang kết nối luồng bảo mật...";
+            document.getElementById('call-avatar').classList.remove('is-ringing');
 
             try {
-                localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-                document.getElementById('localVideo').srcObject = localStream;
+                const streamConstraints = { video: callType === 'video', audio: true };
+                localStream = await navigator.mediaDevices.getUserMedia(streamConstraints);
+                if (callType === 'video') document.getElementById('localVideo').srcObject = localStream;
 
                 peerConnection = new RTCPeerConnection(rtcServers);
                 remoteStream = new MediaStream();
-                document.getElementById('remoteVideo').srcObject = remoteStream;
+                if (callType === 'video') document.getElementById('remoteVideo').srcObject = remoteStream;
 
                 localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
-                peerConnection.ontrack = event => {
-                    event.streams[0].getTracks().forEach(track => remoteStream.addTrack(track));
-                };
+                peerConnection.ontrack = event => { event.streams[0].getTracks().forEach(track => remoteStream.addTrack(track)); };
 
-                // Thu thập ICE Candidates (Bên Nhận)
                 peerConnection.onicecandidate = event => {
-                    if(event.candidate) {
-                        push(ref(db, `calls/${chatId}/calleeCandidates`), event.candidate.toJSON());
-                    }
+                    if(event.candidate) push(ref(db, `calls/${chatId}/calleeCandidates`), event.candidate.toJSON());
                 };
 
-                // Lấy Offer từ Firebase
                 get(ref(db, `calls/${chatId}/offer`)).then(async (snap) => {
                     const offer = snap.val();
                     if(offer) {
-                        const offerDescription = new RTCSessionDescription(offer);
-                        await peerConnection.setRemoteDescription(offerDescription);
-
-                        // Tạo Answer SDP
+                        await peerConnection.setRemoteDescription(new RTCSessionDescription(offer));
                         const answerDescription = await peerConnection.createAnswer();
                         await peerConnection.setLocalDescription(answerDescription);
-
-                        const answer = { type: answerDescription.type, sdp: answerDescription.sdp };
-                        await set(ref(db, `calls/${chatId}/answer`), answer);
-                        
-                        document.getElementById('call-status').innerText = "✅ Đã Kết Nối Giao Tiếp Cục Bộ";
+                        await set(ref(db, `calls/${chatId}/answer`), { type: answerDescription.type, sdp: answerDescription.sdp });
+                        document.getElementById('call-status').innerText = "✅ Đã Kết Nối Thành Công";
                     }
                 });
 
-                // Lắng nghe ICE Candidates từ người gọi
                 onChildAdded(ref(db, `calls/${chatId}/callerCandidates`), (data) => {
-                    const candidate = new RTCIceCandidate(data.val());
-                    peerConnection.addIceCandidate(candidate);
+                    peerConnection.addIceCandidate(new RTCIceCandidate(data.val()));
                 });
                 
-                // Xóa tín hiệu chuông (Incoming Call)
                 remove(ref(db, `incoming_calls/${userId}`));
 
             } catch (error) {
-                alert("Lỗi truy cập Camera/Mic: " + error.message);
-                endCallUI();
+                alert("Lỗi truy cập Camera/Mic: " + error.message); endCallUI();
             }
         };
 
         window.endCall = function() {
             endCallUI();
-            
-            // Xóa dữ liệu Signaling DB
             let pId = window.currentChatPartnerId;
-            if(!pId && incomingCallData) {
-                pId = incomingCallData.callerId;
-            }
-
+            if(!pId && incomingCallData) pId = incomingCallData.callerId;
             if(pId) {
                 const chatId = userId < pId ? userId + '_' + pId : pId + '_' + userId;
-                remove(ref(db, `calls/${chatId}`));
-                remove(ref(db, `incoming_calls/${pId}`));
+                remove(ref(db, `calls/${chatId}`)); remove(ref(db, `incoming_calls/${pId}`));
             }
             remove(ref(db, `incoming_calls/${userId}`));
         };
 
         function endCallUI() {
-            if(peerConnection) {
-                peerConnection.close();
-                peerConnection = null;
-            }
-            if(localStream) {
-                localStream.getTracks().forEach(t => t.stop());
-                localStream = null;
-            }
+            if(peerConnection) { peerConnection.close(); peerConnection = null; }
+            if(localStream) { localStream.getTracks().forEach(t => t.stop()); localStream = null; }
             document.getElementById('webrtc-modal').style.display = 'none';
             document.getElementById('remoteVideo').srcObject = null;
             document.getElementById('localVideo').srcObject = null;
+            document.getElementById('call-avatar').classList.remove('is-ringing');
             incomingCallData = null;
         }
-
     </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuItems = document.querySelectorAll('.menu-item');
             const loadingOverlay = document.getElementById('loadingK463');
-
             menuItems.forEach(item => {
                 item.addEventListener('click', function(e) {
-                    e.preventDefault(); 
-                    const targetUrl = this.href;
-
+                    e.preventDefault(); const targetUrl = this.href;
                     loadingOverlay.style.display = 'flex';
-
-                    setTimeout(() => {
-                        loadingOverlay.style.display = 'none';
-                        window.location.href = targetUrl;
-                    }, 1500);
+                    setTimeout(() => { loadingOverlay.style.display = 'none'; window.location.href = targetUrl; }, 1500);
                 });
             });
         });
     </script>
 </body>
-        </html>
+                    </html>
