@@ -1,0 +1,52 @@
+[
+    {
+        "cauhoi": "Bộ luật hình sự Việt Nam mới nhất đang áp dụng có từ năm nào?",
+        "options": [
+            "Năm 1985.",
+            "Năm 1999.",
+            "Năm 2015.",
+            "Năm 2016."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Bộ luật hình sự Việt Nam mới nhất được sửa đổi năm nào?",
+        "options": [
+            "Năm 2013.",
+            "Năm 2015.",
+            "Năm 2017.",
+            "Năm 2019."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Bộ luật hình sự hiện hành có bao nhiêu chương, điều?",
+        "options": [
+            "24 chương, 416 điều.",
+            "26 chương, 426 điều.",
+            "28 chương, 428 điều.",
+            "30 chương, 430 điều."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Chương nào, mục nào của bộ luật hình sự Việt Nam nói về các tội xâm phạm an toàn giao thông?",
+        "options": [
+            "Chương XX, Mục 1.",
+            "Chương XX, Mục 2.",
+            "Chương XXI, Mục 1.",
+            "Chương XXI, Mục 2."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Theo bộ luật hình sự Việt Nam các tội xâm phạm an toàn giao thông có bao nhiêu điều?",
+        "options": [
+            "15 điều.",
+            "20 điều.",
+            "25 điều.",
+            "30 điều."
+        ],
+        "dapan": 2
+    }
+]

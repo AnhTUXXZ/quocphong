@@ -1,0 +1,342 @@
+[
+  {
+    "cauhoi": "Đảng ta khẳng định vị trí của nền quốc phòng toàn dân, an ninh nhân dân:",
+    "options": [
+      "Xây dựng kinh tế là chủ yếu, quốc phòng, an ninh là thứ yếu.",
+      "Chỉ coi trọng quốc phòng, an ninh khi đất nước có chiến tranh.",
+      "Luôn luôn coi trọng quốc phòng, an ninh, coi đó là nhiệm vụ chiến lược gắn bó chặt chẽ.",
+      "Luôn luôn coi trọng quốc phòng, an ninh, coi đó là nền tảng để xây dựng đất nước."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Đặc trưng đầu tiên của nền quốc phòng toàn dân, an ninh nhân dân:",
+    "options": [
+      "Mang tính chất tự vệ do giai cấp công nhân tiến hành.",
+      "Chỉ có mục đích duy nhất là tự vệ chính đáng.",
+      "Vững mạnh toàn diện để tự vệ chính đáng.",
+      "Được xây dựng hiện đại có sức mạnh tổng hợp."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Đặc trưng mang tính truyền thống của nền quốc phòng toàn dân, an ninh nhân dân:",
+    "options": [
+      "Nền quốc phòng, an ninh vì dân, của dân và toàn thể nhân dân tiến hành.",
+      "Nền quốc phòng, an ninh mang tính giai cấp, dân tộc sâu sắc.",
+      "Nền quốc phòng, an ninh bảo vệ quyền lợi của dân.",
+      "Nền quốc phòng, an ninh do nhân dân xây dựng, mang tính chất nhân dân sâu sắc."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Sức mạnh của nền quốc phòng toàn dân, an ninh nhân dân bao gồm:",
+    "options": [
+      "Sức mạnh do các yếu tố chính trị, văn hóa, khoa học.",
+      "Sức mạnh quốc phòng, an ninh hiện đại.",
+      "Sức mạnh của quân đội nhân dân, công an nhân dân.",
+      "Có sức mạnh tổng hợp do nhiều yếu tố tạo thành."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Mục đích xây dựng nền quốc phòng toàn dân, an ninh nhân dân là:",
+    "options": [
+      "Tạo sức mạnh tổng hợp và tạo thế chủ động cho sự nghiệp xây dựng và bảo vệ Tổ quốc.",
+      "Tạo ra sức mạnh quân sự để ngăn chặn nguy cơ chiến tranh.",
+      "Tạo ra tiềm lực kinh tế để phòng thủ đất nước.",
+      "Tạo ra môi trường hòa bình để phát triển đất nước theo định hướng XHCN."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Nhiệm vụ xây dựng nền quốc phòng toàn dân và an ninh nhân dân là:",
+    "options": [
+      "Xây dựng các cấp chính quyền ở cơ sở và lực lượng dân quân tự vệ vững mạnh.",
+      "Xây dựng lực lượng quốc phòng, an ninh đáp ứng yêu cầu bảo vệ vững chắc Tổ quốc Việt Nam XHCN.",
+      "Xây dựng lực lượng công an, quân đội vững mạnh.",
+      "Xây dựng tiềm lực quân sự, an ninh vững mạnh."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Hai nhiệm vụ chiến lược của cách mạng Việt Nam hiện nay là:",
+    "options": [
+      "Xây dựng và phát triển kinh tế - xã hội ngày càng vững mạnh.",
+      "Xây dựng đất nước và phát triển kinh tế.",
+      "Xây dựng và bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa.",
+      "Xây dựng và phát triển kinh tế, quốc phòng an ninh nhân dân."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Lực lượng của nền Quốc phòng toàn dân, an ninh nhân dân bao gồm:",
+    "options": [
+      "Lực lượng toàn dân, lực lượng vũ trang nhân dân.",
+      "Lực lượng quân đội nhân dân và công an nhân dân.",
+      "Lực lượng toàn dân và dân quân tự vệ.",
+      "Lực lượng dự bị động viên và dân quân tự vệ."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Tiềm lực quốc phòng – an ninh là:",
+    "options": [
+      "Khả năng về của cải vật chất có thể huy động để thực hiện nhiệm vụ quốc phòng, an ninh.",
+      "Khả năng về nhân lực, vật lực, tài chính có thể huy động để thực hiện nhiệm vụ QP-AN.",
+      "Khả năng về tài chính có thể huy động phục vụ cho nhiệm vụ quốc phòng, an ninh.",
+      "Khả năng về phương tiện kỹ thuật có thể huy động thực hiện nhiệm vụ quốc phòng an ninh."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Tiềm lực quốc phòng, an ninh được thể hiện ở tất cả các lĩnh vực đời sống xã hội nhưng tập trung ở:",
+    "options": [
+      "Tiềm lực chính trị - tinh thần; khoa học và công nghệ; kinh tế; quân sự, an ninh.",
+      "Tiềm lực chính trị - tinh thần; đối ngoại, khoa học và công nghệ.",
+      "Tiềm lực công nghiệp quốc phòng, khoa học quân sự.",
+      "Tiềm lực chính trị - tinh thần; văn hóa - xã hội; kinh tế."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Tiềm lực chính trị, tinh thần của nền quốc phòng toàn dân – an ninh nhân dân:",
+    "options": [
+      "Là khả năng về chính trị, tinh thần của xã hội để thực hiện nhiệm vụ quốc phòng.",
+      "Là khả năng về chính trị, ý chí, quyết tâm chiến đấu chống quân xâm lược của toàn dân.",
+      "Là khả năng về chính trị, tinh thần có thể huy động nhằm tạo thành sức mạnh để thực hiện nhiệm vụ quốc phòng an ninh.",
+      "Là khả năng về chính trị, tinh thần của nhân dân được huy động để thực hiện nhiệm vụ quốc phòng an ninh."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Nội dung xây dựng tiềm lực chính trị, tinh thần của nền quốc phòng toàn dân, an ninh nhân dân:",
+    "options": [
+      "Xây dựng lòng yêu nước, niềm tin vào Đảng, Nhà nước, chế độ Xã hội Chủ nghĩa.",
+      "Xây dựng hệ thống chính trị trong sạch, vững mạnh, phát huy quyền làm chủ của nhân dân.",
+      "Xây dựng khối đại đoàn kết toàn dân, nâng cao cảnh giác cách mạng, thực hiện tốt giáo dục QP-AN.",
+      "Tất cả đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Tiềm lực kinh tế của nền quốc phòng toàn dân, an ninh nhân dân:",
+    "options": [
+      "Khả năng về tài chính và khoa học công nghệ để phục vụ nhiệm vụ quốc phòng, an ninh.",
+      "Khả năng về trang bị kỹ thuật quân sự có thể huy động để phục vụ nhiệm vụ quốc phòng, an ninh.",
+      "Khả năng về kinh tế của đất nước có thể khai thác, huy động nhằm phục vụ cho quốc phòng, an ninh.",
+      "Khả năng về tài chính để phục vụ nhiệm vụ quốc phòng, an ninh."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Nội dung xây dựng tiềm lực kinh tế của nền quốc phòng toàn dân, an ninh nhân dân:",
+    "options": [
+      "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước, xây dựng nền kinh tế độc lập tự chủ.",
+      "Kết hợp chặt chẽ phát triển kinh tế - xã hội với tăng cường củng cố quốc phòng, an ninh, xây dựng hạ tầng kinh tế với cơ sở hạ tầng quốc phòng.",
+      "Có kế hoạch chuyển sản xuất từ thời bình sang thời chiến và duy trì sự phát triển của nền kinh tế.",
+      "Tất cả đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Xây dựng tiềm lực khoa học công nghệ của nền quốc phòng toàn dân, an ninh nhân dân:",
+    "options": [
+      "Tạo nên khả năng về vũ khí trang bị kỹ thuật để phòng thủ đất nước.",
+      "Tạo nên khả năng về khoa học công nghệ của quốc gia có thể khai thác, huy động để phục vụ quốc phòng, an ninh.",
+      "Tạo nên khả năng để huy động đội ngũ cán bộ khoa học kỹ thuật phục vụ quốc phòng, an ninh.",
+      "Tạo nên khả năng ứng dụng kết quả nghiên cứu khoa học công nghệ vào quốc phòng, an ninh."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Một trong những nội dung xây dựng tiềm lực quân sự, an ninh:",
+    "options": [
+      "Xây dựng lực lượng quân đội vững mạnh toàn diện.",
+      "Xây dựng lực lượng công an vững mạnh toàn diện.",
+      "Xây dựng lực lượng thường trực, dân quân tự vệ vững mạnh.",
+      "Xây dựng lực lượng vũ trang nhân dân vững mạnh toàn diện."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Thể trận quốc phòng toàn dân, an ninh nhân dân là:",
+    "options": [
+      "Sự tổ chức, bố trí lực lượng, tiềm lực mọi mặt của đất nước trên toàn bộ lãnh thổ.",
+      "Sự bố trí con người và vũ khí trang bị phù hợp trên toàn bộ lãnh thổ.",
+      "Sự bố trí thể trận sẵn sàng tác chiến trên một địa bàn chiến lược.",
+      "Sự bố trí các đơn vị của lực lượng vũ trang trên toàn bộ lãnh thổ."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Một trong những nội dung xây dựng thế trận quốc phòng toàn dân, an ninh nhân dân là:",
+    "options": [
+      "Tổ chức phòng thủ dân sự, kết hợp cải tạo địa hình với xây dựng hạ tầng và các công trình quốc phòng, an ninh.",
+      "Tổ chức phòng thủ dân sự, kết hợp xây dựng các khu vực hậu phương, vùng căn cứ vững chắc về mọi mặt.",
+      "Tổ chức phòng thủ dân sự, chủ động tiến công tiêu diệt địch trên tất cả các mặt trận.",
+      "Tổ chức phòng thủ dân sự bảo đảm an toàn cho người và của cải vật chất."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Biện pháp chính nhằm xây dựng nhận thức về nền quốc phòng toàn dân, an ninh nhân dân là:",
+    "options": [
+      "Thường xuyên giáo dục ý thức, trách nhiệm của công dân.",
+      "Thường xuyên thực hiện giáo dục nghĩa vụ công dân.",
+      "Thường xuyên thực hiện giáo dục quốc phòng, an ninh.",
+      "Thường xuyên phổ biến nhiệm vụ quốc phòng an ninh."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Nội dung thực hiện giáo dục quốc phòng, an ninh:",
+    "options": [
+      "Giáo dục về âm mưu thủ đoạn của địch.",
+      "Giáo dục về tình yêu quê hương, đất nước, chế độ Xã hội Chủ nghĩa.",
+      "Giáo dục đường lối quan điểm của Đảng, pháp luật của Nhà nước về quốc phòng, an ninh.",
+      "Cả A, B, C."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Xây dựng nền quốc phòng toàn dân, an ninh nhân dân có vị trí:",
+    "options": [
+      "Đặc biệt quan trọng.",
+      "Là nền tảng xây dựng đất nước khi có chiến tranh.",
+      "Chiến lược trong nhiệm vụ bảo vệ Tổ quốc.",
+      "Là nhiệm vụ trọng yếu thường xuyên của Đảng, đất nước."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Mục đích xây dựng nền quốc phòng toàn dân, an ninh nhân dân?",
+    "options": [
+      "Tạo thế chủ động cho sự nghiệp xây dựng và bảo vệ Tổ quốc.",
+      "Tạo thế và lực cho nhiệm vụ bảo vệ Tổ quốc và an ninh quốc gia.",
+      "Tạo thế chủ động không bị động bất ngờ.",
+      "Tạo thế và lực để huy động cho xây dựng và bảo vệ Tổ quốc."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Một trong những nhiệm vụ xây dựng thế trận của nền QPAN hiện nay là xây dựng khu vực:",
+    "options": [
+      "Miền núi, biên giới vững mạnh.",
+      "Nông thôn vững mạnh.",
+      "Biên giới biển, đảo vững mạnh.",
+      "Phòng thủ tỉnh (thành) vững chắc."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Tiềm lực chính trị, tinh thần của nền quốc phòng – an ninh biểu hiện ở:",
+    "options": [
+      "Ý chí quyết tâm của nhân dân.",
+      "Năng lực lãnh đạo của Đảng, quản lý điều hành của Nhà nước.",
+      "Các lực lượng VTND sẵn sàng đáp ứng yêu cầu nhiệm vụ QPAN bảo vệ Tổ quốc.",
+      "Cả A, B, C đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Một nội dung chủ yếu trong xây dựng thể trận quốc phòng toàn dân, an ninh nhân dân là:",
+    "options": [
+      "Xây dựng hậu phương tạo chỗ dựa vững chắc.",
+      "Xây dựng lực lượng vũ trang nhân dân tinh nhuệ.",
+      "Xây dựng nền kinh tế giàu mạnh.",
+      "Xây dựng về chính trị vững mạnh."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trong các tiềm lực quốc phòng, an ninh dưới đây, tiềm lực nào đóng vai trò là nền tảng?",
+    "options": [
+      "Tiềm lực chính trị, tinh thần.",
+      "Tiềm lực kinh tế.",
+      "Tiềm lực khoa học công nghệ.",
+      "Tiềm lực quân sự."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Nội dung xây dựng tiềm lực chính trị, tinh thần của nền quốc phòng toàn dân, an ninh nhân dân:",
+    "options": [
+      "Xây dựng lòng yêu nước, niềm tin vào Đảng, Nhà nước, chế độ XHCN.",
+      "Xây dựng hệ thống chính trị trong sạch vững mạnh, phát huy quyền làm chủ của nhân dân.",
+      "Xây dựng khối đại đoàn kết toàn dân, nâng cao cảnh giác cách mạng; thực hiện tốt giáo dục QP-AN.",
+      "Tất cả đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Tiềm lực kinh tế của nền quốc phòng toàn dân, an ninh nhân dân:",
+    "options": [
+      "Khả năng về tài chính và khoa học công nghệ để phục vụ nhiệm vụ quốc phòng, an ninh.",
+      "Khả năng về trang bị kỹ thuật quân sự có thể huy động để phục vụ nhiệm vụ quốc phòng, an ninh.",
+      "Khả năng về kinh tế của đất nước có thể khai thác, huy động nhằm phục vụ cho QP - AN.",
+      "Khả năng về tài chính để phục vụ nhiệm vụ hoạt động quốc phòng, an ninh."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Tiềm lực nào dưới đây tạo nên sức mạnh vật chất cho nền quốc phòng toàn dân, an ninh nhân dân?",
+    "options": [
+      "Tiềm lực chính trị, tinh thần.",
+      "Tiềm lực kinh tế.",
+      "Tiềm lực khoa học công nghệ.",
+      "Tiềm lực quân sự."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Quá trình tăng cường vũ khí trang bị cho các LLVTND gắn với quá trình nào dưới đây?",
+    "options": [
+      "Hiện đại hóa nền kinh tế nước nhà.",
+      "Tăng cường tiềm lực khoa học công nghệ.",
+      "Công nghiệp hóa, hiện đại hóa đất nước.",
+      "Hiện đại hóa nền kinh tế và khoa học công nghệ."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Tiềm lực nào là nhân tố cơ bản biểu hiện tập trung, trực tiếp sức mạnh quốc phòng, an ninh?",
+    "options": [
+      "Tiềm lực khoa học công nghệ.",
+      "Tiềm lực kinh tế.",
+      "Tiềm lực quân sự, an ninh.",
+      "Tiềm lực chính trị tinh thần."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Một trong những nội dung xây dựng tiềm lực quân sự, an ninh:",
+    "options": [
+      "Xây dựng lực lượng quân đội vững mạnh toàn diện.",
+      "Xây dựng lực lượng công an vững mạnh toàn diện.",
+      "Xây dựng lực lượng thường trực, dân quân tự vệ vững mạnh.",
+      "Xây dựng lực lượng vũ trang nhân dân vững mạnh toàn diện."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Một trong những biện pháp chủ yếu xây dựng nền quốc phòng toàn dân, an ninh nhân dân hiện nay?",
+    "options": [
+      "Thường xuyên giáo dục ý thức, trách nhiệm của công dân.",
+      "Thường xuyên thực hiện giáo dục nghĩa vụ công dân.",
+      "Thường xuyên thực hiện giáo dục quốc phòng – an ninh.",
+      "Thường xuyên phổ biến nhiệm vụ quốc phòng và an ninh."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Đường lối của Đảng, pháp luật của Nhà nước về quốc phòng, an ninh nhân dân phải xuất phát từ:",
+    "options": [
+      "Lợi ích của giai cấp công nhân và nhân dân lao động.",
+      "Lợi ích, nguyện vọng và khả năng của nhân dân.",
+      "Lợi ích, nguyện vọng và khả năng huy động của Nhà nước.",
+      "Lợi ích, nguyện vọng của nhân dân và lực lượng vũ trang."
+    ],
+    "dapan": 1
+  }
+]
