@@ -1,0 +1,592 @@
+[
+    {
+        "cauhoi": "Các yếu tố cấu thành quốc gia:",
+        "options": [
+            "Lãnh thổ, dân cư và nhà nước.",
+            "Lãnh thổ, dân cư và chế độ chính trị.",
+            "Lãnh thổ, dân cư và quyền lực công cộng.",
+            "Lãnh thổ, dân cư và hệ thống chính trị."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Lãnh thổ quốc gia là:",
+        "options": [
+            "Phạm vi không gian bao gồm vùng đất, vùng biển, vùng trời của quốc gia.",
+            "Phạm vi không gian bao gồm vùng đất, các đảo, vùng biển, vùng trời của quốc gia.",
+            "Phạm vi không gian được giới hạn bởi biên giới quốc gia thuộc chủ quyền hoàn toàn và đầy đủ.",
+            "Phạm vi không gian bao gồm vùng đất, vùng biển, vùng trời, các đảo và quần đảo của quốc gia."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Lãnh thổ quốc gia Việt Nam bao gồm:",
+        "options": [
+            "Vùng đất, vùng biển, vùng trời quốc gia.",
+            "Đất liền, vùng biển đảo và vùng trời quốc gia.",
+            "Vùng đất, vùng biển, vùng trời quốc gia và lãnh thổ quốc gia đặc biệt.",
+            "Vùng đất, vùng biển đảo, vùng trời và khu vực biên giới quốc gia."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Vùng đất quốc gia Việt Nam bao gồm:",
+        "options": [
+            "Đất liền, các đảo và quần đảo.",
+            "Đất liền, các đảo và bán đảo.",
+            "Đất liền và các quần đảo.",
+            "Đất liền, bán đảo và quần đảo."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Trong vùng biển quốc gia, nội thủy là:",
+        "options": [
+            "Vùng nước nằm bên trong lục địa.",
+            "Vùng biển nằm ở phía trong của đường cơ sở.",
+            "Vùng biển nằm phía trong biên giới quốc gia trên biển.",
+            "Vùng biển nằm phía ngoài đường cơ sở."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Trong vùng biển quốc gia, nội thủy có chế độ pháp lý:",
+        "options": [
+            "Tương tự như lãnh hải.",
+            "Như trên đất liền.",
+            "Như vùng đặc quyền kinh tế.",
+            "Như vùng tiếp giáp lãnh hải."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Quốc gia ven biển có chủ quyền hoàn toàn, đầy đủ và tuyệt đối ở:",
+        "options": [
+            "Lãnh hải.",
+            "Nội thủy.",
+            "Vùng tiếp giáp lãnh hải.",
+            "Vùng đặc quyền kinh tế."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Vùng biển quốc gia, lãnh hải là:",
+        "options": [
+            "Vùng biển có chiều rộng 12 hải lý tính từ bờ biển.",
+            "Vùng biển có chiều rộng 12 hải lý tính từ biên giới quốc gia trên biển.",
+            "Vùng biển có chiều rộng 10 hải lý tính từ đường cơ sở.",
+            "Vùng biển có chiều rộng 12 hải lý tính từ đường cơ sở."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Vùng biển nào, quốc gia ven biển có chủ quyền hoàn toàn, đầy đủ và không tuyệt đối:",
+        "options": [
+            "Nội thủy.",
+            "Lãnh hải.",
+            "Vùng tiếp giáp lãnh hải.",
+            "Vùng đặc quyền kinh tế."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Lãnh hải của nước ta gồm:",
+        "options": [
+            "Lãnh hải của đất liền.",
+            "Lãnh hải của đảo.",
+            "Lãnh hải của quần đảo.",
+            "Cả ba lựa chọn trên."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Biên giới quốc gia trên biển là:",
+        "options": [
+            "Ranh giới ngoài của lãnh hải.",
+            "Ranh giới ngoài của vùng tiếp giáp lãnh hải.",
+            "Ranh giới ngoài của vùng đặc quyền kinh tế.",
+            "Ranh giới ngoài của nội thủy."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Vùng trời quốc gia là:",
+        "options": [
+            "Khoảng không gian phía trên vùng đất và vùng biển quốc gia.",
+            "Khoảng không gian phía trên đất liền và vùng biển quốc gia.",
+            "Khoảng không gian phía trên lãnh thổ quốc gia.",
+            "Khoảng không gian phía trên đất liền, đảo và quần đảo."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Chủ quyền quốc gia là:",
+        "options": [
+            "Quyền làm chủ một cách độc lập, toàn vẹn và đầy đủ về mọi mặt lập pháp, hành pháp và tư pháp tự do.",
+            "Quốc gia thể hiện chủ quyền của mình trên mọi phương diện kinh tế, chính trị, quân sự, ngoại giao.",
+            "Quyền làm chủ vận mệnh của mỗi dân tộc, quyền quyết định chế độ chính trị, con đường phát triển của mỗi dân tộc.",
+            "Cả A và B."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Các quốc gia thể hiện chủ quyền trên những phương diện nào:",
+        "options": [
+            "Kinh tế.",
+            "Chính trị.",
+            "Quân sự, ngoại giao.",
+            "Tất cả lựa chọn trên."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Chủ quyền lãnh thổ quốc gia là:",
+        "options": [
+            "Một bộ phận của chủ quyền quốc gia, khẳng định quyền làm chủ vùng đất, biển, vùng trời của quốc gia.",
+            "Quyền thiêng liêng bất khả xâm phạm, quyết định mọi vấn đề đối nội, đối ngoại của quốc gia.",
+            "Một bộ phận của chủ quyền quốc gia, khẳng định quyền làm chủ của quốc gia đó trên vùng lãnh thổ quốc gia.",
+            "Quyền thiêng liêng bất khả xâm phạm, quyết định mọi vấn đề chính trị, kinh tế, văn hóa, xã hội."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Nội dung xây dựng và bảo vệ chủ quyền lãnh thổ quốc gia:",
+        "options": [
+            "Đấu tranh làm thất bại các hoạt động phá hoại của các thế lực chống phá Việt Nam.",
+            "Xây dựng và phát triển kinh tế, xã hội kết hợp với tăng cường củng cố quốc phòng an ninh.",
+            "Xác lập và bảo vệ quyền lập pháp, hành pháp, tư pháp về mọi mặt trong phạm vi lãnh thổ quốc gia.",
+            "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước; tích cực chủ động hội nhập quốc tế."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Nội dung xây dựng và bảo vệ chủ quyền lãnh thổ quốc gia:",
+        "options": [
+            "Bảo vệ sự toàn vẹn lãnh thổ của đất nước, bao gồm vùng đất, vùng trời, nội thủy, lãnh hải và lãnh thổ quốc gia.",
+            "Bảo vệ chủ quyền của quốc gia trên mọi phương diện kinh tế, chính trị, quân sự, ngoại giao.",
+            "Bảo vệ đường lối đối nội và đối ngoại của Nhà nước ta không bị lệ thuộc vào bên ngoài.",
+            "Tất cả lựa chọn trên."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Biên giới quốc gia Việt Nam bao gồm:",
+        "options": [
+            "Biên giới quốc gia trên đất liền, biển và trên không.",
+            "Biên giới quốc gia trong lòng đất và trên biển.",
+            "Biên giới quốc gia trên không, biển và trong lòng đất.",
+            "Biên giới quốc gia trên đất liền, trên biển, trên không và trong lòng đất."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Biên giới quốc gia trên đất liền được xác định bằng:",
+        "options": [
+            "Các mốc quốc giới trên thực địa.",
+            "Các tọa độ trên hải đồ.",
+            "Các tọa độ trên bản đồ.",
+            "Cả A và C."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Biên giới quốc gia trên biển được đánh dấu bằng:",
+        "options": [
+            "Các mốc quốc giới trên biển.",
+            "Các tọa độ trên hải đồ.",
+            "Các tọa độ trên bản đồ.",
+            "Kinh độ, vĩ độ."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Nội dung xây dựng và bảo vệ biên giới quốc gia:",
+        "options": [
+            "Ưu tiên đầu tư xây dựng cơ sở hạ tầng, kinh tế khu vực biên giới.",
+            "Ưu tiên đầu tư xây dựng cơ sở chính trị vững chắc ở khu vực biên giới.",
+            "Ưu tiên đầu tư xây dựng khu vực biên giới vững mạnh toàn diện.",
+            "Ưu tiên xây dựng lực lượng vũ trang địa phương ở khu vực biên giới."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Nội dung xây dựng và bảo vệ biên giới quốc gia:",
+        "options": [
+            "Tăng cường mở rộng quan hệ đối ngoại các cấp trên khu vực biên giới.",
+            "Tăng cường, thực hiện tốt việc định canh, định cư cho nhân dân ở khu vực biên giới.",
+            "Tập trung xây dựng các khu vực kinh tế quốc phòng dọc tuyến biên giới vững mạnh.",
+            "Tập trung xây dựng các tổ chức chính trị vững chắc ở khu vực biên giới."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung xây dựng và bảo vệ biên giới quốc gia:",
+        "options": [
+            "Phối hợp với các nước láng giềng, ngăn chặn mọi âm mưu gây bạo loạn lật đổ của kẻ thù.",
+            "Phối hợp với các nước, đấu tranh ngăn chặn mọi hành động phá hoại tình đoàn kết hữu nghị các nước.",
+            "Kết hợp phát triển kinh tế với tăng cường an ninh để bảo vệ vững chắc tổ quốc.",
+            "Kết hợp đấu tranh quân sự với đảm bảo an ninh chính trị, trật tự an toàn xã hội."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Xây dựng và bảo vệ chủ quyền lãnh thổ biên giới quốc gia được Đảng và Nhà nước ta xác định:",
+        "options": [
+            "Là một nội dung quan trọng của sự nghiệp đổi mới, công nghiệp hóa, hiện đại hóa đất nước.",
+            "Là một nội dung quan trọng của sự nghiệp xây dựng và bảo vệ Tổ quốc Việt Nam XHCN.",
+            "Là một nội dung quan trọng của chiến lược phát triển kinh tế trong thời kỳ mới.",
+            "Là một nội dung quan trọng của chiến lược đối ngoại trong thời kỳ mới."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Quan điểm của Nhà nước ta về xây dựng bảo vệ chủ quyền lãnh thổ, biên giới quốc gia:",
+        "options": [
+            "Chủ quyền lãnh thổ, biên giới quốc gia là kết quả đấu tranh của hàng ngàn năm dựng nước.",
+            "Chủ quyền lãnh thổ, biên giới quốc gia là yếu tố cơ bản nhất cho sự phát triển kinh tế xã hội.",
+            "Chủ quyền lãnh thổ, biên giới quốc gia là thiêng liêng, bất khả xâm phạm của dân tộc Việt Nam.",
+            "Chủ quyền lãnh thổ, biên giới quốc gia là tài sản vô cùng quý giá của dân tộc Việt Nam."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quan điểm xây dựng biên giới hòa bình hữu nghị, ổn định của Đảng và Nhà nước ta thể hiện:",
+        "options": [
+            "Là vấn đề quan trọng cơ bản và lâu dài trong sự nghiệp cách mạng của Đảng ta.",
+            "Là quan điểm nhất quán trong sự nghiệp công nghiệp hóa hiện đại hóa đất nước.",
+            "Là quan điểm nhất quán, phù hợp với lợi ích, luật pháp của Việt Nam và công ước quốc tế.",
+            "Là xây dựng biên giới hòa bình hữu nghị, ổn định phù hợp với đường lối đối ngoại của nước ta."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quan điểm của Đảng, Nhà nước ta về việc giải quyết các vấn đề tranh chấp lãnh thổ, biên giới:",
+        "options": [
+            "Thông qua các cơ quan tài phán và công ước của Liên Hợp Quốc về lãnh thổ, biên giới.",
+            "Thương lượng hòa bình, tôn trọng độc lập, chủ quyền toàn vẹn lãnh thổ và lợi ích chính đáng của nhà nước.",
+            "Bằng con đường ngoại giao trên tinh thần bình đẳng đôi bên cùng có lợi.",
+            "Bằng nhiều biện pháp kể cả biện pháp sử dụng vũ lực để giải quyết tranh chấp."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Xây dựng và bảo vệ chủ quyền lãnh thổ, biên giới quốc gia:",
+        "options": [
+            "Là sự nghiệp của toàn dân.",
+            "Dưới sự lãnh đạo của Đảng.",
+            "Sự quản lý thống nhất của Nhà nước.",
+            "Cả ba lựa chọn trên."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Trong xây dựng và bảo vệ chủ quyền lãnh thổ, biên giới quốc gia, lực lượng nào là nòng cốt:",
+        "options": [
+            "Quân đội nhân dân.",
+            "Công an nhân dân.",
+            "Bộ đội địa phương.",
+            "Đội ngũ."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Trong xây dựng và bảo vệ chủ quyền lãnh thổ, biên giới quốc gia, lực lượng nào là nòng cốt chuyên trách?",
+        "options": [
+            "Bộ đội Hải quân.",
+            "Bộ đội biên phòng.",
+            "Cảnh sát biển.",
+            "Đội ngũ."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Các yếu tố cấu thành quốc gia là:",
+        "options": [
+            "Lãnh thổ, dân cư và Nhà nước.",
+            "Lãnh thổ, dân cư và chế độ chính trị.",
+            "Lãnh thổ, dân cư và quyền lực công cộng.",
+            "Lãnh thổ, dân cư và hệ thống chính trị."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Lãnh thổ quốc gia là:",
+        "options": [
+            "Phạm vi không gian bao gồm vùng đất, vùng biển, vùng trời của quốc gia.",
+            "Phạm vi không gian bao gồm vùng đất, các đảo, vùng biển, vùng trời của quốc gia.",
+            "Phạm vi không gian được giới hạn bởi biên giới quốc gia thuộc chủ quyền hoàn toàn và đầy đủ của quốc gia.",
+            "Phạm vi không gian bao gồm vùng đất, vùng trời, các đảo và quần đảo của quốc gia."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Lãnh thổ quốc gia Việt Nam bao gồm:",
+        "options": [
+            "Vùng đất, vùng biển đảo, vùng trời và khu vực biên giới của quốc gia.",
+            "Vùng đất, vùng biển và vùng trời quốc gia.",
+            "Đất liền, vùng biển đảo và vùng trời quốc gia.",
+            "Vùng đất, vùng biển, vùng trời quốc gia và lãnh thổ quốc gia đặc biệt."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Vùng đất quốc gia Việt Nam bao gồm:",
+        "options": [
+            "Phần mặt đất và lòng đất của đất liền, của đảo, quần đảo.",
+            "Phần mặt đất của đất liền, các đảo và bán đảo.",
+            "Đất liền, các đảo và quần đảo.",
+            "Đất liền, bán đảo và quần đảo."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Trong vùng biển quốc gia, nội thủy là:",
+        "options": [
+            "Là vùng nước nằm ở bên trong của lục địa có thể tính chiều rộng lãnh hải.",
+            "Là vùng biển nằm ở phía trong của đường cơ sở để tính chiều rộng lãnh hải.",
+            "Là vùng biển nằm phía trong biên giới quốc gia trên biển để tính chiều rộng lãnh hải.",
+            "Là vùng biển nằm phía ngoài đường cơ sở để tính chiều rộng lãnh hải."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Chế độ pháp lý của vùng biển nội thủy được xác định:",
+        "options": [
+            "Tương tự như lãnh hải",
+            "Như vùng tiếp giáp lãnh hải",
+            "Như lãnh thổ trên đất liền",
+            "Như vùng đặc quyền kinh tế"
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quốc gia ven biển có chủ quyền hoàn toàn, đầy đủ và tuyệt đối ở:",
+        "options": [
+            "Vùng biển lãnh hải.",
+            "Vùng biển nội thủy.",
+            "Vùng tiếp giáp lãnh hải.",
+            "Vùng đặc quyền kinh tế."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Trong vùng biển quốc gia, lãnh hải là:",
+        "options": [
+            "Vùng biển có chiều rộng 12 hải lý tính từ bờ biển.",
+            "Vùng biển có chiều rộng 12 hải lý tính từ biên giới quốc gia trên biển.",
+            "Vùng biển có chiều rộng 10 hải lý tính từ đường cơ sở.",
+            "Vùng biển có chiều rộng 12 hải lý tính từ đường cơ sở."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Vùng biển nào có chế độ pháp lý thuộc chủ quyền đầy đủ và toàn vẹn:",
+        "options": [
+            "Vùng đặc quyền kinh tế.",
+            "Lãnh hải.",
+            "Nội thủy.",
+            "Vùng tiếp giáp lãnh hải."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Lãnh hải của nước ta gồm:",
+        "options": [
+            "Lãnh hải của đất liền.",
+            "Lãnh hải của đảo.",
+            "Lãnh hải của quần đảo.",
+            "Tất cả đều đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Biên giới quốc gia trên biển là:",
+        "options": [
+            "Ranh giới ngoài của lãnh hải.",
+            "Ranh giới ngoài của vùng tiếp giáp.",
+            "Ranh giới ngoài của vùng đặc quyền kinh tế.",
+            "Ranh giới ngoài của nội thủy."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Vùng trời quốc gia là:",
+        "options": [
+            "Khoảng không gian phía trên vùng đất và vùng biển quốc gia.",
+            "Khoảng không gian phía trên đất liền và vùng biển quốc gia.",
+            "Khoảng không gian phía trên lãnh thổ quốc gia.",
+            "Khoảng không gian phía trên đất liền, đảo và quần đảo."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Khái niệm chủ quyền quốc gia được hiểu đầy đủ như thế nào?",
+        "options": [
+            "Là quyền làm chủ một cách độc lập, toàn vẹn và đầy đủ về mọi mặt lập pháp, hành pháp và tư pháp phạm vi lãnh thổ của quốc gia đó.",
+            "Là quyền làm chủ trên tất cả các lĩnh vực thuộc phạm vi quốc gia.",
+            "Là quyền làm chủ trên mọi phương diện một cách độc lập, toàn vẹn và đầy đủ của một quốc gia.",
+            "Là quyền làm chủ trên tất cả các lĩnh vực một cách độc lập, toàn vẹn và đầy đủ về hành pháp và tư pháp phạm vi quốc gia."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Chủ quyền của quốc gia được thể hiện trên những phương diện nào dưới đây phù hợp nhất:",
+        "options": [
+            "Kinh tế, quân sự, chính trị",
+            "Quân sự, ngoại giao, chính trị",
+            "Chính trị, kinh tế, ngoại giao",
+            "Kinh tế, chính trị, quân sự, ngoại giao"
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Chủ quyền lãnh thổ quốc gia là:",
+        "options": [
+            "Một bộ phận của chủ quyền quốc gia, khẳng định quyền làm chủ vùng đất, vùng trời của quốc gia.",
+            "Quyền thiêng liêng bất khả xâm phạm, quyết định mọi vấn đề đối nội, đối ngoại của quốc gia.",
+            "Một bộ phận của chủ quyền quốc gia, khẳng định quyền làm chủ của quốc gia đó trên vùng lãnh thổ quốc gia.",
+            "Quyền thiêng liêng bất khả xâm phạm, quyết định mọi vấn đề chính trị, kinh tế, văn hoá, xã hội."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Một nội dung xây dựng và bảo vệ chủ quyền lãnh thổ quốc gia:",
+        "options": [
+            "Đấu tranh làm thất bại các hoạt động phá hoại của các thế lực thù địch chống phá Việt Nam.",
+            "Xây dựng và phát triển kinh tế - xã hội kết hợp với tăng cường, củng cố quốc phòng - an ninh.",
+            "Xác lập và bảo vệ quyền lập pháp, hành pháp, tư pháp của Việt Nam về mọi mặt trong phạm vi lãnh thổ quốc.",
+            "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước; tích cực, chủ động hội nhập quốc tế."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Một nội dung xây dựng và bảo vệ chủ quyền lãnh thổ quốc gia của Việt Nam:",
+        "options": [
+            "Bảo vệ sự toàn vẹn lãnh thổ của đất nước, bao gồm vùng đất, vùng trời, nội thủy, lãnh hải và lãnh thổ quốc.",
+            "Bảo vệ chủ quyền của quốc gia trên mọi phương diện kinh tế, chính trị, quân sự, ngoại giao.",
+            "Bảo vệ đường lối đối nội và đường lối đối ngoại của Nhà nước ta không bị lệ thuộc vào bên ngoài.",
+            "Tất cả đáp án đúng."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Biên giới quốc gia Việt Nam là đường và mặt phẳng đứng theo đường đó để giới hạn lãnh thổ bao gồm:",
+        "options": [
+            "đất liền, các đảo, trên biển và trên không.",
+            "đất liền, trên biển và trong lòng đất.",
+            "đất liền, trên biển, trên không và trong lòng đất.",
+            "đất liền, các đảo, các quần đảo, vùng biển, lòng đất, vùng trời."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Biên giới quốc gia của Việt Nam trên đất liền được xác định bằng:",
+        "options": [
+            "Hệ thống các mốc quốc giới trên thực địa.",
+            "Các tọa độ trên hải đồ.",
+            "Các tọa độ trên bản đồ.",
+            "Cả A và B đúng."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Biên giới quốc gia trên biển được đánh dấu bằng:",
+        "options": [
+            "Đánh dấu các mốc quốc giới trên biển.",
+            "Đánh dấu bảng các tọa độ trên hệ thống.",
+            "Đánh dấu bảng các tọa độ trên bản đồ.",
+            "Đánh dấu kinh độ, vĩ độ."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Để xây dựng và bảo vệ biên giới quốc gia, cần ưu tiên đầu tư gì:",
+        "options": [
+            "Ưu tiên xây dựng lực lượng vũ trang địa phương biên giới vững mạnh.",
+            "Ưu tiên đầu tư xây dựng khu vực biên giới vững mạnh toàn diện.",
+            "Ưu tiên đầu tư xây dựng cơ sở hạ tầng, kinh tế khu vực biên giới.",
+            "Ưu tiên đầu tư xây dựng cơ sở chính trị vững chắc ở khu vực biên giới."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Nội dung xây dựng và bảo vệ biên giới quốc gia:",
+        "options": [
+            "Phối hợp với các nước láng giềng ngăn chặn mọi âm mưu gây bạo loạn lật đổ của kẻ thù.",
+            "Phối hợp với các nước, đấu tranh ngăn chặn mọi hành động phá hoại tình đoàn kết, hữu nghị.",
+            "Kết hợp phát triển kinh tế với tăng cường an ninh để bảo vệ vững chắc Tổ quốc.",
+            "Kết hợp đấu tranh quân sự với bảo đảm an ninh chính trị - trật tự an toàn xã hội."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Xây dựng và bảo vệ chủ quyền lãnh thổ, biên giới quốc gia được Đảng và Nhà nước ta xác định:",
+        "options": [
+            "Là một nội dung quan trọng của sự nghiệp đổi mới, công nghiệp hóa, hiện đại hóa đất nước.",
+            "Là một nội dung quan trọng của sự nghiệp xây dựng và bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa.",
+            "Là một nội dung quan trọng của chiến lược phát triển kinh tế trong thời kỳ mới.",
+            "Là một nội dung quan trọng của chiến lược đối ngoại trong thời kỳ mới."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Một trong những quan điểm của Đảng và Nhà nước ta về xây dựng, bảo vệ chủ quyền lãnh thổ, biên giới quốc gia là:",
+        "options": [
+            "Chủ quyền lãnh thổ, biên giới quốc gia là kết quả đấu tranh của hàng ngàn năm dựng nước, giữ nước.",
+            "Chủ quyền lãnh thổ, biên giới quốc gia là yếu tố cơ bản nhất cho sự phát triển kinh tế, xã hội.",
+            "Chủ quyền lãnh thổ, biên giới quốc gia là thiêng liêng, bất khả xâm phạm của dân tộc Việt Nam.",
+            "Chủ quyền lãnh thổ, biên giới quốc gia là tài sản vô cùng quý giá của dân tộc Việt Nam."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quan điểm của Đảng, Nhà nước ta về việc giải quyết các vấn đề tranh chấp lãnh thổ, biên giới:",
+        "options": [
+            "Thông qua các cơ quan tài phán và công ước của Liên Hợp quốc về lãnh thổ, biên giới.",
+            "Đàm phán hòa bình, tôn trọng độc lập, chủ quyền, toàn vẹn lãnh thổ và lợi ích chính đáng của nhau.",
+            "Bằng con đường ngoại giao trên tinh thần bình đẳng đôi bên cùng có lợi.",
+            "Bằng nhiều biện pháp kể cả biện pháp sử dụng vũ lực để giải quyết tranh chấp."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Lực lượng nào là nòng cốt trong nhiệm vụ bảo vệ toàn vẹn lãnh thổ của Tổ quốc, bảo vệ chủ quyền lãnh thổ, biên giới quốc gia là:",
+        "options": [
+            "Quân đội nhân dân.",
+            "Công an nhân dân.",
+            "Bộ đội địa phương.",
+            "Dân quân tự vệ."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Lực lượng nòng cốt, chuyên trách trong nhiệm vụ xây dựng và bảo vệ chủ quyền lãnh thổ, biên giới quốc gia là:",
+        "options": [
+            "Bộ đội Hải quân.",
+            "Bộ đội Biên phòng.",
+            "Cảnh sát biển.",
+            "Dân quân tự vệ."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Chiều rộng lãnh hải của nước ta là:",
+        "options": [
+            "8 hải lý.",
+            "10 hải lý.",
+            "12 hải lý.",
+            "14 hải lý."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Chủ trương của Việt Nam giải quyết các những bất động, tranh chấp ở Biển Đông:",
+        "options": [
+            "Đối thoại, không sử dụng vũ lực trong tranh chấp.",
+            "Thông qua biện pháp hòa bình, trên cơ sở tôn trọng luật pháp quốc tế.",
+            "Bình đẳng, cùng có lợi không can thiệp vào nội bộ của nhau.",
+            "Thương lượng hòa bình, không sử dụng vũ lực quân sự."
+        ],
+        "dapan": 1
+    }
+]

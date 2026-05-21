@@ -1,0 +1,452 @@
+[
+    {
+        "cauhoi": "Lực lượng tự vệ được tổ chức ở:",
+        "options": [
+            "Ở xã, phường thị trấn.",
+            "Ở cơ quan nhà nước, tổ chức chính trị.",
+            "Tổ chức chính trị xã hội, đơn vị sự nghiệp, tổ chức kinh tế.",
+            "Cả B và C."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Vị trí, vai trò của lực lượng dân quân tự vệ:",
+        "options": [
+            "Dân quân tự vệ là lực lượng cơ bản trong xây dựng nền quốc phòng toàn dân.",
+            "Dân quân tự vệ là một lực lượng chiến lược trong chiến tranh nhân dân, quốc phòng toàn dân.",
+            "Dân quân tự vệ là lực lượng xung kích trong xây dựng nền quốc phòng toàn dân.",
+            "Dân quân tự vệ là lực lượng xung kích trong xây dựng nền quốc phòng toàn dân và an ninh nhân dân."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Nhiệm vụ của lực lượng dân quân tự vệ:",
+        "options": [
+            "Học tập chính trị và huấn luyện quân sự.",
+            "Học tập chính trị, pháp luật, huấn luyện quân sự và diễn tập.",
+            "Thực hiện các nhiệm vụ khác theo quy định của pháp luật.",
+            "Cả B và C."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Phương châm xây dựng lực lượng dân quân tự vệ:",
+        "options": [
+            "Vững mạnh, rộng khắp coi trọng chất lượng là chính.",
+            "Vững mạnh, toàn diện lấy chất lượng chính trị là chính.",
+            "Vững mạnh, coi trọng cả số lượng và chất lượng.",
+            "Vững mạnh về mọi mặt, lấy chính trị làm cơ sở."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Dân quân tự vệ được tổ chức thành 2 lực lượng là:",
+        "options": [
+            "Lực lượng cơ động và lực lượng rộng rãi.",
+            "Lực lượng nòng cốt và lực lượng rộng rãi.",
+            "Lực lượng quân sự và lực lượng chính trị.",
+            "Lực lượng cơ động và lực lượng dự bị."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nhiệm vụ của lực lượng dân quân tự vệ cơ động:",
+        "options": [
+            "Trực tiếp chiến đấu, phục vụ chiến đấu.",
+            "Cơ động chiến đấu, chiến đấu tại chỗ.",
+            "Chiến đấu, chỉ viện cho lực lượng quân đội và công an khi cần.",
+            "Chiến đấu, chỉ viện cho lực lượng chiến đấu tại chỗ và địa phương khác khi cần."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Khi hết thời gian phục vụ trong lực lượng dân quân tự vệ nòng cốt thì có thể tham gia:",
+        "options": [
+            "Lực lượng dân quân tự vệ cơ động.",
+            "Lực lượng dân quân tự vệ tại chỗ.",
+            "Lực lượng dân quân tự vệ rộng rãi.",
+            "Lực lượng dân quân tự vệ thường trực."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Độ tuổi của công dân Việt Nam tham gia lực lượng dân quân tự vệ:",
+        "options": [
+            "Nam từ đủ 18 tuổi đến hết 30 tuổi; nữ từ đủ 18 tuổi đến hết 35 tuổi.",
+            "Nam từ đủ 18 tuổi đến hết 35 tuổi; nữ từ đủ 18 tuổi đến hết 35 tuổi.",
+            "Nam từ đủ 18 tuổi đến hết 40 tuổi; nữ từ đủ 18 tuổi đến hết 35 tuổi.",
+            "Nam từ đủ 18 tuổi đến hết 45 tuổi; nữ từ đủ 18 tuổi đến hết 40 tuổi."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Tiểu đội trưởng, trung đội trưởng dân quân tự vệ do ai bổ nhiệm:",
+        "options": [
+            "Chỉ huy trưởng Ban chỉ huy quân sự xã bổ nhiệm.",
+            "Chủ tịch ủy ban nhân dân xã bổ nhiệm.",
+            "Huyện đội trưởng bổ nhiệm.",
+            "Chủ tịch ủy ban nhân dân huyện bổ nhiệm."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Trong ban chỉ huy quân sự, chính trị viên do ai đảm nhiệm:",
+        "options": [
+            "Bí thư Chi bộ hoặc Bí thư Đảng ủy chủ nhiệm.",
+            "Phó bí thư, chủ tịch ủy ban nhân dân đảm nhiệm.",
+            "Ủy viên thường vụ Đảng ủy đảm nhiệm.",
+            "Chủ tịch ủy ban nhân dân đảm nhiệm."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Biện pháp xây dựng lực lượng dân quân tự vệ trong giai đoạn hiện nay:",
+        "options": [
+            "Phát huy sức mạnh tổng hợp của các tổ chức, các lực lượng.",
+            "Phát huy sức mạnh tổng hợp của chính quyền địa phương.",
+            "Phát huy sức mạnh tổng hợp trên địa bàn.",
+            "Phát huy sức mạnh tổng hợp của nhân dân trên địa bàn."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Lực lượng dự bị động viên bao gồm:",
+        "options": [
+            "Quân nhân thường trực và phương tiện kỹ thuật.",
+            "Quân nhân dự bị và phương tiện kỹ thuật.",
+            "Quân nhân chuyên nghiệp và nhân viên kỹ thuật.",
+            "Sĩ quan và hạ sĩ quan quân đội, công an."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Công tác xây dựng lực lượng dự bị động viên có vị trí vai trò:",
+        "options": [
+            "Rất quan trọng trong chiến lược bảo vệ Tổ quốc Xã hội Chủ nghĩa.",
+            "Quan trọng trong chiến lược bảo vệ Tổ quốc Xã hội Chủ nghĩa.",
+            "Trọng tâm trong chiến lược bảo vệ Tổ quốc Xã hội Chủ nghĩa.",
+            "Cấp bách trong chiến lược bảo vệ Tổ quốc Xã hội Chủ nghĩa."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Quan điểm, nguyên tắc xây dựng lực lượng dự bị động viên:",
+        "options": [
+            "Đảm bảo số lượng, chất lượng cao, rộng khắp, sẵn sàng chiến đấu.",
+            "Đảm bảo toàn diện nhưng có trọng tâm, trọng điểm, tập trung nâng cao chất lượng.",
+            "Đảm bảo số lượng đủ, chất lượng cao, xây dựng toàn diện nhưng có trọng tâm trọng điểm.",
+            "Đảm bảo số lượng đúng, chất lượng cao cho những đơn vị làm nhiệm vụ sẵn sàng chiến đấu."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quan điểm, nguyên tắc xây dựng lực lượng dự bị động viên là phải:",
+        "options": [
+            "Phát huy sức mạnh của toàn dân trên tất cả các lĩnh vực hoạt động xã hội.",
+            "Xây dựng lực lượng dự bị động viên hùng mạnh, sẵn sàng chiến đấu.",
+            "Phát huy sức mạnh của bộ, ngành và địa phương.",
+            "Phát huy sức mạnh tổng hợp của cả hệ thống chính trị."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Quan điểm, nguyên tắc xây dựng lực lượng dự bị động viên:",
+        "options": [
+            "Đặt dưới sự lãnh đạo của Bộ Quốc phòng và Ủy ban nhân dân các địa phương.",
+            "Đặt dưới sự lãnh đạo của Đảng các cấp ở địa phương, bộ, ngành.",
+            "Đặt dưới sự lãnh đạo của các tổ chức chính trị xã hội.",
+            "Đặt dưới sự lãnh đạo của Ủy ban nhân dân các cấp."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Xây dựng lực lượng dự bị động viên đặt dưới sự lãnh đạo:",
+        "options": [
+            "Tuyệt đối, trực tiếp về mọi mặt của Đảng.",
+            "Tuyệt đối, trực tiếp về mọi mặt của Nhà nước.",
+            "Tuyệt đối, trực tiếp về mọi mặt của Bộ Quốc Phòng.",
+            "Toàn diện về mọi mặt của các tổ chức xã hội."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung xây dựng lực lượng dự bị động viên:",
+        "options": [
+            "Tạo nguồn, đăng ký, quản lý lực lượng dự bị động viên.",
+            "Tạo nguồn, đăng ký, biên chế lực lượng dự bị động viên.",
+            "Tạo nguồn, đăng ký, tổ chức lực lượng dự bị động viên theo kế hoạch.",
+            "Tạo nguồn, đăng ký, kiểm tra lực lượng dự bị động viên theo quy định."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nguyên tắc sắp xếp quân nhân dự bị vào các đơn vị dự bị động viên là:",
+        "options": [
+            "Theo mức độ sức khỏe, theo tuổi đời và theo cư trú.",
+            "Theo trình độ chuyên môn, theo hạng, theo cư trú.",
+            "Theo quân hàm, theo chức vụ và chuyên môn.",
+            "Theo hạng và theo trình độ văn hóa."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Phương châm huấn luyện đối với lực lượng dự bị động viên:",
+        "options": [
+            "Chất lượng, thiết thực, hiệu quả tập trung vào khoa học quân sự hiện đại.",
+            "Cơ bản thống nhất, coi trọng khâu kỹ thuật tác chiến, phối hợp giữa các lực lượng.",
+            "Chất lượng, thiết thực, hiệu quả sát thực tế chiến đấu tại địa bàn.",
+            "Chất lượng, thiết thực, hiệu quả, tập trung có trọng tâm, trọng điểm."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Xây dựng lực lượng dự bị động viên là nhiệm vụ chính trị thường xuyên của:",
+        "options": [
+            "Nhà nước, Ủy ban nhân dân các cấp.",
+            "Cấp ủy, chính quyền địa phương.",
+            "Cán bộ, ngành, đoàn thể từ trung ương đến địa phương.",
+            "Toàn Đảng, toàn dân, toàn quân và cả hệ thống chính trị."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Động viên công nghiệp Quốc phòng được chuẩn bị:",
+        "options": [
+            "Từ thời bình.",
+            "Khi bắt đầu chiến tranh.",
+            "Trong quá trình chiến tranh.",
+            "Kết thúc chiến tranh."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Động viên công nghiệp có áp dụng đối với các doanh nghiệp có vốn đầu tư nước ngoài tại Việt Nam hay không:",
+        "options": [
+            "Có.",
+            "Không.",
+            "Tùy tình hình cụ thể.",
+            "Có thể động viên một phần hoặc toàn bộ."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Quyết định và thông báo quyết định động viên công nghiệp quốc phòng do:",
+        "options": [
+            "Chủ tịch Quốc hội quy định.",
+            "Chủ tịch nước quy định.",
+            "Bộ trưởng Bộ quốc phòng quy định.",
+            "Chính phủ quy định."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Lực lượng vũ trang quân chúng được gọi là tự vệ tổ chức ở:",
+        "options": [
+            "Ở xã, phường, thị trấn.",
+            "Ở cơ quan nhà nước, đơn vị sự nghiệp.",
+            "Ở tổ chức kinh tế, tổ chức chính trị, tổ chức chính trị xã hội.",
+            "Cả B và C đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Dân quân, tự vệ có vị trí, vai trò:",
+        "options": [
+            "Là lực lượng cơ bản trong xây dựng nền quốc phòng toàn dân.",
+            "Là lực lượng xung kích trong sự nghiệp xây dựng và bảo vệ Tổ quốc.",
+            "Là lực lượng xung kích trong xây dựng nền quốc phòng toàn dân.",
+            "Là một lực lượng chiến lược trong sự nghiệp xây dựng và bảo vệ Tổ quốc."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Nhiệm vụ của dân quân tự vệ:",
+        "options": [
+            "Học tập chính trị và huấn luyện quân sự",
+            "Học tập chính trị, pháp luật, huấn luyện quân sự và diễn tập.",
+            "Sẵn sàng chiến đấu, chiến đấu và phục vụ chiến đấu để bảo vệ địa phương, cơ sở.",
+            "Cả B và C đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Dân quân tự vệ được tổ chức thành các thành phần nào sau đây?",
+        "options": [
+            "Dân quân tự vệ cơ động và lực lượng rộng rãi.",
+            "Dân quân tự vệ tại chỗ, Dân quân tự vệ cơ động, Dân quân thường trực; Dân quân tự vệ biển.",
+            "Dân quân tự vệ quân sự và dân quân tự vệ chính trị.",
+            "Dân quân tự vệ cơ động và lực lượng dự bị."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Dân quân tự vệ cơ động có nhiệm vụ?",
+        "options": [
+            "Chiến đấu, cơ động chiến đấu trên địa bàn địa phương khác.",
+            "Trực tiếp chiến đấu, phục vụ chiến đấu.",
+            "Cơ động chiến đấu, chiến đấu tại chỗ.",
+            "Chiến đấu, chỉ viện cho lực lượng cho lực lượng quân đội và công an khi cần."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Độ tuổi của công dân Việt Nam tham gia lực lượng dân quân tự vệ:",
+        "options": [
+            "Nam từ đủ 18 đến hết 30 tuổi; Nữ từ đủ 18 tuổi đến hết 25 tuổi.",
+            "Nam từ đủ 18 đến hết 35 tuổi; Nữ từ đủ 18 tuổi đến hết 30 tuổi.",
+            "Nam từ đủ 18 đến hết 40 tuổi; Nữ từ đủ 18 tuổi đến hết 35 tuổi.",
+            "Nam từ đủ 18 đến hết 45 tuổi; Nữ từ đủ 18 tuổi đến hết 40 tuổi."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Chức vụ chính trị viên Ban Chỉ huy quân sự cấp xã do vị trí nào trong chính quyền địa phương đảm nhận?",
+        "options": [
+            "Chủ tịch Ủy ban nhân dân.",
+            "Bí thư Đảng ủy.",
+            "Ủy viên Thường vụ Đảng ủy.",
+            "Phó Chủ tịch Ủy ban nhân dân."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Biện pháp xây dựng dân quân tự vệ trong giai đoạn hiện nay:",
+        "options": [
+            "Phát huy sức mạnh tổng hợp của các lực lượng.",
+            "Phát huy sức mạnh tổng hợp của chính quyền địa phương.",
+            "Phát huy sức mạnh tổng hợp của chính quyều địa phương.",
+            "Phát huy sức mạnh tổng hợp trên địa bàn."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Lực lượng dự bị động viên gồm:",
+        "options": [
+            "Quân nhân thường trực và phương tiện kỹ thuật đã xếp trong kế hoạch bổ sung cho lực lượng thường trực.",
+            "Quân nhân dự bị và phương tiện kỹ thuật đã xếp trong kế hoạch bổ sung cho lực lượng thường trực.",
+            "Quân nhân chuyên nghiệp và nhân viên kỹ thuật đã xếp trong kế hoạch bổ sung cho lực lượng thường trực.",
+            "Sĩ quan và hạ sĩ quan quân đội, công an đã xếp trong kế hoạch bổ sung cho lực lượng thường trực."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Quân nhân dự bị bao gồm những thành phần nào?",
+        "options": [
+            "Sĩ quan dự bị và binh sĩ dự bị.",
+            "Sĩ quan dự bị và hạ sĩ quan dự bị.",
+            "Quân nhân chuyên nghiệp dự bị và binh sĩ dự bị.",
+            "Sĩ quan dự bị, quân nhân chuyên nghiệp dự bị và hạ sĩ quan, binh sĩ dự bị."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Lực lượng dự bị động viên được xây dựng để bổ sung cho lực lượng nào?",
+        "options": [
+            "Lực lượng Công an.",
+            "Lực lượng Dân quân tự vệ.",
+            "Lực lượng thường trực của Quân đội.",
+            "Cả 3 lực lượng trên."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quan điểm, nguyên tắc xây dựng lực lượng dự bị động viên:",
+        "options": [
+            "Bảo đảm số lượng đủ, chất lượng cao, rộng khắp, sẵn sàng chiến đấu.",
+            "Bảo đảm toàn diện nhưng có trọng tâm, trọng điểm, tập trung nâng cao chất lượng.",
+            "Bảo đảm số lượng đủ, chất lượng cao, xây dựng toàn diện nhưng có trọng tâm, trọng điểm.",
+            "Bảo đảm số lượng đúng, chất lượng cao cho những đơn vị làm nhiệm vụ sẵn sàng chiến đấu."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quan điểm, nguyên tắc xây dựng lực lượng dự bị động viên là phải:",
+        "options": [
+            "Phát huy sức mạnh của toàn dân trên tất cả các lĩnh vực hoạt động xã hội.",
+            "Xây dựng lực lượng dự bị động viên hùng mạnh, sẵn sàng chiến đấu.",
+            "Phát huy sức mạnh của bộ, ngành và địa phương.",
+            "Phát huy sức mạnh tổng hợp của cả hệ thống chính trị."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Quan điểm, nguyên tắc xây dựng lực lượng dự bị động viên:",
+        "options": [
+            "Đặt dưới sự lãnh đạo của Bộ Quốc phòng và Ủy ban nhân dân các địa phương.",
+            "Đặt dưới sự lãnh đạo của Đảng các cấp ở địa phương, bộ, ngành.",
+            "Đặt dưới sự lãnh đạo của các tổ chức chính trị xã hội.",
+            "Đặt dưới sự lãnh đạo của Ủy ban nhân dân các cấp."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Nội dung xây dựng lực lượng dự bị động viên:",
+        "options": [
+            "Tạo nguồn, đăng ký, quản lý lực lượng dự bị động viên.",
+            "Tạo nguồn, đăng ký, biên chế lực lượng dự bị động viên.",
+            "Tạo nguồn, đăng ký, tổ chức lực lượng dự bị động viên theo kế hoạch.",
+            "Tạo nguồn, đăng ký, kiểm tra lực lượng dự bị động viên theo qui định."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Sắp xếp quân nhân dự bị theo nguyên tắc nào:",
+        "options": [
+            "Theo mức độ sức khoẻ, theo tuổi đời và theo cư trú.",
+            "Theo hạng và theo trình độ văn hoá.",
+            "Theo quân hàm, theo chức vụ và chuyên môn.",
+            "Theo trình độ chuyên môn, theo hạng, theo cư trú."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Lực lượng dự bị động viên được huấn luyện theo phương châm:",
+        "options": [
+            "\"Chất lượng, thiết thực, hiệu quả tập trung vào khoa học quân sự hiện đại.\"",
+            "\"Chất lượng, thiết thực, hiệu quả, tập trung có trọng tâm, trọng điểm\"",
+            "\"Cơ bản, thống nhất coi trọng khâu kỹ thuật tác chiến, phối hợp giữa các lực lượng\"",
+            "\"Chất lượng, thiết thực, hiệu quả, sát thực tế chiến đấu tại địa bàn\""
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Động viên công nghiệp quốc phòng được chuẩn bị lúc nào?",
+        "options": [
+            "Chuẩn bị từ thời bình.",
+            "Khi chiến tranh sắp xảy ra.",
+            "Trong quá trình chiến tranh.",
+            "Khi kết thúc chiến tranh."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Động viên công nghiệp có áp dụng đối với các doanh nghiệp có vốn đầu tư nước ngoài tại Việt Nam hay không?",
+        "options": [
+            "Áp dụng.",
+            "Không áp dụng.",
+            "Tùy tình hình cụ thể.",
+            "Có thể động viên một phần hoặc toàn bộ."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Động viên CNQP không áp dụng với doanh nghiệp có vốn đầu tư nước ngoài vì:",
+        "options": [
+            "Động viên CNQP là vấn đề hết sức quan trọng của quân đội.",
+            "Động viên CNQP là để tăng cường lực lượng chiến đấu.",
+            "Động viên CNQP là để xây dựng khu vực phòng thủ vững chắc.",
+            "Động viên CNQP là vấn đề bí mật của quốc gia."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Vũ khí trang bị của dân quân tự vệ từ các nguồn nào?",
+        "options": [
+            "Do Bộ quốc phòng cấp, các địa phương tự chế tạo hoặc thu được của địch.",
+            "Do thu lượm, sửa chữa các loại vũ khí quân địch bỏ lại khi bị thất bại trong chiến tranh.",
+            "Do mua sắm từ ngân sách của địa phương.",
+            "Do Bộ Công an trang bị."
+        ],
+        "dapan": 0
+    }
+]

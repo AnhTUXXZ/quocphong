@@ -1,0 +1,32 @@
+[
+    {
+        "cauhoi": "Trách nhiệm của sinh viên trong việc tham gia phong trào bảo vệ an ninh Tổ quốc:",
+        "options": [
+            "Tự giác chấp hành các qui định về đảm bảo an ninh trật tự của nhà trường và địa phương nơi cư trú.",
+            "Nâng cao cảnh giác cách mạng, đấu tranh làm thất bại mọi âm mưu phá hoại của địch.",
+            "Tích cực tham gia phong trào văn hóa văn nghệ, thể dục thể thao của nhà trường.",
+            "Tích cực tham gia phong trào: \"Trường học thân thiện, học sinh tích cực\"."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Ở các cơ sở xã, phường có 3 loại hình tổ chức quần chúng làm công tác an ninh trật tự là:",
+        "options": [
+            "Loại tổ chức có chức năng tư vấn; Loại tổ chức có chức năng quản lý, điều hành và Loại tổ chức có chức năng thực hành.",
+            "Loại tổ chức có chức năng tham mưu; Loại tổ chức có chức năng quản lý và Loại tổ chức có chức năng thực hành.",
+            "Loại tổ chức có chức năng tư vấn; Loại tổ chức có chức năng điều hành và Loại tổ chức có chức năng thực hành.",
+            "Loại tổ chức có chức năng tham mưu; Loại tổ chức có chức năng quản lý, điều hành và Loại tổ chức có chức năng hành động."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Loại hình tổ chức quần chúng có chức năng thực hành làm nhiệm vụ bảo vệ an ninh trật tự ở địa bàn cơ sở gồm:",
+        "options": [
+            "Tổ an ninh nhân dân, an ninh công nhân; đội dân phòng; đội thanh niên xung kích an ninh.",
+            "Ban an ninh trật tự; đội dân phòng; đội thanh niên xung kích an ninh.",
+            "Tổ an ninh nhân dân, an ninh công nhân; ban bảo vệ dân phố; đội thanh niên xung kích an ninh.",
+            "Tổ an ninh nhân dân, an ninh công nhân; đội dân phòng; tổ tự quản."
+        ],
+        "dapan": 0
+    }
+]
