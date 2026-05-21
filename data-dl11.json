@@ -1,0 +1,422 @@
+[
+    {
+        "cauhoi": "An ninh quốc gia là:",
+        "options": [
+            "Là sự bình yên của đất nước, cuộc sống ấm no hạnh phúc của nhân dân Việt Nam.",
+            "Là sự ổn định, phát triển bền vững của chế độ XHCN và Nhà nước CHXHCN Việt Nam.",
+            "Là sự bất khả xâm phạm độc lập chủ quyền, thống nhất và toàn vẹn lãnh thổ Tổ quốc.",
+            "Cả B và C đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Trong an ninh quốc gia, lĩnh vực nào là cốt lõi, xuyên suốt:",
+        "options": [
+            "An ninh kinh tế.",
+            "An ninh chính trị.",
+            "An ninh tư tưởng văn hóa.",
+            "An ninh đối ngoại."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Bảo vệ an ninh quốc gia là:",
+        "options": [
+            "Phòng ngừa các hoạt động xâm hại an ninh quốc gia.",
+            "Phát hiện các hoạt động xâm hại an ninh quốc gia.",
+            "Đấu tranh ngăn chặn các hoạt động xâm hại an ninh quốc gia của các thể lực phản động.",
+            "Phòng ngừa, phát hiện, ngăn chặn, đấu tranh làm thất bại các hoạt động xâm hại an ninh quốc gia."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Mục tiêu quan trọng về an ninh quốc gia:",
+        "options": [
+            "Lực lượng vũ trang nhân dân Việt Nam, các cơ quan Nhà nước và nhân dân.",
+            "Những đối tượng, địa điểm, công trình, cơ sở về chính trị, an ninh, quốc phòng, kinh tế.",
+            "Cơ sở KHKT, văn hóa, xã hội thuộc danh mục cần được bảo vệ theo quy định của pháp luật.",
+            "Cả B và C đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Nguyên tắc bảo vệ an ninh quốc gia là:",
+        "options": [
+            "Kết hợp bảo vệ an ninh chính trị với bảo vệ độc lập, chủ quyền thống nhất và toàn vẹn lãnh thổ Việt Nam.",
+            "Tuân thủ hiến pháp, pháp luật, bảo đảm lợi ích của nhà nước, quyền và lợi ích hợp pháp của tổ chức.",
+            "Tuân thủ những quy định của luật quốc phòng, luật an ninh và những quy định của chính quyền.",
+            "Kết hợp chặt chẽ phát triển kinh tế xã hội với bảo vệ các công trình quốc phòng an ninh."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Nguyên tắc bảo vệ an ninh quốc gia là:",
+        "options": [
+            "Kết hợp giữa bảo vệ an ninh tư tưởng với bảo vệ quyền lợi của nhân dân.",
+            "Đặt dưới sự lãnh đạo của Đảng Cộng sản Việt Nam, sự quản lý thống nhất của Nhà nước.",
+            "Kết hợp giữa phát triển với đấu tranh, làm thất bại các hoạt động xâm phạm an ninh quốc gia.",
+            "Đặt dưới sự lãnh đạo, quản lý của lực lượng vũ trang nhân dân Việt Nam."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Cơ quan chuyên trách bảo vệ an ninh quốc gia là:",
+        "options": [
+            "Cơ quan chỉ đạo, chỉ huy và các đơn vị biên phòng, dân quân tự vệ, dự bị động viên.",
+            "Cơ quan chỉ đạo tác chiến và các đơn vị an ninh quân đội, tỉnh báo quân đội.",
+            "Cơ quan chỉ đạo, chỉ huy và các đơn vị bảo vệ an ninh, tỉnh báo, cảnh sát, cảnh vệ công an nhân dân.",
+            "Cơ quan chỉ đạo, chỉ huy và các đơn vị bộ đội hải quân, biên phòng, cảnh sát biển."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Các biện pháp bảo vệ an ninh quốc gia:",
+        "options": [
+            "Vận động quần chúng, pháp luật, ngoại giao, kinh tế, khoa học kỹ thuật, nghiệp vụ, vũ trang.",
+            "Vận động quần chúng, lực lượng vũ trang, thực hiện chương trình quốc gia phòng chống tội phạm.",
+            "Vận động quần chúng, đẩy mạnh xây dựng phong trào toàn dân bảo vệ an ninh tổ quốc ở cơ sở kháng cự.",
+            "Phát triển kinh tế, xây dựng nếp sống văn minh, giữ gìn an ninh, trật tự an toàn xã hội."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung bảo vệ an ninh tổ quốc gồm:",
+        "options": [
+            "Bảo vệ an ninh chính trị, an ninh quốc phòng, bảo vệ Đảng, Nhà nước, nhân dân.",
+            "Bảo vệ an ninh đối ngoại, bảo vệ sự nghiệp công nghiệp hóa, hiện đại hóa.",
+            "Bảo vệ các chính sách kinh tế xã hội, tôn giáo, dân tộc của Đảng và Nhà nước.",
+            "Bảo vệ an ninh chính trị nội bộ, kinh tế, văn hóa, tư tưởng, dân tộc, tôn giáo, biên giới, thông tin."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Bảo vệ an ninh chính trị nội bộ:",
+        "options": [
+            "Giữ gìn sự trong sạch, vững mạnh về mọi mặt của tổ chức Đảng, Nhà nước.",
+            "Giữ gìn sự trong sạch, vững mạnh về mọi mặt của các tổ chức chính trị xã hội.",
+            "Giữ gìn sự trong sạch, vững mạnh về mọi mặt của các tổ chức quần chúng.",
+            "Giữ gìn sự trong sạch, vững mạnh về mọi mặt của lực lượng quân đội."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Trong bảo vệ an ninh quốc gia, nội dung nào là nhiệm vụ trọng yếu, hàng đầu, thường xuyên, cấp bách của các ngành, các cấp:",
+        "options": [
+            "Bảo vệ an ninh biên giới.",
+            "Bảo vệ an ninh kinh tế.",
+            "Bảo vệ an ninh chính trị nội bộ.",
+            "Bảo vệ an ninh dân tộc, tôn giáo."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Bảo vệ an ninh kinh tế là:",
+        "options": [
+            "Bảo vệ thành quả kinh tế, thành quả lao động sản xuất và đời sống của nhân dân.",
+            "Bảo vệ sự ổn định, phát triển vững mạnh của nền kinh tế thị trường, định hướng XHCN.",
+            "Bảo vệ sự ổn định, phát triển vững mạnh của nền kinh tế thị trường XHCN.",
+            "Bảo vệ công cuộc đổi mới sự nghiệp công nghiệp hóa, hiện đại hóa đất nước."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Bảo vệ an ninh văn hóa tư tưởng là:",
+        "options": [
+            "Bảo vệ đúng đắn, vai trò chủ đạo của chủ nghĩa Mác – Lênin, tư tưởng Hồ Chí Minh.",
+            "Bảo vệ các chủ trương, chính sách của Đảng, pháp luật của Nhà nước Việt Nam.",
+            "Bảo vệ các phong tục tập quán, truyền thống, tín ngưỡng của các dân tộc Việt Nam.",
+            "Bài trừ tư tưởng lạc hậu, văn hóa phẩm độc hại và các biểu hiện tiêu cực khác."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung giữ gìn trật tự an toàn xã hội:",
+        "options": [
+            "Đấu tranh phòng chống tội phạm, giữ gìn trật tự nơi công cộng, bảo đảm trật tự an toàn giao thông.",
+            "Phòng ngừa tai nạn lao động, phòng chống thiên tai, bài trừ tệ nạn xã hội, bảo vệ môi trường.",
+            "Phòng chống các phong tục cổ hũ, lạc hậu, thói hư, tật xấu.",
+            "Cả A và B đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Đảm bảo trật tự an toàn giao thông là nhiệm vụ của:",
+        "options": [
+            "Cảnh sát giao thông, thanh tra giao thông.",
+            "Chính phủ và ủy ban nhân dân các cấp.",
+            "Ủy ban an toàn giao thông quốc gia.",
+            "Tất cả mọi người tham gia giao thông."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Hiện nay, Việt Nam khẳng định là đối tác của:",
+        "options": [
+            "Những quốc gia, vùng lãnh thổ, các tổ chức phi chính phủ giúp đỡ Việt Nam.",
+            "Những nước XHCN và các nước đang phát triển đang giúp đỡ Việt Nam.",
+            "Những ai chủ trương tôn trọng độc lập, chủ quyền và hợp tác bình đẳng cùng có lợi với Việt Nam.",
+            "Những tổ chức, cá nhân tôn trọng, giúp đỡ tạo điều kiện để Việt Nam phát triển."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Đối tượng xâm phạm đến an ninh quốc gia:",
+        "options": [
+            "Bọn tội phạm hình sự, tội phạm kinh tế.",
+            "Bọn gián điệp, bọn phản động.",
+            "Các đối tượng xâm phạm trật tự an toàn xã hội.",
+            "Các phần tử quá khích, gây rối."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Trong tình hình hiện nay, chúng ta cần tập trung đấu tranh chống lực lượng phản động:",
+        "options": [
+            "Bọn phản động lợi dụng tôn giáo dân tộc.",
+            "Bọn phản động người Việt Nam ở nước ngoài.",
+            "Bọn có tư tưởng quan điểm sai trái, thái hóa, biến chất.",
+            "Tất cả đều đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Đối tượng xâm phạm về trật tự an toàn xã hội cần tập trung đấu tranh:",
+        "options": [
+            "Bọn phản động trong và ngoài nước.",
+            "Bọn tội phạm ma túy, tội phạm kinh tế.",
+            "Bọn tội phạm hình sự.",
+            "Cả B và C."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Quan điểm của Đảng, Nhà nước ta về bảo vệ an ninh quốc gia, trật tự an toàn xã hội:",
+        "options": [
+            "Đảng lãnh đạo trực tiếp, tuyệt đối về mọi mặt bảo vệ an ninh quốc gia.",
+            "Kết hợp chặt chẽ giữa hoạt động của lực lượng công an với lực lượng quân đội.",
+            "Kết hợp chặt chẽ nhiệm vụ xây dựng với nhiệm vụ bảo vệ Tổ quốc.",
+            "Phát huy quyền làm chủ của nhân dân trên lĩnh vực bảo vệ an ninh quốc gia."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quan điểm của Đảng, Nhà nước ta về bảo vệ an ninh quốc gia, trật tự an toàn xã hội:",
+        "options": [
+            "Bảo vệ an ninh quốc gia phải kết hợp chặt chẽ với giữ gìn trật tự an toàn xã hội.",
+            "Bảo vệ an ninh quốc gia phải kết hợp chặt chẽ với phát triển kinh tế xã hội.",
+            "Bảo vệ an ninh quốc gia là nhiệm vụ cấp bách hàng đầu.",
+            "Tất cả đều đúng."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Trong bảo vệ an ninh quốc gia, trật tự an toàn xã hội, lực lượng nào là nòng cốt:",
+        "options": [
+            "Quân đội nhân dân.",
+            "Công an nhân dân.",
+            "Dân quân tự vệ.",
+            "Cả A và B"
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Trách nhiệm của sinh viên trong công tác bảo vệ an ninh quốc gia, giữ gìn trật tự an toàn xã hội:",
+        "options": [
+            "Tích cực, tự giác tham gia các hoạt động cụ thể để bảo vệ an ninh quốc gia, giữ gìn trật tự an toàn xã hội.",
+            "Tích cực tham gia chiến dịch tình nguyện mùa hè do Đoàn thanh niên phát động.",
+            "Tăng cường rèn luyện thể lực, học tập tốt môn học Giáo dục Quốc phòng – An ninh.",
+            "Cả A và C."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "An ninh quốc gia là:",
+        "options": [
+            "Sự bình yên của đất nước, cuộc sống ấm no hạnh phúc của nhân dân Việt Nam.",
+            "Sự ổn định, phát triển bền vững của chế độ XHCN và Nhà nước CHXHCN Việt Nam.",
+            "Sự bất khả xâm phạm độc lập chủ quyền, thống nhất, toàn vẹn lãnh thổ Tổ quốc.",
+            "Cả B và C đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Nhiệm vụ bảo vệ an ninh quốc gia nào là trọng yếu hàng đầu, thường xuyên và cấp bách?",
+        "options": [
+            "Bảo vệ an ninh thông tin.",
+            "Bảo vệ an ninh chính trị nội bộ.",
+            "Bảo vệ an ninh kinh tế.",
+            "Bảo vệ an ninh văn hóa, tư tưởng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Bảo vệ an ninh quốc gia là:",
+        "options": [
+            "Phòng ngừa các hoạt động xâm hại an ninh quốc gia.",
+            "Phát hiện các hoạt động xâm hại an ninh quốc gia.",
+            "Đấu tranh ngăn chặn các hoạt động xâm hại an ninh quốc gia của các thể lực phản động.",
+            "Phòng ngừa, phát hiện, ngăn chặn, đấu tranh làm thất bại các hoạt động xâm hại an ninh quốc gia."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Một trong những nhiệm vụ bảo vệ an ninh quốc gia là:",
+        "options": [
+            "Phòng ngừa, phát hiện, ngăn chặn đấu tranh làm thất bại các hoạt động xâm hại an ninh quốc gia.",
+            "Đấu tranh làm thất bại mọi âm mưu và hành động chống phá của các thể lực thù địch đối với an ninh.",
+            "Chủ động kịp thời, ngăn chặn, đánh bài mọi ý đồ chống phá của các thể lực thù địch đối với an ninh.",
+            "Chủ động phát hiện nhanh và tiêu diệt gọn các lực lượng phản động xâm hại an ninh quốc gia."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Một trong những nguyên tắc bảo vệ an ninh quốc gia là:",
+        "options": [
+            "Kết hợp chặt chẽ giữa phát triển kinh tế xã hội với bảo vệ các công trình quốc phòng – an ninh.",
+            "Kết hợp bảo vệ an ninh chính trị với bảo vệ độc lập, chủ quyền, thống nhất toàn vẹn lãnh thổ Tổ Quốc.",
+            "Tuân thủ hiến pháp, pháp luật, bảo đảm lợi ích của Nhà nước, quyền và lợi ích hợp pháp của tổ chức quốc gia.",
+            "Tuân thủ những qui định của luật quốc phòng, luật an ninh và những qui định của chính quyền."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Một trong những nguyên tắc bảo vệ an ninh quốc gia là:",
+        "options": [
+            "Kết hợp giữa bảo vệ an ninh tư tưởng với bảo vệ quyền lợi của nhân dân.",
+            "Đặt dưới sự lãnh đạo của Đảng Cộng sản Việt Nam, sự quản lý thống nhất của Nhà nước.",
+            "Kết hợp giữa phát hiện với đấu tranh làm thất bại các hoạt động xâm phạm an ninh quốc gia.",
+            "Đặt dưới sự lãnh đạo, quản lý của lực lượng vũ trang nhân dân Việt Nam."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Cơ quan chuyên trách bảo vệ an ninh quốc gia:",
+        "options": [
+            "Cơ quan chỉ đạo, chỉ huy và các đơn vị an ninh, tỉnh báo, cảnh sát, cảnh vệ Công an nhân dân.",
+            "Cơ quan chỉ đạo, chỉ huy và các đơn vị bảo vệ an ninh quân đội, tỉnh báo quân đội nhân dân.",
+            "Bộ đội Biên phòng, Cảnh sát biển.",
+            "Tất cả đều đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Các biện pháp bảo vệ an ninh quốc gia:",
+        "options": [
+            "Vận động quần chúng, pháp luật, ngoại giao, kinh tế, khoa học kỹ thuật, nghiệp vụ, vũ trang.",
+            "Vận động quần chúng, lực lượng vũ trang, thực hiện chương trình quốc gia phòng chống tội phạm.",
+            "Vận động quần chúng, đẩy mạnh xây dựng phong trào toàn dân bảo vệ an ninh tốt quốc ở cơ sở kháng cự.",
+            "Phát triển kinh tế, xây dựng nếp sống văn minh, giữ gìn an ninh, trật tự an toàn xã hội."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung bảo vệ an ninh quốc gia trên các lĩnh vực chủ yếu gồm:",
+        "options": [
+            "Bảo vệ an ninh chính trị; quốc phòng; bảo vệ Đảng, Nhà nước, nhân dân.",
+            "Bảo vệ an ninh chính trị nội bộ; kinh tế; văn hoá, tư tưởng; dân tộc; tôn giáo; biên giới; thông tin.",
+            "Bảo vệ an ninh đối ngoại; bảo vệ sự nghiệp công nghiệp hoá, hiện đại hoá.",
+            "Bảo vệ các chính sách kinh tế xã hội; tôn giáo; dân tộc của Đảng và Nhà nước."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Một nội dung bảo vệ an ninh chính trị nội bộ:",
+        "options": [
+            "Giữ gìn sự trong sạch, vững mạnh về mọi mặt của tổ chức Đảng, Nhà nước.",
+            "Giữ gìn sự trong sạch, vững mạnh về mọi mặt của các tổ chức chính trị xã hội.",
+            "Giữ gìn sự trong sạch, vững mạnh về mọi mặt của các tổ chức quần chúng.",
+            "Giữ gìn sự trong sạch, vững mạnh về mọi mặt của lực lượng quân đội."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Nội dung bảo vệ an ninh kinh tế là:",
+        "options": [
+            "Bảo vệ sự ổn định, phát triển vững mạnh của nền kinh tế thị trường xã hội chủ nghĩa.",
+            "Bảo vệ đội ngũ cán bộ quản lí kinh tế, các nhà khoa học, các nhà kinh doanh giỏi không để nước tiêu dùng.",
+            "Chống các biểu hiện chệch hướng và các hoạt động phá hoại cơ sở vật chất - kĩ thuật, phá hoại điện.",
+            "Tất cả đều đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Nội dung giữ gìn trật tự an toàn xã hội:",
+        "options": [
+            "Đấu tranh phòng chống tội phạm; giữ gìn trật tự nơi công cộng; đảm bảo trật tự an toàn giao thông.",
+            "Phòng ngừa tai nạn lao động, chống thiên tai; bài trừ tệ nạn xã hội; bảo vệ môi trường.",
+            "Phòng chống các phong tục cổ hũ, lạc hậu, thói hư, tật xấu.",
+            "Cả A và B đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Nguyên tắc nhận diện đối tác trong đấu tranh bảo vệ an ninh quốc gia, giữ gìn trật tự, an toàn xã hội là:",
+        "options": [
+            "Những quốc gia, vùng lãnh thổ, các tổ chức phi chính phủ giúp đỡ Việt Nam.",
+            "Những nước xã hội chủ nghĩa và các nước đang phát triển giúp đỡ Việt Nam.",
+            "Những ai chủ trương tôn trọng độc lập, chủ quyền và hợp tác bình đẳng cùng có lợi với Việt Nam.",
+            "Những tổ chức, cá nhân tôn trọng, giúp đỡ tạo điều kiện để Việt Nam phát triển."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quan điểm của Đảng, Nhà nước ta về bảo vệ an ninh quốc gia, trật tự, an toàn xã hội:",
+        "options": [
+            "Bảo vệ an ninh quốc gia phải kết hợp với phát triển kinh tế xã hội.",
+            "Bảo vệ an ninh quốc gia phải kết hợp chặt chẽ với giữ gìn trật tự, an toàn xã hội.",
+            "Bảo vệ an ninh quốc gia là nhiệm vụ cấp bách hàng đầu.",
+            "Tất cả đều đúng."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Trong bảo vệ an ninh quốc gia, trật tự, an toàn xã hội lực lượng nào là nòng cốt:",
+        "options": [
+            "Quần chúng nhân dân.",
+            "Quân đội nhân dân.",
+            "Công an nhân dân.",
+            "Dân quân."
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Trách nhiệm của sinh viên trong công tác bảo vệ an ninh quốc gia, giữ gìn trật tự an toàn xã hội:",
+        "options": [
+            "Tích cực, tự giác tham gia các hoạt động cụ thể để bảo vệ an ninh quốc gia giữ gìn trật tự an toàn xã hội.",
+            "Tích cực tham gia chiến dịch tình nguyện mùa hè do đoàn thanh niên phát động.",
+            "Tăng cường rèn luyện thể lực, học tập tốt môn học Giáo dục quốc phòng và an ninh.",
+            "Cả A và C đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Lực lượng nào chuyên trách bảo vệ an ninh quốc gia ở khu vực biên giới trên đất liền và trên biển?",
+        "options": [
+            "Bộ đội biên phòng, Cảnh sát biển.",
+            "Quân đội nhân dân Việt Nam trong đó lực lượng Hải quân là nòng cốt.",
+            "Công an nhân dân, Bộ đội biên phòng.",
+            "Công an nhân dân, Cảnh sát biển."
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Mục đích bảo vệ an ninh thông tin là:",
+        "options": [
+            "Phòng ngừa, ngăn chặn âm mưu, hoạt động khai thác sử dụng hệ thống thông tin liên lạc, gây thiệt hại an ninh.",
+            "Chống lộ, lọt thông tin bí mật của nhà nước.",
+            "Ngăn chặn khai thác thông tin trái phép, đánh cắp thông tin trên mạng.",
+            "Cả A, B và C đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Các tệ nạn xã hội phổ biến, lây lan nhanh trong xã hội?:",
+        "options": [
+            "Giết người, cướp của, trộm cắp, ma túy,...",
+            "Đám thuê, chém mướn, cướp giật, cờ bạc...",
+            "Mại dâm, nghiện ma túy, cờ bạc, mê tín dị đoan,...",
+            "Buôn lậu, buôn người, trốn thuế, mê tín dị..."
+        ],
+        "dapan": 2
+    }
+]
