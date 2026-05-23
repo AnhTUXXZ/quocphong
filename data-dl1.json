@@ -1,0 +1,132 @@
+[
+  {
+    "cauhoi": "Đối tượng nghiên cứu môn học giáo dục quốc phòng, an ninh:",
+    "options": [
+      "Nghiên cứu về chiến lược xây dựng và bảo vệ Tổ quốc của Đảng, Nhà nước trong tình hình mới.",
+      "Nghiên cứu về đường lối quân sự của Đảng, Công tác quốc phòng an ninh, Quân sự và kỹ năng quân sự cần thiết.",
+      "Nghiên cứu về chiến lược kinh tế, quốc phòng của Đảng, Nhà nước trong sự nghiệp đổi mới.",
+      "Nghiên cứu về chiến lược kinh tế, quốc phòng, an ninh và đối ngoại của Đảng, Nhà nước."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Quá trình nghiên cứu môn học giáo dục quốc phòng, an ninh phải nắm vững và vận dụng đúng đắn các quan điểm tiếp cận khoa học:",
+    "options": [
+      "Hệ thống, lịch sử, logic, thực tiễn.",
+      "Khách quan, lịch sử, toàn diện.",
+      "Hệ thống, biện chứng, lịch sử, logic.",
+      "Lịch sử, cụ thể biện chứng."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Các phương pháp nghiên cứu môn học giáo dục quốc phòng, an ninh:",
+    "options": [
+      "Nghiên cứu lý thuyết, nghiên cứu thực tiễn.",
+      "Nghiên cứu tập trung, kết hợp với thảo luận nhóm.",
+      "Kết hợp các phương pháp dạy học lý thuyết và thực hành.",
+      "Cả A và C."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "An ninh quốc gia là:",
+    "options": [
+      "Là sự bình yên của đất nước, cuộc sống ấm no hạnh phúc của nhân dân Việt Nam.",
+      "Là sự ổn định, phát triển bền vững của chế độ XHCN và Nhà nước CHXHCN Việt Nam.",
+      "Là sự bất khả xâm phạm độc lập chủ quyền, thống nhất và toàn vẹn lãnh thổ Tổ quốc.",
+      "Cả B và C đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Trong an ninh quốc gia, lĩnh vực nào là cốt lõi, xuyên suốt:",
+    "options": [
+      "An ninh kinh tế.",
+      "An ninh chính trị.",
+      "An ninh tư tưởng văn hóa.",
+      "An ninh đối ngoại."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Bảo vệ an ninh quốc gia là:",
+    "options": [
+      "Phòng ngừa các hoạt động xâm hại an ninh quốc gia.",
+      "Phát hiện các hoạt động xâm hại an ninh quốc gia.",
+      "Đấu tranh ngăn chặn các hoạt động xâm hại an ninh quốc gia của các thế lực phản động.",
+      "Phòng ngừa, phát hiện, ngăn chặn, đấu tranh làm thất bại các hoạt động xâm hại an ninh quốc gia."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Mục tiêu quan trọng về an ninh quốc gia:",
+    "options": [
+      "Lực lượng vũ trang nhân dân Việt Nam, các cơ quan Nhà nước và nhân dân.",
+      "Những đối tượng, địa điểm, công trình, cơ sở về chính trị, an ninh, quốc phòng, kinh tế.",
+      "Cơ sở KHKT, văn hóa, xã hội thuộc danh mục cần được bảo vệ theo quy định của pháp luật.",
+      "Cả B và C đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Cơ sở phương pháp luận chung nhất của việc nghiên cứu môn học Giáo dục quốc phòng và an ninh là gì?",
+    "options": [
+      "Tư tưởng Hồ Chí Minh về quân đội.",
+      "Đường lối quân sự của Đảng Cộng sản Việt Nam.",
+      "Học thuyết Mác - Lênin và tư tưởng Hồ Chí Minh.",
+      "Quan điểm của các tướng lĩnh quân đội."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Môn học Giáo dục quốc phòng và an ninh có tính chất gì theo quy định của pháp luật?",
+    "options": [
+      "Môn học tự chọn.",
+      "Môn học được luật định.",
+      "Môn học bổ trợ.",
+      "Môn học ngoại khóa."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Nghiên cứu đường lối quân sự của Đảng góp phần hình thành điều gì cho sinh viên?",
+    "options": [
+      "Kỹ năng chiến đấu chuyên nghiệp.",
+      "Niềm tin khoa học, phẩm chất đạo đức cách mạng và lý tưởng.",
+      "Khả năng sử dụng vũ khí công nghệ cao.",
+      "Kỹ năng lãnh đạo đơn vị cấp tiểu đội."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Quan điểm lịch sử, logic trong nghiên cứu môn học yêu cầu điều gì?",
+    "options": [
+      "Nhìn thấy sự phát triển của đối tượng theo thời gian, không gian với điều kiện lịch sử cụ thể.",
+      "Chỉ nghiên cứu các sự kiện quân sự hiện đại.",
+      "Phủ nhận các bài học trong quá khứ.",
+      "Tách rời lịch sử khỏi logic nội tại."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Mục tiêu của môn học Giáo dục quốc phòng và an ninh là gì?",
+    "options": [
+      "Đào tạo sĩ quan quân đội chuyên nghiệp.",
+      "Giáo dục kiến thức quân sự để đi du học.",
+      "Giáo dục cho công dân kiến thức quốc phòng và an ninh, phát huy tinh thần yêu nước, bảo vệ Tổ quốc.",
+      "Trang bị kỹ năng bắn súng cho mọi công dân."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Theo tài liệu, chương trình huấn luyện quân sự phổ thông được thực hiện từ năm nào?",
+    "options": [
+      "1961.",
+      "1991.",
+      "2000.",
+      "2007."
+    ],
+    "dapan": 0
+  }
+]
