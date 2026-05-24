@@ -1,52 +1,242 @@
 [
-    {
-        "cauhoi": "Bộ luật hình sự Việt Nam mới nhất đang áp dụng có từ năm nào?",
-        "options": [
-            "Năm 1985.",
-            "Năm 1999.",
-            "Năm 2015.",
-            "Năm 2016."
-        ],
-        "dapan": 2
-    },
-    {
-        "cauhoi": "Bộ luật hình sự Việt Nam mới nhất được sửa đổi năm nào?",
-        "options": [
-            "Năm 2013.",
-            "Năm 2015.",
-            "Năm 2017.",
-            "Năm 2019."
-        ],
-        "dapan": 2
-    },
-    {
-        "cauhoi": "Bộ luật hình sự hiện hành có bao nhiêu chương, điều?",
-        "options": [
-            "24 chương, 416 điều.",
-            "26 chương, 426 điều.",
-            "28 chương, 428 điều.",
-            "30 chương, 430 điều."
-        ],
-        "dapan": 1
-    },
-    {
-        "cauhoi": "Chương nào, mục nào của bộ luật hình sự Việt Nam nói về các tội xâm phạm an toàn giao thông?",
-        "options": [
-            "Chương XX, Mục 1.",
-            "Chương XX, Mục 2.",
-            "Chương XXI, Mục 1.",
-            "Chương XXI, Mục 2."
-        ],
-        "dapan": 2
-    },
-    {
-        "cauhoi": "Theo bộ luật hình sự Việt Nam các tội xâm phạm an toàn giao thông có bao nhiêu điều?",
-        "options": [
-            "15 điều.",
-            "20 điều.",
-            "25 điều.",
-            "30 điều."
-        ],
-        "dapan": 2
-    }
+  {
+    "cauhoi": "Mục đích của chiến tranh nhân dân Việt Nam bảo vệ Tổ quốc là:",
+    "options": [
+      "Bảo vệ vững chắc độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ, bảo vệ an ninh quốc gia, trật tự an toàn xã hội và nền văn hóa.",
+      "Bảo vệ Đảng, Nhà nước, nhân dân và chế độ Xã hội Chủ nghĩa, bảo vệ lợi ích quốc gia dân tộc.",
+      "Bảo vệ sự nghiệp đổi mới, công nghiệp hóa, hiện đại hóa đất nước, giữ vững ổn định chính trị và môi trường hòa bình, phát triển đất nước theo định hướng Xã hội Chủ nghĩa.",
+      "Tất cả đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Đối tượng tác chiến của chiến tranh nhân dân Việt Nam bảo vệ Tổ quốc là:",
+    "options": [
+      "Chủ nghĩa đế quốc và các lực lượng ly khai dân tộc trên thế giới.",
+      "Chủ nghĩa đế quốc và các thế lực phản động có hành động phá hoại, xâm lược, lật đổ cách mạng.",
+      "Chủ nghĩa đế quốc và các thế lực phản cách mạng trên thế giới.",
+      "Lực lượng khủng bố quốc tế và lực lượng phản động trong nước."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Âm mưu, thủ đoạn chủ yếu của kẻ thù khi xâm lược nước ta:",
+    "options": [
+      "Đánh nhanh, thắng nhanh.",
+      "Lực lượng tham gia với quân số đông, vũ khí trang bị hiện đại.",
+      "Sử dụng biện pháp chính trị, ngoại giao để lừa bịp dư luận.",
+      "Tất cả đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Khi tiến hành chiến tranh xâm lược nước ta, địch có điểm yếu:",
+    "options": [
+      "Tiến hành một cuộc chiến tranh phi nghĩa sẽ bị thế giới lên án.",
+      "Phải tác chiến trong điều kiện địa hình, thời tiết phức tạp.",
+      "Phải đương đầu với dân tộc ta có truyền thống yêu nước, chống xâm lược.",
+      "Tất cả đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Tính chất cơ bản chiến tranh nhân dân Việt Nam bảo vệ Tổ quốc là:",
+    "options": [
+      "Cuộc chiến tranh toàn dân, lấy lực lượng vũ trang làm nòng cốt.",
+      "Cuộc chiến tranh toàn dân, toàn diện, dưới sự lãnh đạo của Đảng Cộng sản Việt Nam.",
+      "Cuộc chiến tranh toàn diện lấy mặt trận quân sự làm yếu tố quyết định.",
+      "Cuộc chiến tranh cách mạng chống các thế lực phản cách mạng."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Tính chất chiến tranh nhân dân bảo vệ Tổ quốc là:",
+    "options": [
+      "Cuộc chiến tranh của giai cấp công nhân nhằm bảo vệ độc lập chủ quyền và lãnh thổ.",
+      "Cuộc chiến tranh cách mạng nhằm bảo vệ biên giới quốc gia.",
+      "Cuộc chiến tranh chính nghĩa, tự vệ cách mạng nhằm bảo vệ Tổ quốc Việt Nam XHCN.",
+      "Cuộc chiến tranh tự vệ nhằm đánh thắng các thế lực xâm lược để bảo vệ chủ quyền, lãnh thổ đất nước."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Tính chất hiện đại trong chiến tranh nhân dân bảo vệ Tổ quốc được thể hiện:",
+    "options": [
+      "Sử dụng vũ khí trang bị hiện đại để tiến hành chiến tranh.",
+      "Sử dụng vũ khí trang bị hiện đại để đánh bại kẻ thù có vũ khí hiện đại hơn.",
+      "Hiện đại về vũ khí, trang bị, tri thức và nghệ thuật quân sự.",
+      "Kết hợp sử dụng vũ khí tương đối hiện đại với vũ khí hiện đại."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Đặc điểm về cường độ của chiến tranh nhân dân bảo vệ Tổ quốc:",
+    "options": [
+      "Diễn ra khẩn trương, quyết liệt phức tạp ngay từ đầu và suốt quá trình chiến tranh.",
+      "Diễn ra khẩn trường, quy mô lớn giai đoạn đầu của chiến tranh.",
+      "Diễn ra trong bối cảnh quốc tế có những thuận lợi cho chúng ta.",
+      "Diễn ra với nhịp độ cao, cường độ lớn giai đoạn giữa của cuộc chiến tranh."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Vị trí, ý nghĩa của quan điểm “toàn dân đánh giặc” trong chiến tranh nhân dân bảo vệ Tổ Quốc:",
+    "options": [
+      "Điều kiện để mỗi người dân được tham gia đánh giặc, giữ nước.",
+      "Điều kiện để phát huy cao nhất yếu tố con người trong cuộc chiến tranh.",
+      "Điều kiện để phát huy cao nhất sức mạnh tổng hợp trong cuộc chiến tranh.",
+      "Điều kiện để phát huy sức mạnh toàn dân."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Trong tiến hành chiến tranh toàn diện, mặt trận đấu tranh nào là chủ yếu:",
+    "options": [
+      "Mặt trận kinh tế.",
+      "Mặt trận quân sự.",
+      "Mặt trận ngoại giao.",
+      "Mặt trận chính trị."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Quan điểm của Đảng ta về chuẩn bị cho chiến tranh nhân dân bảo vệ Tổ Quốc:",
+    "options": [
+      "Chuẩn bị đầy đủ mọi mặt trên các vùng chiến lược của đất nước.",
+      "Chuẩn bị con người, vũ khí trang bị cho chiến tranh.",
+      "Chuẩn bị đầy đủ tiềm lực kinh tế, quân sự trên cả nước cũng như từng khu vực.",
+      "Chuẩn bị mọi mặt trên cả nước, cũng như từng khu vực để bảo vệ vững chắc Tổ quốc Việt Nam XHCN."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Nội dung chủ yếu của chiến tranh nhân dân:",
+    "options": [
+      "Tổ chức thế trận chiến tranh nhân dân.",
+      "Tổ chức lực lượng chiến tranh nhân dân.",
+      "Phối hợp chặt chẽ chống quân địch tiến công từ bên ngoài vào và bạo loạn lật đổ bên trong.",
+      "Tất cả đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Lực lượng nòng cốt của chiến tranh nhân dân bảo vệ Tổ quốc là:",
+    "options": [
+      "Lực lượng bộ đội và công an.",
+      "Lực lượng bộ đội chủ lực, biên phòng và cảnh sát biển.",
+      "Bộ đội chủ lực, bộ đội địa phương và dân quân tự vệ.",
+      "Bộ đội, công an và dân quân tự vệ."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Lực lượng chiến tranh nhân dân là:",
+    "options": [
+      "Toàn diện dựa vào sức mạnh quần chúng làm chỗ dựa vững chắc.",
+      "Toàn dân lấy lực lượng vũ trang gồm ba thứ quân làm nòng cốt.",
+      "Toàn dân, lấy lực lượng lục quân, hải quân, phòng không không quân làm nòng cốt.",
+      "Toàn dân, lấy quân đội nhân dân và công an nhân dân làm nòng cốt."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Lực lượng toàn dân đánh giặc được tổ chức chặt chẽ thành các lực lượng?",
+    "options": [
+      "Lực lượng quần chúng rộng rãi và lực lượng quân sự.",
+      "Lực lượng thanh niên xung phong và lực lượng quân sự.",
+      "Lực lượng bộ đội chủ lực, bộ đội địa phương, dân quân tự vệ.",
+      "Lực lượng quần chúng rộng rãi và bộ đội chủ lực."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Tiến hành chiến tranh nhân dân bảo vệ Tổ quốc phải phối hợp chặt chẽ giữa:",
+    "options": [
+      "Chống quân xâm lược từ bên ngoài vào với chống lực lượng khủng bố từ bên trong.",
+      "Chống địch tiến công từ bên ngoài vào với bạo loạn lật đổ từ bên trong.",
+      "Chống bạo loạn với trấn áp bọn phản động trong nước cấu kết với nước ngoài.",
+      "Chống bạo loạn lật đổ với các hoạt động phá hoại khác."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Một trong ba nội dung chủ yếu của chiến tranh nhân dân BVTQ là?",
+    "options": [
+      "Phối hợp chặt chẽ giữa chống quân địch tiến công từ bên ngoài vào với BLLĐ từ bên trong.",
+      "Xây dựng các lực lượng vũ trang vững mạnh toàn diện, đặc biệt là chất lượng chính trị.",
+      "Trước mắt hiện nay là tập trung đấu tranh làm thất bại chiến lược \"Diễn biến hòa bình\", bạo loạn lật đổ của các thế lực thù địch.",
+      "Bố trí lực lượng rộng khắp trên cả nước nhưng tập trung có trọng tâm, trọng điểm."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Một trong ba biện pháp cơ bản thực hiện quan điểm tiến hành chiến tranh nhân dân, toàn dân đánh giặc là?",
+    "options": [
+      "Tăng cường giáo dục quốc phòng cho mọi tầng lớp nhân dân, nhất là thế hệ trẻ nói chung và sinh viên nói riêng.",
+      "Không ngừng chăm lo xây dựng các lực lượng vũ trang vững mạnh toàn diện, đặc biệt là chất lượng chính trị.",
+      "Không ngừng nghiên cứu nghệ thuật quân sự, nghiên cứu các cuộc chiến tranh gần đây ở trên thế giới để phát triển nghệ thuật quân sự lên một tầm cao mới.",
+      "Tất cả các đáp trên đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Quá trình tăng cường vũ khí trang bị cho các LLVTND gắn với quá trình nào dưới đây?",
+    "options": [
+      "Hiện đại hóa nền kinh tế nước nhà.",
+      "Tăng cường tiềm lực khoa học công nghệ.",
+      "Công nghiệp hóa, hiện đại hóa đất nước.",
+      "Hiện đại hóa nền kinh tế và khoa học công nghệ."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "An ninh quốc gia là:",
+    "options": [
+      "Là sự bình yên của đất nước, cuộc sống ấm no hạnh phúc của nhân dân Việt Nam.",
+      "Là sự ổn định, phát triển bền vững của chế độ XHCN và Nhà nước CHXHCN Việt Nam.",
+      "Là sự bất khả xâm phạm độc lập chủ quyền, thống nhất và toàn vẹn lãnh thổ Tổ quốc.",
+      "Cả B và C đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Trong an ninh quốc gia, lĩnh vực nào là cốt lõi, xuyên suốt:",
+    "options": [
+      "An ninh kinh tế.",
+      "An ninh chính trị.",
+      "An ninh tư tưởng văn hóa.",
+      "An ninh đối ngoại."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Bảo vệ an ninh quốc gia là:",
+    "options": [
+      "Phòng ngừa các hoạt động xâm hại an ninh quốc gia.",
+      "Phát hiện các hoạt động xâm hại an ninh quốc gia.",
+      "Đấu tranh ngăn chặn các hoạt động xâm hại an ninh quốc gia của các thể lực phản động.",
+      "Phòng ngừa, phát hiện, ngăn chặn, đấu tranh làm thất bại các hoạt động xâm hại an ninh quốc gia."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Mục tiêu quan trọng về an ninh quốc gia:",
+    "options": [
+      "Lực lượng vũ trang nhân dân Việt Nam, các cơ quan Nhà nước và nhân dân.",
+      "Những đối tượng, địa điểm, công trình, cơ sở về chính trị, an ninh, quốc phòng, kinh tế.",
+      "Cơ sở KHKT, văn hóa, xã hội thuộc danh mục cần được bảo vệ theo quy định của pháp luật.",
+      "Cả B và C đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Nguyên tắc bảo vệ an ninh quốc gia là:",
+    "options": [
+      "Kết hợp bảo vệ an ninh chính trị với bảo vệ độc lập, chủ quyền thống nhất và toàn vẹn lãnh thổ Việt Nam.",
+      "Kết hợp bảo vệ an ninh quốc gia với giữ gìn trật tự an toàn xã hội.",
+      "Kết hợp sức mạnh dân tộc với sức mạnh thời đại dưới sự lãnh đạo của Đảng.",
+      "Tất cả các đáp trên đều đúng."
+    ],
+    "dapan": 3
+  }
 ]
