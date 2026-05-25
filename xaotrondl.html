@@ -81,7 +81,7 @@
         }
         .hamburger:hover { background: #2f5e4a; }
 
-        /* Sidebar menu (tất cả chức năng) */
+        /* Sidebar menu */
         .sidebar {
             position: fixed;
             top: 0;
@@ -187,7 +187,7 @@
         }
         .exam-btn:hover { background: #b8a45c; }
 
-        /* Khu vực câu hỏi - y chang ảnh */
+        /* Khu vực câu hỏi */
         .quiz-container {
             margin: 20px;
         }
@@ -251,9 +251,104 @@
             border-radius: 50px;
             cursor: pointer;
         }
-        .result-area { margin-top: 16px; font-size: 1.1rem; font-weight: bold; }
         .empty-message { text-align: center; padding: 50px; background: #f9f5ea; border-radius: 28px; color: #7a6842; }
         footer { text-align: center; padding: 20px; background: #1e3a2f; color: #e2d5bc; margin-top: 30px; }
+
+        /* ========== POPUP MODAL ========== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal.show {
+            display: flex;
+        }
+        .modal-content {
+            background: #fefcf7;
+            border-radius: 24px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border: 2px solid #c9b87a;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e2d5bc;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        .modal-header h3 {
+            font-size: 1.5rem;
+            color: #1e3a2f;
+        }
+        .modal-close {
+            background: #1e3a2f;
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .modal-body {
+            font-size: 1rem;
+        }
+        .result-summary {
+            background: #1e3a2f;
+            color: white;
+            padding: 16px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .result-summary p {
+            margin: 8px 0;
+        }
+        .result-detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .result-detail-table th, .result-detail-table td {
+            border: 1px solid #ddd0b0;
+            padding: 8px;
+            text-align: left;
+        }
+        .result-detail-table th {
+            background: #e5ddcd;
+        }
+        .correct-badge {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .wrong-badge {
+            color: #c62828;
+            font-weight: bold;
+        }
+        .modal-btn {
+            background: #1e3a2f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -295,15 +390,28 @@
 
 <div class="submit-section" id="submitSection" style="display: none;">
     <button class="btn-submit" id="submitExamBtn">📮 NỘP BÀI</button>
-    <div class="result-area" id="resultArea"></div>
 </div>
 
 <footer>Times New Roman · Đồng hồ 15 phút · Tự động lưu đề đã làm</footer>
 
+<!-- POPUP MODAL -->
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>📊 KẾT QUẢ BÀI LÀM</h3>
+            <button class="modal-close" id="modalCloseBtn">✕</button>
+        </div>
+        <div class="modal-body" id="modalBody">
+            <!-- Nội dung sẽ được inject bằng JS -->
+        </div>
+    </div>
+</div>
+
 <script>
     // ==================== CẤU HÌNH ====================
     const QUESTIONS_PER_EXAM = 20;
-    const TIME_LIMIT_SEC = 15 * 60; // 15 phút
+    const POINTS_PER_QUESTION = 0.5;  // mỗi câu 0.5 điểm
+    const TIME_LIMIT_SEC = 15 * 60;
     const DATA_FILES = Array.from({ length: 11 }, (_, i) => `data-dl${i+1}.json`);
     
     let fullBank = [];
@@ -316,6 +424,19 @@
     let timeLeft = TIME_LIMIT_SEC;
     let timerInterval = null;
     let isTimerRunning = false;
+    
+    // ==================== POPUP ====================
+    function showPopup(title, contentHtml) {
+        const modal = document.getElementById('resultModal');
+        const modalBody = document.getElementById('modalBody');
+        modalBody.innerHTML = contentHtml;
+        modal.classList.add('show');
+    }
+    
+    function closePopup() {
+        const modal = document.getElementById('resultModal');
+        modal.classList.remove('show');
+    }
     
     // ==================== ĐỒNG HỒ ====================
     function formatTime(seconds) {
@@ -348,13 +469,12 @@
         timerInterval = setInterval(() => {
             if (!isTimerRunning) return;
             if (timeLeft <= 1) {
-                // Hết giờ
                 clearInterval(timerInterval);
                 timerInterval = null;
                 isTimerRunning = false;
-                alert("⏰ HẾT THỜI GIAN! Hệ thống tự động nộp bài.");
+                showPopup("⏰ HẾT GIỜ", "<div style='text-align:center; padding:20px;'><p style='font-size:1.2rem;'>Đã hết thời gian làm bài!</p><p>Hệ thống sẽ tự động nộp bài.</p></div>");
                 if (!isSubmitted && currentQuestions.length > 0) {
-                    submitExam(true); // auto submit
+                    submitExam(true);
                 }
             } else {
                 timeLeft--;
@@ -432,7 +552,10 @@
     
     // ==================== RANDOM ĐỀ MỚI ====================
     function createRandomExam() {
-        if(fullBank.length === 0) { alert("Chưa có dữ liệu câu hỏi!"); return; }
+        if(fullBank.length === 0) { 
+            showPopup("Thông báo", "<div style='text-align:center; padding:20px;'>❌ Chưa có dữ liệu câu hỏi!</div>");
+            return; 
+        }
         
         const usedKeys = new Set();
         Object.values(examHistory).forEach(ex => {
@@ -440,9 +563,8 @@
         });
         let available = fullBank.filter(q => !usedKeys.has(q.id || q.cauhoi));
         if(available.length < QUESTIONS_PER_EXAM) {
-            if(confirm(`⚠️ Chỉ còn ${available.length} câu chưa làm. Lấy thêm câu cũ để đủ 20 câu?`)) {
-                available = [...fullBank];
-            } else return;
+            showPopup("Thông báo", `<div style='text-align:center;'><p>⚠️ Chỉ còn ${available.length} câu chưa làm.</p><p>Sẽ lấy thêm câu đã làm để đủ 20 câu.</p></div>`);
+            available = [...fullBank];
         }
         for(let i=available.length-1; i>0; i--) {
             const j = Math.floor(Math.random()*(i+1));
@@ -455,9 +577,8 @@
         isSubmitted = false;
         
         renderQuestions();
-        showSubmitSection(true);
-        clearResult();
-        resetTimer(); // reset đồng hồ 15 phút
+        document.getElementById('submitSection').style.display = 'block';
+        resetTimer();
         window.scrollTo({ top: 0, behavior: 'smooth' });
         closeSidebar();
     }
@@ -488,7 +609,10 @@
     
     // ==================== NỘP BÀI ====================
     function submitExam(isAuto = false) {
-        if(isSubmitted) { if(!isAuto) alert("Đề này đã nộp rồi!"); return; }
+        if(isSubmitted) { 
+            if(!isAuto) showPopup("Thông báo", "<div style='text-align:center;'>⚠️ Đề này đã nộp rồi!</div>");
+            return; 
+        }
         
         let answered = 0, userAnswers = {};
         for(let i=0; i<currentQuestions.length; i++) {
@@ -496,14 +620,41 @@
             if(selected) { answered++; userAnswers[i] = parseInt(selected.value); }
         }
         if(!isAuto && answered < currentQuestions.length) {
-            if(!confirm(`Bạn mới trả lời ${answered}/${currentQuestions.length} câu. Nộp bài không?`)) return;
+            showPopup("Xác nhận nộp bài", 
+                `<div style='text-align:center;'>
+                    <p>Bạn mới trả lời ${answered}/${currentQuestions.length} câu.</p>
+                    <p>Bạn có chắc muốn nộp bài không?</p>
+                    <button id="confirmSubmitBtn" style="background:#1e3a2f; color:white; border:none; padding:8px 20px; border-radius:30px; margin-top:10px; cursor:pointer;">📮 NỘP BÀI</button>
+                    <button id="cancelSubmitBtn" style="background:#888; color:white; border:none; padding:8px 20px; border-radius:30px; margin-top:10px; margin-left:10px; cursor:pointer;">❌ HỦY</button>
+                </div>`
+            );
+            document.getElementById('confirmSubmitBtn')?.addEventListener('click', () => {
+                closePopup();
+                finalizeSubmit(userAnswers);
+            });
+            document.getElementById('cancelSubmitBtn')?.addEventListener('click', () => closePopup());
+            return;
         }
-        
+        finalizeSubmit(userAnswers);
+    }
+    
+    function finalizeSubmit(userAnswers) {
         let score = 0;
+        const details = [];
         currentQuestions.forEach((q, idx) => {
-            if(userAnswers[idx] !== undefined && userAnswers[idx] === q.dapan) score++;
+            const isCorrect = (userAnswers[idx] !== undefined && userAnswers[idx] === q.dapan);
+            if(isCorrect) score++;
             q.userAnswer = userAnswers[idx];
+            details.push({
+                num: idx+1,
+                question: q.cauhoi.substring(0, 80),
+                isCorrect: isCorrect,
+                userAnswer: userAnswers[idx] !== undefined ? String.fromCharCode(65 + userAnswers[idx]) : "Chưa trả lời",
+                correctAnswer: String.fromCharCode(65 + q.dapan)
+            });
         });
+        
+        const totalPoints = score * POINTS_PER_QUESTION;
         
         examHistory[currentExamId] = {
             id: currentExamId,
@@ -518,10 +669,37 @@
         stopTimer();
         
         highlightAnswers();
-        displayResult(score);
         updateStats();
         renderExamList();
-        showSubmitSection(false);
+        document.getElementById('submitSection').style.display = 'none';
+        
+        // Hiển thị popup kết quả chi tiết
+        let detailsHtml = `
+            <div class="result-summary">
+                <p>📊 Số câu đúng: ${score} / ${currentQuestions.length}</p>
+                <p>⭐ Tổng điểm: ${totalPoints.toFixed(1)} / ${currentQuestions.length * POINTS_PER_QUESTION}</p>
+                <p>🎯 Mỗi câu: ${POINTS_PER_QUESTION} điểm</p>
+            </div>
+            <table class="result-detail-table">
+                <thead>
+                    <tr><th>#</th><th>Câu hỏi</th><th>Kết quả</th><th>Đáp án của bạn</th><th>Đáp án đúng</th></tr>
+                </thead>
+                <tbody>
+        `;
+        details.forEach(d => {
+            detailsHtml += `
+                <tr>
+                    <td>${d.num}</td>
+                    <td>${d.question}</td>
+                    <td class="${d.isCorrect ? 'correct-badge' : 'wrong-badge'}">${d.isCorrect ? '✓ Đúng' : '✗ Sai'}</td>
+                    <td>${d.userAnswer}</td>
+                    <td>${d.correctAnswer}</td>
+                </tr>
+            `;
+        });
+        detailsHtml += `</tbody></table><button class="modal-btn" id="closeResultPopup">ĐÓNG</button>`;
+        showPopup("📝 KẾT QUẢ CHI TIẾT", detailsHtml);
+        document.getElementById('closeResultPopup')?.addEventListener('click', closePopup);
     }
     
     function highlightAnswers() {
@@ -539,15 +717,6 @@
         }
     }
     
-    function displayResult(score) {
-        const final = (score / currentQuestions.length * 10).toFixed(1);
-        document.getElementById('resultArea').innerHTML = `<div style="background:#1e3a2f; color:white; padding:14px; border-radius:28px;">✅ Kết quả: ${score}/${currentQuestions.length} → ${final}/10</div>`;
-    }
-    function clearResult() { document.getElementById('resultArea').innerHTML = ''; }
-    function showSubmitSection(show) {
-        document.getElementById('submitSection').style.display = show ? 'block' : 'none';
-    }
-    
     // Xem lại đề cũ
     function loadExamForReview(examId) {
         const exam = examHistory[examId];
@@ -558,40 +727,66 @@
         stopTimer();
         renderQuestions();
         highlightAnswers();
-        displayResult(exam.score);
-        showSubmitSection(false);
+        document.getElementById('submitSection').style.display = 'none';
+        // Hiển thị popup điểm khi xem lại
+        const score = exam.score;
+        const totalPoints = score * POINTS_PER_QUESTION;
+        showPopup("📜 XEM LẠI ĐỀ ĐÃ LÀM", `
+            <div class="result-summary">
+                <p>📊 Số câu đúng: ${score} / ${currentQuestions.length}</p>
+                <p>⭐ Điểm: ${totalPoints.toFixed(1)} / ${currentQuestions.length * POINTS_PER_QUESTION}</p>
+                <p>📅 Ngày làm: ${new Date(exam.timestamp).toLocaleString('vi-VN')}</p>
+            </div>
+            <button class="modal-btn" id="closeReviewPopup">ĐÓNG</button>
+        `);
+        document.getElementById('closeReviewPopup')?.addEventListener('click', closePopup);
         window.scrollTo({ top: 0, behavior: 'smooth' });
         closeSidebar();
     }
     
     function reviewOldExams() {
         const ids = Object.keys(examHistory);
-        if(ids.length === 0) { alert("Chưa có đề nào để xem lại."); return; }
-        let msg = "Chọn đề xem lại:\n";
+        if(ids.length === 0) { 
+            showPopup("Thông báo", "<div style='text-align:center;'>📭 Chưa có đề nào để xem lại.</div>");
+            return; 
+        }
+        let listHtml = `<div style="max-height:400px; overflow-y:auto;"><p style="font-weight:bold; margin-bottom:12px;">📋 Chọn đề muốn xem lại:</p>`;
         ids.forEach((id, i) => {
             const ex = examHistory[id];
-            const d = new Date(ex.timestamp).toLocaleString('vi-VN');
-            msg += `${i+1}. ${d} - ${ex.score}/${QUESTIONS_PER_EXAM}\n`;
+            const date = new Date(ex.timestamp).toLocaleString('vi-VN');
+            listHtml += `<button class="exam-review-btn" data-id="${id}" style="display:block; width:100%; margin:8px 0; padding:10px; background:#e5ddcd; border:1px solid #c9b87a; border-radius:12px; cursor:pointer;">📄 Đề ${i+1}: ${date} - ${ex.score}/${QUESTIONS_PER_EXAM} câu đúng</button>`;
         });
-        const choice = prompt(msg + "\nNhập số thứ tự (0 hủy):");
-        if(choice && !isNaN(choice)) {
-            const idx = parseInt(choice)-1;
-            if(idx>=0 && idx<ids.length) loadExamForReview(ids[idx]);
-            else if(choice !== '0') alert("Số không hợp lệ");
-        }
+        listHtml += `</div><button class="modal-btn" id="closeReviewList" style="margin-top:16px;">ĐÓNG</button>`;
+        showPopup("📋 DANH SÁCH ĐỀ ĐÃ LÀM", listHtml);
+        document.querySelectorAll('.exam-review-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.getAttribute('data-id');
+                closePopup();
+                loadExamForReview(id);
+            });
+        });
+        document.getElementById('closeReviewList')?.addEventListener('click', closePopup);
         closeSidebar();
     }
     
     function clearAllHistory() {
-        if(confirm("⚠️ XÓA TOÀN BỘ LỊCH SỬ? Không thể hoàn tác!")) {
+        showPopup("⚠️ XÁC NHẬN XÓA", `<div style='text-align:center;'>
+            <p>Bạn có chắc muốn XÓA TOÀN BỘ lịch sử các đề đã làm?</p>
+            <p style="color:#c62828;">Hành động này không thể hoàn tác!</p>
+            <button id="confirmClearBtn" style="background:#c62828; color:white; border:none; padding:8px 20px; border-radius:30px; margin-top:10px; cursor:pointer;">🗑️ XÓA</button>
+            <button id="cancelClearBtn" style="background:#888; color:white; border:none; padding:8px 20px; border-radius:30px; margin-top:10px; margin-left:10px; cursor:pointer;">HỦY</button>
+        </div>`);
+        document.getElementById('confirmClearBtn')?.addEventListener('click', () => {
             examHistory = {};
             saveHistory();
             updateStats();
             renderExamList();
             document.getElementById('quizContainer').innerHTML = '<div class="empty-message">🗑️ Đã xóa. Nhấn "RANDOM ĐỀ MỚI" để bắt đầu.</div>';
-            showSubmitSection(false);
+            document.getElementById('submitSection').style.display = 'none';
             stopTimer();
-        }
+            closePopup();
+        });
+        document.getElementById('cancelClearBtn')?.addEventListener('click', closePopup);
         closeSidebar();
     }
     
@@ -612,8 +807,9 @@
     document.getElementById('menuReview').addEventListener('click', reviewOldExams);
     document.getElementById('menuClear').addEventListener('click', clearAllHistory);
     document.getElementById('submitExamBtn').addEventListener('click', () => submitExam(false));
+    document.getElementById('modalCloseBtn').addEventListener('click', closePopup);
     
     loadAllQuestions();
 </script>
 </body>
-</html>
+    </html>
