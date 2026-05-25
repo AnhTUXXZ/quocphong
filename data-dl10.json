@@ -1,32 +1,382 @@
 [
-    {
-        "cauhoi": "Trách nhiệm của sinh viên trong việc tham gia phong trào bảo vệ an ninh Tổ quốc:",
-        "options": [
-            "Tự giác chấp hành các qui định về đảm bảo an ninh trật tự của nhà trường và địa phương nơi cư trú.",
-            "Nâng cao cảnh giác cách mạng, đấu tranh làm thất bại mọi âm mưu phá hoại của địch.",
-            "Tích cực tham gia phong trào văn hóa văn nghệ, thể dục thể thao của nhà trường.",
-            "Tích cực tham gia phong trào: \"Trường học thân thiện, học sinh tích cực\"."
-        ],
-        "dapan": 0
-    },
-    {
-        "cauhoi": "Ở các cơ sở xã, phường có 3 loại hình tổ chức quần chúng làm công tác an ninh trật tự là:",
-        "options": [
-            "Loại tổ chức có chức năng tư vấn; Loại tổ chức có chức năng quản lý, điều hành và Loại tổ chức có chức năng thực hành.",
-            "Loại tổ chức có chức năng tham mưu; Loại tổ chức có chức năng quản lý và Loại tổ chức có chức năng thực hành.",
-            "Loại tổ chức có chức năng tư vấn; Loại tổ chức có chức năng điều hành và Loại tổ chức có chức năng thực hành.",
-            "Loại tổ chức có chức năng tham mưu; Loại tổ chức có chức năng quản lý, điều hành và Loại tổ chức có chức năng hành động."
-        ],
-        "dapan": 0
-    },
-    {
-        "cauhoi": "Loại hình tổ chức quần chúng có chức năng thực hành làm nhiệm vụ bảo vệ an ninh trật tự ở địa bàn cơ sở gồm:",
-        "options": [
-            "Tổ an ninh nhân dân, an ninh công nhân; đội dân phòng; đội thanh niên xung kích an ninh.",
-            "Ban an ninh trật tự; đội dân phòng; đội thanh niên xung kích an ninh.",
-            "Tổ an ninh nhân dân, an ninh công nhân; ban bảo vệ dân phố; đội thanh niên xung kích an ninh.",
-            "Tổ an ninh nhân dân, an ninh công nhân; đội dân phòng; tổ tự quản."
-        ],
-        "dapan": 0
-    }
+  {
+    "cauhoi": "Vai trò của quần chúng nhân dân trong bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Có khả năng tuyên truyền, phổ biến pháp luật trong khu dân cư.",
+      "Có khả năng phát hiện, quản lí, giáo dục, cải tạo các loại tội phạm.",
+      "Có khả năng trực tiếp đấu tranh, trận áp các loại tội phạm.",
+      "Có khả năng tiến hành các biện pháp nghiệp vụ, nắm tình hình hoạt động của tội phạm."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Phong trào toàn dân bảo vệ an ninh Tổ quốc là một hình thức hoạt động:",
+    "options": [
+      "Tự phát, có tổ chức của nhân dân lao động.",
+      "Tự giác, có tổ chức của nhân dân lao động.",
+      "Tự do, có tổ chức của nhân dân lao động.",
+      "Bắt buộc, có tổ chức của nhân dân lao động."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Vị trí, tác dụng của phong trào toàn dân bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Quan trọng không thể thiếu được trong toàn bộ sự nghiệp cách mạng của Đảng nói chung và sự nghiệp nói riêng.",
+      "Chủ yếu, không thể xem nhẹ trong sự nghiệp xây dựng và bảo vệ vững chắc Tổ quốc.",
+      "Quyết định sự thành bại sự nghiệp đổi mới do Đảng ta khởi xướng và lãnh đạo.",
+      "Nền tảng của sự nghiệp bảo vệ an ninh quốc gia và giữ gìn trật tự an toàn xã hội."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Vị trí, tác dụng của phong trào toàn dân bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Giữ vị trí quan trọng, là nền tảng chủ yếu trong sự nghiệp bảo vệ an ninh quốc gia.",
+      "Giữ vị trí chủ yếu, là nền tảng vững chắc cho sự nghiệp bảo vệ an ninh quốc gia.",
+      "Giữ vị trí chiến lược, là nền tảng cơ bản trong sự nghiệp bảo vệ ANQG, giữ gìn trật tự ATXH.",
+      "Giữ vị trí trọng tâm, là nền tảng của sự nghiệp bảo vệ an ninh quốc gia, giữ gìn trật tự an toàn xã hội."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Mục đích của phong trào toàn dân bảo vệ an ninh trật tự:",
+    "options": [
+      "Giúp cho LL công an có điều kiện triển khai sâu rộng công tác nghiệp vụ phòng chống tội phạm.",
+      "Huy động sức mạnh của nhân dân để phòng ngừa, phát hiện, ngăn chặn, đấu tranh với các loại tội phạm.",
+      "Trực tiếp phòng ngừa, đấu tranh chống tội phạm, ngăn chặn các tệ nạn xã hội.",
+      "Huy động sức mạnh của các tổ chức chính trị về phòng chống tội phạm."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Đặc điểm của phong trào toàn dân bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Hình thức tổ chức quần chúng đa dạng, phong phú với hoạt động thiết thực.",
+      "Đối tượng tham gia đa dạng, liên quan đến mọi người, mọi tầng lớp xã hội.",
+      "Nội dung, hình thức xây dựng phong trào thống nhất trên mọi địa bàn.",
+      "Gắn liền với nhiều hoạt động chính trị và các cuộc vận động ở địa phương."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Nội dung cơ bản của công tác xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc là:",
+    "options": [
+      "Vận động toàn dân nâng cao tinh thần cảnh giác cách mạng bảo vệ an ninh Tổ quốc.",
+      "Vận động toàn dân tích cực tham gia chương trình quốc gia phòng chống tội phạm.",
+      "Vận động nhân dân làm tốt công tác quốc phòng, an ninh ở địa phương, đơn vị.",
+      "Vận động nhân dân tích cực tham gia xây dựng cuộc sống mới ở khu dân cư."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Nội dung cơ bản của công tác xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Nắm tình hình xây dựng kế hoạch phát động phong trào toàn dân bảo vệ Tổ quốc.",
+      "Xây dựng kế hoạch phát động phong trào toàn dân bảo vệ an ninh Tổ quốc.",
+      "Tuyên truyền hướng dẫn nhân dân thực hiện nhiệm vụ bảo vệ an ninh Tổ quốc.",
+      "Tham gia xây dựng tổ chức Đảng chính quyền, đoàn thể quần chúng tại cơ sở vững mạnh."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Phương pháp xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc là:",
+    "options": [
+      "Xây dựng tổ chức Đảng, chính quyền, đoàn thể quần chúng tại cơ sở vững mạnh.",
+      "Xây dựng mở rộng liên kết, phối hợp giữa các ban, ngành, đoàn thể.",
+      "Nắm tình hình và xây dựng kế hoạch phát động phong trào toàn dân bảo vệ an ninh Tổ quốc.",
+      "Nắm tình hình chính trị, xã hội, tâm tư, nguyên vọng của quần chúng nhân dân."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Nội dung năm tình hình xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Vị trí, địa lí, phong tục tập quán, tín ngưỡng của quần chúng nhân dân.",
+      "Tình hình chấp hành hiến pháp, pháp luật của nhân dân địa phương.",
+      "Tình hình an ninh trật tự trên địa bàn.",
+      "Trình độ văn hóa, mức sống của nhân dân địa phương."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Phương pháp nắm tình hình xây dựng kế hoạch phát động phong trào toàn dân bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Đi sát cơ sở nắm tình hình kinh tế, văn hoá xã hội trên từng địa bàn dân cư.",
+      "Đi sát cơ sở, tiếp xúc gặp gỡ, thu thập ý kiến của các tổ chức, các tầng lớp dân cư khác nhau.",
+      "Trực tiếp điều tra hoạt động của các tổ chức quần chúng tự quản ở địa phương.",
+      "Tình hình quần chúng chấp hành đường lối của Đảng, pháp luật của Nhà nước."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Nội dung của kế hoạch phát động phong trào toàn dân bảo vệ an ninh Tổ quốc là:",
+    "options": [
+      "Xác định tính tất yếu phải xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc.",
+      "Xác định mục đích, yêu cầu cụ thể phải đạt được của phong trào toàn dân bảo vệ an ninh Tổ quốc.",
+      "Xác định tính cấp thiết phải xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc.",
+      "Xác định nhiệm vụ, quyền hạn của cá nhân, tổ chức trong xây dựng phong trào."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Phương pháp xây dựng kế hoạch phát động phong trào toàn dân bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Viết dự thảo kế hoạch đảm bảo đủ về nội dung, đúng về thể thức văn bản.",
+      "Gửi bản dự thảo đến các tổ chức và cá nhân có liên quan để lấy ý kiến đóng góp.",
+      "Tiếp thu ý kiến đóng góp, nghiên cứu bổ sung, xây dựng hoàn chỉnh kế hoạch trình Chủ tịch Ủy ban nhân dân phường, xã phê duyệt và tổ chức thực hiện.",
+      "Tất cả đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Phương pháp xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Tuyên truyền, giáo dục và hướng dẫn quần chúng nhân dân thực hiện nhiệm vụ bảo vệ an ninh trật tự.",
+      "Tuyên truyền mở rộng liên kết, phối hợp chặt chẽ giữa các ban, ngành, đoàn thể.",
+      "Xây dựng tổ chức Đảng, chính quyền và các đoàn thể quần chúng.",
+      "Tuyên truyền, giáo dục và hướng dẫn nhân dân xây dựng đời sống văn hóa mới."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Phương pháp tuyên truyền, giáo dục quần chúng nhân dân thực hiện nhiệm vụ bảo vệ an ninh trật tự:",
+    "options": [
+      "Triệt để khai thác sử dụng phương tiện thông tin đại chúng.",
+      "Tuyên truyền giáo dục nhân dân xây dựng đời sống văn hoá mới.",
+      "Vận động nhân dân chấp hành tốt luật giao thông, giữ gìn trật tự công cộng.",
+      "Xây dựng cụm khu dân cư có nếp sống văn hoá lành mạnh."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Tổ chức quần chúng nòng cốt làm nhiệm vụ bảo vệ an ninh trật tự ở địa bàn cơ sở là:",
+    "options": [
+      "Tổ quần chúng tự quản ở cơ sở.",
+      "Ban an ninh trật tự và Ban bảo vệ dân phố.",
+      "Đoàn thanh niên Cộng sản Hồ Chí Minh ở cơ sở.",
+      "Mặt trận Tổ quốc ở cơ sở."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Nội dung, yêu cầu xây dựng các tổ chức quần chúng nòng cốt làm nhiệm vụ bảo vệ an ninh trật tự là:",
+    "options": [
+      "Lựa chọn người có khả năng tổ chức, điều hành các hoạt động có liên quan đến an ninh trật tự.",
+      "Lựa chọn người có phẩm chất đạo đức trong sáng, tích cực trong các hoạt động ở cơ sở.",
+      "Lựa chọn người có trình độ văn hóa cao, có lối sống giản dị, chân thành, trung thực.",
+      "Lựa chọn người tiêu biểu xuất sắc trong các tổ chức quần chúng ở địa phương."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Phương pháp xây dựng các tổ chức quần chúng nòng cốt trong phong trào bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Xác định hình thức tổ chức quần chúng cần xây dựng.",
+      "Xác định chức năng, nhiệm vụ, quyền hạn của tổ chức quần chúng được xây dựng.",
+      "Đề xuất cấp ủy, chính quyền ra quyết định thành lập tổ chức quần chúng bảo vệ an ninh trật tự.",
+      "Tất cả đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Điển hình tiên tiến trong phong trào bảo vệ an ninh Tổ quốc là:",
+    "options": [
+      "Những cá nhân, đơn vị, tổ chức tích cực thực hiện phong trào.",
+      "Những cá nhân, đơn vị, tổ chức có nhiều sáng kiến trong phong trào.",
+      "Những cá nhân, đơn vị, cơ sở đạt được thành tích xuất sắc nổi trội trong phong trào.",
+      "Những cơ sở có tình hình an ninh chính trị, trật tự an toàn xã hội tốt."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Để nhân rộng điển hình tiên tiến trong phong trào toàn dân bảo vệ an ninh Tổ quốc cần làm tốt công việc:",
+    "options": [
+      "Lựa chọn điển hình tiên tiến; tổ chức rút kinh nghiệm điển hình tiên tiến; phổ biến kinh nghiệm điển hình tiên tiến.",
+      "Lựa chọn điển hình tiên tiến; phổ biến kinh nghiệm điển hình tiến tiến.",
+      "Lựa chọn điển hình tiên tiến; tổ chức rút kinh nghiệm điển hình tiên tiến.",
+      "Xây dựng điển hình tiên tiến và nhân rộng điển hình tiên tiến."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trách nhiệm của sinh viên trong việc tham gia phong trào bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Tự giác chấp hành các qui định về đảm bảo an ninh trật tự của nhà trường và địa phương nơi cư trú.",
+      "Nâng cao cảnh giác cách mạng, đấu tranh làm thất bại mọi âm mưu phá hoại của dịch.",
+      "Tích cực tham gia phong trào văn hóa văn nghệ, thể dục thể thao của nhà trường.",
+      "Tích cực tham gia phong trào “Trường học thân thiện, học sinh tích cực”."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Phong trào toàn dân bảo vệ an ninh Tổ quốc là một hình thức hoạt động:",
+    "options": [
+      "Tự phát, có tổ chức của nhân dân lao động.",
+      "Bắt buộc, có tổ chức của nhân dân lao động.",
+      "Tự giác, có tổ chức của nhân dân lao động.",
+      "Tự do, có tổ chức của nhân dân lao động."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Mục đích của phong trào toàn dân bảo vệ an ninh - trật tự?",
+    "options": [
+      "Giúp cho LL công an có điều kiện triển khai các biện pháp để trấn áp tội phạm.",
+      "Huy động sức mạnh của các tổ chức xã hội.",
+      "Huy động sức mạnh của nhân dân để phòng ngừa, phát hiện, ngăn chặn, đấu tranh với các loại tội phạm.",
+      "Đấu tranh với các loại và tệ nạn xã hội."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Đặc điểm của phong trào toàn dân bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Đối tượng tham gia đa dạng, liên quan đến mọi người, mọi tầng lớp xã hội.",
+      "Hình thức tổ chức quần chúng đa dạng, phong phú với hoạt động thiết thực.",
+      "Nội dung, hình thức xây dựng phong trào thống nhất trên mọi địa bàn.",
+      "Gắn liền với nhiều hoạt động chính trị và các cuộc vận động ở địa phương."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Một trong các phương pháp xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc là:",
+    "options": [
+      "Nắm tình hình và xây dựng kế hoạch phát động phong trào toàn dân bảo vệ an ninh Tổ quốc.",
+      "Xây dựng tổ chức Đảng, chính quyền, đoàn thể quần chúng tại cơ sở vững mạnh.",
+      "Xây dựng mở rộng liên kết, phối hợp giữa các ban, ngành, đoàn thể.",
+      "Nắm tình hình chính trị, xã hội, tâm tư, nguyện vọng của quần chúng nhân dân."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Một trong các phương pháp xây dựng phong trào toàn dân bảo vệ an ninh Tổ quốc là:",
+    "options": [
+      "Tuyên truyền, giáo dục và hướng dẫn quần chúng nhân dân thực hiện nhiệm vụ bảo vệ an ninh trật tự.",
+      "Tuyên truyền, mở rộng liên kết, phối hợp chặt chẽ giữa các ban, ngành, đoàn thể.",
+      "Xây dựng tổ chức Đảng, chính quyền và các đoàn thể quần chúng.",
+      "Tuyên truyền, giáo dục và hướng dẫn nhân dân xây dựng đời sống văn hóa mới."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Lực lượng nòng cốt có chức năng quản lý, điều hành trong thực hiện phong trào toàn dân bảo vệ an ninh là:",
+    "options": [
+      "Tổ quần chúng tự quản ở cơ sở.",
+      "Hội cựu chiến binh.",
+      "Đoàn thanh niên Cộng sản Hồ Chí Minh ở cơ sở.",
+      "Ban an ninh trật tự và Ban bảo vệ an ninh."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Lực lượng nào là nòng cốt trong nhiệm vụ bảo vệ toàn lãnh thổ của Tổ quốc, bảo vệ chủ quyền lãnh thổ?",
+    "options": [
+      "Quân đội nhân dân.",
+      "Công an nhân dân.",
+      "Bộ đội địa phương.",
+      "Đại diện tư vấn."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Nội dung, yêu cầu xây dựng các tổ chức quần chúng nòng cốt làm nhiệm vụ bảo vệ an ninh trật tự là:",
+    "options": [
+      "Lựa chọn người có khả năng tổ chức, điều hành các hoạt động có liên quan đến an ninh trật tự.",
+      "Lựa chọn người có phẩm chất đạo đức trong sáng, tích cực trong các hoạt động ở cơ sở.",
+      "Lựa chọn người có trình độ văn hóa cao, có lối sống giản dị, chân thành, trung thực.",
+      "Lựa chọn người tiêu biểu xuất sắc trong các tổ chức quần chúng ở địa phương."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Phương pháp tiến hành xây dựng các tổ chức quần chúng nòng cốt làm nhiệm vụ bảo vệ an ninh trật tự:",
+    "options": [
+      "Xác định hình thức tổ chức quần chúng cần xây dựng.",
+      "Xác định chức năng, nhiệm vụ, quyền hạn của tổ chức quần chúng được xây dựng.",
+      "Đề xuất cấp ủy, chính quyền ra quyết định thành lập tổ chức quần chúng bảo vệ an ninh trật tự.",
+      "Tất cả đều đúng."
+    ],
+    "dapan": 3
+  },
+  {
+    "cauhoi": "Điển hình tiên tiến làm cơ sở để tổ chức vận động quần chúng bảo vệ an ninh Tổ quốc là:",
+    "options": [
+      "Những cá nhân, đơn vị, tổ chức tích cực thực hiện phong trào.",
+      "Những cá nhân, đơn vị, tổ chức có nhiều sáng kiến trong phong trào.",
+      "Những cá nhân, đơn vị, cơ sở đạt được thành tích xuất sắc nổi trội, có đặc thù chung.",
+      "Những cơ sở có tình hình an ninh chính trị, trật tự an toàn xã hội tốt."
+    ],
+    "dapan": 2
+  },
+  {
+    "cauhoi": "Để nhân rộng điển hình tiên tiến trong phong trào toàn dân bảo vệ an ninh Tổ quốc cần làm tốt các công việc sau:",
+    "options": [
+      "Lựa chọn điển hình tiên tiến; tổ chức rút kinh nghiệm điển hình tiên tiến; phổ biến kinh nghiệm điển hình tiên tiến.",
+      "Lựa chọn điển hình tiên tiến; phổ biến kinh nghiệm điển hình tiến tiến.",
+      "Lựa chọn điển hình tiên tiến; tổ chức rút kinh nghiệm điển hình tiên tiến.",
+      "Xây dựng điển hình tiên tiến và nhân rộng điển hình tiên tiến."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Trách nhiệm của sinh viên trong việc tham gia phong trào bảo vệ an ninh Tổ quốc:",
+    "options": [
+      "Tự giác chấp hành các qui định về đảm bảo an ninh trật tự của nhà trường và địa phương nơi cư trú.",
+      "Nâng cao cảnh giác cách mạng, đấu tranh làm thất bại mọi âm mưu phá hoại của dịch.",
+      "Tích cực tham gia phong trào văn hóa văn nghệ, thể dục thể thao của nhà trường.",
+      "Tích cực tham gia phong trào: “Trường học thân thiện, học sinh tích cực”."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Ở các cơ sở xã, phường có 3 loại hình tổ chức quần chúng làm công tác an ninh trật tự là:",
+    "options": [
+      "Loại tổ chức có chức năng tư vấn; Loại tổ chức có chức năng quản lý, điều hành và Loại tổ chức có chức năng quan hệ.",
+      "Loại tổ chức có chức năng tham mưu; Loại tổ chức có chức năng quản lý và Loại tổ chức có chức năng quan hệ.",
+      "Loại tổ chức có chức năng tư vấn; Loại tổ chức có chức năng điều hành và Loại tổ chức có chức năng quan hệ.",
+      "Loại tổ chức có chức năng tham mưu; Loại tổ chức có chức năng quản lý, điều hành và Loại tổ chức có chức năng quan hệ."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Loại hình tổ chức quần chúng có chức năng thực hành làm nhiệm vụ bảo vệ an ninh trật tự ở địa bàn cơ sở:",
+    "options": [
+      "Tổ an ninh nhân dân, an ninh công nhân; đội dân phòng; đội thanh niên xung kích an ninh.",
+      "Ban an ninh trật tự; đội dân phòng; đội thanh niên xung kích an ninh.",
+      "Tổ an ninh nhân dân, an ninh công nhân; ban bảo vệ dân phố; đội thanh niên xung kích an ninh.",
+      "Tổ an ninh nhân dân, an ninh công nhân; đội dân phòng; tổ tự quản."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Tổ chức chuyên môn của quần chúng được lập ra để làm nhiệm vụ tuần tra, canh gác bảo vệ an ninh thường xuyên.",
+    "options": [
+      "Đội dân phòng.",
+      "Đội thanh niên xung kích.",
+      "Tổ an ninh nhân dân.",
+      "Ban bảo vệ dân phố."
+    ],
+    "dapan": 0
+  },
+  {
+    "cauhoi": "Phong trào toàn dân bảo vệ an ninh Tổ quốc là:",
+    "options": [
+      "Hình thức hoạt động bắt buộc nhân dân tham gia phòng chống tội phạm.",
+      "Hình thức hoạt động có tổ chức do đông đảo quần chúng nhân dân lao động tham gia.",
+      "Hình thức hoạt động tự phát của nhân dân trong phòng chống tội phạm.",
+      "Hình thức hoạt động do Nhà nước tổ chức bảo vệ an ninh trật tự."
+    ],
+    "dapan": 1
+  },
+  {
+    "cauhoi": "Mục đích của phong trào toàn dân bảo vệ an ninh trật tự?",
+    "options": [
+      "Phòng ngừa, đấu tranh phòng chống tội phạm và các hành vi vi phạm pháp luật...góp phần xây dựng một hệ thống phòng chống tội phạm.",
+      "Đấu tranh với các biểu hiện xâm phạm đến lợi ích của dân tộc Việt Nam...góp phần xây dựng và bảo vệ an ninh trật tự.",
+      "Chống lại các biểu hiện xâm phạm an ninh quốc gia, trật tự, an toàn xã hội...góp phần xây dựng và bảo vệ an ninh trật tự.",
+      "Huy động sức mạnh của nhân dân để phòng ngừa, phát hiện, ngăn chặn đấu tranh với các loại tội phạm xâm phạm an ninh trật tự."
+    ],
+    "dapan": 3
+  }
 ]
