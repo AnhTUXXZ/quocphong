@@ -343,6 +343,74 @@
             cursor: pointer;
         }
 
+        /* POPUP CHÀO MỪNG MỚI */
+        .welcome-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50000;
+        }
+        .welcome-card {
+            background: linear-gradient(135deg, var(--khaki), #f7f3e5);
+            width: 90%;
+            max-width: 450px;
+            padding: 30px 25px;
+            border-radius: 40px;
+            text-align: center;
+            border: 5px solid var(--army-dark);
+            box-shadow: 12px 12px 0 rgba(0,0,0,0.3);
+            animation: fadeScale 0.4s ease;
+        }
+        @keyframes fadeScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .welcome-card h1 {
+            font-size: 28px;
+            color: var(--danger);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .welcome-card p {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--army-dark);
+            margin: 15px 0;
+            line-height: 1.4;
+        }
+        .welcome-card .highlight {
+            color: #c0392b;
+            font-size: 24px;
+            background: white;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            margin: 10px 0;
+        }
+        .close-welcome {
+            background: var(--army-dark);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .close-welcome:hover {
+            background: var(--danger);
+            transform: scale(1.02);
+        }
+
         /* CHAT UI (KHÔNG GỌI) */
         .chat-fab {
             position: fixed;
@@ -592,11 +660,7 @@
 
 <div class="container">
     <div class="menu-grid">
-        <!-- Các đề thi -->
-        
-            
-            <a href="https://anhtuxxz.github.io/quocphong/xaotrondl.html" class="menu-card" target="_blank"> 20 câu 15 phút ĐL <small> Làm Bài</small></a>
-            
+        <a href="https://anhtuxxz.github.io/quocphong/xaotrondl.html" class="menu-card" target="_blank"> 20 câu 15 phút ĐL <small> Làm Bài</small></a>
         <a href="https://anhtuxxz.github.io/quocphong/dl1.html" class="menu-card" target="_blank">DL 1<small>Làm bài</small></a>
         <a href="https://anhtuxxz.github.io/quocphong/dl2.html" class="menu-card" target="_blank">DL 2<small>Làm bài</small></a>
         <a href="https://anhtuxxz.github.io/quocphong/dl3.html" class="menu-card" target="_blank">DL 3<small>Làm bài</small></a>
@@ -626,6 +690,17 @@
         <div class="input-group"><label>Đại đội (số):</label><input type="number" id="company" placeholder="22"></div>
         <div class="input-group"><label>Tiểu đội (số):</label><input type="number" id="platoon" placeholder="2"></div>
         <button class="btn-confirm" id="confirmBtn">Xác nhận</button>
+    </div>
+</div>
+
+<!-- POPUP CHÀO MỪNG GDQP -->
+<div id="welcomePopup" class="welcome-popup">
+    <div class="welcome-card">
+        <h1>🎯 Vì 1 mùa thi GDQP</h1>
+        <p>⚠️ <strong>KHÔNG THI LẠI</strong> ⚠️</p>
+        <div class="highlight">💪 Toàn điểm 9+ 💪</div>
+        <p>Chúc các bạn ôn tập vui vẻ, tự tin bước vào kỳ thi!</p>
+        <button class="close-welcome" id="closeWelcomeBtn">✨ Đóng ✨</button>
     </div>
 </div>
 
@@ -817,7 +892,6 @@
         document.getElementById('chatHeaderTitle').innerText = partnerName;
         currentChatPartner = partnerId;
         currentChatPartnerName = partnerName;
-        // reset unread
         await update(ref(db, `inbox/${userId}/${partnerId}`), { unread: 0 });
         loadMessages(partnerId);
     };
@@ -910,6 +984,14 @@
     // Kiểm tra người dùng đã khai báo
     if(!localStorage.getItem('hocVienQuocPhong')) document.getElementById('infoModal').style.display = 'flex';
     else { const info = JSON.parse(localStorage.getItem('hocVienQuocPhong')); pushUserVisit(info); }
+
+    // XỬ LÝ ĐÓNG POPUP CHÀO MỪNG
+    document.getElementById('closeWelcomeBtn').onclick = () => {
+        document.getElementById('welcomePopup').style.display = 'none';
+    };
+    // Luôn hiển thị popup khi vào trang (chỉ 1 lần/phiên nếu muốn thì thêm localStorage)
+    // Nhưng yêu cầu hiển thị khi vào -> hiển thị luôn
+    document.getElementById('welcomePopup').style.display = 'flex';
 </script>
 </body>
-    </html>
+                                                                                                                                </html>
