@@ -1,49 +1,192 @@
 [
     {
-        "cauhoi": "An ninh quốc gia là:",
+        "cauhoi": "Chiến thắng Bạch Đằng năm 938 do ai lãnh đạo?",
         "options": [
-            "Là sự bình yên của đất nước, cuộc sống ấm no hạnh phúc của nhân dân Việt Nam.",
-            "Là sự ổn định, phát triển bền vững của chế độ XHCN và Nhà nước CHXHCN Việt Nam.",
-            "Là sự bất khả xâm phạm độc lập chủ quyền, thống nhất và toàn vẹn lãnh thổ Tổ quốc.",
-            "Cả B và C đúng."
+            "A. Hai Bà Trưng",
+            "B. Lý Thường Kiệt",
+            "C. Ngô Quyền",
+            "D. Trần Hưng Đạo"
         ],
-        "dapan": 3
+        "dapan": 2
     },
     {
-        "cauhoi": "Trong an ninh quốc gia, lĩnh vực nào là cốt lõi, xuyên suốt:",
+        "cauhoi": "Chiến thắng Bạch Đằng năm 1288 đánh tan quân xâm lược Nguyên Mông do ai chỉ huy?",
         "options": [
-            "An ninh kinh tế.",
-            "An ninh chính trị.",
-            "An ninh tư tưởng văn hóa.",
-            "An ninh đối ngoại."
+            "A. Lý Thường Kiệt",
+            "B. Trần Quốc Tuấn (Trần Hưng Đạo)",
+            "C. Lê Lợi",
+            "D. Quang Trung"
         ],
         "dapan": 1
     },
     {
-        "cauhoi": "Bảo vệ an ninh quốc gia là:",
+        "cauhoi": "Hai Bà Trưng đã phất cờ khởi nghĩa vào năm nào?",
         "options": [
-            "Phòng ngừa các hoạt động xâm hại an ninh quốc gia.",
-            "Phát hiện các hoạt động xâm hại an ninh quốc gia.",
-            "Đấu tranh ngăn chặn các hoạt động xâm hại an ninh quốc gia của các thế lực phản động.",
-            "Phòng ngừa, phát hiện, ngăn chặn, đấu tranh làm thất bại các hoạt động xâm hại an ninh quốc gia."
-        ],
-        "dapan": 3
-    },
-    {
-        "cauhoi": "Mục tiêu quan trọng về an ninh quốc gia:",
-        "options": [
-            "Lực lượng vũ trang nhân dân Việt Nam, các cơ quan Nhà nước và nhân dân.",
-            "Những đối tượng, địa điểm, công trình, cơ sở về chính trị, an ninh, quốc phòng, kinh tế.",
-            "Cơ sở KHKT, văn hóa, xã hội thuộc danh mục cần được bảo vệ theo quy định của pháp luật.",
-            "Cả B và C đúng."
-        ],
-        "dapan": 3
-    },
-    {
-        "cauhoi": "Nguyên tắc bảo vệ an ninh quốc gia là:",
-        "options": [
-            "Kết hợp bảo vệ an ninh chính trị với bảo vệ độc lập, chủ quyền thống nhất và toàn vẹn lãnh thổ Việt Nam."
+            "A. Năm 40 sau Công nguyên",
+            "B. Năm 248",
+            "C. Năm 542",
+            "D. Năm 722"
         ],
         "dapan": 0
+    },
+    {
+        "cauhoi": "Ai là người lãnh đạo cuộc khởi nghĩa chống quân Đông Hán, giành độc lập cho đất nước trong 3 năm (40-43 sau CN)?",
+        "options": [
+            "A. Bà Triệu",
+            "B. Hai Bà Trưng",
+            "C. Lý Bí",
+            "D. Phùng Hưng"
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "\"Đánh cho để dài tóc, đánh cho để đen răng, đánh cho nó chích luân bất phản, đánh cho nó phiến giáp bất hoàn\" là lời thề trong bài \"Hịch tướng sĩ\" của ai?",
+        "options": [
+            "A. Lê Lợi",
+            "B. Nguyễn Trãi",
+            "C. Trần Hưng Đạo",
+            "D. Quang Trung"
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Chiến thắng Bạch Đằng năm 981 do ai lãnh đạo?",
+        "options": [
+            "A. Ngô Quyền",
+            "B. Đinh Bộ Lĩnh",
+            "C. Lê Hoàn (Lê Đại Hành)",
+            "D. Lý Thường Kiệt"
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quân khu được thành lập sớm nhất trong hệ thống Quân đội Nhân dân Việt Nam là?",
+        "options": [
+            "A. Quân khu 1",
+            "B. Quân khu Thủ đô",
+            "C. Quân khu 2",
+            "D. Quân khu 3"
+        ],
+        "dapan": 0
+    },
+    {
+        "cauhoi": "Quân khu 1 có Bộ Tư lệnh đặt tại tỉnh nào?",
+        "options": [
+            "A. Lạng Sơn",
+            "B. Cao Bằng",
+            "C. Thái Nguyên",
+            "D. Bắc Ninh"
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Quân khu 7 bao gồm khu vực Đông Nam Bộ, trong đó có tỉnh thành nào sau đây?",
+        "options": [
+            "A. Đà Nẵng",
+            "B. TP. Hồ Chí Minh",
+            "C. Cần Thơ",
+            "D. Khánh Hòa"
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Quân khu 4 có địa bàn chủ yếu gồm các tỉnh nào?",
+        "options": [
+            "A. Các tỉnh Tây Bắc",
+            "B. Đồng bằng sông Hồng",
+            "C. Các tỉnh Bắc Trung Bộ (Thanh Hóa đến Quảng Trị)",
+            "D. Tây Nguyên"
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Trong chiến tranh chống Mỹ, tuyến đường vận tải chiến lược \"Đường Trường Sơn\" chạy qua địa bàn chủ yếu của Quân khu nào?",
+        "options": [
+            "A. Quân khu 2",
+            "B. Quân khu 4",
+            "C. Quân khu 5",
+            "D. Quân khu 9"
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Quân chủng Phòng không - Không quân được thành lập vào ngày tháng năm nào?",
+        "options": [
+            "A. 22/12/1944",
+            "B. 07/5/1954",
+            "C. 22/10/1963",
+            "D. 30/4/1975"
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Binh chủng Đặc công nổi tiếng với lối đánh gì?",
+        "options": [
+            "A. Công kiên",
+            "B. Cận chiến, thọc sâu, đánh hiểm",
+            "C. Tác chiến cơ động trên biển",
+            "D. Pháo kích tầm xa"
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Hải quân nhân dân Việt Nam thành lập ngày 07/5/1955. Lực lượng nào giữ vai trò nòng cốt bảo vệ chủ quyền biển đảo?",
+        "options": [
+            "A. Cảnh sát biển",
+            "B. Hải quân đánh bộ",
+            "C. Tàu ngầm",
+            "D. Lực lượng tàu mặt nước"
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Ngày truyền thống của Quân đội nhân dân Việt Nam là?",
+        "options": [
+            "A. 19/8/1945",
+            "B. 22/12/1944",
+            "C. 30/4/1975",
+            "D. 07/5/1954"
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Ngày truyền thống của Dân quân tự vệ Việt Nam là ngày nào?",
+        "options": [
+            "A. 22/12",
+            "B. 19/8",
+            "C. 28/3",
+            "D. 20/10"
+        ],
+        "dapan": 2
+    },
+    {
+        "cauhoi": "Lực lượng Công an nhân dân Việt Nam lấy ngày 19/8/1945 làm ngày truyền thống, gắn liền với sự kiện gì?",
+        "options": [
+            "A. Chiến thắng Điện Biên Phủ",
+            "B. Cách mạng Tháng Tám thành công",
+            "C. Khởi nghĩa Nam Kỳ",
+            "D. Hiệp định Giơ-ne-vơ"
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Quân chủng Hải quân Việt Nam được thành lập vào năm nào?",
+        "options": [
+            "A. 1954",
+            "B. 1955",
+            "C. 1964",
+            "D. 1965"
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Năm 1975, sau ngày giải phóng miền Nam, các đơn vị hành chính - quân sự được tổ chức lại thành bao nhiêu Quân khu?",
+        "options": [
+            "A. 7 quân khu",
+            "B. 8 quân khu",
+            "C. 9 quân khu",
+            "D. 10 quân khu"
+        ],
+        "dapan": 2
     }
 ]
