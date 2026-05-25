@@ -1,0 +1,49 @@
+[
+    {
+        "cauhoi": "An ninh quốc gia là:",
+        "options": [
+            "Là sự bình yên của đất nước, cuộc sống ấm no hạnh phúc của nhân dân Việt Nam.",
+            "Là sự ổn định, phát triển bền vững của chế độ XHCN và Nhà nước CHXHCN Việt Nam.",
+            "Là sự bất khả xâm phạm độc lập chủ quyền, thống nhất và toàn vẹn lãnh thổ Tổ quốc.",
+            "Cả B và C đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Trong an ninh quốc gia, lĩnh vực nào là cốt lõi, xuyên suốt:",
+        "options": [
+            "An ninh kinh tế.",
+            "An ninh chính trị.",
+            "An ninh tư tưởng văn hóa.",
+            "An ninh đối ngoại."
+        ],
+        "dapan": 1
+    },
+    {
+        "cauhoi": "Bảo vệ an ninh quốc gia là:",
+        "options": [
+            "Phòng ngừa các hoạt động xâm hại an ninh quốc gia.",
+            "Phát hiện các hoạt động xâm hại an ninh quốc gia.",
+            "Đấu tranh ngăn chặn các hoạt động xâm hại an ninh quốc gia của các thế lực phản động.",
+            "Phòng ngừa, phát hiện, ngăn chặn, đấu tranh làm thất bại các hoạt động xâm hại an ninh quốc gia."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Mục tiêu quan trọng về an ninh quốc gia:",
+        "options": [
+            "Lực lượng vũ trang nhân dân Việt Nam, các cơ quan Nhà nước và nhân dân.",
+            "Những đối tượng, địa điểm, công trình, cơ sở về chính trị, an ninh, quốc phòng, kinh tế.",
+            "Cơ sở KHKT, văn hóa, xã hội thuộc danh mục cần được bảo vệ theo quy định của pháp luật.",
+            "Cả B và C đúng."
+        ],
+        "dapan": 3
+    },
+    {
+        "cauhoi": "Nguyên tắc bảo vệ an ninh quốc gia là:",
+        "options": [
+            "Kết hợp bảo vệ an ninh chính trị với bảo vệ độc lập, chủ quyền thống nhất và toàn vẹn lãnh thổ Việt Nam."
+        ],
+        "dapan": 0
+    }
+]
